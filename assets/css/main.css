@@ -1,0 +1,3263 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+/*
+	Minimaxing by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	-webkit-text-size-adjust: none;
+}
+
+mark {
+	background-color: transparent;
+	color: inherit;
+}
+
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input,
+select,
+textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+
+/* Basic */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+@-ms-viewport {
+	width: device-width;
+}
+
+body {
+	font-size: 12pt;
+	background-color: #f0f0f0;
+
+	/* 核心修改：首选 Inter 字体，其次调用苹果系统原生字体，最后是常规无衬线 */
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	/* 建议：将原本带点绿色的浅灰 (#878e83) 改为深灰 (#333333)，苹果官网正文通常是高对比度的深灰色，阅读体验更好 */
+	color: #333333;
+
+	/* 注意：这里我删除了 letter-spacing: -1px; 让正文呼吸感更强，更像苹果官网 */
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #007897;
+	font-weight: normal;
+}
+
+
+h2 {
+	font-size: 2em;
+	/* 苹果的大标题通常比较有视觉张力，推荐放大到 2em */
+	font-weight: 600;
+	/* 半粗体 (Semi-bold)，增加标题的分量感 */
+	color: #1d1d1f;
+	/* 苹果官方最爱用的经典深灰色，比纯黑更有呼吸感 */
+	letter-spacing: -0.02em;
+	/* 极微弱的负字距，让英文字母看起来更紧凑高级，去除原本粗暴的 -1px */
+	margin-bottom: 0.8em;
+	/* 增加标题和下方正文的留白距离（呼吸感） */
+	line-height: 1.2;
+	/* 确保标题换行时行距紧凑 */
+}
+
+/* ========================================= */
+/* 缩小主内容区标题与下方内容之间的间距           */
+/* ========================================= */
+
+#main section h2 {
+	/* 强行缩小底部的外边距。你可以将 10px 改为 5px 甚至 0 来看看哪个效果最紧凑 */
+	margin-bottom: 10px !important;
+}
+
+h3,
+h4 {
+	color: #283121;
+	margin-bottom: 0.5em;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin-bottom: 0.8em;
+}
+
+h4 {
+	font-size: 1em;
+}
+
+p,
+ul {
+	margin-bottom: 1.25em;
+}
+
+p {
+	line-height: 1.8em;
+}
+
+strong {
+	color: #474e43;
+}
+
+img.left {
+	float: left;
+	margin: 2px 1.25em 0 0;
+}
+
+img.top {
+	margin: 4px 0 2.25em 0;
+}
+
+ul {
+	padding: 0.25em 0 0 0;
+}
+
+a {
+	color: #5d93a2;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+*>p:last-child {
+	margin-bottom: 0 !important;
+}
+
+section,
+article {
+	margin: 0 0 60px 0;
+}
+
+section:last-child,
+article:last-child {
+	margin-bottom: 0;
+}
+
+/* Container */
+
+.container {
+	margin: 0 auto;
+	max-width: 100%;
+	width: 1200px;
+}
+
+@media screen and (max-width: 1680px) {
+
+	.container {
+		width: 1200px;
+	}
+
+}
+
+@media screen and (max-width: 1280px) {
+
+	.container {
+		width: calc(100% - 70px);
+	}
+
+}
+
+@media screen and (max-width: 980px) {
+
+	.container {
+		width: calc(100% - 100px);
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+
+	.container {
+		width: calc(100% - 40px);
+	}
+
+}
+
+/* Row */
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	align-items: stretch;
+}
+
+.row>* {
+	box-sizing: border-box;
+}
+
+.row.gtr-uniform>*> :last-child {
+	margin-bottom: 0;
+}
+
+.row.aln-left {
+	justify-content: flex-start;
+}
+
+.row.aln-center {
+	justify-content: center;
+}
+
+.row.aln-right {
+	justify-content: flex-end;
+}
+
+.row.aln-top {
+	align-items: flex-start;
+}
+
+.row.aln-middle {
+	align-items: center;
+}
+
+.row.aln-bottom {
+	align-items: flex-end;
+}
+
+.row>.imp {
+	order: -1;
+}
+
+.row>.col-1 {
+	width: 8.33333%;
+}
+
+.row>.off-1 {
+	margin-left: 8.33333%;
+}
+
+.row>.col-2 {
+	width: 16.66667%;
+}
+
+.row>.off-2 {
+	margin-left: 16.66667%;
+}
+
+.row>.col-3 {
+	width: 25%;
+}
+
+.row>.off-3 {
+	margin-left: 25%;
+}
+
+.row>.col-4 {
+	width: 33.33333%;
+}
+
+.row>.off-4 {
+	margin-left: 33.33333%;
+}
+
+.row>.col-5 {
+	width: 41.66667%;
+}
+
+.row>.off-5 {
+	margin-left: 41.66667%;
+}
+
+.row>.col-6 {
+	width: 50%;
+}
+
+.row>.off-6 {
+	margin-left: 50%;
+}
+
+.row>.col-7 {
+	width: 58.33333%;
+}
+
+.row>.off-7 {
+	margin-left: 58.33333%;
+}
+
+.row>.col-8 {
+	width: 66.66667%;
+}
+
+.row>.off-8 {
+	margin-left: 66.66667%;
+}
+
+.row>.col-9 {
+	width: 75%;
+}
+
+.row>.off-9 {
+	margin-left: 75%;
+}
+
+.row>.col-10 {
+	width: 83.33333%;
+}
+
+.row>.off-10 {
+	margin-left: 83.33333%;
+}
+
+.row>.col-11 {
+	width: 91.66667%;
+}
+
+.row>.off-11 {
+	margin-left: 91.66667%;
+}
+
+.row>.col-12 {
+	width: 100%;
+}
+
+.row>.off-12 {
+	margin-left: 100%;
+}
+
+.row.gtr-0 {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.row.gtr-0>* {
+	padding: 0px 0 0 0px;
+}
+
+.row.gtr-0.gtr-uniform {
+	margin-top: 0px;
+}
+
+.row.gtr-0.gtr-uniform>* {
+	padding-top: 0px;
+}
+
+.row.gtr-25 {
+	margin-top: -12.5px;
+	margin-left: -12.5px;
+}
+
+.row.gtr-25>* {
+	padding: 12.5px 0 0 12.5px;
+}
+
+.row.gtr-25.gtr-uniform {
+	margin-top: -12.5px;
+}
+
+.row.gtr-25.gtr-uniform>* {
+	padding-top: 12.5px;
+}
+
+.row.gtr-50 {
+	margin-top: -25px;
+	margin-left: -25px;
+}
+
+.row.gtr-50>* {
+	padding: 25px 0 0 25px;
+}
+
+.row.gtr-50.gtr-uniform {
+	margin-top: -25px;
+}
+
+.row.gtr-50.gtr-uniform>* {
+	padding-top: 25px;
+}
+
+.row {
+	margin-top: -50px;
+	margin-left: -50px;
+}
+
+.row>* {
+	padding: 50px 0 0 50px;
+}
+
+.row.gtr-uniform {
+	margin-top: -50px;
+}
+
+.row.gtr-uniform>* {
+	padding-top: 50px;
+}
+
+.row.gtr-150 {
+	margin-top: -75px;
+	margin-left: -75px;
+}
+
+.row.gtr-150>* {
+	padding: 75px 0 0 75px;
+}
+
+.row.gtr-150.gtr-uniform {
+	margin-top: -75px;
+}
+
+.row.gtr-150.gtr-uniform>* {
+	padding-top: 75px;
+}
+
+.row.gtr-200 {
+	margin-top: -100px;
+	margin-left: -100px;
+}
+
+.row.gtr-200>* {
+	padding: 100px 0 0 100px;
+}
+
+.row.gtr-200.gtr-uniform {
+	margin-top: -100px;
+}
+
+.row.gtr-200.gtr-uniform>* {
+	padding-top: 100px;
+}
+
+@media screen and (max-width: 1680px) {
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		align-items: stretch;
+	}
+
+	.row>* {
+		box-sizing: border-box;
+	}
+
+	.row.gtr-uniform>*> :last-child {
+		margin-bottom: 0;
+	}
+
+	.row.aln-left {
+		justify-content: flex-start;
+	}
+
+	.row.aln-center {
+		justify-content: center;
+	}
+
+	.row.aln-right {
+		justify-content: flex-end;
+	}
+
+	.row.aln-top {
+		align-items: flex-start;
+	}
+
+	.row.aln-middle {
+		align-items: center;
+	}
+
+	.row.aln-bottom {
+		align-items: flex-end;
+	}
+
+	.row>.imp-xlarge {
+		order: -1;
+	}
+
+	.row>.col-1-xlarge {
+		width: 8.33333%;
+	}
+
+	.row>.off-1-xlarge {
+		margin-left: 8.33333%;
+	}
+
+	.row>.col-2-xlarge {
+		width: 16.66667%;
+	}
+
+	.row>.off-2-xlarge {
+		margin-left: 16.66667%;
+	}
+
+	.row>.col-3-xlarge {
+		width: 25%;
+	}
+
+	.row>.off-3-xlarge {
+		margin-left: 25%;
+	}
+
+	.row>.col-4-xlarge {
+		width: 33.33333%;
+	}
+
+	.row>.off-4-xlarge {
+		margin-left: 33.33333%;
+	}
+
+	.row>.col-5-xlarge {
+		width: 41.66667%;
+	}
+
+	.row>.off-5-xlarge {
+		margin-left: 41.66667%;
+	}
+
+	.row>.col-6-xlarge {
+		width: 50%;
+	}
+
+	.row>.off-6-xlarge {
+		margin-left: 50%;
+	}
+
+	.row>.col-7-xlarge {
+		width: 58.33333%;
+	}
+
+	.row>.off-7-xlarge {
+		margin-left: 58.33333%;
+	}
+
+	.row>.col-8-xlarge {
+		width: 66.66667%;
+	}
+
+	.row>.off-8-xlarge {
+		margin-left: 66.66667%;
+	}
+
+	.row>.col-9-xlarge {
+		width: 75%;
+	}
+
+	.row>.off-9-xlarge {
+		margin-left: 75%;
+	}
+
+	.row>.col-10-xlarge {
+		width: 83.33333%;
+	}
+
+	.row>.off-10-xlarge {
+		margin-left: 83.33333%;
+	}
+
+	.row>.col-11-xlarge {
+		width: 91.66667%;
+	}
+
+	.row>.off-11-xlarge {
+		margin-left: 91.66667%;
+	}
+
+	.row>.col-12-xlarge {
+		width: 100%;
+	}
+
+	.row>.off-12-xlarge {
+		margin-left: 100%;
+	}
+
+	.row.gtr-0 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+	.row.gtr-0>* {
+		padding: 0px 0 0 0px;
+	}
+
+	.row.gtr-0.gtr-uniform {
+		margin-top: 0px;
+	}
+
+	.row.gtr-0.gtr-uniform>* {
+		padding-top: 0px;
+	}
+
+	.row.gtr-25 {
+		margin-top: -12.5px;
+		margin-left: -12.5px;
+	}
+
+	.row.gtr-25>* {
+		padding: 12.5px 0 0 12.5px;
+	}
+
+	.row.gtr-25.gtr-uniform {
+		margin-top: -12.5px;
+	}
+
+	.row.gtr-25.gtr-uniform>* {
+		padding-top: 12.5px;
+	}
+
+	.row.gtr-50 {
+		margin-top: -25px;
+		margin-left: -25px;
+	}
+
+	.row.gtr-50>* {
+		padding: 25px 0 0 25px;
+	}
+
+	.row.gtr-50.gtr-uniform {
+		margin-top: -25px;
+	}
+
+	.row.gtr-50.gtr-uniform>* {
+		padding-top: 25px;
+	}
+
+	.row {
+		margin-top: -50px;
+		margin-left: -50px;
+	}
+
+	.row>* {
+		padding: 50px 0 0 50px;
+	}
+
+	.row.gtr-uniform {
+		margin-top: -50px;
+	}
+
+	.row.gtr-uniform>* {
+		padding-top: 50px;
+	}
+
+	.row.gtr-150 {
+		margin-top: -75px;
+		margin-left: -75px;
+	}
+
+	.row.gtr-150>* {
+		padding: 75px 0 0 75px;
+	}
+
+	.row.gtr-150.gtr-uniform {
+		margin-top: -75px;
+	}
+
+	.row.gtr-150.gtr-uniform>* {
+		padding-top: 75px;
+	}
+
+	.row.gtr-200 {
+		margin-top: -100px;
+		margin-left: -100px;
+	}
+
+	.row.gtr-200>* {
+		padding: 100px 0 0 100px;
+	}
+
+	.row.gtr-200.gtr-uniform {
+		margin-top: -100px;
+	}
+
+	.row.gtr-200.gtr-uniform>* {
+		padding-top: 100px;
+	}
+
+}
+
+@media screen and (max-width: 1280px) {
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		align-items: stretch;
+	}
+
+	.row>* {
+		box-sizing: border-box;
+	}
+
+	.row.gtr-uniform>*> :last-child {
+		margin-bottom: 0;
+	}
+
+	.row.aln-left {
+		justify-content: flex-start;
+	}
+
+	.row.aln-center {
+		justify-content: center;
+	}
+
+	.row.aln-right {
+		justify-content: flex-end;
+	}
+
+	.row.aln-top {
+		align-items: flex-start;
+	}
+
+	.row.aln-middle {
+		align-items: center;
+	}
+
+	.row.aln-bottom {
+		align-items: flex-end;
+	}
+
+	.row>.imp-large {
+		order: -1;
+	}
+
+	.row>.col-1-large {
+		width: 8.33333%;
+	}
+
+	.row>.off-1-large {
+		margin-left: 8.33333%;
+	}
+
+	.row>.col-2-large {
+		width: 16.66667%;
+	}
+
+	.row>.off-2-large {
+		margin-left: 16.66667%;
+	}
+
+	.row>.col-3-large {
+		width: 25%;
+	}
+
+	.row>.off-3-large {
+		margin-left: 25%;
+	}
+
+	.row>.col-4-large {
+		width: 33.33333%;
+	}
+
+	.row>.off-4-large {
+		margin-left: 33.33333%;
+	}
+
+	.row>.col-5-large {
+		width: 41.66667%;
+	}
+
+	.row>.off-5-large {
+		margin-left: 41.66667%;
+	}
+
+	.row>.col-6-large {
+		width: 50%;
+	}
+
+	.row>.off-6-large {
+		margin-left: 50%;
+	}
+
+	.row>.col-7-large {
+		width: 58.33333%;
+	}
+
+	.row>.off-7-large {
+		margin-left: 58.33333%;
+	}
+
+	.row>.col-8-large {
+		width: 66.66667%;
+	}
+
+	.row>.off-8-large {
+		margin-left: 66.66667%;
+	}
+
+	.row>.col-9-large {
+		width: 75%;
+	}
+
+	.row>.off-9-large {
+		margin-left: 75%;
+	}
+
+	.row>.col-10-large {
+		width: 83.33333%;
+	}
+
+	.row>.off-10-large {
+		margin-left: 83.33333%;
+	}
+
+	.row>.col-11-large {
+		width: 91.66667%;
+	}
+
+	.row>.off-11-large {
+		margin-left: 91.66667%;
+	}
+
+	.row>.col-12-large {
+		width: 100%;
+	}
+
+	.row>.off-12-large {
+		margin-left: 100%;
+	}
+
+	.row.gtr-0 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+	.row.gtr-0>* {
+		padding: 0px 0 0 0px;
+	}
+
+	.row.gtr-0.gtr-uniform {
+		margin-top: 0px;
+	}
+
+	.row.gtr-0.gtr-uniform>* {
+		padding-top: 0px;
+	}
+
+	.row.gtr-25 {
+		margin-top: -8.75px;
+		margin-left: -8.75px;
+	}
+
+	.row.gtr-25>* {
+		padding: 8.75px 0 0 8.75px;
+	}
+
+	.row.gtr-25.gtr-uniform {
+		margin-top: -8.75px;
+	}
+
+	.row.gtr-25.gtr-uniform>* {
+		padding-top: 8.75px;
+	}
+
+	.row.gtr-50 {
+		margin-top: -17.5px;
+		margin-left: -17.5px;
+	}
+
+	.row.gtr-50>* {
+		padding: 17.5px 0 0 17.5px;
+	}
+
+	.row.gtr-50.gtr-uniform {
+		margin-top: -17.5px;
+	}
+
+	.row.gtr-50.gtr-uniform>* {
+		padding-top: 17.5px;
+	}
+
+	.row {
+		margin-top: -35px;
+		margin-left: -35px;
+	}
+
+	.row>* {
+		padding: 35px 0 0 35px;
+	}
+
+	.row.gtr-uniform {
+		margin-top: -35px;
+	}
+
+	.row.gtr-uniform>* {
+		padding-top: 35px;
+	}
+
+	.row.gtr-150 {
+		margin-top: -52.5px;
+		margin-left: -52.5px;
+	}
+
+	.row.gtr-150>* {
+		padding: 52.5px 0 0 52.5px;
+	}
+
+	.row.gtr-150.gtr-uniform {
+		margin-top: -52.5px;
+	}
+
+	.row.gtr-150.gtr-uniform>* {
+		padding-top: 52.5px;
+	}
+
+	.row.gtr-200 {
+		margin-top: -70px;
+		margin-left: -70px;
+	}
+
+	.row.gtr-200>* {
+		padding: 70px 0 0 70px;
+	}
+
+	.row.gtr-200.gtr-uniform {
+		margin-top: -70px;
+	}
+
+	.row.gtr-200.gtr-uniform>* {
+		padding-top: 70px;
+	}
+
+}
+
+@media screen and (max-width: 980px) {
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		align-items: stretch;
+	}
+
+	.row>* {
+		box-sizing: border-box;
+	}
+
+	.row.gtr-uniform>*> :last-child {
+		margin-bottom: 0;
+	}
+
+	.row.aln-left {
+		justify-content: flex-start;
+	}
+
+	.row.aln-center {
+		justify-content: center;
+	}
+
+	.row.aln-right {
+		justify-content: flex-end;
+	}
+
+	.row.aln-top {
+		align-items: flex-start;
+	}
+
+	.row.aln-middle {
+		align-items: center;
+	}
+
+	.row.aln-bottom {
+		align-items: flex-end;
+	}
+
+	.row>.imp-medium {
+		order: -1;
+	}
+
+	.row>.col-1-medium {
+		width: 8.33333%;
+	}
+
+	.row>.off-1-medium {
+		margin-left: 8.33333%;
+	}
+
+	.row>.col-2-medium {
+		width: 16.66667%;
+	}
+
+	.row>.off-2-medium {
+		margin-left: 16.66667%;
+	}
+
+	.row>.col-3-medium {
+		width: 25%;
+	}
+
+	.row>.off-3-medium {
+		margin-left: 25%;
+	}
+
+	.row>.col-4-medium {
+		width: 33.33333%;
+	}
+
+	.row>.off-4-medium {
+		margin-left: 33.33333%;
+	}
+
+	.row>.col-5-medium {
+		width: 41.66667%;
+	}
+
+	.row>.off-5-medium {
+		margin-left: 41.66667%;
+	}
+
+	.row>.col-6-medium {
+		width: 50%;
+	}
+
+	.row>.off-6-medium {
+		margin-left: 50%;
+	}
+
+	.row>.col-7-medium {
+		width: 58.33333%;
+	}
+
+	.row>.off-7-medium {
+		margin-left: 58.33333%;
+	}
+
+	.row>.col-8-medium {
+		width: 66.66667%;
+	}
+
+	.row>.off-8-medium {
+		margin-left: 66.66667%;
+	}
+
+	.row>.col-9-medium {
+		width: 75%;
+	}
+
+	.row>.off-9-medium {
+		margin-left: 75%;
+	}
+
+	.row>.col-10-medium {
+		width: 83.33333%;
+	}
+
+	.row>.off-10-medium {
+		margin-left: 83.33333%;
+	}
+
+	.row>.col-11-medium {
+		width: 91.66667%;
+	}
+
+	.row>.off-11-medium {
+		margin-left: 91.66667%;
+	}
+
+	.row>.col-12-medium {
+		width: 100%;
+	}
+
+	.row>.off-12-medium {
+		margin-left: 100%;
+	}
+
+	.row.gtr-0 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+	.row.gtr-0>* {
+		padding: 0px 0 0 0px;
+	}
+
+	.row.gtr-0.gtr-uniform {
+		margin-top: 0px;
+	}
+
+	.row.gtr-0.gtr-uniform>* {
+		padding-top: 0px;
+	}
+
+	.row.gtr-25 {
+		margin-top: -12.5px;
+		margin-left: -12.5px;
+	}
+
+	.row.gtr-25>* {
+		padding: 12.5px 0 0 12.5px;
+	}
+
+	.row.gtr-25.gtr-uniform {
+		margin-top: -12.5px;
+	}
+
+	.row.gtr-25.gtr-uniform>* {
+		padding-top: 12.5px;
+	}
+
+	.row.gtr-50 {
+		margin-top: -25px;
+		margin-left: -25px;
+	}
+
+	.row.gtr-50>* {
+		padding: 25px 0 0 25px;
+	}
+
+	.row.gtr-50.gtr-uniform {
+		margin-top: -25px;
+	}
+
+	.row.gtr-50.gtr-uniform>* {
+		padding-top: 25px;
+	}
+
+	.row {
+		margin-top: -50px;
+		margin-left: -50px;
+	}
+
+	.row>* {
+		padding: 50px 0 0 50px;
+	}
+
+	.row.gtr-uniform {
+		margin-top: -50px;
+	}
+
+	.row.gtr-uniform>* {
+		padding-top: 50px;
+	}
+
+	.row.gtr-150 {
+		margin-top: -75px;
+		margin-left: -75px;
+	}
+
+	.row.gtr-150>* {
+		padding: 75px 0 0 75px;
+	}
+
+	.row.gtr-150.gtr-uniform {
+		margin-top: -75px;
+	}
+
+	.row.gtr-150.gtr-uniform>* {
+		padding-top: 75px;
+	}
+
+	.row.gtr-200 {
+		margin-top: -100px;
+		margin-left: -100px;
+	}
+
+	.row.gtr-200>* {
+		padding: 100px 0 0 100px;
+	}
+
+	.row.gtr-200.gtr-uniform {
+		margin-top: -100px;
+	}
+
+	.row.gtr-200.gtr-uniform>* {
+		padding-top: 100px;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		align-items: stretch;
+	}
+
+	.row>* {
+		box-sizing: border-box;
+	}
+
+	.row.gtr-uniform>*> :last-child {
+		margin-bottom: 0;
+	}
+
+	.row.aln-left {
+		justify-content: flex-start;
+	}
+
+	.row.aln-center {
+		justify-content: center;
+	}
+
+	.row.aln-right {
+		justify-content: flex-end;
+	}
+
+	.row.aln-top {
+		align-items: flex-start;
+	}
+
+	.row.aln-middle {
+		align-items: center;
+	}
+
+	.row.aln-bottom {
+		align-items: flex-end;
+	}
+
+	.row>.imp-small {
+		order: -1;
+	}
+
+	.row>.col-1-small {
+		width: 8.33333%;
+	}
+
+	.row>.off-1-small {
+		margin-left: 8.33333%;
+	}
+
+	.row>.col-2-small {
+		width: 16.66667%;
+	}
+
+	.row>.off-2-small {
+		margin-left: 16.66667%;
+	}
+
+	.row>.col-3-small {
+		width: 25%;
+	}
+
+	.row>.off-3-small {
+		margin-left: 25%;
+	}
+
+	.row>.col-4-small {
+		width: 33.33333%;
+	}
+
+	.row>.off-4-small {
+		margin-left: 33.33333%;
+	}
+
+	.row>.col-5-small {
+		width: 41.66667%;
+	}
+
+	.row>.off-5-small {
+		margin-left: 41.66667%;
+	}
+
+	.row>.col-6-small {
+		width: 50%;
+	}
+
+	.row>.off-6-small {
+		margin-left: 50%;
+	}
+
+	.row>.col-7-small {
+		width: 58.33333%;
+	}
+
+	.row>.off-7-small {
+		margin-left: 58.33333%;
+	}
+
+	.row>.col-8-small {
+		width: 66.66667%;
+	}
+
+	.row>.off-8-small {
+		margin-left: 66.66667%;
+	}
+
+	.row>.col-9-small {
+		width: 75%;
+	}
+
+	.row>.off-9-small {
+		margin-left: 75%;
+	}
+
+	.row>.col-10-small {
+		width: 83.33333%;
+	}
+
+	.row>.off-10-small {
+		margin-left: 83.33333%;
+	}
+
+	.row>.col-11-small {
+		width: 91.66667%;
+	}
+
+	.row>.off-11-small {
+		margin-left: 91.66667%;
+	}
+
+	.row>.col-12-small {
+		width: 100%;
+	}
+
+	.row>.off-12-small {
+		margin-left: 100%;
+	}
+
+	.row.gtr-0 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+	.row.gtr-0>* {
+		padding: 0px 0 0 0px;
+	}
+
+	.row.gtr-0.gtr-uniform {
+		margin-top: 0px;
+	}
+
+	.row.gtr-0.gtr-uniform>* {
+		padding-top: 0px;
+	}
+
+	.row.gtr-25 {
+		margin-top: -5px;
+		margin-left: -5px;
+	}
+
+	.row.gtr-25>* {
+		padding: 5px 0 0 5px;
+	}
+
+	.row.gtr-25.gtr-uniform {
+		margin-top: -5px;
+	}
+
+	.row.gtr-25.gtr-uniform>* {
+		padding-top: 5px;
+	}
+
+	.row.gtr-50 {
+		margin-top: -10px;
+		margin-left: -10px;
+	}
+
+	.row.gtr-50>* {
+		padding: 10px 0 0 10px;
+	}
+
+	.row.gtr-50.gtr-uniform {
+		margin-top: -10px;
+	}
+
+	.row.gtr-50.gtr-uniform>* {
+		padding-top: 10px;
+	}
+
+	.row {
+		margin-top: -20px;
+		margin-left: -20px;
+	}
+
+	.row>* {
+		padding: 20px 0 0 20px;
+	}
+
+	.row.gtr-uniform {
+		margin-top: -20px;
+	}
+
+	.row.gtr-uniform>* {
+		padding-top: 20px;
+	}
+
+	.row.gtr-150 {
+		margin-top: -30px;
+		margin-left: -30px;
+	}
+
+	.row.gtr-150>* {
+		padding: 30px 0 0 30px;
+	}
+
+	.row.gtr-150.gtr-uniform {
+		margin-top: -30px;
+	}
+
+	.row.gtr-150.gtr-uniform>* {
+		padding-top: 30px;
+	}
+
+	.row.gtr-200 {
+		margin-top: -40px;
+		margin-left: -40px;
+	}
+
+	.row.gtr-200>* {
+		padding: 40px 0 0 40px;
+	}
+
+	.row.gtr-200.gtr-uniform {
+		margin-top: -40px;
+	}
+
+	.row.gtr-200.gtr-uniform>* {
+		padding-top: 40px;
+	}
+
+}
+
+/* Reusable */
+
+article.blog-post {
+	position: relative;
+}
+
+article.blog-post .comments {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 32px;
+	line-height: 24px;
+	padding-left: 40px;
+	background: url("images/icon-bubble.png") no-repeat;
+}
+
+article.blog-post .blog-post-image {
+	width: 100%;
+}
+
+ul.small-image-list li {
+	overflow: hidden;
+	margin-bottom: 1.5em;
+}
+
+ul.small-image-list li img {
+	width: 78px;
+}
+
+ul.big-image-list li {
+	overflow: hidden;
+	margin-bottom: 2em;
+}
+
+ul.big-image-list li img {
+	width: 178px;
+}
+
+ul.link-list li {
+	border-top: solid 1px #ced0b7;
+	padding: 0.75em 0 0 0;
+	margin: 0.75em 0 0 0;
+}
+
+ul.link-list li:first-child {
+	padding-top: 0;
+	margin-top: 0;
+	border-top: 0;
+}
+
+.button {
+	background-image: -moz-linear-gradient(top, #008dad, #007b9d);
+	background-image: -webkit-linear-gradient(top, #008dad, #007b9d);
+	background-image: -ms-linear-gradient(top, #008dad, #007b9d);
+	background-image: linear-gradient(top, #008dad, #007b9d);
+	display: inline-block;
+	padding: 15px 25px 15px 25px;
+	background-color: #007b9d;
+	border-radius: 10px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.2em;
+	letter-spacing: -1px;
+	border: solid 1px #006e8b;
+	box-shadow: inset 0px 0px 0px 1px #18a8c8;
+}
+
+.button:hover {
+	background-image: -moz-linear-gradient(top, #1b9fbe, #118eb1);
+	background-image: -webkit-linear-gradient(top, #1b9fbe, #118eb1);
+	background-image: -ms-linear-gradient(top, #1b9fbe, #118eb1);
+	background-image: linear-gradient(top, #1b9fbe, #118eb1);
+	background-color: #118eb1;
+	box-shadow: inset 0px 0px 0px 1px #3ecceb;
+}
+
+/* Header */
+
+#header-wrapper {
+	background-image: -moz-linear-gradient(top, #fdfdfd, #e8e8e8);
+	background-image: -webkit-linear-gradient(top, #fdfdfd, #e8e8e8);
+	background-image: -ms-linear-gradient(top, #fdfdfd, #e8e8e8);
+	background-image: linear-gradient(top, #fdfdfd, #e8e8e8);
+	background-color: #f0f0f0;
+	/* 后备底色 */
+	position: sticky;
+	/* 开启粘性定位 */
+	top: 0;
+	/* 吸附在屏幕最顶部边缘 */
+	z-index: 1000;
+	/* 保证它在最上层，不被下方图片或文字遮挡 */
+	width: 100%;
+	/* 宽度撑满屏幕 */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	/* 建议加个极淡的阴影，滚动时能跟下方内容区分开 */
+	padding-top: 0.1px !important;
+	padding-bottom: 0.1px !important;
+}
+
+#header {
+	background-image: -moz-linear-gradient(top, #008ead, #007b9d);
+	background-image: -webkit-linear-gradient(top, #008ead, #007b9d);
+	background-image: -ms-linear-gradient(top, #008ead, #007b9d);
+	background-image: linear-gradient(top, #008ead, #007b9d);
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+	position: relative;
+	margin: 0.5% 0 0.5% 0;
+	/* 修改标题栏背景高度 */
+	padding: 0 20px 0 20px;
+	border-radius: 10px;
+	border: solid 1px #006e8b;
+	box-shadow: inset 0px 0px 0px 1px #12a0bf, 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+	background-color: #007b9d;
+	height: 55px;
+}
+
+#header h1 {
+	position: absolute;
+	left: 40px;
+	top: 0;
+	color: #fff;
+	font-size: 2.4em;
+	letter-spacing: -2px;
+	line-height: 45px;
+	margin-bottom: 0 !important;
+	/* 去除 Logo 下方的默认空隙 */
+}
+
+#header h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#header nav {
+	position: absolute;
+	right: 40px;
+	top: 1px;
+	line-height: 52px;
+	font-size: 1.1em;
+	letter-spacing: -1px;
+}
+
+#header nav a {
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 25px 0 25px;
+	outline: 0;
+}
+
+#header nav a.current-page-item {
+	background-image: -moz-linear-gradient(top, #007b99, #007897);
+	background-image: -webkit-linear-gradient(top, #007b99, #007897);
+	background-image: -ms-linear-gradient(top, #007b99, #007897);
+	background-image: linear-gradient(top, #007b99, #007897);
+	background-color: #007897;
+	box-shadow: inset 0px 1px 5px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px 1px rgba(255, 255, 255, 0.1);
+}
+
+#header nav a:hover {
+	background-image: -moz-linear-gradient(top, #0782a0, #077d9b);
+	background-image: -webkit-linear-gradient(top, #0782a0, #077d9b);
+	background-image: -ms-linear-gradient(top, #0782a0, #077d9b);
+	background-image: linear-gradient(top, #0782a0, #077d9b);
+	background-color: #0882a1;
+	box-shadow: inset 0px 1px 5px 1px rgba(0, 0, 0, 0.05), 0px 0px 5px 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Banner */
+
+#banner-wrapper {
+	background: #c8d2bc url(images/bg1.png);
+	/* 调整上方的空白高度（觉得大就改小，甚至可以改成 0） */
+	padding-top: 10px !important;
+	/* 调整下方的空白高度 */
+	padding-bottom: 10px !important;
+}
+
+#banner {
+	position: relative;
+	width: 100%;
+	padding: 6em 0;
+	border-radius: 10px;
+	background-image: url(images/banner.jpg);
+	background-size: cover;
+	text-align: center;
+	box-shadow: inset 0 0 0 20px #fff;
+}
+
+#banner h2 {
+	font-size: 3.3em;
+	color: #fff;
+	text-align: center;
+	letter-spacing: -2px;
+	margin: 0;
+}
+
+#banner span {
+	display: block;
+	left: 0;
+	margin: 0.5em 0 0 0;
+	font-size: 1.6em;
+	color: #fff;
+	letter-spacing: -1px;
+	opacity: 0.8;
+}
+
+/* Main */
+
+#main {
+	background: #fff;
+	padding: 4em 0;
+}
+
+/* Footer */
+
+#footer-wrapper {
+	padding: 4em 0;
+}
+
+/* Copyright */
+
+#copyright {
+	text-align: center;
+	color: #A6A88F;
+	border-top: solid 1px #ced0b7;
+	padding: 10px 0 0 0;
+	margin: 0 0 0 0;
+}
+
+#copyright a {
+	color: #A6A88F;
+}
+
+/* Large */
+
+@media screen and (max-width: 1280px) {
+
+	/* Reusable */
+
+	ul.small-image-list img {
+		width: 50px;
+	}
+
+	ul.big-image-list img {
+		width: 75px;
+	}
+
+	/* Header */
+
+	#header {
+		height: 75px;
+	}
+
+	#header h1 {
+		font-size: 2em;
+		line-height: 75px;
+	}
+
+	#header nav {
+		line-height: 74px;
+		font-size: 1em;
+	}
+
+	#header nav a {
+		padding: 0 20px 0 20px;
+	}
+
+	/* Banner */
+
+	#banner {
+		width: 100%;
+		padding: 5em 0;
+	}
+
+	#banner h2 {
+		font-size: 3em;
+	}
+
+	#banner span {
+		font-size: 1.4em;
+	}
+
+	/* Footer */
+
+	#footer-wrapper {
+		padding: 4em 0;
+	}
+
+	/* Copyright */
+
+	#copyright {
+		padding: 1em 0 0 0;
+		margin: 1em 0 0 0;
+	}
+
+}
+
+/* Small */
+
+#navPanel,
+#titleBar {
+	display: none;
+}
+
+@media screen and (max-width: 980px) {
+
+	/* Basic */
+
+	html,
+	body {
+		overflow-x: hidden;
+	}
+
+	/* Page Wrapper */
+
+	#page-wrapper {
+		padding-top: 44px;
+	}
+
+	/* Header */
+
+	#header-wrapper {
+		background-image: -moz-linear-gradient(top, #008dab, #007294);
+		background-image: -webkit-linear-gradient(top, #008dab, #007294);
+		background-image: -ms-linear-gradient(top, #008dab, #007294);
+		background-image: linear-gradient(top, #008dab, #007294);
+		background-color: #007294;
+	}
+
+	#header {
+		display: none;
+	}
+
+	#banner {
+		padding: 6em 0;
+	}
+
+	#banner h2 {
+		font-size: 2.5em;
+	}
+
+	/* Nav */
+
+	#page-wrapper {
+		-moz-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-moz-transition: -moz-transform 0.5s ease;
+		-webkit-transition: -webkit-transform 0.5s ease;
+		-ms-transition: -ms-transform 0.5s ease;
+		transition: transform 0.5s ease;
+		padding-bottom: 1px;
+	}
+
+	#titleBar {
+		background-image: -moz-linear-gradient(top, #008dab, #007294);
+		background-image: -webkit-linear-gradient(top, #008dab, #007294);
+		background-image: -ms-linear-gradient(top, #008dab, #007294);
+		background-image: linear-gradient(top, #008dab, #007294);
+		-moz-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-moz-transition: -moz-transform 0.5s ease;
+		-webkit-transition: -webkit-transform 0.5s ease;
+		-ms-transition: -ms-transform 0.5s ease;
+		transition: transform 0.5s ease;
+		display: block;
+		height: 44px;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10001;
+		text-align: center;
+		color: #fff;
+		font-size: 1.25em;
+		background-color: #007294;
+	}
+
+	#titleBar .title {
+		line-height: 44px;
+	}
+
+	#titleBar .toggle {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 80px;
+		height: 60px;
+	}
+
+	#titleBar .toggle:after {
+		content: '';
+		position: absolute;
+		left: 4px;
+		top: 4px;
+		color: #fff;
+		text-align: center;
+		line-height: 31px;
+		font-size: 0.8em;
+		width: 50px;
+		height: 35px;
+		border-radius: 5px;
+		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25), inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5), inset 0px 6px 13px 0px rgba(255, 255, 255, 0.2), 0px 2px 2px 0px rgba(255, 255, 255, 0.1);
+	}
+
+	#titleBar .toggle:before {
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 30px;
+		background: url("images/mobileUI-site-nav-opener-bg.svg");
+		top: 16px;
+		left: 19px;
+	}
+
+	#titleBar .toggle:active:after {
+		background: rgba(0, 0, 0, 0.2);
+	}
+
+	#navPanel {
+		-moz-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-moz-transform: translateX(-275px);
+		-webkit-transform: translateX(-275px);
+		-ms-transform: translateX(-275px);
+		transform: translateX(-275px);
+		-moz-transition: -moz-transform 0.5s ease;
+		-webkit-transition: -webkit-transform 0.5s ease;
+		-ms-transition: -ms-transform 0.5s ease;
+		transition: transform 0.5s ease;
+		display: block;
+		height: 100%;
+		left: 0;
+		overflow-y: auto;
+		position: fixed;
+		top: 0;
+		width: 275px;
+		z-index: 10002;
+		background: #00536F;
+		color: #fff;
+		box-shadow: inset -10px 0px 40px 0px rgba(0, 0, 0, 0.5);
+	}
+
+	#navPanel .link {
+		display: block;
+		color: #fff;
+		border-top: solid 1px rgba(255, 255, 255, 0.1);
+		border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+		height: 55px;
+		line-height: 55px;
+		padding: 0 15px 0 15px;
+		text-decoration: none;
+	}
+
+	#navPanel .link:first-child {
+		border-top: 0;
+	}
+
+	#navPanel .link:last-child {
+		border-bottom: 0;
+	}
+
+	body.navPanel-visible #page-wrapper {
+		-moz-transform: translateX(275px);
+		-webkit-transform: translateX(275px);
+		-ms-transform: translateX(275px);
+		transform: translateX(275px);
+	}
+
+	body.navPanel-visible #titleBar {
+		-moz-transform: translateX(275px);
+		-webkit-transform: translateX(275px);
+		-ms-transform: translateX(275px);
+		transform: translateX(275px);
+	}
+
+	body.navPanel-visible #navPanel {
+		-moz-transform: translateX(0);
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+}
+
+/* Small */
+
+@media screen and (max-width: 736px) {
+
+	/* Basic */
+
+	body {
+		font-size: 13pt;
+	}
+
+	h2 {
+		font-size: 1.4em;
+	}
+
+	h3 {
+		font-size: 1.2em;
+	}
+
+	h4 {
+		font-size: 1em;
+	}
+
+	/* Reusable */
+
+	ul.small-image-list li img {
+		width: 100px;
+	}
+
+	ul.big-image-list li img {
+		width: 100px;
+	}
+
+	ul.link-list {
+		margin: 0 0 1em 0;
+	}
+
+	article.blog-post .comments {
+		display: block;
+		position: relative;
+		top: -0.5em;
+		margin: 0 0 0.5em 0;
+	}
+
+	.button {
+		font-size: 1em;
+	}
+
+	.blog-post-image {
+		width: 100%;
+	}
+
+	/* Banner */
+
+	#banner-wrapper {
+		background: #c8d2bc url(images/bg1.png);
+		padding: 20px 0;
+	}
+
+	#banner {
+		box-shadow: inset 0 0 0 10px #fff;
+		padding: 4em 1em;
+	}
+
+	#banner h2 {
+		font-size: 2em;
+		letter-spacing: -2px;
+		line-height: 1.25em;
+	}
+
+	#banner span {
+		font-size: 1.25em;
+		letter-spacing: -1px;
+		line-height: 1.25em;
+	}
+
+	/* Main */
+
+	#main {
+		padding: 40px 0;
+	}
+
+	/* Footer */
+
+	#footer-wrapper {
+		padding: 40px 0;
+	}
+
+	/* Copyright */
+
+	#copyright {
+		text-align: center;
+		color: #A6A88F;
+		padding: 0px 0 0 0;
+		font-size: 0.8em;
+	}
+
+	#copyright a {
+		color: #A6A88F;
+	}
+
+}
+
+/* ========================================= */
+/* 修复图片 Logo 替换文字后的样式                */
+/* ========================================= */
+
+/* 1. 桌面端与平板端（>980px）：使用绝对定位+位移法实现完美居中 */
+#header h1 {
+	position: absolute !important;
+	top: 50% !important;
+	/* 定位到父容器高度的 50% */
+	transform: translateY(-50%) !important;
+	/* 往上偏移自身高度的一半，实现绝对居中 */
+	margin: 0 !important;
+	height: auto !important;
+	line-height: 1 !important;
+	/* 清除原模板写死的几十像素行高干扰 */
+}
+
+#header h1 a {
+	display: block !important;
+	line-height: 1 !important;
+}
+
+#header h1 img {
+	/* 控制桌面端 Logo 的高度 */
+	max-height: 38px !important;
+	width: auto !important;
+	display: block !important;
+}
+
+/* 2. 手机端与小平板（<980px）：适配动态生成的 #titleBar */
+@media screen and (max-width: 980px) {
+	#titleBar .title img {
+		/* 手机端的顶部导航条总高度只有 44px，所以 Logo 必须缩小 */
+		max-height: 22px !important;
+		width: auto !important;
+		vertical-align: middle !important;
+		display: inline-block !important;
+		/* 微调视觉高度，如果不居中可以修改这里的 -3px */
+		margin-top: -3px !important;
+	}
+}
+
+/* ========================================= */
+/* 自定义轮播图样式 (Slider)                    */
+/* ========================================= */
+
+#banner-slider {
+	position: relative;
+	width: 100%;
+	/* 【控制尺寸】在这里修改轮播图的高度，觉得太大可以改为 400px 或 500px */
+	height: 550px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: inset 0 0 0 10px #fff;
+	/* 保持原模板的白色内边框风格 */
+	background-color: #333;
+	/* 图片加载前的背景色 */
+}
+
+.slider-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	/* 切换图片的动画过渡效果 */
+	transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+	min-width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+	/* 保证图片铺满整个区域且不变形被拉伸 */
+	object-fit: cover;
+}
+
+/* 漂浮在图片上的文字样式 */
+.slide-text {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+	font-size: 2.2em;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+	background: rgba(0, 114, 148, 0.7);
+	/* 品牌蓝色半透明背景 */
+	padding: 10px 30px;
+	border-radius: 5px;
+	white-space: nowrap;
+}
+
+/* 左右切换按钮 */
+.slide-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.3);
+	color: white;
+	border: none;
+	font-size: 1em;
+	padding: 15px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background 0.3s;
+	z-index: 10;
+}
+
+.slide-btn:hover {
+	background: rgba(0, 114, 148, 0.8);
+}
+
+.prev-btn {
+	left: 20px;
+}
+
+.next-btn {
+	right: 20px;
+}
+
+/* 底部指示圆点 */
+.slider-dots {
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+	text-align: center;
+	z-index: 10;
+}
+
+.dot {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 0 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.dot.active,
+.dot:hover {
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 手机端适配：缩小字体和高度 */
+@media screen and (max-width: 736px) {
+	#banner-slider {
+		height: 300px;
+		box-shadow: inset 0 0 0 5px #fff;
+	}
+
+	.slide-text {
+		font-size: 1.2em;
+		bottom: 30px;
+		padding: 5px 15px;
+	}
+
+	.slide-btn {
+		padding: 10px 15px;
+		font-size: 1.5em;
+	}
+}
+
+
+/* ========================================= */
+/* 1. 缩小外侧一圈的空白区域                   */
+/* ========================================= */
+#main {
+	/* 原本是 4em。2em 控制上下空白，0 控制左右。觉得大可以改 1.5em 或 1em */
+	padding: 1.5em 0 !important;
+}
+
+/* ========================================= */
+/* 2. 工厂优势列表样式 (Advantages List)        */
+/* ========================================= */
+.advantages-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.advantages-list li {
+	display: flex;
+	align-items: flex-start;
+	/* 让图片和文字顶部对齐 */
+	/* 👇 在这里修改每个优势项目之间的上下间距 */
+	margin-bottom: 10px;
+}
+
+.adv-img {
+	/* 👇 在这里修改优势图片的尺寸 (目前是正方形 65x65) */
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 4px;
+	/* 让图片有点小圆角，看起来不那么死板 */
+	/* 👇 在这里修改图片和右侧文字之间的水平距离 */
+	margin-right: 15px;
+}
+
+.adv-text h4 {
+	/* 👇 修改优势标题的字体大小和下方间距 */
+	font-size: 1.1em;
+	margin-bottom: 3px;
+	color: #283121;
+}
+
+.adv-text p {
+	/* 👇 修改优势说明的字体大小和行高 */
+	font-size: 0.9em;
+	line-height: 1.4;
+	margin: 0;
+}
+
+/* ========================================= */
+/* 3. 产品展示 3行2列网格样式 (Product Grid)    */
+/* ========================================= */
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/* 强制分为 2 列 */
+	/* 👇 修改产品图片之间的间距：第一个数是上下间距，第二个数(15px)是左右间距 */
+	gap: 10px 15px;
+}
+
+.prod-item {
+	text-align: center;
+}
+
+.prod-item img {
+	width: 100%;
+	/* 👇 统一控制产品图片的高度。这非常重要，能保证即使你上传的背包图比例不一，排版也能整齐划一 */
+	height: 130px;
+	object-fit: cover;
+	/* 让图片填满框且不变形 */
+	border-radius: 4px;
+	border: 1px solid #e0e0e0;
+	/* 加一层极淡的边框提升质感 */
+}
+
+.prod-item h5 {
+	/* 👇 修改产品标题的大小和距离图片的上下间距 */
+	margin-top: 1px;
+	margin-bottom: 0;
+	font-size: 0.95em;
+	color: #007897;
+	text-transform: capitalize;
+	/* 首字母自动大写 */
+}
+
+/* ========================================= */
+/* 服务列表 (Services List) 排版自定义控制        */
+/* ========================================= */
+
+.services-section {
+	/* 💡 添加极淡的灰色分隔线 */
+	border-top: 1px solid #e5e5ea !important;
+
+	/* 👆 调整线【上方】的空白高度（与上方 Services 隔开多远） */
+	margin-top: 30px !important;
+
+	/* 👇 调整线【下方】的空白高度（线到 "Why Partner..." 标题的距离） */
+	padding-top: 40px !important;
+
+	/* 调整这个板块底部的空白高度 */
+	padding-bottom: 20px !important;
+}
+
+/* 2. 每个服务项目之间的上下间距 */
+ul.custom-services-list li {
+	margin-bottom: 15px !important;
+	/* 调整这个数值控制每个服务之间的距离 */
+	display: flex;
+	/* 使用 flex 布局确保图片和文字能在一行内更好地对齐 */
+	align-items: flex-start;
+}
+
+/* 3. 图片尺寸与左右间距 */
+ul.custom-services-list li img {
+	/* 调整这里控制图片的宽度 */
+	width: 200px !important;
+
+	/* 调整图片的高度，建议用固定比例或者固定高度 */
+	height: 130px !important;
+	object-fit: cover;
+	/* 确保图片不变形 */
+
+	/* 图片与右侧文字的距离 */
+	margin-right: 20px !important;
+	margin-top: 5px !important;
+	/* 让图片稍微往下一点，与右侧标题对齐 */
+	border-radius: 4px;
+	/* 加一点圆角 */
+}
+
+/* 4. 文字内容区域间距 */
+.service-content {
+	flex: 1;
+	/* 让文字部分占满剩余空间 */
+}
+
+.service-content h3 {
+	margin-bottom: 8px !important;
+	/* 标题与下方段落的距离 */
+	font-size: 1.15em !important;
+}
+
+.service-content p {
+	margin-bottom: 0 !important;
+	/* 清除段落底部的默认间距 */
+	line-height: 1.5;
+	font-size: 0.95em;
+}
+
+/* 为了让左侧的列表也统一风格，如果需要，可以将左侧的 <ul> 也加上 class="big-image-list custom-services-list" */
+
+
+/* ========================================= */
+/* 适配 macOS 浅灰背景的内部样式修正            */
+/* ========================================= */
+
+/* 1. 把内部的蓝框变透明，去掉原本的边框和内阴影 */
+#header {
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+/* 2. 把导航菜单的文字变成深灰色，更有商务质感 */
+#header nav a {
+	color: #333 !important;
+	font-weight: 500;
+	/* 稍微加粗一点增加可读性 */
+}
+
+/* 3. 修改鼠标悬浮在菜单上的效果 (原本是深蓝底色，现在改成浅灰底色) */
+#header nav a:hover,
+#header nav a.current-page-item {
+	background: rgba(0, 0, 0, 0.05) !important;
+	/* 极淡的黑色半透明底 */
+	color: #000 !important;
+	box-shadow: none !important;
+	border-radius: 6px;
+	/* 苹果风圆角 */
+}
+
+/* 4. 如果你的 Logo 还是文字，也把它变成深灰色 (如果是图片 Logo 这条不影响) */
+#header h1 a {
+	color: #222 !important;
+}
+
+/* ========================================= */
+/* 保持顶部导航栏和 Logo 使用原本的紧凑字体      */
+/* ========================================= */
+
+
+/* ========================================= */
+/* 1. 语言下拉菜单样式 (Language Dropdown)      */
+/* ========================================= */
+
+.lang-dropdown {
+	display: inline-block;
+	position: relative;
+	/* 继承外部的对齐方式 */
+}
+
+/* 隐藏下拉框，只有在鼠标悬浮时才显示 */
+.lang-dropdown-content {
+	display: none;
+	position: absolute;
+	top: 80%;
+	/* 靠近主菜单下方 */
+	left: 50%;
+	transform: translateX(-50%);
+	/* 保证下拉框在文字正下方居中 */
+	background-color: #ffffff;
+	min-width: 120px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+	/* 苹果风柔和弥散阴影 */
+	border-radius: 12px;
+	/* 苹果风圆角 */
+	padding: 8px 0;
+	z-index: 10000;
+}
+
+/* 鼠标悬浮时显示下拉框 */
+.lang-dropdown:hover .lang-dropdown-content {
+	display: block;
+	animation: fadeIn 0.2s ease;
+	/* 简单的淡入动画 */
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -5px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+}
+
+/* 下拉框内部链接样式重置 */
+#header nav .lang-dropdown-content a {
+	display: block !important;
+	padding: 10px 20px !important;
+	line-height: 1.2 !important;
+	color: #333333 !important;
+	font-size: 0.9em !important;
+	background: transparent !important;
+	text-align: center;
+	border-radius: 0 !important;
+}
+
+/* 下拉框内部链接 hover 效果：苹果风浅灰色背景 */
+#header nav .lang-dropdown-content a:hover {
+	background-color: #f5f5f7 !important;
+	color: #0071e3 !important;
+	/* 文字变蓝 */
+}
+
+/* ========================================= */
+/* 2. 苹果风格 Contact 蓝色按钮样式             */
+/* ========================================= */
+
+#header nav a.nav-contact-btn {
+	display: inline-block !important;
+	background-color: #0071e3 !important;
+	/* 苹果经典商务蓝 */
+	color: #ffffff !important;
+	/* 文字纯白 */
+
+	/* 尺寸与对齐控制 */
+	padding: 0 20px !important;
+	height: 40px !important;
+	line-height: 40px !important;
+	vertical-align: middle !important;
+	/* 强制与旁边的文字垂直居中对齐 */
+	margin-left: 15px !important;
+	/* 稍微与左边菜单拉开一点呼吸空间 */
+
+	border-radius: 5px !important;
+	/* 胶囊圆角 */
+	font-weight: 500 !important;
+	/* 稍微加粗让按钮更有力量感 */
+	letter-spacing: normal !important;
+	/* 清除原有负字距 */
+	transition: all 0.2s ease !important;
+	/* 丝滑的过渡动画 */
+}
+
+/* 按钮 Hover 效果：轻微提亮并有一点点浮动 */
+#header nav a.nav-contact-btn:hover {
+	background-color: #0077ed !important;
+	transform: scale(1.15);
+	/* 鼠标放上去有轻微的放大交互感 */
+	box-shadow: 0 4px 10px rgba(0, 113, 227, 0.3) !important;
+	/* 淡淡的蓝色光晕 */
+}
+
+/* ========================================= */
+/* Factory Tour 工厂照片墙网格样式与交互效果     */
+/* ========================================= */
+
+.factory-tour-section {
+	/* 💡 添加极淡的灰色分隔线 */
+	border-top: 1px solid #e5e5ea !important;
+
+	/* 👆 调整线【上方】的空白高度（与上方 Why Partner 板块隔开多远） */
+	margin-top: 30px !important;
+
+	/* 👇 调整线【下方】的空白高度（线到 "Factory Tour" 标题的距离） */
+	padding-top: 40px !important;
+
+	/* 调整这个板块底部的空白高度 */
+	padding-bottom: 30px !important;
+}
+
+/* 使用 CSS Grid 布局，默认电脑端 5 列 */
+.factory-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 15px;
+	/* 图片之间的空隙，可根据喜好调大或调小 */
+}
+
+/* 每个图片容器的样式 */
+.factory-item {
+	position: relative;
+	border-radius: 6px;
+	/* 苹果风圆角 */
+	overflow: hidden;
+	/* 核心机制：防止放大的图片溢出容器 */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	/* 淡淡的立体阴影 */
+	/* 强制图片比例为 4:3，哪怕原图尺寸不一也能自动裁齐排好 */
+	aspect-ratio: 4 / 3;
+	background-color: #f5f5f7;
+	/* 图片加载出来前的底色 */
+}
+
+/* 内部图片的样式 */
+.factory-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* 保证图片铺满且不变形 */
+	display: block;
+	/* 放大动画的过渡时间与平滑曲线 */
+	transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 鼠标悬浮时的丝滑放大交互效果 */
+.factory-item:hover img {
+	transform: scale(1.08);
+	/* 放大 1.08 倍，克制且高级 */
+}
+
+/* 📱 响应式适配：平板端 (小于 1200px 时，自动变为 3 列) */
+@media screen and (max-width: 1200px) {
+	.factory-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* 📱 响应式适配：手机端 (小于 736px 时，自动变为 2 列) */
+@media screen and (max-width: 736px) {
+	.factory-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+		/* 手机端空隙稍微缩小一点 */
+	}
+}
+
+/* ========================================= */
+/* 大数字驱动的纯文本核心优势网格 (2x3 Layout)   */
+/* ========================================= */
+
+.why-choose-section {
+	/* 💡 添加极淡的灰色分隔线 */
+	border-top: 1px solid #e5e5ea !important;
+
+	/* 👆 调整线【上方】的空白高度（与上方 Services 隔开多远） */
+	margin-top: 30px !important;
+
+	/* 👇 调整线【下方】的空白高度（线到 "Why Partner..." 标题的距离） */
+	padding-top: 40px !important;
+
+	/* 调整这个板块底部的空白高度 */
+	padding-bottom: 20px !important;
+}
+
+/* 采用 Grid 网格，电脑端 3 列 */
+.text-grid-2x3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	/* 卡片之间的间距 */
+}
+
+/* 极简文字卡片的基础样式 */
+.text-card {
+	background-color: #ffffff;
+	border: 1px solid #e5e5ea;
+	/* 极淡的苹果风边框 */
+	border-radius: 12px;
+	padding: 35px 25px;
+	text-align: center;
+	/* 内容居中 */
+	transition: all 0.3s ease;
+	/* 丝滑过渡动画 */
+}
+
+/* 卡片悬浮交互：轻微上浮 + 柔和阴影 */
+.text-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+	border-color: #d2d2d7;
+}
+
+/* 核心灵魂：极其醒目的大数字 */
+.big-number {
+	font-size: 3em;
+	/* 超大字号 */
+	font-weight: 700;
+	/* 粗体 */
+	color: #0071e3;
+	/* 苹果经典商务蓝，吸引眼球 */
+	line-height: 1;
+	margin-bottom: 10px;
+	letter-spacing: -1.5px;
+	/* 让大数字的字符更紧凑，显得更有力量感 */
+}
+
+/* 卡片内的小标题 */
+.text-card h4 {
+	font-size: 1.25em !important;
+	color: #1d1d1f !important;
+	/* 近乎黑色的深灰 */
+	margin-bottom: 12px !important;
+	font-weight: 600 !important;
+}
+
+/* 卡片内的补充说明段落 */
+.text-card p {
+	font-size: 0.95em !important;
+	color: #515154 !important;
+	/* 柔和的灰色，区分层级 */
+	line-height: 1.6 !important;
+	margin: 0 !important;
+}
+
+/* 📱 响应式：平板端变为 2 列 */
+@media screen and (max-width: 980px) {
+	.text-grid-2x3 {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+/* 📱 响应式：手机端变为 1 列 */
+@media screen and (max-width: 736px) {
+	.text-grid-2x3 {
+		grid-template-columns: 1fr;
+	}
+
+	.big-number {
+		font-size: 2.5em;
+		/* 手机端数字稍微缩减一点 */
+	}
+}
+
+/* ========================================= */
+/* Contact 联系方式区域样式 (三列布局)           */
+/* ========================================= */
+
+.contact-col {
+	padding: 0 15px;
+	margin-bottom: 30px;
+}
+
+.contact-col h3 {
+	font-size: 1.3em !important;
+	margin-bottom: 10px !important;
+	color: #1d1d1f;
+}
+
+/* 1. 表单样式 (苹果极简风) */
+.custom-form input,
+.custom-form textarea {
+	width: 100%;
+	padding: 12px 15px;
+	margin-bottom: 15px;
+	border: 1px solid #d2d2d7;
+	border-radius: 8px;
+	/* 柔和圆角 */
+	font-family: inherit;
+	font-size: 0.95em;
+	background-color: #fbfbfd;
+	transition: all 0.3s;
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus {
+	border-color: #0071e3;
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+	/* 聚焦时的蓝色光晕 */
+}
+
+.submit-btn {
+	width: 100%;
+	padding: 12px 0;
+	background-color: #0071e3;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 1em;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+	background-color: #0077ed;
+}
+
+/* 2. 快捷联系按钮样式 (带品牌识别色) */
+.quick-contact-links a {
+	display: block;
+	width: 100%;
+	padding: 12px 20px;
+	margin-bottom: 12px;
+	border-radius: 8px;
+	text-align: left;
+	font-weight: 500;
+	text-decoration: none;
+	transition: transform 0.2s, box-shadow 0.2s;
+	color: white !important;
+}
+
+.quick-contact-links a:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-email {
+	background-color: #0071e3;
+}
+
+.btn-whatsapp {
+	background-color: #25D366;
+}
+
+/* WhatsApp 经典绿 */
+.btn-phone {
+	background-color: #34c759;
+}
+
+/* 苹果电话绿 */
+.btn-tiktok {
+	background-color: #000000;
+}
+
+/* TikTok 经典黑 */
+
+/* 3. 地址与地图样式 */
+.address-box p {
+	font-size: 0.95em;
+	line-height: 1.6;
+	margin-bottom: 15px !important;
+	color: #333;
+}
+
+/* 突出显示机场和广交会距离的标签 */
+.location-advantage {
+	margin-bottom: 15px;
+}
+
+.location-advantage .badge {
+	display: inline-block;
+	background-color: #f5f5f7;
+	color: #1d1d1f;
+	font-size: 0.85em;
+	padding: 6px 10px;
+	border-radius: 6px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #e5e5ea;
+}
+
+.map-container {
+	border-radius: 8px;
+	overflow: hidden;
+	border: 1px solid #e5e5ea;
+}
+
+/* ========================================= */
+/* 快捷联系方式 SVG 图标与账号排版             */
+/* ========================================= */
+
+/* 快捷链接卡片化，使用 Flexbox 实现图标和文字的垂直居中 */
+.contact-item {
+	display: flex !important;
+	align-items: center;
+	/* 垂直居中对齐 */
+	width: 100%;
+	padding: 12px 16px;
+	margin-bottom: 12px;
+	background-color: #fbfbfd;
+	/* 极淡的灰白底色 */
+	border: 1px solid #e5e5ea;
+	border-radius: 8px;
+	color: #333333 !important;
+	/* 文字颜色 */
+	font-weight: 500;
+	font-size: 0.95em;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+/* 悬浮交互：外框变蓝，轻微阴影 */
+.contact-item:hover {
+	border-color: #0071e3;
+	background-color: #ffffff;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 113, 227, 0.08);
+}
+
+/* 控制 SVG 图标的大小和间距 */
+.contact-icon {
+	width: 22px;
+	height: 22px;
+	margin-right: 12px;
+	flex-shrink: 0;
+	/* 防止图标被长文字挤压变形 */
+}
+
+/* ========================================= */
+/* 双地址排版 (Showroom & Factory)             */
+/* ========================================= */
+
+.address-item {
+	display: flex;
+	align-items: flex-start;
+	/* 顶部对齐 */
+}
+
+.address-icon {
+	width: 24px;
+	height: 24px;
+	margin-right: 12px;
+	margin-top: 3px;
+	/* 微调图标，使其与第一行文字对齐 */
+	flex-shrink: 0;
+}
+
+.address-box strong {
+	display: block;
+	font-size: 1.05em;
+	color: #1d1d1f;
+	margin-bottom: 4px;
+}
+
+.address-box p {
+	font-size: 0.9em;
+	color: #555;
+	margin-bottom: 8px !important;
+	line-height: 1.5;
+}
+
+/* ========================================= */
+/* 修复：强制 Direct Contact 里的文字显示为深色 */
+/* ========================================= */
+
+.quick-contact-links a.contact-item,
+.quick-contact-links a.contact-item span {
+	color: #333333 !important;
+	/* 强制改回深灰色 */
+}
+
+/* ========================================= */
+/* 极简底部版权声明条 (Copyright Bar)            */
+/* ========================================= */
+
+#copyright-bar {
+	background-color: #f5f5f7;
+	/* 苹果风格的极浅灰色底 */
+	border-top: 1px solid #e5e5ea;
+	/* 与上方内容区隔的淡淡横线 */
+	padding: 20px 0;
+	font-size: 0.85em;
+	/* 字号要小，保持克制和低调 */
+	color: #86868b;
+	/* 苹果风的次要文字灰 */
+}
+
+/* 使用 Flexbox 让左右两端对齐 */
+.copyright-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	/* 空间不够时允许折行 */
+}
+
+.copy-text p {
+	margin: 0 !important;
+	line-height: 1.5 !important;
+	color: inherit !important;
+}
+
+/* 右侧链接样式 */
+.footer-links a {
+	color: #86868b;
+	text-decoration: none;
+	margin-left: 20px;
+	transition: color 0.2s ease;
+}
+
+/* 鼠标悬浮时链接变深色 */
+.footer-links a:hover {
+	color: #1d1d1f;
+}
+
+/* 📱 响应式：手机端居中堆叠排版 */
+@media screen and (max-width: 736px) {
+	.copyright-content {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.footer-links {
+		margin-top: 12px;
+	}
+
+	.footer-links a {
+		margin: 0 10px;
+		/* 手机端链接之间的距离 */
+	}
+}
+
+/* ========================================= */
+/* 底部二维码排版样式 (QR Codes Wrapper)         */
+/* ========================================= */
+
+.qr-codes-wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	/* 三个二维码之间的间距 */
+	margin-top: 20px;
+	/* 距离上方文字列表的距离 */
+}
+
+.qr-item {
+	flex: 1;
+	/* 让三个二维码等宽平分空间 */
+	text-align: center;
+}
+
+/* 二维码外层的白色精致边框容器 */
+.qr-img-box {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	/* 强制容器为正方形 */
+	background-color: #ffffff;
+	border: 1px solid #e5e5ea;
+	border-radius: 5px;
+	/* 苹果风圆角 */
+	padding: 3px;
+	/* 给内部二维码留出一点白边，类似相框 */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	margin-bottom: 3px;
+	/* 与下方文字的距离 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 内部二维码图片本身 */
+.qr-img-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 4px;
+	background-color: #f5f5f7;
+	/* 图片加载出来前的底色 */
+}
+
+/* 二维码下方的平台名称文字 */
+.qr-item span {
+	display: block;
+	font-size: 0.85em !important;
+	color: #333333 !important;
+	/* 统一的深灰色文字 */
+	font-weight: 500 !important;
+}
+
+/* 📱 响应式：在极小屏幕手机上微调二维码间距 */
+@media screen and (max-width: 480px) {
+	.qr-codes-wrapper {
+		gap: 10px;
+	}
+
+	.qr-img-box {
+		padding: 4px;
+	}
+}
+
+/* ========================================= */
+/* 服务列表统一采用 Grid 真正的双列网格布局       */
+/* ========================================= */
+
+ul.custom-services-list {
+	display: grid !important;
+	grid-template-columns: repeat(2, 1fr);
+	/* 电脑端强制分为 2 列 */
+	column-gap: 40px;
+	/* 左右两列之间的空隙 */
+	row-gap: 15px;
+	/* 上下行之间的空隙 */
+	padding-top: 20px;
+}
+
+/* 修复在 Grid 布局下的边距重叠问题 */
+ul.custom-services-list li {
+	margin-bottom: 0 !important;
+	width: 100%;
+}
+
+/* 📱 响应式：屏幕小于 980px（手机或小平板）时，自动变回 1 列上下排列 */
+@media screen and (max-width: 980px) {
+	ul.custom-services-list {
+		grid-template-columns: 1fr;
+		/* 变回单列 */
+		row-gap: 25px;
+		/* 单列模式下稍微加大上下间距 */
+	}
+}
+
+
+/* ========================================= */
+/* Products Category 苹果风格展示区            */
+/* ========================================= */
+
+.products-category-section {
+	/* 💡 添加极淡的灰色分隔线 */
+	border-top: 1px solid #e5e5ea !important;
+	/* 👆 调整线【上方】的空白高度（与上方 隔开多远） */
+	margin-top: 30px !important;
+	/* 👇 调整线【下方】的空白高度（线到 "product" 标题的距离） */
+	padding-top: 40px !important;
+	/* 调整这个板块底部的空白高度 */
+	padding-bottom: 20px !important;
+	border-top: 1px solid #e5e5ea;
+	/* 与上方内容区隔的淡淡横线 */
+	margin-bottom: 20px !important;
+	/* 与下方 Advantages 板块保持呼吸间距 */
+}
+
+/* 整个卡片可点击 */
+a.category-card {
+	display: block;
+	background-color: #ffffff;
+	border: 1px solid #e5e5ea;
+	/* 极淡的苹果风边框 */
+	border-radius: 12px;
+	/* 苹果风圆角 */
+	padding: 20px;
+	/* 增加内边距 */
+	text-align: center;
+	text-decoration: none !important;
+	/* 去除链接下划线 */
+	transition: all 0.3s ease;
+	/* 丝滑过渡动画 */
+	height: 100%;
+	/* 确保高度一致 */
+	overflow: hidden;
+}
+
+/* 悬浮交互：轻微上浮 + 柔和弥散阴影 (还原 Apple Store 卡片质感) */
+a.category-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+	border-color: #d2d2d7;
+	/* 悬浮时边框稍深一点 */
+}
+
+/* 图片容器：固定比例，溢出隐藏 (用于内部放大效果) */
+.category-card .image-wrapper {
+	width: 100%;
+	aspect-ratio: 16 / 12;
+	/* 强制统一的宽幅景观比例，非常大气 */
+	border-radius: 8px;
+	/* 内部小圆角 */
+	overflow: hidden;
+	margin-bottom: 15px;
+	/* 图片与标题的距离 */
+	background-color: #fbfbfd;
+	/* 加载前的浅灰底色 */
+}
+
+/* 内部图片的样式 */
+.category-card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* 保证铺满且不变形 */
+	display: block;
+	transition: transform 0.5s ease;
+	/* 内部放大的过渡时间 */
+}
+
+/* 悬浮时内部图片轻微放大 (高级呼吸感) */
+a.category-card:hover img {
+	transform: scale(1.05);
+}
+
+/* 产品类别标题样式 */
+.category-card h3 {
+	font-size: 1.15em !important;
+	color: #1d1d1f !important;
+	/* 苹果深灰 */
+	font-weight: 600 !important;
+	/* 半粗体 */
+	margin-bottom: 0 !important;
+	line-height: 1.3;
+}
+
+/* ========================================= */
+/* 修复：将导航栏左右边缘与下方内容严格对齐      */
+/* ========================================= */
+
+#header {
+	padding: 0 !important;
+	/* 移除原本左右 40px 的内边距 */
+}
+
+#header h1 {
+	left: 0 !important;
+	/* 让左侧的 Logo 紧贴容器的最左侧边缘 */
+}
+
+#header nav {
+	right: 0 !important;
+	/* 让右侧的 Contact 按钮及菜单紧贴容器的最右侧边缘 */
+}
