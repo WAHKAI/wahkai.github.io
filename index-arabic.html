@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="ar" dir="rtl">
 
 <head>
-    <title>SANDA Backpack Manufacturer</title>
+    <title>SANDA لتصنيع حقائب الظهر</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -13,37 +13,123 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* 导航栏与 Logo 翻转 */
+        #header h1 {
+            left: auto !important;
+            right: 0 !important;
+        }
+
+        #header nav {
+            right: auto !important;
+            left: 0 !important;
+        }
+
+        /* 标题与蓝色短线翻转 */
+        #main section h2,
+        .footer-main-title {
+            text-align: right !important;
+        }
+
+        #main section h2::after,
+        .footer-main-title::after {
+            margin-left: auto !important;
+            margin-right: 0 !important;
+        }
+
+        /* 各种左右间距反转 */
+        .adv-img,
+        .contact-icon,
+        .address-icon {
+            margin-right: 0;
+            margin-left: 15px;
+        }
+
+        .cta-text strong {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+
+        .footer-brand-flex {
+            align-items: flex-start;
+            text-align: right;
+        }
+
+        .footer-slogan-wrap p {
+            text-align: right !important;
+        }
+
+        /* 🌟 核心修复 A：全局应用阿拉伯语高级字体 */
+        body,
+        p,
+        span,
+        a,
+        li,
+        div,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Cairo', sans-serif !important;
+        }
+
+        body {
+            font-size: 15pt;
+        }
+
+        /* 阿拉伯语稍微大一点会更容易阅读 */
+        .stat-num span {
+            margin-right: 5px;
+            margin-left: 0;
+        }
+
+        .timeline-step {
+            text-align: right;
+        }
+
+        /* 🌟 核心修复 B：强行用 Flex 引擎让数字在圆圈内绝对居中 */
+        .step-circle {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            line-height: 1 !important;
+            /* 解除原有高度对基线的干扰 */
+        }
+    </style>
 </head>
 
 <body>
     <div id="page-wrapper">
 
-        <!-- Header -->
         <div id="header-wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
 
                         <header id="header">
-                            <h1><a href="index.html" id="logo">
+                            <h1><a href="index-arabic.html" id="logo">
                                     <img src="images/SANDA.png" alt="SANDA" />
                                 </a></h1>
                             <nav id="nav">
-                                <a href="#about" class="current-page-item">About</a>
-                                <a href="#featured-products">Products</a>
-                                <a href="#core-services">Services</a>
+                                <a href="#about" class="current-page-item">من نحن</a>
+                                <a href="#featured-products">المنتجات</a>
+                                <a href="#core-services">الخدمات</a>
 
                                 <div class="lang-dropdown">
-                                    <a href="javascript:void(0);" class="lang-dropbtn">Language ▾</a>
+                                    <a href="javascript:void(0);" class="lang-dropbtn">اللغة ▾</a>
                                     <div class="lang-dropdown-content">
+                                        <a href="index.html">English</a>
                                         <a href="index-es.html">Español</a>
                                         <a href="index-fr.html">Français</a>
-                                        <a href="index-arabic.html">العربية</a>
                                         <a href="index-malay.html">Bahasa</a>
                                     </div>
                                 </div>
 
-                                <a href="#contact" class="nav-contact-btn">Contact</a>
+                                <a href="#quote"  class="nav-contact-btn">اتصل بنا</a>
                             </nav>
                         </header>
 
@@ -52,7 +138,6 @@
             </div>
         </div>
 
-        <!-- Banner -->
         <div id="banner-wrapper">
             <div class="container">
                 <div id="banner-slider">
@@ -60,20 +145,20 @@
                         <div class="slide">
                             <img src="images/banner/banner1.jpg"
                                 alt="SANDA Factory Overview">
-                            <div class="slide-text">Professional Bag Manufacturer Since 2019</div>
+                            <div class="slide-text">شركة تصنيع حقائب احترافية منذ عام 2019</div>
                         </div>
                         <div class="slide">
                             <img src="images/banner/banner2.jpg" alt="Production Line">
-                            <div class="slide-text">50,000+ pcs Monthly Capacity</div>
+                            <div class="slide-text">طاقة إنتاجية تتجاوز 50,000 قطعة شهرياً</div>
                         </div>
                         <div class="slide">
                             <img src="images/banner/banner3.jpg" alt="Premium Backpacks">
-                            <div class="slide-text">OEM & ODM Customization Services</div>
+                            <div class="slide-text">خدمات التخصيص الشاملة OEM و ODM</div>
                         </div>
                     </div>
 
-                    <button class="slide-btn prev-btn">&#10094;</button>
-                    <button class="slide-btn next-btn">&#10095;</button>
+                    <button class="slide-btn prev-btn">❮</button>
+                    <button class="slide-btn next-btn">❯</button>
 
                     <div class="slider-dots">
                         <span class="dot active"></span>
@@ -93,22 +178,21 @@
                             <div class="about-split-layout">
 
                                 <div class="about-left-intro">
-                                    <h2>About SANDA</h2>
-                                    <h3 class="about-subtitle">Driven by design, powered by scale.</h3>
-                                    <p>Founded in <strong style="color: #0071e3;">2019</strong> and located in
-                                        Guangzhou, China, our modern factory covers <strong
-                                            style="color: #0071e3;">7,000 m²</strong>. Equipped with 7 dedicated
-                                        production lines, an in-house R&D department, and 183 skilled professionals, we
-                                        provide seamless <strong style="color: #0071e3;">one-stop OEM & ODM
-                                            solutions</strong> backed by rigorous quality control.We have proudly
-                                        manufactured custom-branded outdoor backpacks for well-known global leaders,
-                                        including <strong style="color: #0071e3;">Walmart</strong> and <strong
-                                            style="color: #0071e3;">Watsons</strong>. Our robust capacity reaches
-                                        <strong style="color: #0071e3;">50,000+ pcs monthly</strong>, delivering rapid
-                                        samples in just 7 days to keep your brand highly competitive.
+                                    <h2>نبذة عن SANDA</h2>
+                                    <h3 class="about-subtitle">مدفوعون بالتصميم، مدعومون بالقدرة الإنتاجية.</h3>
+                                    <p>تأسس مصنعنا في عام <strong style="color: #0071e3;">2019</strong> ويقع في
+                                        قوانغتشو، الصين، ويمتد مصنعنا الحديث على مساحة <strong
+                                            style="color: #0071e3;">7,000 متر مربع</strong>. نحن مجهزون بـ 7 خطوط إنتاج
+                                        مخصصة، وقسم بحث وتطوير داخلي، و 183 محترفاً ماهراً، نقدم <strong
+                                            style="color: #0071e3;">حلول OEM و ODM متكاملة</strong> مدعومة بمراقبة جودة
+                                        صارمة. لقد قمنا بفخر بتصنيع حقائب ظهر خارجية مخصصة للعلامات التجارية العالمية
+                                        الرائدة، بما في ذلك <strong style="color: #0071e3;">Walmart</strong> و <strong
+                                            style="color: #0071e3;">Watsons</strong>. تصل قدرتنا الإنتاجية القوية إلى
+                                        <strong style="color: #0071e3;">أكثر من 50,000 قطعة شهرياً</strong>، مع تسليم
+                                        عينات سريعة في غضون 7 أيام فقط للحفاظ على تنافسية علامتك التجارية.
                                     </p>
                                     <div class="about-action">
-                                        <a href="#quote" class="button">Get Catalog & Sample</a>
+                                        <a href="#contact" class="button">احصل على الكتالوج والعينات</a>
                                     </div>
                                 </div>
 
@@ -116,45 +200,45 @@
 
                                     <div class="stats-grid-3x3">
                                         <div class="stat-card">
-                                            <div class="stat-num">7,000<span>m²</span></div>
-                                            <div class="stat-label">Modern Facility</div>
+                                            <div class="stat-num">7,000<span>م²</span></div>
+                                            <div class="stat-label">منشأة حديثة</div>
                                         </div>
                                         <div class="stat-card">
                                             <div class="stat-num">50k+</div>
-                                            <div class="stat-label">Monthly Capacity</div>
+                                            <div class="stat-label">طاقة شهرية</div>
                                         </div>
                                         <div class="stat-card">
                                             <div class="stat-num">183</div>
-                                            <div class="stat-label">Skilled Workers</div>
+                                            <div class="stat-label">عمال مهرة</div>
                                         </div>
                                         <div class="stat-card">
                                             <div class="stat-num">135</div>
-                                            <div class="stat-label">Advanced Machines</div>
+                                            <div class="stat-label">آلات متقدمة</div>
                                         </div>
                                         <div class="stat-card">
                                             <div class="stat-num">7</div>
-                                            <div class="stat-label">Production Lines</div>
+                                            <div class="stat-label">خطوط إنتاج</div>
                                         </div>
                                         <div class="stat-card">
                                             <div class="stat-num">6</div>
-                                            <div class="stat-label">In-House Designers</div>
+                                            <div class="stat-label">مصممون داخليون</div>
                                         </div>
                                         <div class="stat-card">
                                             <div class="stat-num">100<span>%</span></div>
-                                            <div class="stat-label">QC Inspection</div>
+                                            <div class="stat-label">فحص الجودة</div>
                                         </div>
                                         <div class="stat-card">
                                             <div class="stat-num">10<span>+</span></div>
-                                            <div class="stat-label">Global Markets</div>
+                                            <div class="stat-label">أسواق عالمية</div>
                                         </div>
                                         <div class="stat-card">
-                                            <div class="stat-num">7<span> Days</span></div>
-                                            <div class="stat-label">Rapid Sampling</div>
+                                            <div class="stat-num">7<span> أيام</span></div>
+                                            <div class="stat-label">عينات سريعة</div>
                                         </div>
                                     </div>
 
                                     <div class="trust-signals-wrapper">
-                                        <span class="trust-title">TRUSTED BY GLOBAL BRANDS</span>
+                                        <span class="trust-title">موثوقون من قبل العلامات التجارية العالمية</span>
 
                                         <div class="scrolling-logo-wall">
                                             <div class="logo-track">
@@ -184,7 +268,7 @@
                 <div class="row">
                     <div class="col-12">
                         <section class="products-category-section global-section" id="featured-products">
-                            <h2>Featured Collections</h2>
+                            <h2>التشكيلات المميزة</h2>
 
                             <div class="category-master-detail" id="category-module">
 
@@ -192,29 +276,29 @@
                                     <ul class="category-menu" id="category-menu-list">
                                         <li class="active" onclick="switchCategory(event, 'cat-laptop')"
                                             data-bg="images/ProductList/mood-laptop.jpg"
-                                            data-text="Designed for Urban Professionals">Laptop Bags</li>
+                                            data-text="مصممة للمحترفين في المدن">حقائب لابتوب</li>
                                         <li onclick="switchCategory(event, 'cat-hiking')"
                                             data-bg="images/ProductList/mood-hiking.jpg"
-                                            data-text="Built for Extreme Outdoors">Hiking Bags</li>
+                                            data-text="صُممت للظروف الخارجية القاسية">حقائب تنزه</li>
                                         <li onclick="switchCategory(event, 'cat-school')"
                                             data-bg="images/ProductList/mood-school.jpg"
-                                            data-text="Ergonomic & Fun for Kids">School Bags</li>
+                                            data-text="مريحة وممتعة للأطفال">حقائب مدرسية</li>
                                         <li onclick="switchCategory(event, 'cat-tote')"
                                             data-bg="images/ProductList/mood-tote.jpg"
-                                            data-text="Eco-Friendly Daily Carry">Tote Bags</li>
+                                            data-text="حقائب يومية صديقة للبيئة">حقائب توت</li>
                                         <li onclick="switchCategory(event, 'cat-duffle')"
-                                            data-bg="images/ProductList/mood-duffle.jpg"
-                                            data-text="Spacious Travel Companions">Duffle Bags</li>
+                                            data-bg="images/ProductList/mood-duffle.jpg" data-text="رفيق السفر الواسع">
+                                            حقائب دافل</li>
                                         <li onclick="switchCategory(event, 'cat-sling')"
-                                            data-bg="images/ProductList/mood-sling.jpg"
-                                            data-text="Lightweight & Hands-Free">Waist & Sling Bags</li>
+                                            data-bg="images/ProductList/mood-sling.jpg" data-text="خفيفة الوزن وعملية">
+                                            حقائب خصر وكتف</li>
                                     </ul>
 
                                     <div class="category-mood-box">
                                         <img id="mood-image" src="images/ProductList/mood-laptop.jpg"
                                             alt="Category Mood" loading="lazy">
                                         <div class="mood-overlay">
-                                            <span id="mood-text">Designed for Urban Professionals</span>
+                                            <span id="mood-text">مصممة للمحترفين في المدن</span>
                                         </div>
                                     </div>
                                 </div>
@@ -224,131 +308,131 @@
                                     <div id="cat-laptop" class="product-grid-2x3 active-grid">
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/laptop1.jpg"
-                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: LT-8012</span>
+                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: LT-8012</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/laptop2.jpg"
-                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: LT-8013</span>
+                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: LT-8013</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/laptop3.jpg"
-                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: LT-8014</span>
+                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: LT-8014</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/laptop4.jpg"
-                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: LT-8015</span>
+                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: LT-8015</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/laptop5.jpg"
-                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: LT-8016</span>
+                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: LT-8016</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/laptop6.jpg"
-                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: LT-8017</span>
+                                                    alt="Laptop Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: LT-8017</span>
                                         </div>
                                     </div>
 
                                     <div id="cat-hiking" class="product-grid-2x3">
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/hiking1.jpg"
-                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: HK-5021</span>
+                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: HK-5021</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/hiking2.jpg"
-                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: HK-5022</span>
+                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: HK-5022</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/hiking3.jpg"
-                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: HK-5023</span>
+                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: HK-5023</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/hiking4.jpg"
-                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: HK-5024</span>
+                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: HK-5024</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/hiking5.jpg"
-                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: HK-5025</span>
+                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: HK-5025</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/hiking6.jpg"
-                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: HK-5026</span>
+                                                    alt="Hiking Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: HK-5026</span>
                                         </div>
                                     </div>
 
                                     <div id="cat-school" class="product-grid-2x3">
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/school1.jpg"
-                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: SC-3011</span>
+                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SC-3011</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/school2.jpg"
-                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: SC-3012</span>
+                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SC-3012</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/school3.jpg"
-                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: SC-3013</span>
+                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SC-3013</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/school4.jpg"
-                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: SC-3014</span>
+                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SC-3014</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/school5.jpg"
-                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: SC-3015</span>
+                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SC-3015</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/school6.jpg"
-                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: SC-3016</span>
+                                                    alt="School Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SC-3016</span>
                                         </div>
                                     </div>
 
                                     <div id="cat-tote" class="product-grid-2x3">
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/tote1.jpg"
-                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">Item No.:
+                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">رقم الصنف:
                                                 TB-2051</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/tote2.jpg"
-                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">Item No.:
+                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">رقم الصنف:
                                                 TB-2052</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/tote3.jpg"
-                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">Item No.:
+                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">رقم الصنف:
                                                 TB-2053</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/tote4.jpg"
-                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">Item No.:
+                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">رقم الصنف:
                                                 TB-2054</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/tote5.jpg"
-                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">Item No.:
+                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">رقم الصنف:
                                                 TB-2055</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/tote6.jpg"
-                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">Item No.:
+                                                    alt="Tote Bag" loading="lazy"></div><span class="prod-id">رقم الصنف:
                                                 TB-2056</span>
                                         </div>
                                     </div>
@@ -356,66 +440,66 @@
                                     <div id="cat-duffle" class="product-grid-2x3">
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/duffle1.jpg"
-                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: DF-9081</span>
+                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: DF-9081</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/duffle2.jpg"
-                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: DF-9082</span>
+                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: DF-9082</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/duffle3.jpg"
-                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: DF-9083</span>
+                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: DF-9083</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/duffle4.jpg"
-                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: DF-9084</span>
+                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: DF-9084</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/duffle5.jpg"
-                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: DF-9085</span>
+                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: DF-9085</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/duffle6.jpg"
-                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">Item
-                                                No.: DF-9086</span>
+                                                    alt="Duffle Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: DF-9086</span>
                                         </div>
                                     </div>
 
                                     <div id="cat-sling" class="product-grid-2x3">
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/sling1.jpg"
-                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">Item No.:
-                                                SL-7041</span>
+                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SL-7041</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/sling2.jpg"
-                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">Item No.:
-                                                SL-7042</span>
+                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SL-7042</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/sling3.jpg"
-                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">Item No.:
-                                                SL-7043</span>
+                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SL-7043</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/sling4.jpg"
-                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">Item No.:
-                                                SL-7044</span>
+                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SL-7044</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/sling5.jpg"
-                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">Item No.:
-                                                SL-7045</span>
+                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SL-7045</span>
                                         </div>
                                         <div class="prod-card">
                                             <div class="prod-img-wrapper"><img src="images/ProductList/sling6.jpg"
-                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">Item No.:
-                                                SL-7046</span>
+                                                    alt="Sling Bag" loading="lazy"></div><span class="prod-id">رقم
+                                                الصنف: SL-7046</span>
                                         </div>
                                     </div>
 
@@ -424,10 +508,11 @@
 
                             <div class="cta-capsule-banner">
                                 <div class="cta-text">
-                                    <strong>Looking for more styles? Need a custom quote for these bags?</strong>
-                                    <span>Feel Free to Contact -></span>
+                                    <strong>هل تبحث عن المزيد من التصاميم؟ هل تحتاج إلى عرض أسعار مخصص لهذه
+                                        الحقائب؟</strong>
+                                    <span>لا تتردد في التواصل معنا</span>
                                 </div>
-                                <a href="#quote" class="cta-btn" >Get Latest Full Catalog</a>
+                                <a href="#quote" class="cta-btn">احصل على أحدث كتالوج كامل</a>
                             </div>
 
                         </section>
@@ -444,17 +529,17 @@
                     <div class="row">
                         <div class="col-12">
                             <section class="services-section global-section" id="core-services">
-                                <h2>Core Services & Capabilities</h2>
-                                <p class="section-subtitle">Comprehensive manufacturing solutions designed to scale your
-                                    brand with efficiency and precision.</p>
+                                <h2>الخدمات الأساسية والقدرات</h2>
+                                <p class="section-subtitle">حلول تصنيع شاملة مصممة لتوسيع نطاق علامتك التجارية بكفاءة
+                                    ودقة.</p>
 
                                 <div class="bento-grid-2rows">
 
                                     <div class="bento-card bento-wide">
                                         <div class="bento-text">
-                                            <h3>OEM & ODM</h3>
-                                            <p>100% end-to-end customization from tech packs to bespoke packaging with
-                                                500+ premium materials.</p>
+                                            <h3>تصنيع المعدات الأصلية والتصميم الأصلي (OEM & ODM)</h3>
+                                            <p>تخصيص شامل بنسبة 100% من الحزم التقنية إلى التغليف المخصص مع أكثر من 500
+                                                مادة ممتازة.</p>
                                         </div>
                                         <img src="images/Services/Service2.jpg" alt="OEM & ODM" class="bento-img-right"
                                             loading="lazy">
@@ -464,8 +549,8 @@
                                         <img src="images/Services/Service3.jpg" alt="Prototyping" class="bento-img-top"
                                             loading="lazy">
                                         <div class="bento-text">
-                                            <h3>Prototyping</h3>
-                                            <p>Physical samples in just 7 days.</p>
+                                            <h3>النماذج الأولية</h3>
+                                            <p>عينات مادية في 7 أيام فقط.</p>
                                         </div>
                                     </div>
 
@@ -473,16 +558,16 @@
                                         <img src="images/Services/Service4.jpg" alt="Design" class="bento-img-top"
                                             loading="lazy">
                                         <div class="bento-text">
-                                            <h3>Design Team</h3>
-                                            <p>300+ innovative styles generated annually.</p>
+                                            <h3>فريق التصميم</h3>
+                                            <p>أكثر من 300 تصميم مبتكر يتم إصداره سنوياً.</p>
                                         </div>
                                     </div>
 
                                     <div class="bento-card bento-overlay">
                                         <img src="images/Services/Service5.jpg" alt="Eco" class="bg-img" loading="lazy">
                                         <div class="overlay-content">
-                                            <h3>Eco-Friendly</h3>
-                                            <p>GRS-certified RPET.</p>
+                                            <h3>صديقة للبيئة</h3>
+                                            <p>مواد RPET معتمدة من GRS.</p>
                                         </div>
                                     </div>
 
@@ -490,8 +575,8 @@
                                         <img src="images/Services/Service7.jpg" alt="QA" class="bento-img-top"
                                             loading="lazy">
                                         <div class="bento-text">
-                                            <h3>Strict QA</h3>
-                                            <p>4-step QC guaranteeing <0.5% defect rate.</p>
+                                            <h3>ضمان جودة صارم</h3>
+                                            <p>فحص جودة من 4 خطوات يضمن معدل عيوب أقل من 0.5%.</p>
                                         </div>
                                     </div>
 
@@ -499,8 +584,8 @@
                                         <img src="images/Services/Service8.jpg" alt="Logistics" class="bg-img"
                                             loading="lazy">
                                         <div class="overlay-content">
-                                            <h3>Logistics</h3>
-                                            <p>Delivery to 50+ countries.</p>
+                                            <h3>الخدمات اللوجستية</h3>
+                                            <p>تسليم إلى أكثر من 50 دولة.</p>
                                         </div>
                                     </div>
 
@@ -508,8 +593,8 @@
                                         <img src="images/Services/Service6.jpg" alt="Market" class="bento-img-top"
                                             loading="lazy">
                                         <div class="bento-text">
-                                            <h3>Market Insights</h3>
-                                            <p>Data-driven trend analysis for buyers.</p>
+                                            <h3>رؤى السوق</h3>
+                                            <p>تحليل اتجاهات السوق المبني على البيانات للمشترين.</p>
                                         </div>
                                     </div>
 
@@ -517,9 +602,9 @@
                                         <img src="images/Services/Service1.jpg" alt="Ready to Ship"
                                             class="bento-img-left" loading="lazy">
                                         <div class="bento-text">
-                                            <h3>Ready-to-Ship</h3>
-                                            <p>10,000+ premium bags in stock for 48-hour global dispatch. Keep your line
-                                                competitive.</p>
+                                            <h3>جاهز للشحن</h3>
+                                            <p>أكثر من 10,000 حقيبة فاخرة في المخزون للإرسال العالمي خلال 48 ساعة. حافظ
+                                                على تنافسية منتجاتك.</p>
                                         </div>
                                     </div>
 
@@ -530,308 +615,291 @@
                 </div>
 
                 <div class="row">
-                            <div class="col-12">
-                                <section class="customization-section global-section">
-                                    <h2 style="text-align: center; margin-bottom: 10px;">End-to-End Customization</h2>
-                                    <p
-                                        style="text-align: center; color: #86868b; font-size: 1.1em; margin-bottom: 40px;">
-                                        From initial concept to global delivery. Explore our standardized process and
-                                        premium capabilities.</p>
+                    <div class="col-12">
+                        <section class="customization-section global-section">
+                            <h2 style="text-align: center; margin-bottom: 10px;">تخصيص متكامل</h2>
+                            <p style="text-align: center; color: #86868b; font-size: 1.1em; margin-bottom: 40px;">
+                                من المفهوم الأولي إلى التسليم العالمي. استكشف عمليتنا الموحدة وقدراتنا المتميزة.</p>
 
-                                    <div class="process-timeline-box">
-                                        <div class="timeline-step">
-                                            <div class="step-circle">1</div>
-                                            <h4>Inquiry & Quote</h4>
-                                            <p>Share your tech packs or ideas.</p>
-                                        </div>
-                                        <div class="timeline-step">
-                                            <div class="step-circle">2</div>
-                                            <h4>Design & Material</h4>
-                                            <p>Select fabrics, logos, and functions.</p>
-                                        </div>
-                                        <div class="timeline-step">
-                                            <div class="step-circle">3</div>
-                                            <h4>Prototyping</h4>
-                                            <p>Physical sample in 7 days.</p>
-                                        </div>
-                                        <div class="timeline-step">
-                                            <div class="step-circle">4</div>
-                                            <h4>Mass Production</h4>
-                                            <p>100% QC with 50k+ capacity.</p>
-                                        </div>
-                                        <div class="timeline-step">
-                                            <div class="step-circle">5</div>
-                                            <h4>Global Delivery</h4>
-                                            <p>Seamless logistics to your door.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="custom-tabs-container">
-
-                                        <div class="custom-tabs-nav">
-                                            <button class="tab-btn active" onclick="openCustomTab(event, 'tab-logo')">1.
-                                                Logo Craft</button>
-                                            <button class="tab-btn" onclick="openCustomTab(event, 'tab-material')">2.
-                                                Materials</button>
-                                            <button class="tab-btn" onclick="openCustomTab(event, 'tab-function')">3.
-                                                Functions</button>
-                                            <button class="tab-btn" onclick="openCustomTab(event, 'tab-color')">4.
-                                                Colors</button>
-                                            <button class="tab-btn" onclick="openCustomTab(event, 'tab-packing')">5.
-                                                Packaging</button>
-                                        </div>
-
-                                        <div id="tab-logo" class="tab-content active">
-                                            <div class="craft-grid-5">
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/logo-silk.jpg"
-                                                            alt="Silk Screen" loading="lazy"></div><span>Silk
-                                                        Screen</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/logo-pu.jpg"
-                                                            alt="PU Logo" loading="lazy"></div><span>PU Logo</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/logo-woven.jpg"
-                                                            alt="Woven Label" loading="lazy"></div><span>Woven
-                                                        Label</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/logo-emboss.jpg"
-                                                            alt="Embossed" loading="lazy"></div><span>Embossed</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/logo-metal.jpg"
-                                                            alt="Metal Logo" loading="lazy"></div><span>Metal
-                                                        Logo</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/logo-wash.jpg"
-                                                            alt="Washing Label" loading="lazy"></div><span>Washing
-                                                        Label</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/logo-embroidery.jpg"
-                                                            alt="Embroidery" loading="lazy"></div>
-                                                    <span>Embroidery</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/logo-rubber.jpg"
-                                                            alt="Rubber Logo" loading="lazy"></div><span>Rubber
-                                                        Logo</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/logo-digital.jpg"
-                                                            alt="Digital Print" loading="lazy"></div><span>Digital
-                                                        Print</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/logo-press.jpg"
-                                                            alt="Press Logo" loading="lazy"></div><span>Heat
-                                                        Press</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div id="tab-material" class="tab-content">
-                                            <div class="craft-grid-4">
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/mat-nylon.jpg"
-                                                            alt="Nylon" loading="lazy"></div><span>Premium Nylon</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/mat-polyester.jpg"
-                                                            alt="Polyester" loading="lazy"></div><span>Polyester</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/mat-canvas.jpg"
-                                                            alt="Canvas" loading="lazy"></div><span>Durable
-                                                        Canvas</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/mat-pu.jpg"
-                                                            alt="PU Leather" loading="lazy"></div><span>PU
-                                                        Leather</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/mat-neoprene.jpg"
-                                                            alt="Neoprene" loading="lazy"></div><span>Neoprene</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/mat-crystal.jpg"
-                                                            alt="Crystal Soft" loading="lazy"></div><span>Crystal
-                                                        Soft</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/mat-corduroy.jpg"
-                                                            alt="Corduroy" loading="lazy"></div><span>Corduroy</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/mat-lamb.jpg"
-                                                            alt="Lamb Wool" loading="lazy"></div><span>Lamb Wool</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div id="tab-function" class="tab-content">
-                                            <div class="craft-grid-5">
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/func-strap.jpg"
-                                                            alt="Strap" loading="lazy"></div><span>Custom Straps</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/func-zipper.jpg"
-                                                            alt="Zipper" loading="lazy"></div><span>Premium
-                                                        Zippers</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/func-puller.jpg"
-                                                            alt="Puller" loading="lazy"></div><span>Custom
-                                                        Pullers</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/func-buckle.jpg"
-                                                            alt="Buckle" loading="lazy"></div><span>Durable
-                                                        Buckles</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/func-audio.jpg"
-                                                            alt="Audio Port" loading="lazy"></div><span>Audio/USB
-                                                        Port</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/func-silicone.jpg"
-                                                            alt="Silicone" loading="lazy"></div><span>Non-slip
-                                                        Silicone</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/func-reflective.jpg"
-                                                            alt="Reflective" loading="lazy"></div><span>Reflective
-                                                        Strips</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/func-leash.jpg"
-                                                            alt="Dog Leash" loading="lazy"></div><span>Pet Leash
-                                                        Hook</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/func-key.jpg"
-                                                            alt="Key Holder" loading="lazy"></div><span>Key
-                                                        Holder</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/func-pocket.jpg"
-                                                            alt="Pocket" loading="lazy"></div><span>Custom
-                                                        Pockets</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div id="tab-color" class="tab-content">
-                                            <div class="craft-grid-2">
-                                                <div class="craft-item" style="padding: 25px;">
-                                                    <div class="craft-img" style="aspect-ratio: 16/9;"><img
-                                                            src="images/custom/color-pantone.jpg"
-                                                            alt="Pantone Color Matching" loading="lazy"></div>
-                                                    <span style="font-size: 1.1em;">Pantone® Solid Coated / Uncoated
-                                                        Matching</span>
-                                                </div>
-                                                <div class="craft-item" style="padding: 25px;">
-                                                    <div class="craft-img" style="aspect-ratio: 16/9;"><img
-                                                            src="images/custom/color-swatch.jpg" alt="Fabric Swatches"
-                                                            loading="lazy"></div>
-                                                    <span style="font-size: 1.1em;">Custom Fabric Dyeing & Stock
-                                                        Swatches</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div id="tab-packing" class="tab-content">
-                                            <div class="craft-grid-5">
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/pack-hangtag.jpg"
-                                                            alt="Custom Hangtags" loading="lazy"></div>
-                                                    <span>Custom Hangtags</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/pack-polybag.jpg"
-                                                            alt="Eco Polybags" loading="lazy"></div>
-                                                    <span>Eco-friendly Polybags</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/pack-dustbag.jpg"
-                                                            alt="Dust Bags" loading="lazy"></div>
-                                                    <span>Non-Woven Dust Bags</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/pack-box.jpg"
-                                                            alt="Gift Boxes" loading="lazy"></div>
-                                                    <span>Premium Gift Boxes</span>
-                                                </div>
-                                                <div class="craft-item">
-                                                    <div class="craft-img"><img src="images/custom/pack-carton.jpg"
-                                                            alt="Export Cartons" loading="lazy"></div>
-                                                    <span>7-Ply Export Cartons</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </section>
+                            <div class="process-timeline-box">
+                                <div class="timeline-step">
+                                    <div class="step-circle">1</div>
+                                    <h4>الاستفسار وعرض الأسعار</h4>
+                                    <p>شاركنا حزمك التقنية أو أفكارك.</p>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="step-circle">2</div>
+                                    <h4>التصميم والمواد</h4>
+                                    <p>اختر الأقمشة، الشعارات، والوظائف.</p>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="step-circle">3</div>
+                                    <h4>النماذج الأولية</h4>
+                                    <p>عينة مادية في 7 أيام.</p>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="step-circle">4</div>
+                                    <h4>الإنتاج الضخم</h4>
+                                    <p>مراقبة جودة بنسبة 100% مع قدرة 50k+.</p>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="step-circle">5</div>
+                                    <h4>التسليم العالمي</h4>
+                                    <p>خدمات لوجستية سلسة حتى باب منزلك.</p>
+                                </div>
                             </div>
-                        </div>
+
+                            <div class="custom-tabs-container">
+
+                                <div class="custom-tabs-nav">
+                                    <button class="tab-btn active" onclick="openCustomTab(event, 'tab-logo')">1.
+                                        صناعة الشعار</button>
+                                    <button class="tab-btn" onclick="openCustomTab(event, 'tab-material')">2.
+                                        المواد</button>
+                                    <button class="tab-btn" onclick="openCustomTab(event, 'tab-function')">3.
+                                        الوظائف</button>
+                                    <button class="tab-btn" onclick="openCustomTab(event, 'tab-color')">4.
+                                        الألوان</button>
+                                    <button class="tab-btn" onclick="openCustomTab(event, 'tab-packing')">5.
+                                        التغليف</button>
+                                </div>
+
+                                <div id="tab-logo" class="tab-content active">
+                                    <div class="craft-grid-5">
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/logo-silk.jpg"
+                                                    alt="Silk Screen" loading="lazy"></div><span>طباعة حريرية</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/logo-pu.jpg" alt="PU Logo"
+                                                    loading="lazy"></div><span>شعار من جلد PU</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/logo-woven.jpg"
+                                                    alt="Woven Label" loading="lazy"></div><span>ملصق منسوج</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/logo-emboss.jpg"
+                                                    alt="Embossed" loading="lazy"></div><span>شعار بارز</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/logo-metal.jpg"
+                                                    alt="Metal Logo" loading="lazy"></div><span>شعار معدني</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/logo-wash.jpg"
+                                                    alt="Washing Label" loading="lazy"></div><span>ملصق العناية</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/logo-embroidery.jpg"
+                                                    alt="Embroidery" loading="lazy"></div>
+                                            <span>تطريز</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/logo-rubber.jpg"
+                                                    alt="Rubber Logo" loading="lazy"></div><span>شعار مطاطي</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/logo-digital.jpg"
+                                                    alt="Digital Print" loading="lazy"></div><span>طباعة رقمية</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/logo-press.jpg"
+                                                    alt="Press Logo" loading="lazy"></div><span>طباعة حرارية</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab-material" class="tab-content">
+                                    <div class="craft-grid-4">
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/mat-nylon.jpg" alt="Nylon"
+                                                    loading="lazy"></div><span>نايلون فاخر</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/mat-polyester.jpg"
+                                                    alt="Polyester" loading="lazy"></div><span>بوليستر</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/mat-canvas.jpg" alt="Canvas"
+                                                    loading="lazy"></div><span>قماش كانفاس متين</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/mat-pu.jpg" alt="PU Leather"
+                                                    loading="lazy"></div><span>جلد PU</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/mat-neoprene.jpg"
+                                                    alt="Neoprene" loading="lazy"></div><span>نيوبرين</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/mat-crystal.jpg"
+                                                    alt="Crystal Soft" loading="lazy"></div><span>مخمل كريستال
+                                                ناعم</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/mat-corduroy.jpg"
+                                                    alt="Corduroy" loading="lazy"></div><span>قماش مضلع
+                                                (كورودروي)</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/mat-lamb.jpg" alt="Lamb Wool"
+                                                    loading="lazy"></div><span>صوف صناعي</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab-function" class="tab-content">
+                                    <div class="craft-grid-5">
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/func-strap.jpg" alt="Strap"
+                                                    loading="lazy"></div><span>أحزمة مخصصة</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/func-zipper.jpg" alt="Zipper"
+                                                    loading="lazy"></div><span>سحابات فاخرة</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/func-puller.jpg" alt="Puller"
+                                                    loading="lazy"></div><span>رؤوس سحابات مخصصة</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/func-buckle.jpg" alt="Buckle"
+                                                    loading="lazy"></div><span>أبازيم متينة</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/func-audio.jpg"
+                                                    alt="Audio Port" loading="lazy"></div><span>منفذ Audio/USB</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/func-silicone.jpg"
+                                                    alt="Silicone" loading="lazy"></div><span>سيليكون مانع
+                                                للانزلاق</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/func-reflective.jpg"
+                                                    alt="Reflective" loading="lazy"></div><span>شرائط عاكسة</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/func-leash.jpg"
+                                                    alt="Dog Leash" loading="lazy"></div><span>خطاف لمقود الحيوانات
+                                                الأليفة</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/func-key.jpg"
+                                                    alt="Key Holder" loading="lazy"></div><span>حامل مفاتيح</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/func-pocket.jpg" alt="Pocket"
+                                                    loading="lazy"></div><span>جيوب مخصصة</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab-color" class="tab-content">
+                                    <div class="craft-grid-2">
+                                        <div class="craft-item" style="padding: 25px;">
+                                            <div class="craft-img" style="aspect-ratio: 16/9;"><img
+                                                    src="images/custom/color-pantone.jpg" alt="Pantone Color Matching"
+                                                    loading="lazy"></div>
+                                            <span style="font-size: 1.1em;">مطابقة ألوان Pantone® المغلفة / غير
+                                                المغلفة</span>
+                                        </div>
+                                        <div class="craft-item" style="padding: 25px;">
+                                            <div class="craft-img" style="aspect-ratio: 16/9;"><img
+                                                    src="images/custom/color-swatch.jpg" alt="Fabric Swatches"
+                                                    loading="lazy"></div>
+                                            <span style="font-size: 1.1em;">صباغة الأقمشة المخصصة وحوامل الأقمشة
+                                                المتوفرة</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab-packing" class="tab-content">
+                                    <div class="craft-grid-5">
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/pack-hangtag.jpg"
+                                                    alt="Custom Hangtags" loading="lazy"></div>
+                                            <span>بطاقات تعليق مخصصة</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/pack-polybag.jpg"
+                                                    alt="Eco Polybags" loading="lazy"></div>
+                                            <span>أكياس بلاستيكية صديقة للبيئة</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/pack-dustbag.jpg"
+                                                    alt="Dust Bags" loading="lazy"></div>
+                                            <span>أكياس حفظ غير منسوجة</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/pack-box.jpg"
+                                                    alt="Gift Boxes" loading="lazy"></div>
+                                            <span>علب هدايا فاخرة</span>
+                                        </div>
+                                        <div class="craft-item">
+                                            <div class="craft-img"><img src="images/custom/pack-carton.jpg"
+                                                    alt="Export Cartons" loading="lazy"></div>
+                                            <span>كراتين تصدير من 7 طبقات</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-12">
                         <section class="why-choose-section global-section">
-                            <h2>Why Partner With SANDA?</h2>
+                            <h2>لماذا الشراكة مع SANDA؟</h2>
                             <div class="text-grid-2x3">
                                 <div class="text-card">
-                                    <div class="big-number">7 Days</div>
-                                    <h3>Rapid Prototyping</h3>
-                                    <p>Time is market share. We turn your concepts and tech packs into physical,
-                                        high-quality samples in just one week.</p>
+                                    <div class="big-number">7 أيام</div>
+                                    <h3>نماذج أولية سريعة</h3>
+                                    <p>الوقت هو حصتك في السوق. نحن نحول مفاهيمك وحزمك التقنية إلى عينات مادية عالية
+                                        الجودة في غضون أسبوع واحد فقط.</p>
                                 </div>
                                 <div class="text-card">
-                                    <div class="big-number">Low MOQ</div>
-                                    <h3>Beginner-Friendly</h3>
-                                    <p>We support growing brands with flexible minimum order quantities, allowing you to
-                                        test the market with minimal financial risk.</p>
+                                    <div class="big-number">كميات منخفضة</div>
+                                    <h3>صديقة للعلامات الناشئة</h3>
+                                    <p>نحن ندعم العلامات التجارية المتنامية بحد أدنى مرن للطلبات، مما يتيح لك اختبار
+                                        السوق بأقل قدر من المخاطر المالية.</p>
                                 </div>
                                 <div class="text-card">
-                                    <div class="big-number">100% NDA</div>
-                                    <h3>Strict Confidentiality</h3>
-                                    <p>Your intellectual property is safe with us. We sign and strictly enforce
-                                        Non-Disclosure Agreements for all your custom designs.</p>
+                                    <div class="big-number">100% اتفاقية سرية</div>
+                                    <h3>سرية تامة</h3>
+                                    <p>حقوق الملكية الفكرية الخاصة بك آمنة معنا. نقوم بتوقيع وتطبيق صارم لاتفاقيات عدم
+                                        الإفصاح لجميع تصميماتك المخصصة.</p>
                                 </div>
                                 <div class="text-card">
                                     <div class="big-number">24/7</div>
-                                    <h3>Transparent Communication</h3>
-                                    <p>No language barriers or ghosting. Your dedicated account manager provides
-                                        real-time updates on your order status.</p>
+                                    <h3>تواصل شفاف</h3>
+                                    <p>لا توجد حواجز لغوية أو انقطاع في التواصل. يوفر لك مدير الحساب المخصص تحديثات في
+                                        الوقت الفعلي حول حالة طلبك.</p>
                                 </div>
                                 <div class="text-card">
-                                    <div class="big-number">0 Hassle</div>
-                                    <h3>End-to-End Logistics</h3>
-                                    <p>From our production line to your designated warehouse. We handle the complex
-                                        shipping, customs, and door-to-door delivery.</p>
+                                    <div class="big-number">صفر عناء</div>
+                                    <h3>لوجستيات متكاملة</h3>
+                                    <p>من خط الإنتاج لدينا إلى المستودع المخصص لك. نحن نتعامل مع الشحن المعقد والجمارك
+                                        والتسليم من الباب إلى الباب.</p>
                                 </div>
                                 <div class="text-card">
-                                    <div class="big-number">Worry-Free</div>
-                                    <h3>After-Sales Guarantee</h3>
-                                    <p>We stand behind our craftsmanship. In the rare event of a manufacturing defect,
-                                        we offer a straightforward replacement policy.</p>
+                                    <div class="big-number">راحة بال</div>
+                                    <h3>ضمان ما بعد البيع</h3>
+                                    <p>نحن نقف وراء براعتنا الحرفية. في حالة حدوث عيب تصنيعي نادر، فإننا نقدم سياسة
+                                        استبدال مباشرة وميسرة.</p>
                                 </div>
                             </div>
                         </section>
                     </div>
                 </div>
-   <div class="row">
+                <div class="row">
                     <div class="col-12">
                         <section class="news-exhibition-section global-section">
-                            <h2>News & Exhibitions</h2>
+                            <h2>الأخبار والمعارض</h2>
 
                             <div class="exhibition-split-layout">
 
@@ -840,22 +908,22 @@
                                         loading="lazy">
                                     <div class="upcoming-overlay">
                                         <div class="upcoming-content">
-                                            <span class="badge">UPCOMING EVENT</span>
-                                            <h3>Meet SANDA at Canton Fair 2026</h3>
+                                            <span class="badge">حدث قادم</span>
+                                            <h3>قابل SANDA في معرض كانتون 2026</h3>
                                             <ul class="event-details">
-                                                <li><strong>Date:</strong> May 1st - 5th, 2026</li>
-                                                <li><strong>Phase:</strong> Phase 3 (Bags & Luggage)</li>
-                                                <li><strong>Booth:</strong> COMING SOON</li>
+                                                <li><strong>التاريخ:</strong> 1 - 5 مايو، 2026</li>
+                                                <li><strong>المرحلة:</strong> المرحلة 3 (الحقائب والأمتعة)</li>
+                                                <li><strong>الجناح:</strong> COMING SOON</li>
                                             </ul>
-                                            <a href="#contact" class="book-meeting-btn">Book a Meeting</a>
+                                            <a href="#contact" class="book-meeting-btn">احجز اجتماعاً</a>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="exhibition-past">
                                     <div class="past-header">
-                                        <h3>Past Highlights & Global Clients</h3>
-                                        <p>Building long-term partnerships with buyers worldwide.</p>
+                                        <h3>أبرز الأحداث السابقة والعملاء العالميين</h3>
+                                        <p>نبني شراكات طويلة الأمد مع المشترين في جميع أنحاء العالم.</p>
                                     </div>
 
                                     <div class="past-gallery-grid-12">
@@ -890,7 +958,7 @@
 
                             </div>
                         </section>
-                        
+
 
 
 
@@ -902,7 +970,7 @@
                 <div class="row">
                     <div class="col-12">
                         <section class="factory-tour-section global-section">
-                            <h2>Factory Tour</h2>
+                            <h2>جولة في المصنع</h2>
                             <div class="factory-grid">
                                 <div class="factory-item"><img src="images/Factory Tour/ft1.jpg" alt="Factory View 1"
                                         loading="lazy"></div>
@@ -932,7 +1000,7 @@
                                         loading="lazy"></div>
                                 <div class="factory-item"><img src="images/Factory Tour/ft14.jpg" alt="Team Work"
                                         loading="lazy"></div>
-                                <div class="factory-item"><img src="images/Factory Tour/ft15.jpg" alt="Sample Room"
+                                <div class="factory-item" ><img src="images/Factory Tour/ft15.jpg" alt="Sample Room"
                                         loading="lazy"></div>
                             </div>
                         </section>
@@ -940,115 +1008,116 @@
                 </div>
 
 
-                <div class="row">
+                <div class="row" id="quote">
                     <div class="col-12">
-                        <section class="faq-quote-section global-section" id="quote">
+                        <section class="faq-quote-section global-section">
                             <div class="faq-split-layout">
 
                                 <div class="faq-left-accordion">
-                                    <h2>Frequently Asked Questions</h2>
+                                    <h2>الأسئلة الشائعة</h2>
                                     <div class="faq-accordion">
 
                                         <details class="faq-item" name="faq">
                                             <summary class="faq-question">
-                                                1. Do you offer OEM & ODM services, and can you customize my logo?
+                                                1. هل تقدمون خدمات OEM و ODM، وهل يمكنكم تخصيص شعاري؟
                                                 <span class="faq-icon">+</span>
                                             </summary>
                                             <div class="faq-answer">
-                                                <p>Absolutely. As a 100% full-service manufacturer, we provide
-                                                    comprehensive OEM & ODM solutions. Backed by our in-house design
-                                                    team, we can customize your bags based on your precise tech packs,
-                                                    including structures, custom branding (embroidery, silk-screen,
-                                                    rubber patches), and bespoke packaging.</p>
+                                                <p>بالتأكيد. بصفتنا شركة مصنعة تقدم خدمات متكاملة بنسبة 100%، فإننا نقدم
+                                                    حلول OEM و ODM شاملة. بدعم من فريق التصميم الداخلي لدينا، يمكننا
+                                                    تخصيص حقائبك بناءً على حزمك التقنية الدقيقة، بما في ذلك الهياكل،
+                                                    والعلامات التجارية المخصصة (التطريز، الطباعة الحريرية، الرقع
+                                                    المطاطية)، والتغليف المخصص.</p>
                                             </div>
                                         </details>
 
                                         <details class="faq-item" name="faq">
                                             <summary class="faq-question">
-                                                2. What types of bags and technical materials can your factory process?
+                                                2. ما هي أنواع الحقائب والمواد التقنية التي يمكن لمصنعكم التعامل معها؟
                                                 <span class="faq-icon">+</span>
                                             </summary>
                                             <div class="faq-answer">
-                                                <p>We specialize in premium outdoor backpacks, travel bags, and daily
-                                                    commuter bags. Our 135 advanced machines allow us to process complex
-                                                    materials, including high-performance waterproof TPU/PVC fabrics,
-                                                    multi-layer insulated cooler structures, and GRS-certified
-                                                    eco-friendly RPET materials.</p>
+                                                <p>نحن متخصصون في حقائب الظهر الخارجية الفاخرة، وحقائب السفر، وحقائب
+                                                    التنقل اليومية. تتيح لنا أجهزتنا المتقدمة البالغ عددها 135 آلة
+                                                    التعامل مع المواد المعقدة، بما في ذلك أقمشة TPU/PVC المقاومة للماء
+                                                    عالية الأداء، وهياكل التبريد المعزولة متعددة الطبقات، ومواد RPET
+                                                    الصديقة للبيئة والمعتمدة من GRS.</p>
                                             </div>
                                         </details>
 
                                         <details class="faq-item" name="faq">
                                             <summary class="faq-question">
-                                                3. What is your Minimum Order Quantity (MOQ) and pricing structure?
+                                                3. ما هو الحد الأدنى لكمية الطلب (MOQ) وهيكل التسعير الخاص بكم؟
                                                 <span class="faq-icon">+</span>
                                             </summary>
                                             <div class="faq-answer">
-                                                <p>Our standard MOQ is typically 500 pcs per style/color, ensuring
-                                                    maximum cost-efficiency for mass production. However, we offer
-                                                    flexible solutions for growing brands. Pricing is tiered based on
-                                                    your order volume, material selection, and design complexity.
-                                                    Contact us for a competitive quote within 24 hours.</p>
+                                                <p>الحد الأدنى القياسي للطلب لدينا هو عادة 500 قطعة لكل نمط/لون، مما
+                                                    يضمن أقصى قدر من كفاءة التكلفة للإنتاج الضخم. ومع ذلك، نحن نقدم
+                                                    حلولاً مرنة للعلامات التجارية المتنامية. يتم تسعير الطلبات على
+                                                    مستويات بناءً على حجم طلبك، واختيار المواد، وتعقيد التصميم. اتصل بنا
+                                                    للحصول على عرض أسعار تنافسي في غضون 24 ساعة.</p>
                                             </div>
                                         </details>
 
                                         <details class="faq-item" name="faq">
                                             <summary class="faq-question">
-                                                4. What is the typical lead time for samples and mass production?
+                                                4. ما هو الوقت النموذجي لتسليم العينات والإنتاج الضخم؟
                                                 <span class="faq-icon">+</span>
                                             </summary>
                                             <div class="faq-answer">
-                                                <p>Speed is our advantage. Custom physical samples and prototypes are
-                                                    typically completed in just <strong>7 to 10 days</strong>. For mass
-                                                    production, our robust monthly capacity of 50,000+ pcs allows us to
-                                                    deliver bulk orders within <strong>25 to 35 days</strong> after
-                                                    sample approval and deposit.</p>
+                                                <p>السرعة هي ميزتنا. عادة ما تكتمل العينات والنماذج الأولية المادية
+                                                    المخصصة في غضون <strong>7 إلى 10 أيام</strong> فقط. بالنسبة للإنتاج
+                                                    الضخم، تتيح لنا قدرتنا الشهرية القوية التي تتجاوز 50,000 قطعة تقديم
+                                                    الطلبات بالجملة في غضون <strong>25 إلى 35 يوماً</strong> بعد
+                                                    الموافقة على العينة والإيداع.</p>
                                             </div>
                                         </details>
 
                                         <details class="faq-item" name="faq">
                                             <summary class="faq-question">
-                                                5. How do you ensure product quality before shipment?
+                                                5. كيف تضمنون جودة المنتج قبل الشحن؟
                                                 <span class="faq-icon">+</span>
                                             </summary>
                                             <div class="faq-answer">
-                                                <p>Quality is non-negotiable. We implement a strict 4-step internal QC
-                                                    protocol, featuring 100% inspection prior to shipping. We guarantee
-                                                    a defect rate of less than 0.5% and fully cooperate with third-party
-                                                    testing agencies (like SGS or BSCI) based on your requirements.</p>
+                                                <p>الجودة أمر غير قابل للتفاوض. نحن نطبق بروتوكول جودة داخلي صارم من 4
+                                                    خطوات، يضم فحصاً بنسبة 100% قبل الشحن. نحن نضمن معدل عيوب يقل عن
+                                                    0.5% ونتعاون بالكامل مع وكالات اختبار تابعة لجهات خارجية (مثل SGS أو
+                                                    BSCI) بناءً على متطلباتك.</p>
                                             </div>
                                         </details>
 
                                         <details class="faq-item" name="faq">
                                             <summary class="faq-question">
-                                                6. What payment methods and terms do you accept?
+                                                6. ما هي طرق الدفع والشروط التي تقبلونها؟
                                                 <span class="faq-icon">+</span>
                                             </summary>
                                             <div class="faq-answer">
-                                                <p>For mass production, our standard term is a 30% T/T deposit before
-                                                    production and a 70% T/T balance before shipment. For large-scale
-                                                    orders, we also accept L/C (Letter of Credit) at sight. Sample fees
-                                                    can be paid conveniently via PayPal or Western Union.</p>
+                                                <p>بالنسبة للإنتاج الضخم، شرطنا القياسي هو إيداع 30% T/T قبل الإنتاج
+                                                    ورصيد 70% T/T قبل الشحن. بالنسبة للطلبات الكبيرة، نقبل أيضاً خطابات
+                                                    الاعتماد (L/C) في الأفق. يمكن دفع رسوم العينات بسهولة عبر PayPal أو
+                                                    Western Union.</p>
                                             </div>
                                         </details>
 
                                     </div>
                                 </div>
 
-                                <div class="faq-right-form">
+                                <div class="faq-right-form" >
                                     <div class="quote-form-card">
-                                        <h3>Get a Quote Now</h3>
+                                        <h3>احصل على عرض أسعار الآن</h3>
                                         <form action="https://formsubmit.co/your-email@example.com" method="POST"
                                             class="quote-form">
                                             <input type="hidden" name="_captcha" value="false">
                                             <input type="hidden" name="_subject"
                                                 value="New Quote Request from SANDA FAQ Page!">
 
-                                            <input type="text" name="name" placeholder="Your Name*" required />
-                                            <input type="email" name="email" placeholder="Work Email*" required />
-                                            <input type="text" name="phone" placeholder="Your Phone" />
-                                            <textarea name="message" placeholder="Please share your specific requirements (e.g., target styles, materials, or estimated quantity). We will reply within 24 hours and send our latest catalog and a tailored quotation to your inbox." required></textarea>
+                                            <input type="text" name="name" placeholder="اسمك*" required />
+                                            <input type="email" name="email" placeholder="البريد الإلكتروني للعمل*"
+                                                required />
+                                            <input type="text" name="phone" placeholder="رقم هاتفك" />
+                                            <textarea name="message" placeholder="يرجى مشاركة متطلباتك المحددة (مثل الأنماط المستهدفة، المواد، أو الكمية التقديرية). سنقوم بالرد خلال 24 ساعة وإرسال أحدث كتالوج لدينا وعرض أسعار مخصص إلى بريدك الإلكتروني." required></textarea>
 
-                                            <button type="submit" class="quote-submit-btn">INQUIRY NOW</button>
+                                            <button type="submit" class="quote-submit-btn">استفسر الآن</button>
                                         </form>
                                     </div>
                                 </div>
@@ -1058,7 +1127,7 @@
                     </div>
                 </div>
 
-             
+
 
             </div>
 
@@ -1072,7 +1141,6 @@
 
 
 
-    <!-- Footer -->
     <div id="footer-wrapper">
 
         <div class="container">
@@ -1082,7 +1150,7 @@
                         <div class="footer-grid-master">
 
                             <div class="footer-cell-headline">
-                                <h2 class="footer-main-title"  id="contact">Let's Build Something Great Together.</h2>
+                                <h2 class="footer-main-title" id="contact">لنبني شيئاً رائعاً معاً.</h2>
                             </div>
 
                             <div class="footer-cell-contact">
@@ -1091,8 +1159,8 @@
                                         <img src="images/SANDA-logo.png" alt="SANDA Logo" class="footer-logo-img">
                                     </div>
                                     <div class="footer-slogan-wrap">
-                                        <p>Premium Backpack Manufacturing Partner.<br>Driven by design, powered by
-                                            scale.</p>
+                                        <p>شريكك الرائد في تصنيع حقائب الظهر.<br>مدفوعون بالتصميم، مدعومون بالقدرة
+                                            الإنتاجية.</p>
                                     </div>
                                 </div>
 
@@ -1104,34 +1172,34 @@
                                     <p><strong>Wechat:</strong> +86 135 6244 8949</p>
                                 </div>
 
-                                
+
                                 <!-- <div class="qr-direct-group">
                                     <div class="qr-direct-item">
                                         <img src="images/qr-wechat.png" alt="WeChat">
-                                        <span>WeChat</span>
+                                        <span>ويشات</span>
                                     </div>
                                     <div class="qr-direct-item">
                                         <img src="images/qr-whatsapp.png" alt="WhatsApp">
-                                        <span>WhatsApp</span>
+                                        <span>واتساب</span>
                                     </div>
                                     <div class="qr-direct-item">
                                         <img src="images/qr-tiktok.png" alt="TikTok">
-                                        <span>TikTok</span>
+                                        <span>تيك توك</span>
                                     </div>
                                 </div> -->
                             </div>
 
                             <div class="footer-cell-locations">
-                                <h4 class="footer-title">Our Locations</h4>
+                                <h4 class="footer-title">مواقعنا</h4>
                                 <div class="locations-flex">
                                     <div class="location-item">
-                                        <strong>Showroom & Head Office</strong>
-                                        <p>Room 2821, Jinying Plaza, NO 316 Huanshi Middle Road, Yuexiu District,
-                                            Guangzhou</p>
+                                        <strong>صالة العرض والمكتب الرئيسي</strong>
+                                        <p>غرفة 2821، جينينغ بلازا، شارع هوانشي الأوسط رقم 316، منطقة يويشيو، قوانغتشو
+                                        </p>
                                     </div>
                                     <div class="location-item">
-                                        <strong>Manufacturing Facility</strong>
-                                        <p>No. 1202 Industrial Road, Huadu District, Guangzhou</p>
+                                        <strong>منشأة التصنيع</strong>
+                                        <p>طريق الصناعة رقم 1202، منطقة هوادو، قوانغتشو</p>
                                     </div>
                                 </div>
 
@@ -1153,12 +1221,12 @@
             <div class="container">
                 <div class="copyright-content">
                     <div class="copy-left">
-                        &copy; 2026 SANDA Backpack Manufacturing Co., Ltd. All rights reserved.
+                        © 2026 شركة SANDA لتصنيع حقائب الظهر المحدودة. جميع الحقوق محفوظة.
                     </div>
                     <div class="copy-right">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a hrefFs="#">Sitemap</a>
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">شروط الخدمة</a>
+                        <a href="#">خريطة الموقع</a>
                     </div>
                 </div>
             </div>
@@ -1166,7 +1234,6 @@
 
     </div>
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
@@ -1218,9 +1285,13 @@
             const slideCount = slides.length;
             const autoPlaySpeed = 4000;
             let slideTimer;
-
             function updateSlider(index) {
-                container.style.transform = `translateX(-${index * 100}%)`;
+                // 动态检测当前网页是不是 RTL（从右到左）
+                const isRTL = document.documentElement.dir === 'rtl';
+                // 如果是 RTL，就取消负号；如果是 LTR，保留负号
+                const sign = isRTL ? '' : '-';
+                container.style.transform = `translateX(${sign}${index * 100}%)`;
+
                 dots.forEach(dot => dot.classList.remove('active'));
                 if (dots[index]) dots[index].classList.add('active');
             }
