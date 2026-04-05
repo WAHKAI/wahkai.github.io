@@ -1,24 +1,100 @@
-@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 
-.row.gtr-0,
-.row.gtr-0.gtr-uniform {
-	margin-top: 0
+/*
+	Minimaxing by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-#banner,
-#header,
-article.blog-post {
-	position: relative
-}
-
-#banner h2,
-#header h1 {
-	letter-spacing: -2px;
-	color: #fff
-}
-
-#banner span,
-.tab-content.active,
 article,
 aside,
 details,
@@ -30,202 +106,48 @@ hgroup,
 menu,
 nav,
 section {
-	display: block
+	display: block;
 }
 
-#banner span,
-#header nav,
-.button {
-	letter-spacing: -1px
+body {
+	line-height: 1;
 }
 
-#copyright,
-ul.link-list li {
-	border-top: 1px solid #ced0b7
-}
-
-#copyright,
-#copyright a {
-	color: #a6a88f
-}
-
-.category-menu,
-.event-details,
-details.faq-item>summary,
 ol,
 ul {
-	list-style: none
-}
-
-#main .customization-section p,
-.services-section .section-subtitle {
-	text-align: left !important;
-	max-width: 100% !important
-}
-
-#banner,
-#banner h2,
-#copyright,
-.craft-item,
-.prod-card,
-.prod-item,
-.quote-form-card h3,
-.slider-dots,
-.stat-card,
-.text-card,
-.timeline-step {
-	text-align: center
-}
-
-#copyright-bar-advanced::before,
-#page-wrapper,
-body {
-	background-color: #fff !important
-}
-
-#copyright-bar-advanced,
-#footer-advanced,
-#footer-wrapper {
-	background-color: transparent !important
-}
-
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline
-}
-
-.big-number,
-.stat-num,
-body {
-	line-height: 1
-}
-
-body {
-	-webkit-text-size-adjust: none;
-	font-size: 12pt;
-	font-family: Inter, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #333;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none
+	list-style: none;
 }
 
 blockquote,
 q {
-	quotes: none
+	quotes: none;
 }
 
-blockquote:after,
 blockquote:before,
-q:after,
-q:before {
+blockquote:after,
+q:before,
+q:after {
 	content: '';
-	content: none
+	content: none;
 }
 
 table {
 	border-collapse: collapse;
-	border-spacing: 0
+	border-spacing: 0;
+}
+
+body {
+	-webkit-text-size-adjust: none;
 }
 
 mark {
 	background-color: transparent;
-	color: inherit
+	color: inherit;
 }
 
 input::-moz-focus-inner {
 	border: 0;
-	padding: 0
-}
-
-#header,
-.button {
-	border-radius: 10px
+	padding: 0;
 }
 
 input,
@@ -234,26 +156,36 @@ textarea {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-ms-appearance: none;
-	appearance: none
+	appearance: none;
 }
 
+/* Basic */
+
 html {
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 *,
-:after,
-:before {
-	box-sizing: inherit
-}
-
-.row,
-.row>* {
-	box-sizing: border-box
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
 @-ms-viewport {
-	width: device-width
+	width: device-width;
+}
+
+body {
+	font-size: 12pt;
+	background-color: #f0f0f0;
+
+	/* 核心修改：首选 Inter 字体，其次调用苹果系统原生字体，最后是常规无衬线 */
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	/* 建议：将原本带点绿色的浅灰 (#878e83) 改为深灰 (#333333)，苹果官网正文通常是高对比度的深灰色，阅读体验更好 */
+	color: #333333;
+
+	/* 注意：这里我删除了 letter-spacing: -1px; 让正文呼吸感更强，更像苹果官网 */
 }
 
 h1,
@@ -261,568 +193,1365 @@ h2,
 h3,
 h4 {
 	color: #007897;
-	font-weight: 400
+	font-weight: normal;
 }
+
 
 h2 {
 	font-size: 2em;
+	/* 苹果的大标题通常比较有视觉张力，推荐放大到 2em */
 	font-weight: 600;
+	/* 半粗体 (Semi-bold)，增加标题的分量感 */
 	color: #1d1d1f;
-	letter-spacing: -.02em;
-	margin-bottom: .8em;
-	line-height: 1.2
+	/* 苹果官方最爱用的经典深灰色，比纯黑更有呼吸感 */
+	letter-spacing: -0.02em;
+	/* 极微弱的负字距，让英文字母看起来更紧凑高级，去除原本粗暴的 -1px */
+	margin-bottom: 0.8em;
+	/* 增加标题和下方正文的留白距离（呼吸感） */
+	line-height: 1.2;
+	/* 确保标题换行时行距紧凑 */
 }
 
-.button,
-h3 {
-	font-size: 1.2em
+/* ========================================= */
+/* 缩小主内容区标题与下方内容之间的间距           */
+/* ========================================= */
+
+#main section h2 {
+	/* 强行缩小底部的外边距。你可以将 10px 改为 5px 甚至 0 来看看哪个效果最紧凑 */
+	margin-bottom: 10px !important;
 }
 
 h3,
 h4 {
 	color: #283121;
-	margin-bottom: .5em
+	margin-bottom: 0.5em;
 }
 
 h3 {
-	margin-bottom: .8em
+	font-size: 1.2em;
+	margin-bottom: 0.8em;
 }
 
 h4 {
-	font-size: 1em
+	font-size: 1em;
 }
 
 p,
 ul {
-	margin-bottom: 1.25em
+	margin-bottom: 1.25em;
 }
 
 p {
-	line-height: 1.8em
+	line-height: 1.8em;
 }
 
 strong {
-	color: #474e43
+	color: #474e43;
 }
 
 img.left {
 	float: left;
-	margin: 2px 1.25em 0 0
+	margin: 2px 1.25em 0 0;
 }
 
 img.top {
-	margin: 4px 0 2.25em
+	margin: 4px 0 2.25em 0;
 }
 
 ul {
-	padding: .25em 0 0
+	padding: 0.25em 0 0 0;
 }
 
 a {
 	color: #5d93a2;
-	text-decoration: underline
+	text-decoration: underline;
 }
 
 a:hover {
-	text-decoration: none
+	text-decoration: none;
 }
 
 *>p:last-child {
-	margin-bottom: 0 !important
+	margin-bottom: 0 !important;
 }
 
-article,
-section {
-	margin: 0 0 60px
+section,
+article {
+	margin: 0 0 60px 0;
 }
 
-.row.gtr-uniform>*>:last-child,
-article:last-child,
-section:last-child {
-	margin-bottom: 0
+section:last-child,
+article:last-child {
+	margin-bottom: 0;
 }
+
+/* Container */
 
 .container {
 	margin: 0 auto;
 	max-width: 100%;
-	width: 1200px
+	width: 1200px;
 }
+
+@media screen and (max-width: 1680px) {
+
+	.container {
+		width: 1200px;
+	}
+
+}
+
+@media screen and (max-width: 1280px) {
+
+	.container {
+		width: calc(100% - 70px);
+	}
+
+}
+
+@media screen and (max-width: 980px) {
+
+	.container {
+		width: calc(100% - 100px);
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+
+	.container {
+		width: calc(100% - 40px);
+	}
+
+}
+
+/* Row */
 
 .row {
 	display: flex;
 	flex-wrap: wrap;
+	box-sizing: border-box;
 	align-items: stretch;
-	margin-top: -50px;
-	margin-left: -50px
 }
 
 .row>* {
-	padding: 50px 0 0 50px
+	box-sizing: border-box;
+}
+
+.row.gtr-uniform>*> :last-child {
+	margin-bottom: 0;
 }
 
 .row.aln-left {
-	justify-content: flex-start
+	justify-content: flex-start;
 }
 
 .row.aln-center {
-	justify-content: center
+	justify-content: center;
 }
 
 .row.aln-right {
-	justify-content: flex-end
+	justify-content: flex-end;
 }
 
 .row.aln-top {
-	align-items: flex-start
+	align-items: flex-start;
 }
 
 .row.aln-middle {
-	align-items: center
+	align-items: center;
 }
 
 .row.aln-bottom {
-	align-items: flex-end
+	align-items: flex-end;
 }
 
 .row>.imp {
-	order: -1
+	order: -1;
 }
 
 .row>.col-1 {
-	width: 8.33333%
+	width: 8.33333%;
 }
 
 .row>.off-1 {
-	margin-left: 8.33333%
+	margin-left: 8.33333%;
 }
 
 .row>.col-2 {
-	width: 16.66667%
+	width: 16.66667%;
 }
 
 .row>.off-2 {
-	margin-left: 16.66667%
+	margin-left: 16.66667%;
 }
 
 .row>.col-3 {
-	width: 25%
+	width: 25%;
 }
 
 .row>.off-3 {
-	margin-left: 25%
+	margin-left: 25%;
 }
 
 .row>.col-4 {
-	width: 33.33333%
+	width: 33.33333%;
 }
 
 .row>.off-4 {
-	margin-left: 33.33333%
+	margin-left: 33.33333%;
 }
 
 .row>.col-5 {
-	width: 41.66667%
+	width: 41.66667%;
 }
 
 .row>.off-5 {
-	margin-left: 41.66667%
+	margin-left: 41.66667%;
 }
 
 .row>.col-6 {
-	width: 50%
+	width: 50%;
 }
 
 .row>.off-6 {
-	margin-left: 50%
+	margin-left: 50%;
 }
 
 .row>.col-7 {
-	width: 58.33333%
+	width: 58.33333%;
 }
 
 .row>.off-7 {
-	margin-left: 58.33333%
+	margin-left: 58.33333%;
 }
 
 .row>.col-8 {
-	width: 66.66667%
+	width: 66.66667%;
 }
 
 .row>.off-8 {
-	margin-left: 66.66667%
+	margin-left: 66.66667%;
 }
 
 .row>.col-9 {
-	width: 75%
+	width: 75%;
 }
 
 .row>.off-9 {
-	margin-left: 75%
+	margin-left: 75%;
 }
 
 .row>.col-10 {
-	width: 83.33333%
+	width: 83.33333%;
 }
 
 .row>.off-10 {
-	margin-left: 83.33333%
+	margin-left: 83.33333%;
 }
 
 .row>.col-11 {
-	width: 91.66667%
-}
-
-#banner,
-.faq-accordion,
-.row>.col-12,
-article.blog-post .blog-post-image {
-	width: 100%
+	width: 91.66667%;
 }
 
 .row>.off-11 {
-	margin-left: 91.66667%
+	margin-left: 91.66667%;
+}
+
+.row>.col-12 {
+	width: 100%;
 }
 
 .row>.off-12 {
-	margin-left: 100%
+	margin-left: 100%;
 }
 
 .row.gtr-0 {
-	margin-left: 0
+	margin-top: 0px;
+	margin-left: 0px;
 }
 
 .row.gtr-0>* {
-	padding: 0
+	padding: 0px 0 0 0px;
 }
 
-.row.gtr-25,
-.row.gtr-25.gtr-uniform {
-	margin-top: -12.5px
+.row.gtr-0.gtr-uniform {
+	margin-top: 0px;
 }
 
 .row.gtr-0.gtr-uniform>* {
-	padding-top: 0
+	padding-top: 0px;
 }
 
 .row.gtr-25 {
-	margin-left: -12.5px
+	margin-top: -12.5px;
+	margin-left: -12.5px;
 }
 
 .row.gtr-25>* {
-	padding: 12.5px 0 0 12.5px
+	padding: 12.5px 0 0 12.5px;
 }
 
-.row.gtr-50,
-.row.gtr-50.gtr-uniform {
-	margin-top: -25px
+.row.gtr-25.gtr-uniform {
+	margin-top: -12.5px;
 }
 
 .row.gtr-25.gtr-uniform>* {
-	padding-top: 12.5px
+	padding-top: 12.5px;
 }
 
 .row.gtr-50 {
-	margin-left: -25px
+	margin-top: -25px;
+	margin-left: -25px;
 }
 
 .row.gtr-50>* {
-	padding: 25px 0 0 25px
+	padding: 25px 0 0 25px;
+}
+
+.row.gtr-50.gtr-uniform {
+	margin-top: -25px;
 }
 
 .row.gtr-50.gtr-uniform>* {
-	padding-top: 25px
+	padding-top: 25px;
+}
+
+.row {
+	margin-top: -50px;
+	margin-left: -50px;
+}
+
+.row>* {
+	padding: 50px 0 0 50px;
 }
 
 .row.gtr-uniform {
-	margin-top: -50px
-}
-
-.row.gtr-150,
-.row.gtr-150.gtr-uniform {
-	margin-top: -75px
+	margin-top: -50px;
 }
 
 .row.gtr-uniform>* {
-	padding-top: 50px
+	padding-top: 50px;
 }
 
 .row.gtr-150 {
-	margin-left: -75px
+	margin-top: -75px;
+	margin-left: -75px;
 }
 
 .row.gtr-150>* {
-	padding: 75px 0 0 75px
+	padding: 75px 0 0 75px;
 }
 
-.row.gtr-200,
-.row.gtr-200.gtr-uniform {
-	margin-top: -100px
+.row.gtr-150.gtr-uniform {
+	margin-top: -75px;
 }
 
 .row.gtr-150.gtr-uniform>* {
-	padding-top: 75px
+	padding-top: 75px;
 }
 
 .row.gtr-200 {
-	margin-left: -100px
+	margin-top: -100px;
+	margin-left: -100px;
 }
 
 .row.gtr-200>* {
-	padding: 100px 0 0 100px
+	padding: 100px 0 0 100px;
+}
+
+.row.gtr-200.gtr-uniform {
+	margin-top: -100px;
 }
 
 .row.gtr-200.gtr-uniform>* {
-	padding-top: 100px
+	padding-top: 100px;
 }
 
-@media screen and (max-width:1680px) {
-	.container {
-		width: 1200px
-	}
-
-	.row,
-	.row>* {
-		box-sizing: border-box
-	}
-
-	.row.gtr-0,
-	.row.gtr-0.gtr-uniform {
-		margin-top: 0
-	}
+@media screen and (max-width: 1680px) {
 
 	.row {
 		display: flex;
 		flex-wrap: wrap;
+		box-sizing: border-box;
 		align-items: stretch;
-		margin-top: -50px;
-		margin-left: -50px
 	}
 
 	.row>* {
-		padding: 50px 0 0 50px
+		box-sizing: border-box;
 	}
 
-	.row.gtr-uniform>*>:last-child {
-		margin-bottom: 0
+	.row.gtr-uniform>*> :last-child {
+		margin-bottom: 0;
 	}
 
 	.row.aln-left {
-		justify-content: flex-start
+		justify-content: flex-start;
 	}
 
 	.row.aln-center {
-		justify-content: center
+		justify-content: center;
 	}
 
 	.row.aln-right {
-		justify-content: flex-end
+		justify-content: flex-end;
 	}
 
 	.row.aln-top {
-		align-items: flex-start
+		align-items: flex-start;
 	}
 
 	.row.aln-middle {
-		align-items: center
+		align-items: center;
 	}
 
 	.row.aln-bottom {
-		align-items: flex-end
+		align-items: flex-end;
 	}
 
 	.row>.imp-xlarge {
-		order: -1
+		order: -1;
 	}
 
 	.row>.col-1-xlarge {
-		width: 8.33333%
+		width: 8.33333%;
 	}
 
 	.row>.off-1-xlarge {
-		margin-left: 8.33333%
+		margin-left: 8.33333%;
 	}
 
 	.row>.col-2-xlarge {
-		width: 16.66667%
+		width: 16.66667%;
 	}
 
 	.row>.off-2-xlarge {
-		margin-left: 16.66667%
+		margin-left: 16.66667%;
 	}
 
 	.row>.col-3-xlarge {
-		width: 25%
+		width: 25%;
 	}
 
 	.row>.off-3-xlarge {
-		margin-left: 25%
+		margin-left: 25%;
 	}
 
 	.row>.col-4-xlarge {
-		width: 33.33333%
+		width: 33.33333%;
 	}
 
 	.row>.off-4-xlarge {
-		margin-left: 33.33333%
+		margin-left: 33.33333%;
 	}
 
 	.row>.col-5-xlarge {
-		width: 41.66667%
+		width: 41.66667%;
 	}
 
 	.row>.off-5-xlarge {
-		margin-left: 41.66667%
+		margin-left: 41.66667%;
 	}
 
 	.row>.col-6-xlarge {
-		width: 50%
+		width: 50%;
 	}
 
 	.row>.off-6-xlarge {
-		margin-left: 50%
+		margin-left: 50%;
 	}
 
 	.row>.col-7-xlarge {
-		width: 58.33333%
+		width: 58.33333%;
 	}
 
 	.row>.off-7-xlarge {
-		margin-left: 58.33333%
+		margin-left: 58.33333%;
 	}
 
 	.row>.col-8-xlarge {
-		width: 66.66667%
+		width: 66.66667%;
 	}
 
 	.row>.off-8-xlarge {
-		margin-left: 66.66667%
+		margin-left: 66.66667%;
 	}
 
 	.row>.col-9-xlarge {
-		width: 75%
+		width: 75%;
 	}
 
 	.row>.off-9-xlarge {
-		margin-left: 75%
+		margin-left: 75%;
 	}
 
 	.row>.col-10-xlarge {
-		width: 83.33333%
+		width: 83.33333%;
 	}
 
 	.row>.off-10-xlarge {
-		margin-left: 83.33333%
+		margin-left: 83.33333%;
 	}
 
 	.row>.col-11-xlarge {
-		width: 91.66667%
+		width: 91.66667%;
 	}
 
 	.row>.off-11-xlarge {
-		margin-left: 91.66667%
+		margin-left: 91.66667%;
 	}
 
 	.row>.col-12-xlarge {
-		width: 100%
+		width: 100%;
 	}
 
 	.row>.off-12-xlarge {
-		margin-left: 100%
+		margin-left: 100%;
 	}
 
 	.row.gtr-0 {
-		margin-left: 0
+		margin-top: 0px;
+		margin-left: 0px;
 	}
 
 	.row.gtr-0>* {
-		padding: 0
+		padding: 0px 0 0 0px;
 	}
 
-	.row.gtr-25,
-	.row.gtr-25.gtr-uniform {
-		margin-top: -12.5px
+	.row.gtr-0.gtr-uniform {
+		margin-top: 0px;
 	}
 
 	.row.gtr-0.gtr-uniform>* {
-		padding-top: 0
+		padding-top: 0px;
 	}
 
 	.row.gtr-25 {
-		margin-left: -12.5px
+		margin-top: -12.5px;
+		margin-left: -12.5px;
 	}
 
 	.row.gtr-25>* {
-		padding: 12.5px 0 0 12.5px
+		padding: 12.5px 0 0 12.5px;
 	}
 
-	.row.gtr-50,
-	.row.gtr-50.gtr-uniform {
-		margin-top: -25px
+	.row.gtr-25.gtr-uniform {
+		margin-top: -12.5px;
 	}
 
 	.row.gtr-25.gtr-uniform>* {
-		padding-top: 12.5px
+		padding-top: 12.5px;
 	}
 
 	.row.gtr-50 {
-		margin-left: -25px
+		margin-top: -25px;
+		margin-left: -25px;
 	}
 
 	.row.gtr-50>* {
-		padding: 25px 0 0 25px
+		padding: 25px 0 0 25px;
+	}
+
+	.row.gtr-50.gtr-uniform {
+		margin-top: -25px;
 	}
 
 	.row.gtr-50.gtr-uniform>* {
-		padding-top: 25px
+		padding-top: 25px;
+	}
+
+	.row {
+		margin-top: -50px;
+		margin-left: -50px;
+	}
+
+	.row>* {
+		padding: 50px 0 0 50px;
 	}
 
 	.row.gtr-uniform {
-		margin-top: -50px
-	}
-
-	.row.gtr-150,
-	.row.gtr-150.gtr-uniform {
-		margin-top: -75px
+		margin-top: -50px;
 	}
 
 	.row.gtr-uniform>* {
-		padding-top: 50px
+		padding-top: 50px;
 	}
 
 	.row.gtr-150 {
-		margin-left: -75px
+		margin-top: -75px;
+		margin-left: -75px;
 	}
 
 	.row.gtr-150>* {
-		padding: 75px 0 0 75px
+		padding: 75px 0 0 75px;
 	}
 
-	.row.gtr-200,
-	.row.gtr-200.gtr-uniform {
-		margin-top: -100px
+	.row.gtr-150.gtr-uniform {
+		margin-top: -75px;
 	}
 
 	.row.gtr-150.gtr-uniform>* {
-		padding-top: 75px
+		padding-top: 75px;
 	}
 
 	.row.gtr-200 {
-		margin-left: -100px
+		margin-top: -100px;
+		margin-left: -100px;
 	}
 
 	.row.gtr-200>* {
-		padding: 100px 0 0 100px
+		padding: 100px 0 0 100px;
+	}
+
+	.row.gtr-200.gtr-uniform {
+		margin-top: -100px;
 	}
 
 	.row.gtr-200.gtr-uniform>* {
-		padding-top: 100px
+		padding-top: 100px;
 	}
+
 }
 
-#header nav a,
-.button {
-	display: inline-block;
-	text-decoration: none
+@media screen and (max-width: 1280px) {
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		align-items: stretch;
+	}
+
+	.row>* {
+		box-sizing: border-box;
+	}
+
+	.row.gtr-uniform>*> :last-child {
+		margin-bottom: 0;
+	}
+
+	.row.aln-left {
+		justify-content: flex-start;
+	}
+
+	.row.aln-center {
+		justify-content: center;
+	}
+
+	.row.aln-right {
+		justify-content: flex-end;
+	}
+
+	.row.aln-top {
+		align-items: flex-start;
+	}
+
+	.row.aln-middle {
+		align-items: center;
+	}
+
+	.row.aln-bottom {
+		align-items: flex-end;
+	}
+
+	.row>.imp-large {
+		order: -1;
+	}
+
+	.row>.col-1-large {
+		width: 8.33333%;
+	}
+
+	.row>.off-1-large {
+		margin-left: 8.33333%;
+	}
+
+	.row>.col-2-large {
+		width: 16.66667%;
+	}
+
+	.row>.off-2-large {
+		margin-left: 16.66667%;
+	}
+
+	.row>.col-3-large {
+		width: 25%;
+	}
+
+	.row>.off-3-large {
+		margin-left: 25%;
+	}
+
+	.row>.col-4-large {
+		width: 33.33333%;
+	}
+
+	.row>.off-4-large {
+		margin-left: 33.33333%;
+	}
+
+	.row>.col-5-large {
+		width: 41.66667%;
+	}
+
+	.row>.off-5-large {
+		margin-left: 41.66667%;
+	}
+
+	.row>.col-6-large {
+		width: 50%;
+	}
+
+	.row>.off-6-large {
+		margin-left: 50%;
+	}
+
+	.row>.col-7-large {
+		width: 58.33333%;
+	}
+
+	.row>.off-7-large {
+		margin-left: 58.33333%;
+	}
+
+	.row>.col-8-large {
+		width: 66.66667%;
+	}
+
+	.row>.off-8-large {
+		margin-left: 66.66667%;
+	}
+
+	.row>.col-9-large {
+		width: 75%;
+	}
+
+	.row>.off-9-large {
+		margin-left: 75%;
+	}
+
+	.row>.col-10-large {
+		width: 83.33333%;
+	}
+
+	.row>.off-10-large {
+		margin-left: 83.33333%;
+	}
+
+	.row>.col-11-large {
+		width: 91.66667%;
+	}
+
+	.row>.off-11-large {
+		margin-left: 91.66667%;
+	}
+
+	.row>.col-12-large {
+		width: 100%;
+	}
+
+	.row>.off-12-large {
+		margin-left: 100%;
+	}
+
+	.row.gtr-0 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+	.row.gtr-0>* {
+		padding: 0px 0 0 0px;
+	}
+
+	.row.gtr-0.gtr-uniform {
+		margin-top: 0px;
+	}
+
+	.row.gtr-0.gtr-uniform>* {
+		padding-top: 0px;
+	}
+
+	.row.gtr-25 {
+		margin-top: -8.75px;
+		margin-left: -8.75px;
+	}
+
+	.row.gtr-25>* {
+		padding: 8.75px 0 0 8.75px;
+	}
+
+	.row.gtr-25.gtr-uniform {
+		margin-top: -8.75px;
+	}
+
+	.row.gtr-25.gtr-uniform>* {
+		padding-top: 8.75px;
+	}
+
+	.row.gtr-50 {
+		margin-top: -17.5px;
+		margin-left: -17.5px;
+	}
+
+	.row.gtr-50>* {
+		padding: 17.5px 0 0 17.5px;
+	}
+
+	.row.gtr-50.gtr-uniform {
+		margin-top: -17.5px;
+	}
+
+	.row.gtr-50.gtr-uniform>* {
+		padding-top: 17.5px;
+	}
+
+	.row {
+		margin-top: -35px;
+		margin-left: -35px;
+	}
+
+	.row>* {
+		padding: 35px 0 0 35px;
+	}
+
+	.row.gtr-uniform {
+		margin-top: -35px;
+	}
+
+	.row.gtr-uniform>* {
+		padding-top: 35px;
+	}
+
+	.row.gtr-150 {
+		margin-top: -52.5px;
+		margin-left: -52.5px;
+	}
+
+	.row.gtr-150>* {
+		padding: 52.5px 0 0 52.5px;
+	}
+
+	.row.gtr-150.gtr-uniform {
+		margin-top: -52.5px;
+	}
+
+	.row.gtr-150.gtr-uniform>* {
+		padding-top: 52.5px;
+	}
+
+	.row.gtr-200 {
+		margin-top: -70px;
+		margin-left: -70px;
+	}
+
+	.row.gtr-200>* {
+		padding: 70px 0 0 70px;
+	}
+
+	.row.gtr-200.gtr-uniform {
+		margin-top: -70px;
+	}
+
+	.row.gtr-200.gtr-uniform>* {
+		padding-top: 70px;
+	}
+
+}
+
+@media screen and (max-width: 980px) {
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		align-items: stretch;
+	}
+
+	.row>* {
+		box-sizing: border-box;
+	}
+
+	.row.gtr-uniform>*> :last-child {
+		margin-bottom: 0;
+	}
+
+	.row.aln-left {
+		justify-content: flex-start;
+	}
+
+	.row.aln-center {
+		justify-content: center;
+	}
+
+	.row.aln-right {
+		justify-content: flex-end;
+	}
+
+	.row.aln-top {
+		align-items: flex-start;
+	}
+
+	.row.aln-middle {
+		align-items: center;
+	}
+
+	.row.aln-bottom {
+		align-items: flex-end;
+	}
+
+	.row>.imp-medium {
+		order: -1;
+	}
+
+	.row>.col-1-medium {
+		width: 8.33333%;
+	}
+
+	.row>.off-1-medium {
+		margin-left: 8.33333%;
+	}
+
+	.row>.col-2-medium {
+		width: 16.66667%;
+	}
+
+	.row>.off-2-medium {
+		margin-left: 16.66667%;
+	}
+
+	.row>.col-3-medium {
+		width: 25%;
+	}
+
+	.row>.off-3-medium {
+		margin-left: 25%;
+	}
+
+	.row>.col-4-medium {
+		width: 33.33333%;
+	}
+
+	.row>.off-4-medium {
+		margin-left: 33.33333%;
+	}
+
+	.row>.col-5-medium {
+		width: 41.66667%;
+	}
+
+	.row>.off-5-medium {
+		margin-left: 41.66667%;
+	}
+
+	.row>.col-6-medium {
+		width: 50%;
+	}
+
+	.row>.off-6-medium {
+		margin-left: 50%;
+	}
+
+	.row>.col-7-medium {
+		width: 58.33333%;
+	}
+
+	.row>.off-7-medium {
+		margin-left: 58.33333%;
+	}
+
+	.row>.col-8-medium {
+		width: 66.66667%;
+	}
+
+	.row>.off-8-medium {
+		margin-left: 66.66667%;
+	}
+
+	.row>.col-9-medium {
+		width: 75%;
+	}
+
+	.row>.off-9-medium {
+		margin-left: 75%;
+	}
+
+	.row>.col-10-medium {
+		width: 83.33333%;
+	}
+
+	.row>.off-10-medium {
+		margin-left: 83.33333%;
+	}
+
+	.row>.col-11-medium {
+		width: 91.66667%;
+	}
+
+	.row>.off-11-medium {
+		margin-left: 91.66667%;
+	}
+
+	.row>.col-12-medium {
+		width: 100%;
+	}
+
+	.row>.off-12-medium {
+		margin-left: 100%;
+	}
+
+	.row.gtr-0 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+	.row.gtr-0>* {
+		padding: 0px 0 0 0px;
+	}
+
+	.row.gtr-0.gtr-uniform {
+		margin-top: 0px;
+	}
+
+	.row.gtr-0.gtr-uniform>* {
+		padding-top: 0px;
+	}
+
+	.row.gtr-25 {
+		margin-top: -12.5px;
+		margin-left: -12.5px;
+	}
+
+	.row.gtr-25>* {
+		padding: 12.5px 0 0 12.5px;
+	}
+
+	.row.gtr-25.gtr-uniform {
+		margin-top: -12.5px;
+	}
+
+	.row.gtr-25.gtr-uniform>* {
+		padding-top: 12.5px;
+	}
+
+	.row.gtr-50 {
+		margin-top: -25px;
+		margin-left: -25px;
+	}
+
+	.row.gtr-50>* {
+		padding: 25px 0 0 25px;
+	}
+
+	.row.gtr-50.gtr-uniform {
+		margin-top: -25px;
+	}
+
+	.row.gtr-50.gtr-uniform>* {
+		padding-top: 25px;
+	}
+
+	.row {
+		margin-top: -50px;
+		margin-left: -50px;
+	}
+
+	.row>* {
+		padding: 50px 0 0 50px;
+	}
+
+	.row.gtr-uniform {
+		margin-top: -50px;
+	}
+
+	.row.gtr-uniform>* {
+		padding-top: 50px;
+	}
+
+	.row.gtr-150 {
+		margin-top: -75px;
+		margin-left: -75px;
+	}
+
+	.row.gtr-150>* {
+		padding: 75px 0 0 75px;
+	}
+
+	.row.gtr-150.gtr-uniform {
+		margin-top: -75px;
+	}
+
+	.row.gtr-150.gtr-uniform>* {
+		padding-top: 75px;
+	}
+
+	.row.gtr-200 {
+		margin-top: -100px;
+		margin-left: -100px;
+	}
+
+	.row.gtr-200>* {
+		padding: 100px 0 0 100px;
+	}
+
+	.row.gtr-200.gtr-uniform {
+		margin-top: -100px;
+	}
+
+	.row.gtr-200.gtr-uniform>* {
+		padding-top: 100px;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		align-items: stretch;
+	}
+
+	.row>* {
+		box-sizing: border-box;
+	}
+
+	.row.gtr-uniform>*> :last-child {
+		margin-bottom: 0;
+	}
+
+	.row.aln-left {
+		justify-content: flex-start;
+	}
+
+	.row.aln-center {
+		justify-content: center;
+	}
+
+	.row.aln-right {
+		justify-content: flex-end;
+	}
+
+	.row.aln-top {
+		align-items: flex-start;
+	}
+
+	.row.aln-middle {
+		align-items: center;
+	}
+
+	.row.aln-bottom {
+		align-items: flex-end;
+	}
+
+	.row>.imp-small {
+		order: -1;
+	}
+
+	.row>.col-1-small {
+		width: 8.33333%;
+	}
+
+	.row>.off-1-small {
+		margin-left: 8.33333%;
+	}
+
+	.row>.col-2-small {
+		width: 16.66667%;
+	}
+
+	.row>.off-2-small {
+		margin-left: 16.66667%;
+	}
+
+	.row>.col-3-small {
+		width: 25%;
+	}
+
+	.row>.off-3-small {
+		margin-left: 25%;
+	}
+
+	.row>.col-4-small {
+		width: 33.33333%;
+	}
+
+	.row>.off-4-small {
+		margin-left: 33.33333%;
+	}
+
+	.row>.col-5-small {
+		width: 41.66667%;
+	}
+
+	.row>.off-5-small {
+		margin-left: 41.66667%;
+	}
+
+	.row>.col-6-small {
+		width: 50%;
+	}
+
+	.row>.off-6-small {
+		margin-left: 50%;
+	}
+
+	.row>.col-7-small {
+		width: 58.33333%;
+	}
+
+	.row>.off-7-small {
+		margin-left: 58.33333%;
+	}
+
+	.row>.col-8-small {
+		width: 66.66667%;
+	}
+
+	.row>.off-8-small {
+		margin-left: 66.66667%;
+	}
+
+	.row>.col-9-small {
+		width: 75%;
+	}
+
+	.row>.off-9-small {
+		margin-left: 75%;
+	}
+
+	.row>.col-10-small {
+		width: 83.33333%;
+	}
+
+	.row>.off-10-small {
+		margin-left: 83.33333%;
+	}
+
+	.row>.col-11-small {
+		width: 91.66667%;
+	}
+
+	.row>.off-11-small {
+		margin-left: 91.66667%;
+	}
+
+	.row>.col-12-small {
+		width: 100%;
+	}
+
+	.row>.off-12-small {
+		margin-left: 100%;
+	}
+
+	.row.gtr-0 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+	.row.gtr-0>* {
+		padding: 0px 0 0 0px;
+	}
+
+	.row.gtr-0.gtr-uniform {
+		margin-top: 0px;
+	}
+
+	.row.gtr-0.gtr-uniform>* {
+		padding-top: 0px;
+	}
+
+	.row.gtr-25 {
+		margin-top: -5px;
+		margin-left: -5px;
+	}
+
+	.row.gtr-25>* {
+		padding: 5px 0 0 5px;
+	}
+
+	.row.gtr-25.gtr-uniform {
+		margin-top: -5px;
+	}
+
+	.row.gtr-25.gtr-uniform>* {
+		padding-top: 5px;
+	}
+
+	.row.gtr-50 {
+		margin-top: -10px;
+		margin-left: -10px;
+	}
+
+	.row.gtr-50>* {
+		padding: 10px 0 0 10px;
+	}
+
+	.row.gtr-50.gtr-uniform {
+		margin-top: -10px;
+	}
+
+	.row.gtr-50.gtr-uniform>* {
+		padding-top: 10px;
+	}
+
+	.row {
+		margin-top: -20px;
+		margin-left: -20px;
+	}
+
+	.row>* {
+		padding: 20px 0 0 20px;
+	}
+
+	.row.gtr-uniform {
+		margin-top: -20px;
+	}
+
+	.row.gtr-uniform>* {
+		padding-top: 20px;
+	}
+
+	.row.gtr-150 {
+		margin-top: -30px;
+		margin-left: -30px;
+	}
+
+	.row.gtr-150>* {
+		padding: 30px 0 0 30px;
+	}
+
+	.row.gtr-150.gtr-uniform {
+		margin-top: -30px;
+	}
+
+	.row.gtr-150.gtr-uniform>* {
+		padding-top: 30px;
+	}
+
+	.row.gtr-200 {
+		margin-top: -40px;
+		margin-left: -40px;
+	}
+
+	.row.gtr-200>* {
+		padding: 40px 0 0 40px;
+	}
+
+	.row.gtr-200.gtr-uniform {
+		margin-top: -40px;
+	}
+
+	.row.gtr-200.gtr-uniform>* {
+		padding-top: 40px;
+	}
+
+}
+
+/* Reusable */
+
+article.blog-post {
+	position: relative;
 }
 
 article.blog-post .comments {
@@ -832,36 +1561,41 @@ article.blog-post .comments {
 	height: 32px;
 	line-height: 24px;
 	padding-left: 40px;
-	background: url("images/icon-bubble.png") no-repeat
+	background: url("images/icon-bubble.png") no-repeat;
+}
+
+article.blog-post .blog-post-image {
+	width: 100%;
 }
 
 ul.small-image-list li {
 	overflow: hidden;
-	margin-bottom: 1.5em
+	margin-bottom: 1.5em;
 }
 
 ul.small-image-list li img {
-	width: 78px
+	width: 78px;
 }
 
 ul.big-image-list li {
 	overflow: hidden;
-	margin-bottom: 2em
+	margin-bottom: 2em;
 }
 
 ul.big-image-list li img {
-	width: 178px
+	width: 178px;
 }
 
 ul.link-list li {
-	padding: .75em 0 0;
-	margin: .75em 0 0
+	border-top: solid 1px #ced0b7;
+	padding: 0.75em 0 0 0;
+	margin: 0.75em 0 0 0;
 }
 
 ul.link-list li:first-child {
 	padding-top: 0;
 	margin-top: 0;
-	border-top: 0
+	border-top: 0;
 }
 
 .button {
@@ -869,11 +1603,16 @@ ul.link-list li:first-child {
 	background-image: -webkit-linear-gradient(top, #008dad, #007b9d);
 	background-image: -ms-linear-gradient(top, #008dad, #007b9d);
 	background-image: linear-gradient(top, #008dad, #007b9d);
-	padding: 15px 25px;
+	display: inline-block;
+	padding: 15px 25px 15px 25px;
 	background-color: #007b9d;
+	border-radius: 10px;
+	text-decoration: none;
 	color: #fff;
-	border: 1px solid #006e8b;
-	box-shadow: inset 0 0 0 1px #18a8c8
+	font-size: 1.2em;
+	letter-spacing: -1px;
+	border: solid 1px #006e8b;
+	box-shadow: inset 0px 0px 0px 1px #18a8c8;
 }
 
 .button:hover {
@@ -882,704 +1621,318 @@ ul.link-list li:first-child {
 	background-image: -ms-linear-gradient(top, #1b9fbe, #118eb1);
 	background-image: linear-gradient(top, #1b9fbe, #118eb1);
 	background-color: #118eb1;
-	box-shadow: inset 0 0 0 1px #3ecceb
+	box-shadow: inset 0px 0px 0px 1px #3ecceb;
 }
+
+/* Header */
 
 #header-wrapper {
 	background-image: -moz-linear-gradient(top, #fdfdfd, #e8e8e8);
 	background-image: -webkit-linear-gradient(top, #fdfdfd, #e8e8e8);
 	background-image: -ms-linear-gradient(top, #fdfdfd, #e8e8e8);
 	background-image: linear-gradient(top, #fdfdfd, #e8e8e8);
-	box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
-	padding-top: .1px !important;
-	padding-bottom: .1px !important
+	background-color: #f0f0f0;
+	/* 后备底色 */
+	position: sticky;
+	/* 开启粘性定位 */
+	top: 0;
+	/* 吸附在屏幕最顶部边缘 */
+	z-index: 1000;
+	/* 保证它在最上层，不被下方图片或文字遮挡 */
+	width: 100%;
+	/* 宽度撑满屏幕 */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	/* 建议加个极淡的阴影，滚动时能跟下方内容区分开 */
+	padding-top: 0.1px !important;
+	padding-bottom: 0.1px !important;
 }
 
 #header {
+	background-image: -moz-linear-gradient(top, #008ead, #007b9d);
+	background-image: -webkit-linear-gradient(top, #008ead, #007b9d);
+	background-image: -ms-linear-gradient(top, #008ead, #007b9d);
+	background-image: linear-gradient(top, #008ead, #007b9d);
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	-ms-box-sizing: content-box;
 	box-sizing: content-box;
-	margin: .5% 0;
-	border: 1px solid #006e8b;
-	box-shadow: inset 0 0 0 1px #12a0bf, 0 1px 4px 0 rgba(0, 0, 0, .1);
-	height: 55px
+	position: relative;
+	margin: 0.5% 0 0.5% 0;
+	/* 修改标题栏背景高度 */
+	padding: 0 20px 0 20px;
+	border-radius: 10px;
+	border: solid 1px #006e8b;
+	box-shadow: inset 0px 0px 0px 1px #12a0bf, 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+	background-color: #007b9d;
+	height: 55px;
 }
 
 #header h1 {
-	font-size: 2.4em
+	position: absolute;
+	left: 40px;
+	top: 0;
+	color: #fff;
+	font-size: 2.4em;
+	letter-spacing: -2px;
+	line-height: 45px;
+	margin-bottom: 0 !important;
+	/* 去除 Logo 下方的默认空隙 */
 }
 
 #header h1 a {
+	color: #fff;
 	text-decoration: none;
-	display: block !important;
-	line-height: 1 !important;
-	color: #222 !important
 }
 
 #header nav {
 	position: absolute;
+	right: 40px;
 	top: 1px;
 	line-height: 52px;
 	font-size: 1.1em;
-	right: 0 !important
+	letter-spacing: -1px;
 }
 
 #header nav a {
-	padding: 0 25px;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 25px 0 25px;
 	outline: 0;
-	color: #333 !important;
-	font-weight: 500
 }
 
 #header nav a.current-page-item {
+	background-image: -moz-linear-gradient(top, #007b99, #007897);
+	background-image: -webkit-linear-gradient(top, #007b99, #007897);
+	background-image: -ms-linear-gradient(top, #007b99, #007897);
+	background-image: linear-gradient(top, #007b99, #007897);
 	background-color: #007897;
-	box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, .1), 0 0 5px 1px rgba(255, 255, 255, .1)
+	box-shadow: inset 0px 1px 5px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px 1px rgba(255, 255, 255, 0.1);
 }
 
 #header nav a:hover {
+	background-image: -moz-linear-gradient(top, #0782a0, #077d9b);
+	background-image: -webkit-linear-gradient(top, #0782a0, #077d9b);
+	background-image: -ms-linear-gradient(top, #0782a0, #077d9b);
+	background-image: linear-gradient(top, #0782a0, #077d9b);
 	background-color: #0882a1;
-	box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, .05), 0 0 5px 1px rgba(255, 255, 255, .05)
+	box-shadow: inset 0px 1px 5px 1px rgba(0, 0, 0, 0.05), 0px 0px 5px 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Banner */
+
+#banner-wrapper {
+	/* 调整上方的空白高度（觉得大就改小，甚至可以改成 0） */
+	padding-top: 10px !important;
+	/* 调整下方的空白高度 */
+	padding-bottom: 10px !important;
 }
 
 #banner {
+	position: relative;
+	width: 100%;
 	padding: 6em 0;
 	border-radius: 10px;
 	background-size: cover;
-	box-shadow: inset 0 0 0 20px #fff
+	text-align: center;
+	box-shadow: inset 0 0 0 20px #fff;
 }
 
 #banner h2 {
 	font-size: 3.3em;
-	margin: 0
+	color: #fff;
+	text-align: center;
+	letter-spacing: -2px;
+	margin: 0;
 }
 
 #banner span {
+	display: block;
 	left: 0;
-	margin: .5em 0 0;
+	margin: 0.5em 0 0 0;
 	font-size: 1.6em;
 	color: #fff;
-	opacity: .8
+	letter-spacing: -1px;
+	opacity: 0.8;
 }
+
+/* Main */
+
+#main {
+	background: #fff;
+	padding: 4em 0;
+}
+
+/* Footer */
+
+#footer-wrapper {
+	padding: 4em 0;
+}
+
+/* Copyright */
 
 #copyright {
-	padding: 10px 0 0;
-	margin: 0
+	text-align: center;
+	color: #A6A88F;
+	border-top: solid 1px #ced0b7;
+	padding: 10px 0 0 0;
+	margin: 0 0 0 0;
 }
 
-@media screen and (max-width:1280px) {
-	.container {
-		width: calc(100% - 70px)
-	}
+#copyright a {
+	color: #A6A88F;
+}
 
-	.row,
-	.row>* {
-		box-sizing: border-box
-	}
+/* Large */
 
-	.row.gtr-0,
-	.row.gtr-0.gtr-uniform {
-		margin-top: 0
-	}
+@media screen and (max-width: 1280px) {
 
-	.row {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: stretch;
-		margin-top: -35px;
-		margin-left: -35px
-	}
-
-	.row>* {
-		padding: 35px 0 0 35px
-	}
-
-	.row.gtr-uniform>*>:last-child {
-		margin-bottom: 0
-	}
-
-	.row.aln-left {
-		justify-content: flex-start
-	}
-
-	.row.aln-center {
-		justify-content: center
-	}
-
-	.row.aln-right {
-		justify-content: flex-end
-	}
-
-	.row.aln-top {
-		align-items: flex-start
-	}
-
-	.row.aln-middle {
-		align-items: center
-	}
-
-	.row.aln-bottom {
-		align-items: flex-end
-	}
-
-	.row>.imp-large {
-		order: -1
-	}
-
-	.row>.col-1-large {
-		width: 8.33333%
-	}
-
-	.row>.off-1-large {
-		margin-left: 8.33333%
-	}
-
-	.row>.col-2-large {
-		width: 16.66667%
-	}
-
-	.row>.off-2-large {
-		margin-left: 16.66667%
-	}
-
-	.row>.col-3-large {
-		width: 25%
-	}
-
-	.row>.off-3-large {
-		margin-left: 25%
-	}
-
-	.row>.col-4-large {
-		width: 33.33333%
-	}
-
-	.row>.off-4-large {
-		margin-left: 33.33333%
-	}
-
-	.row>.col-5-large {
-		width: 41.66667%
-	}
-
-	.row>.off-5-large {
-		margin-left: 41.66667%
-	}
-
-	.row>.col-6-large {
-		width: 50%
-	}
-
-	.row>.off-6-large {
-		margin-left: 50%
-	}
-
-	.row>.col-7-large {
-		width: 58.33333%
-	}
-
-	.row>.off-7-large {
-		margin-left: 58.33333%
-	}
-
-	.row>.col-8-large {
-		width: 66.66667%
-	}
-
-	.row>.off-8-large {
-		margin-left: 66.66667%
-	}
-
-	.row>.col-9-large {
-		width: 75%
-	}
-
-	.row>.off-9-large {
-		margin-left: 75%
-	}
-
-	.row>.col-10-large {
-		width: 83.33333%
-	}
-
-	.row>.off-10-large {
-		margin-left: 83.33333%
-	}
-
-	.row>.col-11-large {
-		width: 91.66667%
-	}
-
-	.row>.off-11-large {
-		margin-left: 91.66667%
-	}
-
-	.row>.col-12-large {
-		width: 100%
-	}
-
-	.row>.off-12-large {
-		margin-left: 100%
-	}
-
-	.row.gtr-0 {
-		margin-left: 0
-	}
-
-	.row.gtr-0>* {
-		padding: 0
-	}
-
-	.row.gtr-25,
-	.row.gtr-25.gtr-uniform {
-		margin-top: -8.75px
-	}
-
-	.row.gtr-0.gtr-uniform>* {
-		padding-top: 0
-	}
-
-	.row.gtr-25 {
-		margin-left: -8.75px
-	}
-
-	.row.gtr-25>* {
-		padding: 8.75px 0 0 8.75px
-	}
-
-	.row.gtr-50,
-	.row.gtr-50.gtr-uniform {
-		margin-top: -17.5px
-	}
-
-	.row.gtr-25.gtr-uniform>* {
-		padding-top: 8.75px
-	}
-
-	.row.gtr-50 {
-		margin-left: -17.5px
-	}
-
-	.row.gtr-50>* {
-		padding: 17.5px 0 0 17.5px
-	}
-
-	.row.gtr-50.gtr-uniform>* {
-		padding-top: 17.5px
-	}
-
-	.row.gtr-uniform {
-		margin-top: -35px
-	}
-
-	.row.gtr-150,
-	.row.gtr-150.gtr-uniform {
-		margin-top: -52.5px
-	}
-
-	.row.gtr-uniform>* {
-		padding-top: 35px
-	}
-
-	.row.gtr-150 {
-		margin-left: -52.5px
-	}
-
-	.row.gtr-150>* {
-		padding: 52.5px 0 0 52.5px
-	}
-
-	.row.gtr-200,
-	.row.gtr-200.gtr-uniform {
-		margin-top: -70px
-	}
-
-	.row.gtr-150.gtr-uniform>* {
-		padding-top: 52.5px
-	}
-
-	.row.gtr-200 {
-		margin-left: -70px
-	}
-
-	.row.gtr-200>* {
-		padding: 70px 0 0 70px
-	}
-
-	.row.gtr-200.gtr-uniform>* {
-		padding-top: 70px
-	}
+	/* Reusable */
 
 	ul.small-image-list img {
-		width: 50px
+		width: 50px;
 	}
 
 	ul.big-image-list img {
-		width: 75px
+		width: 75px;
 	}
 
+	/* Header */
+
 	#header {
-		height: 75px
+		height: 75px;
 	}
 
 	#header h1 {
 		font-size: 2em;
-		line-height: 75px
+		line-height: 75px;
 	}
 
 	#header nav {
 		line-height: 74px;
-		font-size: 1em
+		font-size: 1em;
 	}
 
 	#header nav a {
-		padding: 0 20px
+		padding: 0 20px 0 20px;
 	}
+
+	/* Banner */
 
 	#banner {
 		width: 100%;
-		padding: 5em 0
+		padding: 5em 0;
 	}
 
 	#banner h2 {
-		font-size: 3em
+		font-size: 3em;
 	}
 
 	#banner span {
-		font-size: 1.4em
+		font-size: 1.4em;
 	}
+
+	/* Footer */
 
 	#footer-wrapper {
-		padding: 4em 0
+		padding: 4em 0;
 	}
 
+	/* Copyright */
+
 	#copyright {
-		padding: 1em 0 0;
-		margin: 1em 0 0
+		padding: 1em 0 0 0;
+		margin: 1em 0 0 0;
 	}
+
 }
+
+/* Small */
 
 #navPanel,
 #titleBar {
-	display: none
+	display: none;
 }
 
-@media screen and (max-width:980px) {
-	.container {
-		width: calc(100% - 100px)
+@media screen and (max-width: 980px) {
+
+	/* Basic */
+
+	html,
+	body {
+		overflow-x: hidden;
 	}
 
-	.row,
-	.row>* {
-		box-sizing: border-box
+	/* Page Wrapper */
+
+	#page-wrapper {
+		padding-top: 44px;
 	}
 
-	.row.gtr-0,
-	.row.gtr-0.gtr-uniform {
-		margin-top: 0
+	/* Header */
+
+	#header-wrapper {
+		background-image: -moz-linear-gradient(top, #008dab, #007294);
+		background-image: -webkit-linear-gradient(top, #008dab, #007294);
+		background-image: -ms-linear-gradient(top, #008dab, #007294);
+		background-image: linear-gradient(top, #008dab, #007294);
+		background-color: #007294;
 	}
 
-	.row {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: stretch;
-		margin-top: -50px;
-		margin-left: -50px
+	#header {
+		display: none;
 	}
 
-	.row>* {
-		padding: 50px 0 0 50px
+	#banner {
+		padding: 6em 0;
 	}
 
-	.row.gtr-uniform>*>:last-child {
-		margin-bottom: 0
+	#banner h2 {
+		font-size: 2.5em;
 	}
 
-	.row.aln-left {
-		justify-content: flex-start
-	}
+	/* Nav */
 
-	.row.aln-center {
-		justify-content: center
-	}
-
-	.row.aln-right {
-		justify-content: flex-end
-	}
-
-	.row.aln-top {
-		align-items: flex-start
-	}
-
-	.row.aln-middle {
-		align-items: center
-	}
-
-	.row.aln-bottom {
-		align-items: flex-end
-	}
-
-	.row>.imp-medium {
-		order: -1
-	}
-
-	.row>.col-1-medium {
-		width: 8.33333%
-	}
-
-	.row>.off-1-medium {
-		margin-left: 8.33333%
-	}
-
-	.row>.col-2-medium {
-		width: 16.66667%
-	}
-
-	.row>.off-2-medium {
-		margin-left: 16.66667%
-	}
-
-	.row>.col-3-medium {
-		width: 25%
-	}
-
-	.row>.off-3-medium {
-		margin-left: 25%
-	}
-
-	.row>.col-4-medium {
-		width: 33.33333%
-	}
-
-	.row>.off-4-medium {
-		margin-left: 33.33333%
-	}
-
-	.row>.col-5-medium {
-		width: 41.66667%
-	}
-
-	.row>.off-5-medium {
-		margin-left: 41.66667%
-	}
-
-	.row>.col-6-medium {
-		width: 50%
-	}
-
-	.row>.off-6-medium {
-		margin-left: 50%
-	}
-
-	.row>.col-7-medium {
-		width: 58.33333%
-	}
-
-	.row>.off-7-medium {
-		margin-left: 58.33333%
-	}
-
-	.row>.col-8-medium {
-		width: 66.66667%
-	}
-
-	.row>.off-8-medium {
-		margin-left: 66.66667%
-	}
-
-	.row>.col-9-medium {
-		width: 75%
-	}
-
-	.row>.off-9-medium {
-		margin-left: 75%
-	}
-
-	.row>.col-10-medium {
-		width: 83.33333%
-	}
-
-	.row>.off-10-medium {
-		margin-left: 83.33333%
-	}
-
-	.row>.col-11-medium {
-		width: 91.66667%
-	}
-
-	.row>.off-11-medium {
-		margin-left: 91.66667%
-	}
-
-	.row>.col-12-medium {
-		width: 100%
-	}
-
-	.row>.off-12-medium {
-		margin-left: 100%
-	}
-
-	.row.gtr-0 {
-		margin-left: 0
-	}
-
-	.row.gtr-0>* {
-		padding: 0
-	}
-
-	.row.gtr-25,
-	.row.gtr-25.gtr-uniform {
-		margin-top: -12.5px
-	}
-
-	.row.gtr-0.gtr-uniform>* {
-		padding-top: 0
-	}
-
-	.row.gtr-25 {
-		margin-left: -12.5px
-	}
-
-	.row.gtr-25>* {
-		padding: 12.5px 0 0 12.5px
-	}
-
-	.row.gtr-50,
-	.row.gtr-50.gtr-uniform {
-		margin-top: -25px
-	}
-
-	.row.gtr-25.gtr-uniform>* {
-		padding-top: 12.5px
-	}
-
-	.row.gtr-50 {
-		margin-left: -25px
-	}
-
-	.row.gtr-50>* {
-		padding: 25px 0 0 25px
-	}
-
-	.row.gtr-50.gtr-uniform>* {
-		padding-top: 25px
-	}
-
-	.row.gtr-uniform {
-		margin-top: -50px
-	}
-
-	.row.gtr-150,
-	.row.gtr-150.gtr-uniform {
-		margin-top: -75px
-	}
-
-	.row.gtr-uniform>* {
-		padding-top: 50px
-	}
-
-	.row.gtr-150 {
-		margin-left: -75px
-	}
-
-	.row.gtr-150>* {
-		padding: 75px 0 0 75px
-	}
-
-	.row.gtr-200,
-	.row.gtr-200.gtr-uniform {
-		margin-top: -100px
-	}
-
-	.row.gtr-150.gtr-uniform>* {
-		padding-top: 75px
-	}
-
-	.row.gtr-200 {
-		margin-left: -100px
-	}
-
-	.row.gtr-200>* {
-		padding: 100px 0 0 100px
-	}
-
-	.row.gtr-200.gtr-uniform>* {
-		padding-top: 100px
-	}
-
-	#page-wrapper,
-	#titleBar {
+	#page-wrapper {
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
-		-moz-transition: -moz-transform .5s;
-		-webkit-transition: -webkit-transform .5s;
-		-ms-transition: -ms-transform .5s
+		backface-visibility: hidden;
+		-moz-transition: -moz-transform 0.5s ease;
+		-webkit-transition: -webkit-transform 0.5s ease;
+		-ms-transition: -ms-transform 0.5s ease;
+		transition: transform 0.5s ease;
+		padding-bottom: 1px;
 	}
 
-	#header-wrapper,
 	#titleBar {
 		background-image: -moz-linear-gradient(top, #008dab, #007294);
 		background-image: -webkit-linear-gradient(top, #008dab, #007294);
 		background-image: -ms-linear-gradient(top, #008dab, #007294);
-		background-color: #007294
-	}
-
-	#navPanel,
-	#titleBar {
+		background-image: linear-gradient(top, #008dab, #007294);
+		-moz-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-moz-transition: -moz-transform 0.5s ease;
+		-webkit-transition: -webkit-transform 0.5s ease;
+		-ms-transition: -ms-transform 0.5s ease;
+		transition: transform 0.5s ease;
+		display: block;
+		height: 44px;
 		left: 0;
 		position: fixed;
-		top: 0
-	}
-
-	body,
-	html {
-		overflow-x: hidden
-	}
-
-	#page-wrapper {
-		padding-top: 44px;
-		backface-visibility: hidden;
-		transition: transform .5s;
-		padding-bottom: 1px
-	}
-
-	#header-wrapper {
-		background-image: linear-gradient(top, #008dab, #007294)
-	}
-
-	#header {
-		display: none
-	}
-
-	#navPanel,
-	#navPanel .link,
-	#titleBar {
-		display: block;
-		color: #fff
-	}
-
-	#banner {
-		padding: 6em 0
-	}
-
-	#banner h2 {
-		font-size: 2.5em
-	}
-
-	#titleBar {
-		background-image: linear-gradient(top, #008dab, #007294);
-		backface-visibility: hidden;
-		transition: transform .5s;
-		height: 44px;
+		top: 0;
 		width: 100%;
 		z-index: 10001;
 		text-align: center;
-		font-size: 1.25em
+		color: #fff;
+		font-size: 1.25em;
+		background-color: #007294;
 	}
 
 	#titleBar .title {
-		line-height: 44px
+		line-height: 44px;
 	}
 
 	#titleBar .toggle {
@@ -1587,7 +1940,7 @@ ul.link-list li:first-child {
 		top: 0;
 		left: 0;
 		width: 80px;
-		height: 60px
+		height: 60px;
 	}
 
 	#titleBar .toggle:after {
@@ -1598,11 +1951,11 @@ ul.link-list li:first-child {
 		color: #fff;
 		text-align: center;
 		line-height: 31px;
-		font-size: .8em;
+		font-size: 0.8em;
 		width: 50px;
 		height: 35px;
 		border-radius: 5px;
-		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25), inset 0 1px 2px 0 rgba(0, 0, 0, .5), inset 0 6px 13px 0 rgba(255, 255, 255, .2), 0 2px 2px 0 rgba(255, 255, 255, .1)
+		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25), inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5), inset 0px 6px 13px 0px rgba(255, 255, 255, 0.2), 0px 2px 2px 0px rgba(255, 255, 255, 0.1);
 	}
 
 	#titleBar .toggle:before {
@@ -1612,11 +1965,11 @@ ul.link-list li:first-child {
 		height: 30px;
 		background: url("images/mobileUI-site-nav-opener-bg.svg");
 		top: 16px;
-		left: 19px
+		left: 19px;
 	}
 
 	#titleBar .toggle:active:after {
-		background: rgba(0, 0, 0, .2)
+		background: rgba(0, 0, 0, 0.2);
 	}
 
 	#navPanel {
@@ -1628,479 +1981,298 @@ ul.link-list li:first-child {
 		-webkit-transform: translateX(-275px);
 		-ms-transform: translateX(-275px);
 		transform: translateX(-275px);
-		-moz-transition: -moz-transform .5s;
-		-webkit-transition: -webkit-transform .5s;
-		-ms-transition: -ms-transform .5s;
-		transition: transform .5s;
+		-moz-transition: -moz-transform 0.5s ease;
+		-webkit-transition: -webkit-transform 0.5s ease;
+		-ms-transition: -ms-transform 0.5s ease;
+		transition: transform 0.5s ease;
+		display: block;
 		height: 100%;
+		left: 0;
 		overflow-y: auto;
+		position: fixed;
+		top: 0;
 		width: 275px;
 		z-index: 10002;
-		background: #00536f;
-		box-shadow: inset -10px 0 40px 0 rgba(0, 0, 0, .5)
+		background: #00536F;
+		color: #fff;
+		box-shadow: inset -10px 0px 40px 0px rgba(0, 0, 0, 0.5);
 	}
 
 	#navPanel .link {
-		border-top: 1px solid rgba(255, 255, 255, .1);
-		border-bottom: 1px solid rgba(0, 0, 0, .2);
+		display: block;
+		color: #fff;
+		border-top: solid 1px rgba(255, 255, 255, 0.1);
+		border-bottom: solid 1px rgba(0, 0, 0, 0.2);
 		height: 55px;
 		line-height: 55px;
-		padding: 0 15px;
-		text-decoration: none
+		padding: 0 15px 0 15px;
+		text-decoration: none;
 	}
 
 	#navPanel .link:first-child {
-		border-top: 0
+		border-top: 0;
 	}
 
 	#navPanel .link:last-child {
-		border-bottom: 0
+		border-bottom: 0;
 	}
 
-	body.navPanel-visible #page-wrapper,
+	body.navPanel-visible #page-wrapper {
+		-moz-transform: translateX(275px);
+		-webkit-transform: translateX(275px);
+		-ms-transform: translateX(275px);
+		transform: translateX(275px);
+	}
+
 	body.navPanel-visible #titleBar {
 		-moz-transform: translateX(275px);
 		-webkit-transform: translateX(275px);
 		-ms-transform: translateX(275px);
-		transform: translateX(275px)
+		transform: translateX(275px);
 	}
 
 	body.navPanel-visible #navPanel {
 		-moz-transform: translateX(0);
 		-webkit-transform: translateX(0);
 		-ms-transform: translateX(0);
-		transform: translateX(0)
+		transform: translateX(0);
 	}
 
-	#titleBar .title img {
-		max-height: 22px !important;
-		width: auto !important;
-		vertical-align: middle !important;
-		display: inline-block !important;
-		margin-top: -3px !important
-	}
 }
 
-@media screen and (max-width:736px) {
-	.container {
-		width: calc(100% - 40px)
-	}
+/* Small */
 
-	.row,
-	.row>* {
-		box-sizing: border-box
-	}
+@media screen and (max-width: 736px) {
 
-	.row.gtr-0,
-	.row.gtr-0.gtr-uniform {
-		margin-top: 0
-	}
-
-	.row {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: stretch;
-		margin-top: -20px;
-		margin-left: -20px
-	}
-
-	.row>* {
-		padding: 20px 0 0 20px
-	}
-
-	.row.gtr-uniform>*>:last-child {
-		margin-bottom: 0
-	}
-
-	.row.aln-left {
-		justify-content: flex-start
-	}
-
-	.row.aln-center {
-		justify-content: center
-	}
-
-	.row.aln-right {
-		justify-content: flex-end
-	}
-
-	.row.aln-top {
-		align-items: flex-start
-	}
-
-	.row.aln-middle {
-		align-items: center
-	}
-
-	.row.aln-bottom {
-		align-items: flex-end
-	}
-
-	.row>.imp-small {
-		order: -1
-	}
-
-	.row>.col-1-small {
-		width: 8.33333%
-	}
-
-	.row>.off-1-small {
-		margin-left: 8.33333%
-	}
-
-	.row>.col-2-small {
-		width: 16.66667%
-	}
-
-	.row>.off-2-small {
-		margin-left: 16.66667%
-	}
-
-	.row>.col-3-small {
-		width: 25%
-	}
-
-	.row>.off-3-small {
-		margin-left: 25%
-	}
-
-	.row>.col-4-small {
-		width: 33.33333%
-	}
-
-	.row>.off-4-small {
-		margin-left: 33.33333%
-	}
-
-	.row>.col-5-small {
-		width: 41.66667%
-	}
-
-	.row>.off-5-small {
-		margin-left: 41.66667%
-	}
-
-	.row>.col-6-small {
-		width: 50%
-	}
-
-	.row>.off-6-small {
-		margin-left: 50%
-	}
-
-	.row>.col-7-small {
-		width: 58.33333%
-	}
-
-	.row>.off-7-small {
-		margin-left: 58.33333%
-	}
-
-	.row>.col-8-small {
-		width: 66.66667%
-	}
-
-	.row>.off-8-small {
-		margin-left: 66.66667%
-	}
-
-	.row>.col-9-small {
-		width: 75%
-	}
-
-	.row>.off-9-small {
-		margin-left: 75%
-	}
-
-	.row>.col-10-small {
-		width: 83.33333%
-	}
-
-	.row>.off-10-small {
-		margin-left: 83.33333%
-	}
-
-	.row>.col-11-small {
-		width: 91.66667%
-	}
-
-	.row>.off-11-small {
-		margin-left: 91.66667%
-	}
-
-	.blog-post-image,
-	.row>.col-12-small {
-		width: 100%
-	}
-
-	.row>.off-12-small {
-		margin-left: 100%
-	}
-
-	.row.gtr-0 {
-		margin-left: 0
-	}
-
-	.row.gtr-0>* {
-		padding: 0
-	}
-
-	.row.gtr-25,
-	.row.gtr-25.gtr-uniform {
-		margin-top: -5px
-	}
-
-	.row.gtr-0.gtr-uniform>* {
-		padding-top: 0
-	}
-
-	.row.gtr-25 {
-		margin-left: -5px
-	}
-
-	.row.gtr-25>* {
-		padding: 5px 0 0 5px
-	}
-
-	.row.gtr-50,
-	.row.gtr-50.gtr-uniform {
-		margin-top: -10px
-	}
-
-	.row.gtr-25.gtr-uniform>* {
-		padding-top: 5px
-	}
-
-	.row.gtr-50 {
-		margin-left: -10px
-	}
-
-	.row.gtr-50>* {
-		padding: 10px 0 0 10px
-	}
-
-	.row.gtr-50.gtr-uniform>* {
-		padding-top: 10px
-	}
-
-	.row.gtr-uniform {
-		margin-top: -20px
-	}
-
-	.row.gtr-150,
-	.row.gtr-150.gtr-uniform {
-		margin-top: -30px
-	}
-
-	.row.gtr-uniform>* {
-		padding-top: 20px
-	}
-
-	.row.gtr-150 {
-		margin-left: -30px
-	}
-
-	.row.gtr-150>* {
-		padding: 30px 0 0 30px
-	}
-
-	.row.gtr-200,
-	.row.gtr-200.gtr-uniform {
-		margin-top: -40px
-	}
-
-	.row.gtr-150.gtr-uniform>* {
-		padding-top: 30px
-	}
-
-	.row.gtr-200 {
-		margin-left: -40px
-	}
-
-	.row.gtr-200>* {
-		padding: 40px 0 0 40px
-	}
-
-	.row.gtr-200.gtr-uniform>* {
-		padding-top: 40px
-	}
-
-	#copyright,
-	#copyright a {
-		color: #a6a88f
-	}
+	/* Basic */
 
 	body {
-		font-size: 13pt
+		font-size: 13pt;
 	}
 
 	h2 {
-		font-size: 1.4em
+		font-size: 1.4em;
 	}
 
 	h3 {
-		font-size: 1.2em
+		font-size: 1.2em;
 	}
 
-	.button,
 	h4 {
-		font-size: 1em
+		font-size: 1em;
 	}
 
-	ul.big-image-list li img,
+	/* Reusable */
+
 	ul.small-image-list li img {
-		width: 100px
+		width: 100px;
+	}
+
+	ul.big-image-list li img {
+		width: 100px;
 	}
 
 	ul.link-list {
-		margin: 0 0 1em
+		margin: 0 0 1em 0;
 	}
 
 	article.blog-post .comments {
 		display: block;
 		position: relative;
-		top: -.5em;
-		margin: 0 0 .5em
+		top: -0.5em;
+		margin: 0 0 0.5em 0;
 	}
 
+	.button {
+		font-size: 1em;
+	}
+
+	.blog-post-image {
+		width: 100%;
+	}
+
+	/* Banner */
+
 	#banner-wrapper {
-		padding: 20px 0
+		padding: 20px 0;
 	}
 
 	#banner {
 		box-shadow: inset 0 0 0 10px #fff;
-		padding: 4em 1em
+		padding: 4em 1em;
 	}
 
 	#banner h2 {
 		font-size: 2em;
 		letter-spacing: -2px;
-		line-height: 1.25em
+		line-height: 1.25em;
 	}
 
 	#banner span {
 		font-size: 1.25em;
 		letter-spacing: -1px;
-		line-height: 1.25em
+		line-height: 1.25em;
 	}
 
-	#footer-wrapper,
+	/* Main */
+
 	#main {
-		padding: 40px 0
+		padding: 40px 0;
 	}
+
+	/* Footer */
+
+	#footer-wrapper {
+		padding: 40px 0;
+	}
+
+	/* Copyright */
 
 	#copyright {
 		text-align: center;
-		padding: 0;
-		font-size: .8em
+		color: #A6A88F;
+		padding: 0px 0 0 0;
+		font-size: 0.8em;
 	}
+
+	#copyright a {
+		color: #A6A88F;
+	}
+
 }
 
-#footer-wrapper,
-#header,
-#main {
-	padding: 0 !important
-}
+/* ========================================= */
+/* 修复图片 Logo 替换文字后的样式                */
+/* ========================================= */
 
+/* 1. 桌面端与平板端（>980px）：使用绝对定位+位移法实现完美居中 */
 #header h1 {
 	position: absolute !important;
 	top: 50% !important;
+	/* 定位到父容器高度的 50% */
 	transform: translateY(-50%) !important;
+	/* 往上偏移自身高度的一半，实现绝对居中 */
 	margin: 0 !important;
 	height: auto !important;
 	line-height: 1 !important;
-	left: 0 !important
+	/* 清除原模板写死的几十像素行高干扰 */
+}
+
+#header h1 a {
+	display: block !important;
+	line-height: 1 !important;
 }
 
 #header h1 img {
+	/* 控制桌面端 Logo 的高度 */
 	max-height: 38px !important;
 	width: auto !important;
-	display: block !important
+	display: block !important;
 }
+
+/* 2. 手机端与小平板（<980px）：适配动态生成的 #titleBar */
+@media screen and (max-width: 980px) {
+	#titleBar .title img {
+		/* 手机端的顶部导航条总高度只有 44px，所以 Logo 必须缩小 */
+		max-height: 22px !important;
+		width: auto !important;
+		vertical-align: middle !important;
+		display: inline-block !important;
+		/* 微调视觉高度，如果不居中可以修改这里的 -3px */
+		margin-top: -3px !important;
+	}
+}
+
+/* ========================================= */
+/* 自定义轮播图样式 (Slider)                    */
+/* ========================================= */
 
 #banner-slider {
 	position: relative;
 	width: 100%;
+	/* 【控制尺寸】在这里修改轮播图的高度，觉得太大可以改为 400px 或 500px */
 	height: 550px;
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: inset 0 0 0 10px #fff;
-	background-color: #333
+	/* 保持原模板的白色内边框风格 */
+	background-color: #333;
+	/* 图片加载前的背景色 */
 }
 
 .slider-container {
 	display: flex;
 	width: 100%;
 	height: 100%;
-	transition: transform .6s ease-in-out
-}
-
-.dot,
-.slide-btn {
-	transition: background .3s;
-	cursor: pointer
+	/* 切换图片的动画过渡效果 */
+	transition: transform 0.6s ease-in-out;
 }
 
 .slide {
 	min-width: 100%;
 	height: 100%;
-	position: relative
-}
-
-.slide-btn,
-.slide-text,
-.slider-dots {
-	position: absolute
+	position: relative;
 }
 
 .slide img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover
+	/* 保证图片铺满整个区域且不变形被拉伸 */
+	object-fit: cover;
 }
 
+/* 漂浮在图片上的文字样式 */
 .slide-text {
+	position: absolute;
 	bottom: 50px;
 	left: 50%;
 	transform: translateX(-50%);
 	color: #fff;
 	font-size: 2.2em;
-	font-weight: 700;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
-	background: rgba(0, 114, 148, .7);
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+	background: rgba(0, 114, 148, 0.7);
+	/* 品牌蓝色半透明背景 */
 	padding: 10px 30px;
 	border-radius: 5px;
-	white-space: nowrap
+	white-space: nowrap;
 }
 
+/* 左右切换按钮 */
 .slide-btn {
+	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	background: rgba(0, 0, 0, .3);
-	color: #fff;
+	background: rgba(0, 0, 0, 0.3);
+	color: white;
 	border: none;
 	font-size: 1em;
 	padding: 15px 20px;
+	cursor: pointer;
 	border-radius: 5px;
-	z-index: 10
+	transition: background 0.3s;
+	z-index: 10;
 }
 
 .slide-btn:hover {
-	background: rgba(0, 114, 148, .8)
+	background: rgba(0, 114, 148, 0.8);
 }
 
 .prev-btn {
-	left: 20px
+	left: 20px;
 }
 
 .next-btn {
-	right: 20px
+	right: 20px;
 }
 
+/* 底部指示圆点 */
 .slider-dots {
+	position: absolute;
 	bottom: 15px;
 	width: 100%;
-	z-index: 10
+	text-align: center;
+	z-index: 10;
 }
 
 .dot {
@@ -2108,264 +2280,453 @@ ul.link-list li:first-child {
 	width: 12px;
 	height: 12px;
 	margin: 0 5px;
-	background-color: rgba(255, 255, 255, .5);
-	border-radius: 50%
-}
-
-.adv-img,
-.prod-item img {
-	border-radius: 4px;
-	object-fit: cover
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.3s;
 }
 
 .dot.active,
 .dot:hover {
 	background-color: #fff;
-	box-shadow: 0 0 5px rgba(0, 0, 0, .5)
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+/* 手机端适配：缩小字体和高度 */
+@media screen and (max-width: 736px) {
+	#banner-slider {
+		height: 300px;
+		box-shadow: inset 0 0 0 5px #fff;
+	}
+
+	.slide-text {
+		font-size: 1.2em;
+		bottom: 30px;
+		padding: 5px 15px;
+	}
+
+	.slide-btn {
+		padding: 10px 15px;
+		font-size: 1.5em;
+	}
+}
+
+
+/* ========================================= */
+/* 1. 缩小外侧一圈的空白区域                   */
+/* ========================================= */
+#main {
+	/* 原本是 4em。2em 控制上下空白，0 控制左右。觉得大可以改 1.5em 或 1em */
+	padding: 1.5em 0 !important;
+}
+
+/* ========================================= */
+/* 2. 工厂优势列表样式 (Advantages List)        */
+/* ========================================= */
 .advantages-list {
 	margin: 0;
 	padding: 0;
-	list-style: none
+	list-style: none;
 }
 
 .advantages-list li {
 	display: flex;
 	align-items: flex-start;
-	margin-bottom: 10px
+	/* 让图片和文字顶部对齐 */
+	/* 👇 在这里修改每个优势项目之间的上下间距 */
+	margin-bottom: 10px;
 }
 
 .adv-img {
+	/* 👇 在这里修改优势图片的尺寸 (目前是正方形 65x65) */
 	width: 80px;
 	height: 80px;
-	margin-right: 15px
+	object-fit: cover;
+	border-radius: 4px;
+	/* 让图片有点小圆角，看起来不那么死板 */
+	/* 👇 在这里修改图片和右侧文字之间的水平距离 */
+	margin-right: 15px;
 }
 
 .adv-text h4 {
+	/* 👇 修改优势标题的字体大小和下方间距 */
 	font-size: 1.1em;
 	margin-bottom: 3px;
-	color: #283121
+	color: #283121;
 }
 
 .adv-text p {
-	font-size: .9em;
+	/* 👇 修改优势说明的字体大小和行高 */
+	font-size: 0.9em;
 	line-height: 1.4;
-	margin: 0
+	margin: 0;
 }
 
+/* ========================================= */
+/* 3. 产品展示 3行2列网格样式 (Product Grid)    */
+/* ========================================= */
 .product-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 10px 15px
+	/* 强制分为 2 列 */
+	/* 👇 修改产品图片之间的间距：第一个数是上下间距，第二个数(15px)是左右间距 */
+	gap: 10px 15px;
+}
+
+.prod-item {
+	text-align: center;
 }
 
 .prod-item img {
 	width: 100%;
+	/* 👇 统一控制产品图片的高度。这非常重要，能保证即使你上传的背包图比例不一，排版也能整齐划一 */
 	height: 130px;
-	border: 1px solid #e0e0e0
+	object-fit: cover;
+	/* 让图片填满框且不变形 */
+	border-radius: 4px;
+	border: 1px solid #e0e0e0;
+	/* 加一层极淡的边框提升质感 */
 }
 
 .prod-item h5 {
+	/* 👇 修改产品标题的大小和距离图片的上下间距 */
 	margin-top: 1px;
 	margin-bottom: 0;
-	font-size: .95em;
+	font-size: 0.95em;
 	color: #007897;
-	text-transform: capitalize
+	text-transform: capitalize;
+	/* 首字母自动大写 */
 }
 
-.location-item,
+
+/* 4. 文字内容区域间距 */
 .service-content {
-	flex: 1
+	flex: 1;
+	/* 让文字部分占满剩余空间 */
 }
 
 .service-content h3 {
 	margin-bottom: 8px !important;
-	font-size: 1.15em !important
+	/* 标题与下方段落的距离 */
+	font-size: 1.15em !important;
 }
 
 .service-content p {
 	margin-bottom: 0 !important;
+	/* 清除段落底部的默认间距 */
 	line-height: 1.5;
-	font-size: .95em
+	font-size: 0.95em;
 }
 
+/* 为了让左侧的列表也统一风格，如果需要，可以将左侧的 <ul> 也加上 class="big-image-list custom-services-list" */
+
+
+/* ========================================= */
+/* 适配 macOS 浅灰背景的内部样式修正            */
+/* ========================================= */
+
+/* 1. 把内部的蓝框变透明，去掉原本的边框和内阴影 */
 #header {
-	background: 0 0 !important;
+	background: transparent !important;
 	border: none !important;
-	box-shadow: none !important
+	box-shadow: none !important;
 }
 
-#header nav a.current-page-item,
-#header nav a:hover {
-	background: rgba(0, 0, 0, .05) !important;
+/* 2. 把导航菜单的文字变成深灰色，更有商务质感 */
+#header nav a {
+	color: #333 !important;
+	font-weight: 500;
+	/* 稍微加粗一点增加可读性 */
+}
+
+/* 3. 修改鼠标悬浮在菜单上的效果 (原本是深蓝底色，现在改成浅灰底色) */
+#header nav a:hover,
+#header nav a.current-page-item {
+	background: rgba(0, 0, 0, 0.05) !important;
+	/* 极淡的黑色半透明底 */
 	color: #000 !important;
 	box-shadow: none !important;
-	border-radius: 6px
+	border-radius: 6px;
+	/* 苹果风圆角 */
 }
+
+/* 4. 如果你的 Logo 还是文字，也把它变成深灰色 (如果是图片 Logo 这条不影响) */
+#header h1 a {
+	color: #222 !important;
+}
+
+/* ========================================= */
+/* 保持顶部导航栏和 Logo 使用原本的紧凑字体      */
+/* ========================================= */
+
+
+/* ========================================= */
+/* 1. 语言下拉菜单样式 (Language Dropdown)      */
+/* ========================================= */
 
 .lang-dropdown {
 	display: inline-block;
-	position: relative
+	position: relative;
+	/* 继承外部的对齐方式 */
 }
 
+/* 隐藏下拉框，只有在鼠标悬浮时才显示 */
 .lang-dropdown-content {
 	display: none;
 	position: absolute;
 	top: 80%;
+	/* 靠近主菜单下方 */
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: #fff;
+	/* 保证下拉框在文字正下方居中 */
+	background-color: #ffffff;
 	min-width: 120px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+	/* 苹果风柔和弥散阴影 */
 	border-radius: 12px;
+	/* 苹果风圆角 */
 	padding: 8px 0;
-	z-index: 10000
+	z-index: 10000;
 }
 
-.category-mood-box,
-.factory-item {
-	position: relative;
-	aspect-ratio: 4/3;
-	overflow: hidden
-}
-
+/* 鼠标悬浮时显示下拉框 */
 .lang-dropdown:hover .lang-dropdown-content {
 	display: block;
-	animation: .2s fadeIn
+	animation: fadeIn 0.2s ease;
+	/* 简单的淡入动画 */
 }
 
 @keyframes fadeIn {
 	from {
 		opacity: 0;
-		transform: translate(-50%, -5px)
+		transform: translate(-50%, -5px);
 	}
 
 	to {
 		opacity: 1;
-		transform: translate(-50%, 0)
+		transform: translate(-50%, 0);
 	}
 }
 
+/* 下拉框内部链接样式重置 */
 #header nav .lang-dropdown-content a {
 	display: block !important;
 	padding: 10px 20px !important;
 	line-height: 1.2 !important;
-	color: #333 !important;
-	font-size: .9em !important;
-	background: 0 0 !important;
+	color: #333333 !important;
+	font-size: 0.9em !important;
+	background: transparent !important;
 	text-align: center;
-	border-radius: 0 !important
+	border-radius: 0 !important;
 }
 
+/* 下拉框内部链接 hover 效果：苹果风浅灰色背景 */
 #header nav .lang-dropdown-content a:hover {
 	background-color: #f5f5f7 !important;
-	color: #0071e3 !important
+	color: #0071e3 !important;
+	/* 文字变蓝 */
 }
+
+/* ========================================= */
+/* 2. 苹果风格 Contact 蓝色按钮样式             */
+/* ========================================= */
 
 #header nav a.nav-contact-btn {
 	display: inline-block !important;
 	background-color: #0071e3 !important;
-	color: #fff !important;
+	/* 苹果经典商务蓝 */
+	color: #ffffff !important;
+	/* 文字纯白 */
+
+	/* 尺寸与对齐控制 */
 	padding: 0 20px !important;
 	height: 40px !important;
 	line-height: 40px !important;
 	vertical-align: middle !important;
+	/* 强制与旁边的文字垂直居中对齐 */
 	margin-left: 15px !important;
+	/* 稍微与左边菜单拉开一点呼吸空间 */
+
 	border-radius: 5px !important;
+	/* 胶囊圆角 */
 	font-weight: 500 !important;
+	/* 稍微加粗让按钮更有力量感 */
 	letter-spacing: normal !important;
-	transition: .2s !important
+	/* 清除原有负字距 */
+	transition: all 0.2s ease !important;
+	/* 丝滑的过渡动画 */
 }
 
+/* 按钮 Hover 效果：轻微提亮并有一点点浮动 */
 #header nav a.nav-contact-btn:hover {
 	background-color: #0077ed !important;
 	transform: scale(1.15);
-	box-shadow: 0 4px 10px rgba(0, 113, 227, .3) !important
+	/* 鼠标放上去有轻微的放大交互感 */
+	box-shadow: 0 4px 10px rgba(0, 113, 227, 0.3) !important;
+	/* 淡淡的蓝色光晕 */
 }
 
-.craft-grid-5,
+/* ========================================= */
+/* Factory Tour 工厂照片墙网格样式与交互效果     */
+/* ========================================= */
+/* 使用 CSS Grid 布局，默认电脑端 5 列 */
 .factory-grid {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	gap: 15px
+	gap: 15px;
+	/* 图片之间的空隙，可根据喜好调大或调小 */
 }
 
+/* 每个图片容器的样式 */
 .factory-item {
+	position: relative;
 	border-radius: 6px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
-	background-color: #f5f5f7
+	/* 苹果风圆角 */
+	overflow: hidden;
+	/* 核心机制：防止放大的图片溢出容器 */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	/* 淡淡的立体阴影 */
+	/* 强制图片比例为 4:3，哪怕原图尺寸不一也能自动裁齐排好 */
+	aspect-ratio: 4 / 3;
+	background-color: #f5f5f7;
+	/* 图片加载出来前的底色 */
 }
 
+/* 内部图片的样式 */
 .factory-item img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	/* 保证图片铺满且不变形 */
 	display: block;
-	transition: transform .4s cubic-bezier(.25, .46, .45, .94)
+	/* 放大动画的过渡时间与平滑曲线 */
+	transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.factory-item:hover img,
-.prod-card:hover .prod-img-wrapper img {
-	transform: scale(1.08)
+/* 鼠标悬浮时的丝滑放大交互效果 */
+.factory-item:hover img {
+	transform: scale(1.08);
+	/* 放大 1.08 倍，克制且高级 */
 }
 
-@media screen and (max-width:1200px) {
+/* 📱 响应式适配：平板端 (小于 1200px 时，自动变为 3 列) */
+@media screen and (max-width: 1200px) {
 	.factory-grid {
-		grid-template-columns: repeat(3, 1fr)
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
+/* 📱 响应式适配：手机端 (小于 736px 时，自动变为 2 列) */
+@media screen and (max-width: 736px) {
+	.factory-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+		/* 手机端空隙稍微缩小一点 */
+	}
+}
+
+/* ========================================= */
+/* 大数字驱动的纯文本核心优势网格 (2x3 Layout)   */
+/* ========================================= */
+
+/* 采用 Grid 网格，电脑端 3 列 */
 .text-grid-2x3 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 10px
+	gap: 10px;
+	/* 卡片之间的间距 */
 }
 
+/* 极简文字卡片的基础样式 */
 .text-card {
-	background-color: #fff;
+	background-color: #ffffff;
 	border: 1px solid #e5e5ea;
+	/* 极淡的苹果风边框 */
 	border-radius: 12px;
 	padding: 35px 25px;
-	transition: .3s
+	text-align: center;
+	/* 内容居中 */
+	transition: all 0.3s ease;
+	/* 丝滑过渡动画 */
 }
 
+/* 卡片悬浮交互：轻微上浮 + 柔和阴影 */
 .text-card:hover {
 	transform: translateY(-6px);
-	box-shadow: 0 12px 24px rgba(0, 0, 0, .06);
-	border-color: #d2d2d7
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+	border-color: #d2d2d7;
 }
 
+/* 核心灵魂：极其醒目的大数字 */
 .big-number {
 	font-size: 3em;
+	/* 超大字号 */
 	font-weight: 700;
+	/* 粗体 */
 	color: #0071e3;
+	/* 苹果经典商务蓝，吸引眼球 */
+	line-height: 1;
 	margin-bottom: 10px;
-	letter-spacing: -1.5px
+	letter-spacing: -1.5px;
+	/* 让大数字的字符更紧凑，显得更有力量感 */
 }
 
-.text-card h3,
+/* 卡片内的小标题 */
 .text-card h4 {
 	font-size: 1.25em !important;
 	color: #1d1d1f !important;
+	/* 近乎黑色的深灰 */
 	margin-bottom: 12px !important;
-	font-weight: 600 !important
+	font-weight: 600 !important;
 }
 
+/* 卡片内的补充说明段落 */
 .text-card p {
-	font-size: .95em !important;
+	font-size: 0.95em !important;
 	color: #515154 !important;
+	/* 柔和的灰色，区分层级 */
 	line-height: 1.6 !important;
-	margin: 0 !important
+	margin: 0 !important;
 }
+
+/* 📱 响应式：平板端变为 2 列 */
+@media screen and (max-width: 980px) {
+	.text-grid-2x3 {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+/* 📱 响应式：手机端变为 1 列 */
+@media screen and (max-width: 736px) {
+	.text-grid-2x3 {
+		grid-template-columns: 1fr;
+	}
+
+	.big-number {
+		font-size: 2.5em;
+		/* 手机端数字稍微缩减一点 */
+	}
+}
+
+
+
+/* ========================================= */
+/* Products Category 苹果风格展示区            */
+/* ========================================= */
+/* ========================================= */
+/* 🎒 Featured Collections (終極主從佈局)     */
+/* ========================================= */
 
 .category-master-detail {
 	display: flex;
 	align-items: stretch;
+	/* 🌟 核心：讓左右兩邊高度強制相等 */
 	gap: 40px;
-	margin-bottom: 40px
+	margin-bottom: 40px;
 }
 
+/* ================= 1. 左側分類菜單 + 動態場景圖 (25%) ================= */
 .category-sidebar {
 	flex: 0 0 25%;
 	background-color: #fbfbfd;
@@ -2373,13 +2734,17 @@ ul.link-list li:first-child {
 	border-radius: 12px;
 	display: flex;
 	flex-direction: column;
+	/* 垂直排列 */
 	justify-content: space-between;
-	overflow: hidden
+	/* 🌟 核心：將菜單頂到最上，將場景圖推到最下 */
+	overflow: hidden;
 }
 
 .category-menu {
+	list-style: none;
 	margin: 0;
-	padding: 10px 0
+	padding: 10px 0;
+	/* 菜單上下留點空隙 */
 }
 
 .category-menu li {
@@ -2388,27 +2753,33 @@ ul.link-list li:first-child {
 	font-weight: 500;
 	color: #515154;
 	cursor: pointer;
-	transition: .2s;
-	border-left: 3px solid transparent
+	transition: all 0.2s ease;
+	border-left: 3px solid transparent;
 }
 
 .category-menu li:hover {
 	color: #1d1d1f;
-	background-color: #f5f5f7
+	background-color: #f5f5f7;
 }
 
 .category-menu li.active {
 	color: #0071e3;
 	font-weight: 600;
-	background-color: #fff;
+	background-color: #ffffff;
 	border-left: 3px solid #0071e3;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, .02)
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
 }
 
+/* 🖼️ 左下角動態場景圖樣式 */
 .category-mood-box {
+	position: relative;
 	margin: 15px;
+	/* 留出內邊距，像相框一樣 */
 	border-radius: 8px;
-	background-color: #e5e5ea
+	overflow: hidden;
+	aspect-ratio: 4 / 3;
+	/* 限制場景圖為 4:3 比例，不會太高 */
+	background-color: #e5e5ea;
 }
 
 .category-mood-box img {
@@ -2416,7 +2787,8 @@ ul.link-list li:first-child {
 	height: 100%;
 	object-fit: cover;
 	display: block;
-	transition: opacity .4s
+	transition: opacity 0.4s ease;
+	/* 切換時自帶漸變淡入效果 */
 }
 
 .mood-overlay {
@@ -2424,84 +2796,95 @@ ul.link-list li:first-child {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 20px 15px 12px;
-	background: linear-gradient(to top, rgba(0, 0, 0, .8), transparent)
+	padding: 20px 15px 12px 15px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+	/* 底部黑色漸變保證文字清晰 */
 }
 
 .mood-overlay span {
 	display: block;
-	color: #fff;
-	font-size: .9em;
+	color: #ffffff;
+	font-size: 0.9em;
 	font-weight: 600;
-	line-height: 1.3
+	line-height: 1.3;
 }
 
-.category-content,
-.faq-left-accordion {
+/* ================= 2. 右側單品網格 (75%) ================= */
+.category-content {
 	flex: 1;
-	min-width: 0
+	min-width: 0;
 }
 
 .product-grid-2x3 {
 	display: none;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
-	animation: .4s fadeInGrid
+	animation: fadeInGrid 0.4s ease;
 }
 
 .product-grid-2x3.active-grid {
-	display: grid
+	display: grid;
 }
 
 @keyframes fadeInGrid {
 	from {
 		opacity: 0;
-		transform: translateY(10px)
+		transform: translateY(10px);
 	}
 
 	to {
 		opacity: 1;
-		transform: translateY(0)
+		transform: translateY(0);
 	}
 }
 
-.craft-item,
+/* ================= 3. 單品卡片與【自定義圖片尺寸控制台】 ================= */
 .prod-card {
-	background-color: #fff;
+	background-color: #ffffff;
 	border: 1px solid #e5e5ea;
 	border-radius: 12px;
 	padding: 15px;
-	transition: .3s
+	text-align: center;
+	transition: all 0.3s ease;
 }
 
 .prod-card:hover {
-	box-shadow: 0 10px 20px rgba(0, 0, 0, .06);
-	border-color: #d2d2d7
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+	border-color: #d2d2d7;
 }
 
+/* 📐 圖片尺寸自定義控制台： */
 .prod-img-wrapper {
 	width: 100%;
-	aspect-ratio: 1/1;
+	/* 這裡控制圖片比例。默認 1 / 1 (正方形)。如果你們包包比較長，可以改為 4 / 5，如果是橫向可改為 4 / 3 */
+	aspect-ratio: 1 / 1;
 	margin-bottom: 15px;
 	border-radius: 8px;
 	overflow: hidden;
-	background-color: #fcfcfc
+	background-color: #fcfcfc;
+	/* 淺灰底色，非常適合襯托去背產品圖 */
 }
 
 .prod-img-wrapper img {
 	width: 100%;
 	height: 100%;
+	/* contain 保證圖片完整顯示不被裁切。如果你們的圖已經完美去背，這個效果最好 */
 	object-fit: contain;
-	transition: transform .4s
+	transition: transform 0.4s ease;
+}
+
+.prod-card:hover .prod-img-wrapper img {
+	transform: scale(1.08);
 }
 
 .prod-id {
 	display: block;
-	font-size: .9em;
+	font-size: 0.9em;
 	color: #86868b;
-	font-weight: 500
+	font-weight: 500;
 }
 
+/* ================= 4. 底部硬朗化 CTA 橫幅 ================= */
 .cta-capsule-banner {
 	display: flex;
 	justify-content: space-between;
@@ -2509,140 +2892,232 @@ ul.link-list li:first-child {
 	background-color: #f5f5f7;
 	border: 1px solid #e5e5ea;
 	border-radius: 16px;
-	padding: 15px 25px
+	/* 🌟 修正：從 50px 膠囊改為更專業的 16px 大廠圓角 */
+	padding: 15px 25px;
 }
 
 .cta-text strong {
 	color: #1d1d1f;
 	font-size: 1.1em;
-	margin-right: 10px
+	margin-right: 10px;
 }
 
 .cta-text span {
 	color: #515154;
-	font-size: .95em
+	font-size: 0.95em;
 }
 
 .cta-btn {
 	background-color: #0071e3;
-	color: #fff !important;
+	color: #ffffff !important;
 	padding: 12px 25px;
 	border-radius: 6px;
+	/* 🌟 修正：按鈕改為 12px 硬朗商務圓角 */
 	font-weight: 600;
 	text-decoration: none;
-	transition: .2s
+	transition: all 0.2s ease;
 }
 
 .cta-btn:hover {
 	background-color: #0077ed;
 	transform: translateY(-2px);
-	box-shadow: 0 4px 12px rgba(0, 113, 227, .25)
+	box-shadow: 0 4px 12px rgba(0, 113, 227, 0.25);
 }
 
-.bento-card:hover,
-.stat-card:hover {
-	transform: translateY(-4px);
-	border-color: #d2d2d7
+/* ================= 📱 響應式適配 ================= */
+@media screen and (max-width: 980px) {
+	.category-master-detail {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.category-sidebar {
+		flex: auto;
+		width: 100%;
+		padding: 0;
+		flex-direction: column;
+	}
+
+	.category-menu {
+		display: flex;
+		overflow-x: auto;
+		padding: 0;
+	}
+
+	.category-menu li {
+		flex: 0 0 auto;
+		border-left: none;
+		border-bottom: 3px solid transparent;
+	}
+
+	.category-menu li.active {
+		border-left: none;
+		border-bottom: 3px solid #0071e3;
+	}
+
+	.category-mood-box {
+		display: none;
+		/* 📱 為了節省空間，手機端自動隱藏場景圖 */
+	}
+
+	.cta-capsule-banner {
+		flex-direction: column;
+		padding: 25px;
+		text-align: center;
+		gap: 20px;
+	}
+
+	.cta-text strong {
+		display: block;
+		margin: 0 0 5px 0;
+	}
 }
 
+@media screen and (max-width: 736px) {
+	.product-grid-2x3 {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 15px;
+	}
+}
+
+
+/* ========================================= */
+/* 修复：将导航栏左右边缘与下方内容严格对齐      */
+/* ========================================= */
+
+#header {
+	padding: 0 !important;
+	/* 移除原本左右 40px 的内边距 */
+}
+
+#header h1 {
+	left: 0 !important;
+	/* 让左侧的 Logo 紧贴容器的最左侧边缘 */
+}
+
+#header nav {
+	right: 0 !important;
+	/* 让右侧的 Contact 按钮及菜单紧贴容器的最右侧边缘 */
+}
+
+
+/* ========================================= */
+/* 🍎 苹果风格 Services 服务卡片排版区           */
+/* ========================================= */
+
+/* ========================================= */
+/* 🧩 Core Services (極限 2 行壓縮網格)       */
+/* ========================================= */
+
+/* 🌟 修復對齊：強制副標題靠左並限制寬度，消除居中錯位 */
 .services-section .section-subtitle {
+	text-align: left !important;
+	max-width: 700px;
 	color: #86868b;
 	font-size: 1.05em;
-	margin-bottom: 35px
+	margin-bottom: 35px;
+	max-width: 100% !important;
+	/* 🌟 解除宽度限制，允许文字在一行内完全舒展 */
 }
 
+/* 🌟 核心引擎：5列 x 2行 的極限網格 */
 .bento-grid-2rows {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
+	/* 5 列均分 */
 	grid-auto-rows: 240px;
-	gap: 18px
+	/* 🌟 核心壓縮：強制每一行高度僅為 240px，兩行總高不到 500px！ */
+	gap: 18px;
 }
 
+/* 統一的卡片底座 */
 .bento-card {
-	background-color: #fff;
+	background-color: #ffffff;
 	border: 1px solid #e5e5ea;
 	border-radius: 14px;
 	overflow: hidden;
 	display: flex;
 	position: relative;
-	transition: .3s cubic-bezier(.25, .8, .25, 1)
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .bento-card:hover {
-	box-shadow: 0 12px 24px rgba(0, 0, 0, .08)
+	transform: translateY(-4px);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+	border-color: #d2d2d7;
 }
 
+/* 1. 寬卡片 (佔據 2 列，內部左右排列) */
 .bento-wide {
 	grid-column: span 2;
 	flex-direction: row;
-	align-items: center
+	align-items: center;
 }
 
 .bento-wide .bento-text {
 	flex: 1;
-	padding: 25px
+	padding: 25px;
 }
 
 .bento-wide .bento-text h3 {
 	font-size: 1.3em !important;
 	margin-bottom: 8px !important;
 	font-weight: 700 !important;
-	color: #1d1d1f !important
+	color: #1d1d1f !important;
 }
 
 .bento-wide .bento-text p {
-	font-size: .9em !important;
+	font-size: 0.9em !important;
 	line-height: 1.5 !important;
 	margin: 0 !important;
-	color: #515154 !important
+	color: #515154 !important;
 }
 
-#main section h2,
-.bento-small .bento-text h3 {
-	font-weight: 700 !important;
-	color: #1d1d1f !important
-}
-
-.bento-img-left,
-.bento-img-right {
+.bento-img-right,
+.bento-img-left {
 	width: 45%;
 	height: 100%;
-	object-fit: cover
+	object-fit: cover;
 }
 
+/* 2. 小卡片 (佔據 1 列，內部上下排列) */
 .bento-small {
 	grid-column: span 1;
-	flex-direction: column
+	flex-direction: column;
 }
 
 .bento-small .bento-img-top {
 	width: 100%;
 	height: 110px;
+	/* 圖片高度壓縮 */
 	object-fit: cover;
-	background-color: #fbfbfd
+	background-color: #fbfbfd;
 }
 
 .bento-small .bento-text {
 	padding: 15px;
-	flex: 1
+	flex: 1;
 }
 
 .bento-small .bento-text h3 {
 	font-size: 1.05em !important;
-	margin-bottom: 5px !important
+	margin-bottom: 5px !important;
+	font-weight: 700 !important;
+	color: #1d1d1f !important;
 }
 
 .bento-small .bento-text p {
-	font-size: .85em !important;
+	font-size: 0.85em !important;
 	line-height: 1.3 !important;
 	margin: 0 !important;
-	color: #86868b !important
+	color: #86868b !important;
 }
 
+/* 3. 全圖遮罩小卡片 (佔據 1 列) */
 .bento-overlay {
 	grid-column: span 1;
 	border: none;
-	background-color: #1d1d1f
+	background-color: #1d1d1f;
 }
 
 .bento-overlay .bg-img {
@@ -2652,13 +3127,13 @@ ul.link-list li:first-child {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	opacity: .6;
-	transition: transform .5s
+	opacity: 0.6;
+	transition: transform 0.5s ease;
 }
 
 .bento-card:hover.bento-overlay .bg-img {
 	transform: scale(1.1);
-	opacity: .4
+	opacity: 0.4;
 }
 
 .overlay-content {
@@ -2666,47 +3141,116 @@ ul.link-list li:first-child {
 	bottom: 0;
 	left: 0;
 	padding: 15px;
-	z-index: 2
+	z-index: 2;
 }
 
 .overlay-content h3 {
-	color: #fff !important;
+	color: #ffffff !important;
 	margin-bottom: 5px !important;
 	font-size: 1.1em !important;
-	font-weight: 700 !important
+	font-weight: 700 !important;
 }
 
 .overlay-content p {
-	color: rgba(255, 255, 255, .85) !important;
+	color: rgba(255, 255, 255, 0.85) !important;
 	margin: 0 !important;
-	font-size: .85em !important;
-	line-height: 1.3 !important
+	font-size: 0.85em !important;
+	line-height: 1.3 !important;
 }
 
-.bento-img-left,
+/* 🌟 卡片內圖片懸浮放大特效 (針對非遮罩卡片) */
 .bento-img-right,
+.bento-img-left,
 .bento-img-top {
-	transition: transform .4s
+	transition: transform 0.4s ease;
 }
 
-.bento-card:hover .bento-img-left,
 .bento-card:hover .bento-img-right,
+.bento-card:hover .bento-img-left,
 .bento-card:hover .bento-img-top {
-	transform: scale(1.05)
+	transform: scale(1.05);
 }
 
+/* ================= 📱 響應式拆解 ================= */
+/* 平板端 (980px)：改為 2 列網格 */
+@media screen and (max-width: 980px) {
+	.bento-grid-2rows {
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: auto;
+	}
+
+	.bento-wide {
+		grid-column: span 2;
+	}
+
+	/* 寬卡片依然橫跨 2 列 */
+	.bento-small,
+	.bento-overlay {
+		grid-column: span 1;
+		min-height: 200px;
+	}
+
+	.bento-img-right,
+	.bento-img-left {
+		width: 50%;
+	}
+}
+
+/* 手機端 (736px)：全部變為單列 */
+@media screen and (max-width: 736px) {
+	.bento-grid-2rows {
+		grid-template-columns: 1fr;
+	}
+
+	.bento-wide,
+	.bento-small,
+	.bento-overlay {
+		grid-column: span 1;
+	}
+
+	.bento-wide {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	/* 手機端寬卡片變成上下排列 */
+	.bento-img-right,
+	.bento-img-left {
+		width: 100%;
+		height: 180px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/* ========================================= */
+/* 🍎 Apple-Style About Us (40/60 左右数据卡布局) */
+/* ========================================= */
+
+/* Flexbox 实现 40/60 左右分栏 */
 .about-split-layout {
 	display: flex;
 	align-items: center;
-	gap: 20px
+	/* 左右垂直居中对齐 */
+	gap: 20px;
+	/* 左右两边之间的留白间距 */
 }
 
+/* ================= 左侧：引言区 ================= */
 .about-left-intro {
-	flex: 0 0 38%
+	flex: 0 0 38%;
+	/* 占据大约 40% 的宽度 */
 }
 
 .about-left-intro h2 {
-	margin-bottom: 8px !important
+	margin-bottom: 8px !important;
 }
 
 .about-left-intro .about-subtitle {
@@ -2714,204 +3258,327 @@ ul.link-list li:first-child {
 	font-weight: 500 !important;
 	font-size: 1.25em !important;
 	margin-bottom: 20px !important;
-	line-height: 1.4
-}
-
-.faq-question:hover,
-.stat-num,
-details[open].faq-item .faq-question {
-	color: #0071e3
+	line-height: 1.4;
 }
 
 .about-left-intro p {
 	font-size: 1.05em !important;
 	color: #515154 !important;
 	line-height: 1.6 !important;
-	margin-bottom: 30px !important
+	margin-bottom: 30px !important;
 }
 
+/* ================= 右側：3行3列數據卡 ================= */
 .about-right-stats {
 	flex: 1;
+	/* 占据剩下的 60% 宽度 */
 	min-width: 0;
-	overflow: hidden
+	/* 🚨 核心修复：打破 Flexbox 默认的最小宽度限制，防止被子元素撑爆 */
+	overflow: hidden;
+	/* 双重保险，确保内容绝对不会溢出边界 */
 }
 
 .stats-grid-3x3 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 12px
+	/* 強制 3 列 */
+	gap: 12px;
+	/* ⚙️ 卡片之間的間距稍微調小，適應 3 行排列 */
 }
 
 .stat-card {
 	background-color: #fbfbfd;
 	border: 1px solid #e5e5ea;
 	border-radius: 12px;
+
+	/* ⚙️ 內部留白：為了容納 3 行而不顯得過高，將上下 Padding 調整為 20px */
 	padding: 25px 10px;
+
+	/* ⚙️ 最低高度：設置為 115px，讓卡片保持微胖的正方形質感 */
 	min-height: 115px;
-	transition: .3s;
+
+	text-align: center;
+	transition: all 0.3s ease;
 	display: flex;
 	flex-direction: column;
-	justify-content: center
+	justify-content: center;
 }
 
+/* 交互：懸浮時卡片變純白、微微上浮並帶柔和陰影 */
 .stat-card:hover {
-	background-color: #fff;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, .06)
+	background-color: #ffffff;
+	transform: translateY(-4px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+	border-color: #d2d2d7;
 }
 
 .stat-num {
 	font-size: 2.5em;
+	/* ⚙️ 字號稍微收斂一點，適配更多的卡片數量 */
 	font-weight: 700;
+	color: #0071e3;
+	line-height: 1;
 	margin-bottom: 6px;
-	letter-spacing: -1px
+	letter-spacing: -1px;
 }
 
 .stat-num span {
-	font-size: .45em;
+	font-size: 0.45em;
 	font-weight: 600;
-	margin-left: 2px
+	margin-left: 2px;
 }
 
 .stat-label {
-	font-size: .85em;
+	font-size: 0.85em;
 	color: #515154;
 	font-weight: 600;
-	line-height: 1.2
+	line-height: 1.2;
 }
 
-@media screen and (max-width:600px) {
+/* ================= 📱 響應式適配 ================= */
+/* 極小屏幕手機：數據卡片變為 2 列 (自動向下延伸) */
+@media screen and (max-width: 600px) {
 	.stats-grid-3x3 {
-		grid-template-columns: repeat(2, 1fr)
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
+
+
+/* ========================================= */
+/* 🌐 全局大一统格式 (Global Section Styles)     */
+/* ========================================= */
+
+/* 1. 统一所有大板块的上下呼吸间距与淡淡的分割线 */
 .global-section {
+	padding: 30px 0 !important;
+	/* 统一模块内部的上下留白 (呼吸感核心) */
+	margin: 0 !important;
 	border-top: 1px solid #e5e5ea;
-	background-color: #fdfdfd !important
+	/* 全站统一的极淡苹果风分割线 */
 }
 
+/* About 板块作为首屏第一个模块，不需要顶部横线 */
 .about-split-section {
 	border-top: none !important;
-	padding-top: 10px !important
+	padding-top: 10px !important;
 }
 
+/* 2. 统一全站主标题 (H2) - 强制居左对齐 */
 #main section h2 {
 	text-align: left !important;
 	font-size: 2.4em !important;
+	/* 统一大字号 */
+	font-weight: 700 !important;
+	/* 统一加粗，提升大厂质感 */
+	color: #1d1d1f !important;
 	letter-spacing: -1px !important;
 	margin-bottom: 35px !important;
-	line-height: 1.2 !important
+	/* 统一标题和下方内容之间的距离 */
+	line-height: 1.2 !important;
 }
 
+/* 🍎 苹果风高级细节：标题下方增加一抹品牌蓝色的几何短线 */
 #main section h2::after {
 	content: '';
 	display: block;
 	width: 60px;
 	height: 4px;
 	background-color: #0071e3;
+	/* SANDA 品牌蓝 */
 	margin-top: 13px;
-	border-radius: 2px
+	border-radius: 2px;
 }
 
+/* 3. 统一层级：修正 Why Partner 卡片里的标题大小 (由 h4 修正为 h3) */
+.text-card h3 {
+	font-size: 1.25em !important;
+	color: #1d1d1f !important;
+	margin-bottom: 12px !important;
+	font-weight: 600 !important;
+}
+
+
+/* ========================================= */
+/* 🎨 各大模块背景自定义控制台 (Background Customization) */
+/* ========================================= */
+
+/* 1. 默认底色与准备工作 */
+.global-section {
+	/* 如果不使用图片背景，全站模块默认显示这个极淡的高级浅灰底色。如果你想用纯白，可改为 #ffffff */
+	background-color: #fdfdfd !important;
+
+	/* 以下两行必须保留：为下方的图片伪元素提供定位锚点，并保证文字内容永远在图片的最上层 */
+	position: relative;
+	z-index: 1;
+}
+
+/* =======================================================
+2. 【预留模块】各大板块背景图自定义 (默认已注释)
+👉 启用方法：删除你想修改的模块前后的 /* 和 * / 符号即可启用。
+👉 高级玩法：我已为你预设了 opacity(透明度)、brightness(亮度)、blur(模糊) 等参数，你可以随意改数值！
+=======================================================
+*/
+
+
+
+/* ========================================= */
+/* 🤝 信任背书区域 (Logo 滚动墙 / LCD 跑马灯)   */
+/* ========================================= */
+
+/* 外层容器：利用 margin-top 将其推下，正好与左侧的按钮保持水平视觉平衡 */
 .trust-signals-wrapper {
 	margin-top: 25px;
 	border-top: 1px solid #e5e5ea;
+	/* 添加一条很淡的分割线 */
 	padding-top: 15px;
-	overflow: hidden
+	overflow: hidden;
+	/* 防止内容撑爆容器 */
 }
 
+/* 信任背书小标题 */
 .trust-title {
 	display: block;
-	font-size: .75em;
+	font-size: 0.75em;
 	font-weight: 600;
 	color: #86868b;
 	letter-spacing: 1px;
-	margin-bottom: 12px
+	margin-bottom: 12px;
 }
 
+/* 🍎 方案一：Logo 滚动墙核心样式 */
 .scrolling-logo-wall {
 	width: 100%;
 	overflow: hidden;
+	/* 苹果级特效：左右两端边缘渐变透明，让 Logo 看起来像从雾中浮现 */
 	-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-	mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent)
+	mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .logo-track {
 	display: flex;
 	align-items: center;
 	width: max-content;
-	animation: 7s linear infinite scroll-left
+	/* ⚙️ 滚动速度：15s 是滚动一圈的时间。越小越快，越大越慢 */
+	animation: scroll-left 7s linear infinite;
 }
 
+/* 悬浮交互：鼠标移上去时，滚动暂停，方便客户仔细看 Logo */
 .scrolling-logo-wall:hover .logo-track {
-	animation-play-state: paused
+	animation-play-state: paused;
 }
 
 .logo-track img {
+	/* ⚙️ Logo 高度：通过修改这里控制 Logo 的整体大小 */
 	height: 30px;
 	object-fit: contain;
+	/* ⚙️ Logo 间距：修改这里的数值控制 Logo 之间的距离 */
 	margin: 0 25px;
+	/* 苹果级特效：强制黑白并降低透明度，展现高级的次级视觉层级 */
 	filter: grayscale(0%) opacity(50%);
-	transition: filter .3s
+	transition: filter 0.3s ease;
 }
 
+/* 鼠标悬浮在某个特定 Logo 上时，恢复原本的彩色 */
 .logo-track img:hover {
-	filter: grayscale(0%) opacity(100%)
+	filter: grayscale(0%) opacity(100%);
 }
 
+/* 🚇 方案二：LCD 文字滚动跑马灯核心样式 */
 .lcd-ticker-tape {
 	width: 100%;
 	overflow: hidden;
 	background-color: #fbfbfd;
 	border: 1px solid #e5e5ea;
 	border-radius: 8px;
-	padding: 8px 0
+	/* 胶囊状外框 */
+	padding: 8px 0;
 }
 
 .ticker-track {
 	display: flex;
 	width: max-content;
-	animation: 20s linear infinite scroll-left
+	/* ⚙️ 滚动速度：这里是 20s，也可以自由更改 */
+	animation: scroll-left 20s linear infinite;
 }
 
 .ticker-track span {
-	font-size: .9em;
+	font-size: 0.9em;
 	font-weight: 500;
 	color: #1d1d1f;
+	/* ⚙️ 文字间距：控制不同公告之间的距离 */
 	margin: 0 40px;
-	white-space: nowrap
+	white-space: nowrap;
+	/* 强制文字不换行 */
 }
 
+/* ♾️ 核心动画引擎：无缝向左滑动 */
 @keyframes scroll-left {
 	0% {
-		transform: translateX(0)
+		transform: translateX(0);
 	}
 
+	/* 因为内部包含两套完全一模一样的元素，所以移动到 -50% 时，视觉上刚好完成一次完美轮回 */
 	100% {
-		transform: translateX(-50%)
+		transform: translateX(-50%);
 	}
 }
 
+/* 📱 响应式：手机端稍微缩小间距和大小 */
+@media screen and (max-width: 736px) {
+	.trust-signals-wrapper {
+		margin-top: 20px;
+	}
+
+	.logo-track img {
+		height: 24px;
+		margin: 0 20px;
+	}
+
+	.ticker-track span {
+		font-size: 0.85em;
+		margin: 0 20px;
+	}
+}
+
+
+
+/* ========================================= */
+/* 📝 FAQ & Quote 左右分栏布局与样式            */
+/* ========================================= */
+
+/* 1. 左右分栏 Flex 布局 */
 .faq-split-layout {
 	display: flex;
 	align-items: flex-start;
-	gap: 50px
+	gap: 50px;
+	/* 左右两边之间的留白距离 */
+}
+
+/* ================= 左侧：FAQ 手风琴 ================= */
+.faq-left-accordion {
+	flex: 1;
+	/* 占据剩余的 65% 宽度 */
+	min-width: 0;
+	/* 防止内容撑破 Flex 容器 */
+}
+
+.faq-accordion {
+	width: 100%;
+}
+
+details.faq-item>summary {
+	list-style: none;
 }
 
 details.faq-item>summary::-webkit-details-marker {
-	display: none
+	display: none;
 }
 
 details.faq-item {
 	border-bottom: 1px solid #e5e5ea;
 	margin-bottom: 5px;
-	transition: .3s
-}
-
-.craft-img img,
-.gallery-item img {
-	transition: transform .4s;
-	object-fit: cover
+	transition: all 0.3s ease;
 }
 
 .faq-question {
@@ -2919,76 +3586,91 @@ details.faq-item {
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 10px 24px 0;
+	/* 左侧无内边距，保持与左侧文字对齐 */
 	font-size: 1.15em;
 	font-weight: 600;
 	color: #1d1d1f;
 	cursor: pointer;
-	transition: color .2s
+	transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+	color: #0071e3;
 }
 
 .faq-icon {
 	font-size: 1.3em;
 	font-weight: 300;
 	color: #86868b;
-	transition: transform .3s
+	transition: transform 0.3s ease;
 }
 
 details[open].faq-item .faq-icon {
 	transform: rotate(45deg);
-	color: #0071e3
+	color: #0071e3;
+}
+
+details[open].faq-item .faq-question {
+	color: #0071e3;
 }
 
 .faq-answer {
 	padding: 0 5px 24px 0;
-	animation: .3s ease-in-out slideDown
+	animation: slideDown 0.3s ease-in-out;
 }
 
 .faq-answer p {
-	font-size: 1em !important;
+	font-size: 1.0em !important;
 	color: #515154 !important;
 	line-height: 1.7 !important;
-	margin: 0 !important
+	margin: 0 !important;
 }
 
 .faq-answer strong {
 	color: #0071e3 !important;
-	font-weight: 600
+	font-weight: 600;
 }
 
 @keyframes slideDown {
 	from {
 		opacity: 0;
-		transform: translateY(-10px)
+		transform: translateY(-10px);
 	}
 
 	to {
 		opacity: 1;
-		transform: translateY(0)
+		transform: translateY(0);
 	}
 }
 
+/* ================= 右侧：Get a Quote 表单卡片 ================= */
 .faq-right-form {
 	flex: 0 0 35%;
+	/* 表单占据 35% 宽度 */
 	position: sticky;
-	top: 80px
+	/* 开启粘性定位，左侧滚动时表单固定在屏幕上 */
+	top: 80px;
 }
 
 .quote-form-card {
 	background-color: #0071e3;
+	/* SANDA 品牌蓝 */
 	border-radius: 16px;
 	padding: 35px 25px;
-	box-shadow: 0 10px 30px rgba(0, 113, 227, .15)
+	box-shadow: 0 10px 30px rgba(0, 113, 227, 0.15);
 }
 
 .quote-form-card h3 {
-	color: #fff !important;
+	color: #ffffff !important;
+	text-align: center;
 	font-size: 1.6em !important;
 	font-weight: 700 !important;
-	margin-bottom: 25px !important
+	margin-bottom: 25px !important;
 }
 
-.quote-form input[type=email],
-.quote-form input[type=text],
+/* 表单输入框样式重置 */
+.quote-form input[type="text"],
+.quote-form input[type="email"],
 .quote-form textarea {
 	width: 100%;
 	padding: 14px 15px;
@@ -2996,60 +3678,109 @@ details[open].faq-item .faq-icon {
 	border: none;
 	border-radius: 8px;
 	font-family: inherit;
-	font-size: .95em;
-	background-color: #fff;
-	color: #333
+	font-size: 0.95em;
+	background-color: #ffffff;
+	color: #333333;
 }
 
 .quote-form input::placeholder,
 .quote-form textarea::placeholder {
-	color: #86868b
+	color: #86868b;
 }
 
 .quote-form input:focus,
 .quote-form textarea:focus {
-	outline: 0;
-	box-shadow: 0 0 0 3px rgba(255, 255, 255, .3)
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
+/* ⚙️ 禁止拖拽并固定尺寸 */
 .quote-form textarea {
 	resize: none;
-	height: 170px
+	/* 禁止用户在右下角拖拽缩放 */
+	height: 170px;
+	/* ⚙️ 如果你想让留言框更扁，改小数值（如 90px）；如果想更高，改大数值（如 150px） */
 }
 
+/* 纯白色的提交按钮 */
 .quote-submit-btn {
 	width: 100%;
 	padding: 14px 0;
-	background-color: #fff;
+	background-color: #ffffff;
 	color: #0071e3;
 	border: none;
 	border-radius: 8px;
 	font-size: 1.05em;
 	font-weight: 700;
 	cursor: pointer;
-	transition: .3s;
-	text-transform: uppercase
+	transition: all 0.3s ease;
+	text-transform: uppercase;
 }
 
 .quote-submit-btn:hover {
 	background-color: #f5f5f7;
 	transform: translateY(-2px);
-	box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
+/* ================= 📱 响应式适配 ================= */
+@media screen and (max-width: 980px) {
+	.faq-split-layout {
+		flex-direction: column;
+		/* 手机端改为上下排列，FAQ在上，表单在下 */
+		gap: 40px;
+	}
+
+	.faq-right-form {
+		flex: auto;
+		width: 100%;
+		position: static;
+		/* 手机端取消粘性定位 */
+	}
+
+	.faq-left-accordion {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.faq-question {
+		font-size: 1.05em;
+		padding: 20px 5px 20px 0;
+	}
+
+	.faq-answer p {
+		font-size: 0.95em !important;
+	}
+
+	.quote-form-card {
+		padding: 25px 20px;
+	}
+}
+
+
+/* ========================================= */
+/* 📰 News & Exhibitions (40/60 展會風采佈局) */
+/* ========================================= */
 
 .exhibition-split-layout {
 	display: flex;
 	gap: 40px;
-	align-items: stretch
+	/* 左右兩邊的間距 */
+	align-items: stretch;
+	/* 讓左右兩邊高度自動等高 */
 }
 
+/* ================= 左側 (40%)：即將到來的展會 ================= */
 .exhibition-upcoming {
 	flex: 0 0 35%;
+	/* ⚙️ 精準鎖定左側寬度為 40% */
 	position: relative;
 	border-radius: 16px;
 	overflow: hidden;
 	min-height: 480px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, .08)
+	/* 稍微加高一點，以匹配右側 3 行照片的高度 */
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .exhibition-upcoming .upcoming-bg {
@@ -3059,7 +3790,7 @@ details[open].faq-item .faq-icon {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	z-index: 1
+	z-index: 1;
 }
 
 .upcoming-overlay {
@@ -3068,166 +3799,227 @@ details[open].faq-item .faq-icon {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to top, rgba(0, 0, 0, .85) 0, rgba(0, 0, 0, .1) 100%);
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.1) 100%);
 	z-index: 2;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	padding: 40px 30px
+	padding: 40px 30px;
 }
 
 .upcoming-content {
-	color: #fff
+	color: #ffffff;
 }
 
 .upcoming-content .badge {
 	display: inline-block;
 	background-color: #0071e3;
-	color: #fff;
-	font-size: .75em;
+	color: white;
+	font-size: 0.75em;
 	font-weight: 700;
 	padding: 6px 12px;
 	border-radius: 4px;
 	letter-spacing: 1px;
-	margin-bottom: 15px
+	margin-bottom: 15px;
 }
 
 .upcoming-content h3 {
-	color: #fff !important;
+	color: #ffffff !important;
 	font-size: 1.8em !important;
 	font-weight: 700 !important;
 	margin-bottom: 20px !important;
-	line-height: 1.2
+	line-height: 1.2;
 }
 
 .event-details {
+	list-style: none;
 	padding: 0;
-	margin: 0 0 25px
+	margin: 0 0 25px 0;
 }
 
 .event-details li {
 	font-size: 1.05em;
 	margin-bottom: 8px;
-	color: rgba(255, 255, 255, .9)
+	color: rgba(255, 255, 255, 0.9);
 }
 
 .event-details li strong {
-	color: #fff;
+	color: #ffffff;
 	display: inline-block;
-	width: 70px
+	width: 70px;
 }
 
 .book-meeting-btn {
 	display: inline-block;
-	background-color: #fff;
+	background-color: #ffffff;
 	color: #0071e3 !important;
 	font-weight: 600;
 	font-size: 1.05em;
 	padding: 12px 25px;
 	border-radius: 8px;
 	text-decoration: none;
-	transition: .3s
+	transition: all 0.3s ease;
 }
 
 .book-meeting-btn:hover {
 	background-color: #f5f5f7;
 	transform: translateY(-2px);
-	box-shadow: 0 4px 15px rgba(255, 255, 255, .2)
+	box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
+/* ================= 右側 (60%)：3行4列 照片牆 ================= */
 .exhibition-past {
 	flex: 1;
+	/* 自動佔滿剩下的 60% 空間 */
 	display: flex;
 	flex-direction: column;
-	min-width: 0
+	min-width: 0;
+	/* 防止子元素撐爆容器 */
 }
 
 .past-header {
-	margin-bottom: 20px
+	margin-bottom: 20px;
 }
 
 .past-header h3 {
 	font-size: 1.4em !important;
 	color: #1d1d1f !important;
 	margin-bottom: 5px !important;
-	font-weight: 600 !important
+	font-weight: 600 !important;
 }
 
 .past-header p {
 	color: #515154 !important;
-	margin: 0 !important
+	margin: 0 !important;
 }
 
+/* 核心：3行4列 緊湊型網格 */
 .past-gallery-grid-12 {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 12px
+	/* ⚙️ 橫向強制 4 列 */
+	gap: 12px;
+	/* ⚙️ 圖片之間的縫隙。為了容納 12 張圖，縫隙稍微調小一點顯得更精緻 */
 }
 
 .gallery-item {
 	border-radius: 8px;
+	/* 圓角比左邊小一點，更像相簿 */
 	overflow: hidden;
 	background-color: #f5f5f7;
 	position: relative;
-	aspect-ratio: 4/3
-}
-
-.process-timeline-box,
-.timeline-step {
-	position: relative;
-	background-color: #fbfbfd
+	aspect-ratio: 4 / 3;
+	/* ⚙️ 終極大招：強制所有照片變成 4:3 的橫向統一比例，絕對整齊！ */
 }
 
 .gallery-item img {
 	width: 100%;
 	height: 100%;
-	display: block
+	object-fit: cover;
+	/* 確保圖片鋪滿且不變形 */
+	display: block;
+	transition: transform 0.4s ease;
 }
 
-.craft-item:hover .craft-img img,
 .gallery-item:hover img {
-	transform: scale(1.1)
+	transform: scale(1.1);
+	/* 懸浮時的絲滑放大 */
 }
 
-@media screen and (max-width:1100px) {
+/* ================= 📱 響應式適配 ================= */
+@media screen and (max-width: 1100px) {
 	.past-gallery-grid-12 {
-		grid-template-columns: repeat(3, 1fr)
+		grid-template-columns: repeat(3, 1fr);
+		/* 螢幕變小時改為 3 列 */
 	}
 }
 
-#main .customization-section h2 {
-	text-align: left !important
+@media screen and (max-width: 980px) {
+	.exhibition-split-layout {
+		flex-direction: column;
+		/* 平板及手機端改為上下堆疊 */
+	}
+
+	.exhibition-upcoming {
+		min-height: 380px;
+	}
+
+	.past-gallery-grid-12 {
+		grid-template-columns: repeat(4, 1fr);
+		/* 堆疊後空間變大，恢復 4 列 */
+	}
 }
 
+@media screen and (max-width: 736px) {
+	.past-gallery-grid-12 {
+		grid-template-columns: repeat(2, 1fr);
+		/* 狹窄手機端改為 2 列 */
+		gap: 8px;
+	}
+
+	.gallery-item {
+		border-radius: 6px;
+	}
+}
+
+
+/* ========================================= */
+/* 🛠️ Customization Solutions (流程 + 互動選項卡) */
+/* ========================================= */
+
+/* 1. 強制大標題靠左對齊 */
+#main .customization-section h2 {
+	text-align: left !important;
+}
+
+/* 2. 強制小藍條靠左對齊 (取消原本的居中屬性) */
 #main .customization-section h2::after {
 	margin-left: 0 !important;
-	margin-right: auto !important
+	margin-right: auto !important;
 }
 
+/* 3. 強制大標題下方的灰色副標題段落也靠左對齊 (覆蓋 HTML 裡的居中樣式) */
+#main .customization-section p {
+	text-align: left !important;
+	max-width: 100% !important;
+	/* 🌟 解除宽度限制，允许文字在一行内完全舒展 */
+}
+
+
+/* ================= 1. 上半部分：時間軸 ================= */
 .process-timeline-box {
 	display: flex;
 	justify-content: space-between;
+	position: relative;
+	background-color: #fbfbfd;
 	border: 1px solid #e5e5ea;
 	border-radius: 16px;
 	padding: 30px 20px;
-	margin-bottom: 30px
+	margin-bottom: 30px;
 }
 
+/* 貫穿 5 個步驟的灰色背景連接線 */
 .process-timeline-box::before {
 	content: '';
 	position: absolute;
 	top: 60px;
+	/* 控制線條的高度，使其穿過圓圈中心 */
 	left: 80px;
 	right: 80px;
 	height: 2px;
 	background-color: #e5e5ea;
-	z-index: 1
+	z-index: 1;
 }
 
 .timeline-step {
+	position: relative;
 	z-index: 2;
+	/* 確保圓圈蓋在連接線的上方 */
+	text-align: center;
+	background-color: #fbfbfd;
+	/* 擋住背後的線 */
 	padding: 0 15px;
-	flex: 1
+	flex: 1;
 }
 
 .step-circle {
@@ -3235,234 +4027,165 @@ details[open].faq-item .faq-icon {
 	height: 44px;
 	border-radius: 50%;
 	background-color: #0071e3;
-	color: #fff;
+	/* 蘋果藍 */
+	color: #ffffff;
 	font-size: 1.2em;
 	font-weight: 700;
 	line-height: 44px;
-	margin: 0 auto 15px;
-	box-shadow: 0 4px 10px rgba(0, 113, 227, .3)
+	/* 垂直居中數字 */
+	margin: 0 auto 15px auto;
+	box-shadow: 0 4px 10px rgba(0, 113, 227, 0.3);
 }
 
 .timeline-step h4 {
 	font-size: 1.1em !important;
 	color: #1d1d1f !important;
 	margin-bottom: 8px !important;
-	font-weight: 600 !important
+	font-weight: 600 !important;
 }
 
 .timeline-step p {
-	font-size: .85em !important;
+	font-size: 0.85em !important;
 	color: #86868b !important;
 	line-height: 1.4 !important;
-	margin: 0 !important
+	margin: 0 !important;
 }
 
+/* ================= 2. 下半部分：Tab 導航切換按鈕 ================= */
 .custom-tabs-nav {
 	display: flex;
 	justify-content: center;
 	background-color: #f5f5f7;
+	/* 淺灰底座 */
 	padding: 6px;
 	border-radius: 12px;
 	max-width: 100 !important;
-	margin: 0 auto 40px
+	margin: 0 auto 40px auto;
 }
 
 .tab-btn {
 	flex: 1;
 	padding: 12px 20px;
 	border: none;
-	background: 0 0;
+	background: transparent;
 	border-radius: 8px;
 	cursor: pointer;
 	font-size: 1.05em;
 	font-weight: 600;
 	color: #86868b;
-	transition: .3s
+	transition: all 0.3s ease;
 }
 
+/* 當前被選中的按鈕狀態 (高亮) */
 .tab-btn.active {
-	background-color: #fff;
+	background-color: #ffffff;
 	color: #1d1d1f;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, .06)
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.copy-right a:hover,
 .tab-btn:hover:not(.active) {
-	color: #1d1d1f
+	color: #1d1d1f;
 }
 
+/* ================= 3. 下半部分：Tab 內容與微距卡片網格 ================= */
 .tab-content {
 	display: none;
-	animation: .4s fadeInTab
+	/* 默認隱藏所有內容 */
+	animation: fadeInTab 0.4s ease;
+	/* 切換時的淡入動畫 */
+}
+
+.tab-content.active {
+	display: block;
+	/* 只顯示帶有 active 類的內容 */
 }
 
 @keyframes fadeInTab {
 	from {
 		opacity: 0;
-		transform: translateY(10px)
+		transform: translateY(10px);
 	}
 
 	to {
 		opacity: 1;
-		transform: translateY(0)
+		transform: translateY(0);
 	}
+}
+
+/* 網格系統：支持 5列、4列、2列 佈局 */
+.craft-grid-5 {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 15px;
 }
 
 .craft-grid-4 {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 15px
+	gap: 15px;
 }
 
 .craft-grid-2 {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 20px
+	gap: 20px;
+}
+
+/* 獨立工藝卡片 (Bento Box 質感) */
+.craft-item {
+	background-color: #ffffff;
+	border: 1px solid #e5e5ea;
+	border-radius: 12px;
+	padding: 15px;
+	text-align: center;
+	transition: all 0.3s ease;
 }
 
 .craft-item:hover {
 	transform: translateY(-5px);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, .06);
-	border-color: #d2d2d7
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+	border-color: #d2d2d7;
 }
 
-#copyright-bar-advanced,
-#footer-advanced,
-.global-section {
-	position: relative;
-	z-index: 1;
-	border-top: none !important
-}
-
+/* 強制正方形圖片容器 */
 .craft-img {
 	width: 100%;
-	aspect-ratio: 1/1;
+	aspect-ratio: 1 / 1;
 	border-radius: 8px;
 	overflow: hidden;
 	background-color: #fbfbfd;
-	margin-bottom: 12px
+	/* 圖片加載前的底色 */
+	margin-bottom: 12px;
 }
 
 .craft-img img {
 	width: 100%;
-	height: 100%
+	height: 100%;
+	object-fit: cover;
+	/* 確保圖片不變形，填滿方塊 */
+	transition: transform 0.4s ease;
+}
+
+.craft-item:hover .craft-img img {
+	transform: scale(1.1);
+	/* 懸浮放大圖片細節 */
 }
 
 .craft-item span {
 	display: block;
-	font-size: .95em;
+	font-size: 0.95em;
 	font-weight: 600;
-	color: #333
+	color: #333333;
 }
 
-.copy-left,
-.copy-right a {
-	color: #86868b;
-	font-size: .85em
-}
+/* ================= 📱 響應式適配 ================= */
+@media screen and (max-width: 980px) {
 
-@media screen and (max-width:980px) {
-	.text-grid-2x3 {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 20px
-	}
-
-	.category-master-detail {
-		flex-direction: column;
-		gap: 20px
-	}
-
-	.category-sidebar {
-		flex: auto;
-		width: 100%;
-		padding: 0;
-		flex-direction: column
-	}
-
-	.category-menu {
-		display: flex;
-		overflow-x: auto;
-		padding: 0
-	}
-
-	.category-menu li {
-		flex: 0 0 auto;
-		border-left: none;
-		border-bottom: 3px solid transparent
-	}
-
-	.category-menu li.active {
-		border-left: none;
-		border-bottom: 3px solid #0071e3
-	}
-
-	.category-mood-box {
-		display: none
-	}
-
-	.cta-capsule-banner {
-		flex-direction: column;
-		padding: 25px;
-		text-align: center;
-		gap: 20px
-	}
-
-	.cta-text strong {
-		display: block;
-		margin: 0 0 5px
-	}
-
-	.bento-grid-2rows {
-		grid-template-columns: repeat(2, 1fr);
-		grid-auto-rows: auto
-	}
-
-	.bento-wide {
-		grid-column: span 2
-	}
-
-	.bento-overlay,
-	.bento-small {
-		grid-column: span 1;
-		min-height: 200px
-	}
-
-	.bento-img-left,
-	.bento-img-right {
-		width: 50%
-	}
-
-	.faq-split-layout {
-		flex-direction: column;
-		gap: 40px
-	}
-
-	.faq-right-form {
-		flex: auto;
-		width: 100%;
-		position: static
-	}
-
-	.faq-left-accordion {
-		width: 100%
-	}
-
-	.exhibition-split-layout {
-		flex-direction: column
-	}
-
-	.exhibition-upcoming {
-		min-height: 380px
-	}
-
-	.past-gallery-grid-12 {
-		grid-template-columns: repeat(4, 1fr)
-	}
-
+	/* 平板端時間軸改為垂直 */
 	.process-timeline-box {
 		flex-direction: column;
 		gap: 30px;
-		padding: 30px
+		padding: 30px;
 	}
 
 	.process-timeline-box::before {
@@ -3471,34 +4194,84 @@ details[open].faq-item .faq-icon {
 		left: 52px;
 		right: auto;
 		width: 2px;
-		height: auto
+		height: auto;
 	}
 
 	.timeline-step {
 		display: flex;
 		align-items: center;
 		text-align: left;
-		background: 0 0;
-		padding: 0
+		background: transparent;
+		padding: 0;
 	}
 
 	.step-circle {
 		margin: 0 20px 0 0;
-		flex-shrink: 0
+		flex-shrink: 0;
 	}
 
 	.craft-grid-5 {
-		grid-template-columns: repeat(3, 1fr)
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.craft-grid-4 {
-		grid-template-columns: repeat(2, 1fr)
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
-#copyright-bar-advanced::before,
-#footer-advanced::before,
+@media screen and (max-width: 736px) {
+	.custom-tabs-nav {
+		flex-wrap: wrap;
+	}
+
+	.tab-btn {
+		flex: 0 0 50%;
+		/* 頂部按鈕變成 2x2 矩陣 */
+	}
+
+	.craft-grid-5,
+	.craft-grid-4,
+	.craft-grid-2 {
+		grid-template-columns: repeat(2, 1fr);
+		/* 手機端全部強制為 2 列 */
+		gap: 10px;
+	}
+
+	.craft-item {
+		padding: 10px;
+	}
+}
+
+/* ========================================= */
+/* 🎨 终极版：全模块全屏背景控制台 (Zero Bleed)  */
+/* ========================================= */
+
+/* 1. 双重保险：防止 100vw 导致网页出现横向滚动条 */
+html,
+body {
+	overflow-x: hidden !important;
+}
+
+/* 2. 彻底清除外层容器的干扰留白，消除蓝色/红色框的缝隙 */
+#main {
+	padding: 0 !important;
+}
+
+/* 3. 规范所有全局模块的基础属性 */
+.global-section {
+	position: relative;
+	z-index: 1;
+	padding: 70px 0 !important;
+	/* 统一模块内部的上下呼吸间距 */
+	margin: 0 !important;
+	/* 绝对不能有 margin，否则模块之间会漏出白缝 */
+	border-top: none !important;
+	/* 使用背景图时，建议去掉原本的横线 */
+}
+
+/* 4. 🌟 核心大招：让所有模块的背景统一具备「左右铺满 + 上下绝对不越界」的能力 */
 .global-section::before {
+	content: '';
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -3506,483 +4279,381 @@ details[open].faq-item .faq-icon {
 	transform: translateX(-50%);
 	width: 100vw;
 	z-index: -1;
-	content: ''
+	background-color: #ffffff;
+    
+	/* 🌟 终极防重复与尺寸锁定机制 */
+	background-repeat: no-repeat !important;     /* 绝对禁止图片重复贴瓷砖 */
+	background-size: cover !important;           /* 强制等比例缩放并完全覆盖容器 */
+	background-position: center center !important; /* 始终保持图片中心点在正中央 */
 }
 
-@media screen and (max-width:736px) {
-	#banner-slider {
-		height: 300px;
-		box-shadow: inset 0 0 0 5px #fff
-	}
 
-	.slide-text {
-		font-size: 1.2em;
-		bottom: 30px;
-		padding: 5px 15px
-	}
+/* =======================================================
+   👇 各大模块的专属背景设置区 
+   你可以为任何一个模块加上图片，或者换成浅灰底色
+======================================================= */
 
-	.slide-btn {
-		padding: 10px 15px;
-		font-size: 1.5em
-	}
 
-	.craft-grid-2,
-	.craft-grid-4,
-	.craft-grid-5,
-	.factory-grid {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 10px
-	}
+/* ========================================= */
+/* 🖼️ Banner 外層區域全屏背景自定義 (Zero Bleed) */
+/* ========================================= */
 
-	.bento-grid-2rows,
-	.text-grid-2x3 {
-		grid-template-columns: 1fr
-	}
-
-	.big-number {
-		font-size: 2.5em
-	}
-
-	.product-grid-2x3 {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 15px
-	}
-
-	.bento-overlay,
-	.bento-small,
-	.bento-wide {
-		grid-column: span 1
-	}
-
-	.bento-wide {
-		flex-direction: column;
-		text-align: center
-	}
-
-	.bento-img-left,
-	.bento-img-right {
-		width: 100%;
-		height: 180px
-	}
-
-	.trust-signals-wrapper {
-		margin-top: 20px
-	}
-
-	.logo-track img {
-		height: 24px;
-		margin: 0 20px
-	}
-
-	.ticker-track span {
-		font-size: .85em;
-		margin: 0 20px
-	}
-
-	.faq-question {
-		font-size: 1.05em;
-		padding: 20px 5px 20px 0
-	}
-
-	.faq-answer p {
-		font-size: .95em !important
-	}
-
-	.quote-form-card {
-		padding: 25px 20px
-	}
-
-	.past-gallery-grid-12 {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 8px
-	}
-
-	.gallery-item {
-		border-radius: 6px
-	}
-
-	.custom-tabs-nav {
-		flex-wrap: wrap
-	}
-
-	.tab-btn {
-		flex: 0 0 50%
-	}
-
-	.craft-item {
-		padding: 10px
-	}
-}
-
-body,
-html {
-	overflow-x: hidden !important
-}
-
-#main {
-	background: #fff
-}
-
-.global-section {
-	padding: 70px 0 !important;
-	margin: 0 !important
-}
-
-.global-section::before {
-	background-color: #fff;
-	background-repeat: no-repeat !important;
-	background-size: cover !important;
-	background-position: center center !important
-}
-
+/* 1. 重置 Banner 外層容器，確保乾淨無干擾 */
 #banner-wrapper {
 	position: relative !important;
 	z-index: 1 !important;
 	background: #fbfbfd !important;
+	/* 默認的高級淺灰底色，覆蓋掉所有舊版綠色 */
 	padding-top: 30px !important;
-	padding-bottom: 30px !important
+	/* ⚙️ 控制輪播圖上方的留白距離 */
+	padding-bottom: 30px !important;
+	/* ⚙️ 控制輪播圖下方的留白距離 */
 }
 
+/* 2. 獨立的高級背景層 */
 #banner-wrapper::before {
 	content: '';
 	position: absolute;
+	/* 嚴格鎖定上下左右邊界，絕對不會干擾到上方導航欄或下方模塊 */
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	z-index: -1;
+
+	/* 👇 在這裡放你的 Banner 背景圖路徑 */
 	background-image: url('../../images/Background/bg1.jpg');
 	background-size: cover;
 	background-position: center;
-	opacity: .55;
-	filter: grayscale(100%)
+
+	/* 🍎 蘋果風高級特效調節 */
+	opacity: 0.55;
+	/* 透明度：建議 0.1 到 0.2 之間，隱約的紋理質感最高級 */
+	filter: grayscale(100%);
+	/* 如果圖片顏色太亂，解開這個註釋可將其變為高級黑白灰 */
 }
 
+
+/* 1. About SANDA (雪山背景) */
 .about-split-section::before {
+	/* 替换为你的雪山图片路径 */
+	/* background-image: url('../../images/Background/bg1.jpg'); */
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	opacity: .75
+	/* 视差滚动特效 */
+	opacity: 0.75;
+	/* 降低透明度保证文字清晰 */
 }
 
+/* 2. Products Category (默认浅灰底色，与上下模块区分) */
 .products-category-section::before {
 	background-color: #fbfbfd;
-	background-image: url('../../images/Background/bg2.jpg');
+	/* 如果想加图片，取消下面两行的注释 */
+	background-image: url('../../images/Background/bg2.jpg'); 
 	background-size: cover;
-	opacity: .55
+	opacity: 0.55;
 }
 
+/* 3. Services 服务模块 (图片背景演示) */
 .services-section::before {
+	/* background-image: url('../../images/Background/bg3.jpg'); */
 	background-size: cover;
 	background-attachment: fixed;
-	opacity: .55
+	opacity: 0.55;
 }
 
+/* 4. Why Partner 优势模块 (可以设置为纯白) */
 .why-choose-section::before {
+	/* background-image: url('../../images/Background/bg4.jpg'); */
 	background-size: cover;
 	background-attachment: fixed;
-	opacity: .55;
-	background-color: #fff
+	opacity: 0.55;
+	background-color: #ffffff;
 }
 
+/* 5. Factory Tour 工厂展示 (浅灰底色) */
 .factory-tour-section::before {
-	background-color: #fbfbfd
+	background-color: #fbfbfd;
 }
 
+/* 6. FAQ & Quote 询盘模块 */
 .faq-quote-section::before {
 	background-image: url('../../images/Background/bg5.jpg');
-	opacity: .55;
-	background-color: #fff
+	opacity: 0.55;
+	background-color: #ffffff;
 }
 
+/* 7. News & Exhibitions 展会模块 */
 .news-exhibition-section::before {
-	opacity: .55;
+	opacity: 0.55;
 	background-image: url('../../images/Background/bg4.jpg');
-	background-color: #fbfbfd
+	background-color: #fbfbfd;
 }
 
+/* 8. Customization 定制模块 */
 .customization-section::before {
-	opacity: .55;
+	opacity: 0.55;
 	background-image: url('../../images/Background/bg3.jpg');
-	background-color: #fff
+	background-color: #ffffff;
 }
 
+
+/* ========================================= */
+/* 🌍 終極企業級 Footer (三列網格佈局)          */
+/* ========================================= */
+/* ========================================= */
+/* 🔧 全局修復 1：導航欄高級懸浮與防遮擋       */
+/* ========================================= */
 #header-wrapper {
 	position: fixed !important;
-	top: 0;
-	left: 0;
-	width: 100%;
+	top: 0; left: 0; width: 100%;
 	z-index: 99999 !important;
-	background-color: rgba(255, 255, 255, .95) !important;
+	background-color: rgba(255, 255, 255, 0.95) !important;
 	backdrop-filter: blur(10px);
-	border-bottom: 1px solid rgba(0, 0, 0, .05)
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+@media screen and (min-width: 981px) {
+	#banner-wrapper { margin-top: 55px !important; }
 }
 
-@media screen and (min-width:981px) {
-	#banner-wrapper {
-		margin-top: 55px !important
-	}
-}
-
+/* ========================================= */
+/* 🔧 全局修復 2：圖片防拽出與底層灰色縫隙切除   */
+/* ========================================= */
 img {
 	-webkit-user-drag: none;
-	user-drag: none
+	user-drag: none;
 }
-
+body, #page-wrapper {
+	background-color: #ffffff !important;
+}
 #footer-wrapper {
-	margin: 0 !important
+	padding: 0 !important;
+	margin: 0 !important;
+	background-color: transparent !important;
 }
 
+/* ========================================= */
+/* 🔒 終極極簡版權條 (Copyright Bar)           */
+/* ========================================= */
 #copyright-bar-advanced {
-	padding: 25px 0
+    position: relative;
+    z-index: 1;
+    background-color: transparent !important;
+    padding: 25px 0; /* 移除左右内边距，让内部的 container 去对齐全站网格 */
+    border-top: none !important;
 }
 
 #copyright-bar-advanced::before {
-	border-top: 1px solid #e5e5ea
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: -1;
+    background-color: #ffffff !important; 
+    border-top: 1px solid #e5e5ea;
 }
 
+/* 🌟 将 Flex 对齐作用于内部的真实内容容器 */
 .copyright-content {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%
+    display: flex;
+    justify-content: space-between; /* 左右两端对齐 */
+    align-items: center; /* 垂直居中 */
+    width: 100%;
 }
+
+.copy-left { color: #86868b; font-size: 0.85em; }
 
 .copy-right a {
-	text-decoration: none;
-	margin-left: 20px;
-	transition: color .2s
+    color: #86868b; text-decoration: none;
+    font-size: 0.85em; margin-left: 20px; transition: color 0.2s;
 }
 
-.footer-main-title,
-.footer-slogan-wrap p {
-	margin: 0 !important;
-	text-align: left !important;
-	white-space: nowrap !important
+.copy-right a:hover { color: #1d1d1f; }
+
+/* 📱 响应式：手机端才允许折叠为上下居中 */
+@media screen and (max-width: 980px) {
+    .copyright-content { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 15px; 
+    }
+    .copy-right a { margin: 0 10px; }
 }
 
+/* ========================================= */
+/* 🚀 終極重構版：2x2 矩陣 Footer (完美對齊)    */
+/* ========================================= */
 #footer-advanced {
-	padding: 70px 0 50px !important
+	position: relative; z-index: 1;
+	background-color: transparent !important;
+	padding: 70px 0 50px 0 !important;
+	border-top: none !important;
 }
-
+/* 100vw 滿屏延伸的淺灰底色 */
 #footer-advanced::before {
+	content: ''; position: absolute;
+	top: 0; bottom: 0; left: 50%; transform: translateX(-50%);
+	width: 100vw; z-index: -1;
 	background-color: #fbfbfd !important;
-	border-top: 1px solid #e5e5ea
+	border-top: 1px solid #e5e5ea;
 }
 
+/* 核心網格引擎：2x2 矩陣 */
 .footer-grid-master {
 	display: grid;
-	grid-template-columns: 46% 50%;
+	grid-template-columns: 46% 50%; /* 收緊中間空白 */
 	justify-content: space-between;
-	row-gap: 30px
+	row-gap: 30px; 
 }
+.footer-cell-headline { grid-column: 1; grid-row: 1; }
+.footer-cell-contact { grid-column: 1; grid-row: 2; }
+.footer-cell-locations { grid-column: 2; grid-row: 2; }
 
-.footer-cell-headline {
-	grid-column: 1;
-	grid-row: 1
-}
-
-.footer-cell-contact {
-	grid-column: 1;
-	grid-row: 2
-}
-
-.footer-cell-locations {
-	grid-column: 2;
-	grid-row: 2
-}
-
+/* 標題強制不換行與小藍條 */
 .footer-main-title {
-	font-size: 2.1em !important;
+	text-align: left !important;
+	font-size: 2.1em !important; 
 	font-weight: 700 !important;
 	color: #1d1d1f !important;
-	letter-spacing: -.5px !important
-}
-
-.footer-main-title::after {
-	content: '';
-	display: block;
-	width: 60px;
-	height: 4px;
-	background-color: #0071e3;
-	margin-top: 15px;
-	border-radius: 2px
-}
-
-.footer-brand-flex {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-	margin-bottom: 25px
-}
-
-.footer-logo-img {
-	max-height: 42px !important;
-	width: auto !important;
-	display: block
-}
-
-.footer-slogan-wrap p {
-	font-size: .95em !important;
-	color: #515154 !important;
-	line-height: 1.4 !important;
-	max-width: none !important
-}
-
-.direct-contact-info p {
-	margin-bottom: 10px !important;
-	color: #1d1d1f !important
-}
-
-.direct-contact-info a {
-	color: #0071e3;
-	text-decoration: none
-}
-
-.qr-direct-group {
-	display: flex;
-	gap: 15px
-}
-
-.qr-direct-item {
-	flex: 0 0 100px;
-	text-align: center
-}
-
-.qr-direct-item img {
-	width: 100%;
-	aspect-ratio: 1/1;
-	object-fit: cover;
-	border-radius: 10px;
-	border: 1px solid #e5e5ea;
-	background-color: #fff;
-	padding: 4px;
-	margin-bottom: 8px
-}
-
-.qr-direct-item span {
-	font-size: .9em;
-	font-weight: 600;
-	color: #515154
-}
-
-.footer-cell-locations .footer-title {
-	margin-top: 0 !important;
-	font-size: 1.25em !important;
-	color: #1d1d1f !important;
-	font-weight: 700 !important;
-	margin-bottom: 20px !important
-}
-
-.locations-flex {
-	display: flex;
-	gap: 20px;
-	margin-bottom: 25px
-}
-
-.location-item strong {
-	display: block;
-	color: #1d1d1f;
-	font-size: 1.05em;
-	margin-bottom: 8px
-}
-
-.location-item p {
+	white-space: nowrap !important;
 	margin: 0 !important;
-	font-size: .95em !important;
-	color: #515154 !important;
-	line-height: 1.5 !important
+	letter-spacing: -0.5px !important;
+}
+.footer-main-title::after {
+	content: ''; display: block;
+	width: 60px; height: 4px;
+	background-color: #0071e3;
+	margin-top: 15px; border-radius: 2px;
 }
 
+/* Logo 與雙行口號佈局 */
+.footer-brand-flex {
+	display: flex; align-items: center;
+	gap: 15px; margin-bottom: 25px;
+}
+.footer-logo-img {
+	max-height: 42px !important; width: auto !important; display: block;
+}
+.footer-slogan-wrap p {
+	font-size: 0.95em !important; color: #515154 !important;
+	line-height: 1.4 !important; margin: 0 !important;
+	text-align: left !important; max-width: none !important; 
+	white-space: nowrap !important; /* 僅靠 HTML <br> 換行 */
+}
+
+/* 聯繫方式文字間距 */
+.direct-contact-info p {
+	margin-bottom: 10px !important; color: #1d1d1f !important;
+}
+.direct-contact-info a {
+	color: #0071e3; text-decoration: none;
+}
+
+/* 二維碼佈局 */
+.qr-direct-group { display: flex; gap: 15px; }
+.qr-direct-item { flex: 0 0 100px; text-align: center; }
+.qr-direct-item img {
+	width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+	border-radius: 10px; border: 1px solid #e5e5ea;
+	background-color: #ffffff; padding: 4px; margin-bottom: 8px;
+}
+.qr-direct-item span { font-size: 0.9em; font-weight: 600; color: #515154; }
+
+/* 右側標題、地圖與地址佈局 */
+.footer-cell-locations .footer-title {
+	margin-top: 0 !important; font-size: 1.25em !important;
+	color: #1d1d1f !important; font-weight: 700 !important; margin-bottom: 20px !important;
+}
+.locations-flex { display: flex; gap: 20px; margin-bottom: 25px; }
+.location-item { flex: 1; }
+.location-item strong {
+	display: block; color: #1d1d1f; font-size: 1.05em; margin-bottom: 8px;
+}
+.location-item p {
+	margin: 0 !important; font-size: 0.95em !important;
+	color: #515154 !important; line-height: 1.5 !important;
+}
 .footer-map-wide {
-	width: 100%;
-	height: 200px;
-	border-radius: 12px;
-	overflow: hidden;
-	border: 1px solid #e5e5ea
+	width: 100%; height: 200px;
+	border-radius: 12px; overflow: hidden; border: 1px solid #e5e5ea;
 }
+.footer-map-wide iframe { width: 100%; height: 100%; border: none; }
 
-.footer-map-wide iframe {
-	width: 100%;
-	height: 100%;
-	border: none
-}
-
-input,
-textarea {
-	-webkit-user-select: auto !important;
-	-moz-user-select: auto !important;
-	-ms-user-select: auto !important;
-	user-select: auto !important
-}
-
-@media screen and (max-width:980px) {
-	.copyright-content {
-		flex-direction: column;
-		text-align: center;
-		gap: 15px
-	}
-
-	.copy-right a {
-		margin: 0 10px
-	}
-
+/* 📱 響應式：手機與平板 */
+@media screen and (max-width: 980px) {
 	.footer-grid-master {
-		grid-template-columns: 1fr;
-		row-gap: 40px
+		grid-template-columns: 1fr; /* 單列堆疊 */
+		row-gap: 40px;
 	}
-
-	.footer-cell-locations {
-		grid-column: 1;
-		grid-row: 3
-	}
-
-	.footer-brand-flex {
-		flex-direction: column;
-		align-items: flex-start
-	}
-
-	.footer-main-title {
-		white-space: normal !important;
-		font-size: 1.8em !important
-	}
-
-	.bento-wide {
-		grid-column: span 1 !important;
-		flex-direction: column !important;
-		padding: 30px !important
-	}
-
-	.bento-wide .bento-text {
-		max-width: 100% !important;
-		margin-bottom: 20px
-	}
-
-	.bento-img-left,
-	.bento-img-right {
-		position: relative !important;
-		width: 100% !important;
-		height: 200px !important;
-		object-fit: cover !important;
-		right: auto !important;
-		left: auto !important;
-		bottom: auto !important;
-		top: auto !important;
-		border-radius: 12px
-	}
+	.footer-cell-locations { grid-column: 1; grid-row: 3; }
+	.footer-brand-flex { flex-direction: column; align-items: flex-start; }
+	.footer-main-title { white-space: normal !important; font-size: 1.8em !important; }
 }
 
-@media screen and (max-width:736px) {
-	#banner-wrapper {
-		margin-top: 160px !important
-	}
 
-	.footer-grid-master {
-		grid-template-columns: 1fr !important
-	}
+/* ========================================= */
+/* 🚫 全局防复制：禁止网页文字被鼠标选中        */
+/* ========================================= */
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE10+/Edge */
+    user-select: none;         /* 标准语法 */
+}
 
-	.footer-cell-locations {
-		grid-column: 1 !important;
-		grid-row: 3 !important
-	}
+/* ⚠️ 核心保护：允许客户在表单输入框里正常选中和修改自己打的字 */
+input, textarea {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+}
+
+/* ========================================= */
+/* 📱 终极移动端（手机+平板）排版与颜色修复  */
+/* ========================================= */
+
+@media screen and (max-width: 980px) {
+    
+
+    /* 3. 🌟 修复 Bento Grid（核心服务模块）错位与撑爆屏幕 */
+    .bento-wide {
+        grid-column: span 1 !important; /* 强制只占一列，防止横向撑爆屏幕 */
+        flex-direction: column !important; /* 强制改为上下图文结构 */
+        padding: 30px !important;
+    }
+    .bento-wide .bento-text {
+        max-width: 100% !important;
+        margin-bottom: 20px;
+    }
+    /* 将原本绝对定位在右下角/左下角的图片，在手机端恢复为相对排版 */
+    .bento-img-right, .bento-img-left {
+        position: relative !important;
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover !important;
+        right: auto !important;
+        left: auto !important;
+        bottom: auto !important;
+        top: auto !important;
+        border-radius: 12px;
+    }
+}
+
+/* 极限小屏幕手机额外的安全间距修复 */
+@media screen and (max-width: 736px) {
+    #banner-wrapper {
+        margin-top: 160px !important; /* 屏幕越窄，导航按钮换行越多，需要更多空间 */
+    }
+    
+    /* 确保底部地址网格完全单列排布，不错位 */
+    .footer-grid-master {
+        grid-template-columns: 1fr !important;
+    }
+    .footer-cell-locations {
+        grid-column: 1 !important;
+        grid-row: 3 !important;
+    }
 }
