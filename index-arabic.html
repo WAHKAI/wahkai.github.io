@@ -4,7 +4,7 @@
 <head>
     <title>SANDA لتصنيع حقائب الظهر</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="viewport" content="width=1200" />
 
     <link rel="icon" type="image/webp" href="images/favicon.webp" sizes="32x32">
     <link rel="apple-touch-icon" href="images/favicon.webp" sizes="180x180">
@@ -98,6 +98,12 @@
             align-items: center !important;
             line-height: 1 !important;
             /* 解除原有高度对基线的干扰 */
+        }
+        /* 🌟 核心修復 C：修正 RTL 佈局下全屏 Banner 偏左的問題 */
+        #banner-slider {
+            left: auto !important; /* 解除原本向左的鎖定 */
+            right: 50% !important; /* 從右側推到正中間 */
+            transform: translateX(50%) !important; /* (正值) 向右拉回自身寬度的一半，實現完美居中 */
         }
     </style>
 </head>
