@@ -1766,7 +1766,7 @@ ul.link-list li:first-child {
 /* About 板块作为首屏第一个模块，不需要顶部横线 */
 .about-split-section {
 	border-top: none !important;
-	padding-top: -5px !important;
+	padding-top: 0px !important;
 }
 
 /* 2. 统一全站主标题 (H2) - 强制居左对齐 */
@@ -2701,13 +2701,9 @@ body {
 	position: relative !important;
 	z-index: 1 !important;
 	background: #ececec !important;
-	/* 默認的高級淺灰底色，覆蓋掉所有舊版綠色 */
-	padding-top: 10px !important;
-	/* ⚙️ 控制輪播圖上方的留白距離 */
-	padding-bottom: 10px !important;
-	/* ⚙️ 控制輪播圖下方的留白距離 */
+	padding-top: 70px !important;  /* 把 Banner 往下推，讓出導航欄的空間 */
+	padding-bottom: 0px !important;
 }
-
 /* 2. 獨立的高級背景層 */
 #banner-wrapper::before {
 	content: '';
@@ -3883,7 +3879,6 @@ textarea {
 	width: 97vw !important;
 	/*vw 代表 Viewport Width（視口寬度）*/
 	height: 37vw !important;
-	/*vw 代表 Viewport Width（視口寬度）*/
 	position: relative !important;
 	left: 50% !important;
 	transform: translateX(-50%) !important;
@@ -3979,3 +3974,4 @@ textarea {
 	line-height: 1.5 !important;
 	margin: 0 !important;
 }
+
