@@ -1,0 +1,4924 @@
+/* ==========================================================================
+   LAYER 3 / 4 - COMPONENTS
+   Section and component styles
+   --------------------------------------------------------------------------
+   Verbatim copy of the original main.css lines 618-3977. Rule order is
+   unchanged, so the cascade behaves exactly as before the split.
+
+   Contents: Header | Banner | Main | Footer | Copyright | Logo fix | Slider |
+             Advantages | Language dropdown | Contact button | Factory Tour |
+             Why-choose grid | Bento services | Customization | Products |
+             FAQ | Quote form | Footer grid | glassmorphism patch layer
+   ========================================================================== */
+
+/* Header */
+
+#header-wrapper {
+	/* Legacy gradient syntax is kept on purpose: the unprefixed form
+	   `linear-gradient(top, ..)` is invalid (it needs `to bottom`), so
+	   -webkit-/-moz- are the only declarations that actually apply. */
+	background-image: -moz-linear-gradient(top, #fdfdfd, #e8e8e8);
+	background-image: -webkit-linear-gradient(top, #fdfdfd, #e8e8e8);
+	background-color: var(--c-border-4);
+	/* 后备底色 */
+	position: sticky;
+	/* 开启粘性定位 */
+	top: 0;
+	/* 吸附在屏幕最顶部边缘 */
+	z-index: var(--z-header);
+	/* 保证它在最上层，不被下方图片或文字遮挡 */
+	width: 100%;
+	/* 宽度撑满屏幕 */
+	box-shadow: 0 2px 5px var(--c-shadow-10);
+	/* 建议加个极淡的阴影，滚动时能跟下方内容区分开 */
+	padding-top: 0.1px;
+	padding-bottom: 0.1px;
+}
+
+#header {
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	position: relative;
+	margin: 0.5% 0 0.5% 0;
+	/* 修改标题栏背景高度 */
+	padding: 0 20px 0 20px;
+	border-radius: 10px;
+	height: 55px;
+}
+
+#header h1 {
+	position: absolute;
+	left: 40px;
+	top: 0;
+	color: var(--c-white);
+	font-size: 2.4em;
+	letter-spacing: -2px;
+	line-height: 45px;
+	margin-bottom: 0;
+	/* 去除 Logo 下方的默认空隙 */
+}
+
+#header h1 a {
+	color: var(--c-white);
+	text-decoration: none;
+}
+
+#header nav {
+	position: absolute;
+	right: 40px;
+	top: 1px;
+	line-height: 52px;
+	font-size: 1.1em;
+	letter-spacing: -1px;
+}
+
+#header nav a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--c-white);
+	padding: 0 25px 0 25px;
+	outline: 0;
+}
+
+/* Banner */
+
+#banner-wrapper {
+	/* 调整上方的空白高度（觉得大就改小，甚至可以改成 0） */
+	padding-top: var(--sp-2);
+	/* 调整下方的空白高度 */
+	padding-bottom: var(--sp-2);
+}
+
+
+
+
+
+
+
+/* Main */
+
+#main {
+	background: var(--c-white);
+	padding: 4em 0;
+}
+
+/* Footer */
+
+#footer-wrapper {
+	padding: 4em 0;
+}
+
+/* Copyright */
+
+
+
+
+
+/* Large */
+
+
+/* Small */
+
+
+
+
+
+/* ========================================= */
+/* 修复图片 Logo 替换文字后的样式                */
+/* ========================================= */
+
+/* 1. 桌面端与平板端（>980px）：使用绝对定位+位移法实现完美居中 */
+#header h1 {
+	position: absolute;
+	top: 50%;
+	/* 定位到父容器高度的 50% */
+	transform: translateY(-50%);
+	/* 往上偏移自身高度的一半，实现绝对居中 */
+	margin: 0;
+	height: auto;
+	line-height: 1;
+	/* 清除原模板写死的几十像素行高干扰 */
+}
+
+#header h1 a {
+	display: block;
+	line-height: 1;
+}
+
+#header h1 img {
+	/* 控制桌面端 Logo 的高度 */
+	max-height: 38px;
+	width: auto;
+	display: block;
+}
+
+/* 2. 手机端与小平板（<980px）：响应式预留区（原 #titleBar 已随 jQuery 链移除） */
+
+/* ========================================= */
+/* 自定义轮播图样式 (Slider)                    */
+/* ========================================= */
+
+#banner-slider {
+	position: relative;
+	width: 100%;
+	/* 【控制尺寸】在这里修改轮播图的高度，觉得太大可以改为 400px 或 500px */
+	height: 550px;
+	border-radius: var(--r-sm);
+	overflow: hidden;
+	box-shadow: inset 0 0 0 10px var(--c-white);
+	/* 保持原模板的白色内边框风格 */
+	background-color: var(--c-text-5);
+	/* 图片加载前的背景色 */
+}
+
+.slider-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	/* 切换图片的动画过渡效果 */
+	transition: transform var(--dur) var(--ease-out);
+}
+
+.slide {
+	min-width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+	/* 保证图片铺满整个区域且不变形被拉伸 */
+	object-fit: cover;
+}
+
+/* 漂浮在图片上的文字样式 */
+.slide-text {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: var(--c-white);
+	font-size: var(--fs-xl);
+	font-weight: bold;
+	text-shadow: 2px 2px 4px var(--c-shadow-60);
+	background: var(--c-shadow-50);
+	padding: var(--sp-2) var(--sp-5);
+	border-radius: var(--r-xs);
+	white-space: nowrap;
+}
+
+/* 左右切换按钮 */
+.slide-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: var(--c-shadow-30);
+	color: white;
+	border: none;
+	font-size: var(--fs-base);
+	padding: var(--sp-3) var(--sp-4);
+	cursor: pointer;
+	border-radius: var(--r-xs);
+	transition: background var(--dur) var(--ease-out);
+	z-index: var(--z-sticky);
+}
+
+.slide-btn:hover {
+	background: var(--c-shadow-40);
+}
+
+.prev-btn {
+	left: 20px;
+}
+
+.next-btn {
+	right: 20px;
+}
+
+/* 底部指示圆点 */
+.slider-dots {
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+	text-align: center;
+	z-index: var(--z-sticky);
+}
+
+.dot {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 0 5px;
+	background-color: var(--c-glass-50);
+	border-radius: var(--r-pill);
+	cursor: pointer;
+	transition: background var(--dur) var(--ease-out);
+}
+
+.dot.active,
+.dot:hover {
+	background-color: var(--c-white);
+	box-shadow: var(--sh-on-photo);
+}
+
+
+
+/* ========================================= */
+/* 1. 缩小外侧一圈的空白区域                   */
+/* ========================================= */
+#main {
+	/* 原本是 4em。2em 控制上下空白，0 控制左右。觉得大可以改 1.5em 或 1em */
+	padding: 1.5em 0;
+}
+
+/* ========================================= */
+/* 2. 工厂优势列表样式 (Advantages List)        */
+/* ========================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================= */
+/* 适配 macOS 浅灰背景的内部样式修正            */
+/* ========================================= */
+
+/* 1. 把内部的蓝框变透明，去掉原本的边框和内阴影 */
+#header {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+/* 2. 把导航菜单的文字变成深灰色，更有商务质感 */
+#header nav a {
+	color: var(--c-text-5);
+	font-weight: 500;
+	/* 稍微加粗一点增加可读性 */
+}
+
+/* 3. 修改鼠标悬浮在菜单上的效果 (原本是深蓝底色，现在改成浅灰底色) */
+#header nav a:hover,
+#header nav a.current-page-item {
+	background: var(--c-shadow-05);
+	/* 极淡的黑色半透明底 */
+	color: var(--c-black);
+	box-shadow: none;
+	border-radius: 6px;
+	/* 苹果风圆角 */
+}
+
+/* 4. 如果你的 Logo 还是文字，也把它变成深灰色 (如果是图片 Logo 这条不影响) */
+#header h1 a {
+	color: var(--c-text-6);
+}
+
+
+/* ========================================= */
+/* 1. 语言下拉菜单样式 (Language Dropdown)      */
+/* ========================================= */
+
+.lang-dropdown {
+	display: inline-block;
+	position: relative;
+	/* 继承外部的对齐方式 */
+}
+
+/* 隐藏下拉框，只有在鼠标悬浮时才显示 */
+.lang-dropdown-content {
+	display: none;
+	position: absolute;
+	top: 80%;
+	/* 靠近主菜单下方 */
+	left: 50%;
+	transform: translateX(-50%);
+	/* 保证下拉框在文字正下方居中 */
+	background-color: var(--c-white);
+	min-width: 120px;
+	box-shadow: 0 10px 20px var(--c-shadow-08);
+	/* 苹果风柔和弥散阴影 */
+	border-radius: 12px;
+	/* 苹果风圆角 */
+	padding: 8px 0;
+	z-index: var(--z-dropdown);
+}
+
+/* 鼠标悬浮时显示下拉框 */
+.lang-dropdown:hover .lang-dropdown-content {
+	display: block;
+	animation: langDropIn 0.2s ease;
+	/* 淡入 + 單純下移，不做水平位移 */
+}
+
+/* ⚠ 這組 keyframes 被兩個地方共用（語言下拉、Company 巨集面板），
+   兩者的定位方式完全不同：
+     · 語言下拉：`left:auto; right:0; transform:none`（Round 27b 改的）
+     · Company 巨集：`right:-8px`，本來就沒有 transform
+   舊版在 keyframes 裡寫死 `transform: translate(-50%, …)`，動畫播放期間
+   會把面板往左拉半個寬度，動畫結束後 transform 回到 none/原值 → 面板
+   在 0.2s 內「突然右移」。
+   修正：fadeIn 只做 opacity，不再碰 transform。 */
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+
+/* 語言下拉專用：淡入 + 下移 5px。只動 Y 軸，不干擾 right:0 的水平定位
+   （舊版誤用 translate(-50%)，面板寬 120px → 開啟瞬間左跳 60px）。 */
+@keyframes langDropIn {
+	from {
+		opacity: 0;
+		transform: translateY(-5px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* 下拉框内部链接样式重置 */
+#header nav .lang-dropdown-content a {
+	display: block;
+	padding: 10px 20px;
+	line-height: 1.2;
+	color: var(--c-text-5);
+	font-size: 0.9em;
+	background: transparent;
+	text-align: center;
+	border-radius: 0;
+}
+
+/* 下拉框内部链接 hover 效果：苹果风浅灰色背景 */
+#header nav .lang-dropdown-content a:hover {
+	background-color: var(--c-surface-2);
+	color: var(--c-primary);
+	/* 文字变蓝 */
+}
+
+/* ========================================= */
+/* 2. 苹果风格 Contact 蓝色按钮样式             */
+/* ========================================= */
+
+#header nav a.nav-contact-btn {
+	display: inline-block;
+	background-color: var(--c-primary);
+	color: var(--c-white);
+	/* 文字纯白 */
+
+	/* 尺寸与对齐控制 */
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	/* 强制与旁边的文字垂直居中对齐 */
+	margin-left: 15px;
+	/* 稍微与左边菜单拉开一点呼吸空间 */
+
+	border-radius: 7px;
+	/* 胶囊圆角 */
+	font-weight: 500;
+	/* 稍微加粗让按钮更有力量感 */
+	letter-spacing: normal;
+	/* 清除原有负字距 */
+	transition: all 0.2s ease;
+	/* 丝滑的过渡动画 */
+}
+
+/* 按钮 Hover 效果：轻微提亮并有一点点浮动 */
+#header nav a.nav-contact-btn:hover {
+	background-color: var(--c-primary-hover);
+	transform: scale(1.15);
+	/* 鼠标放上去有轻微的放大交互感 */
+	box-shadow: 0 4px 10px var(--c-primary-30);
+	/* 淡淡的蓝色光晕 */
+}
+
+/* ========================================= */
+/* Factory Tour 工厂工序网格                    */
+/* ========================================= */
+/* 15 道工序，阅读顺序为蛇形：第 1 行左→右，第 2 行右→左，第 3 行左→右。
+   顺序由编号承担，箭头只做指向提示。标题与文案常显（不依赖 hover），
+   自动轮播仅用于高亮当前工序，因此不会遮挡照片。
+   风格与全站一致：编号胶囊沿用毛玻璃语言，图片圆角用 --r-md（与 .bento-card 同阶），
+   标题/正文只用字号阶里的 16/14，箭头用 1.5px 发丝线（与全站分割线同厚度）。 */
+.factory-tour-section {
+	position: relative;
+	/* 供右上角的暂停按钮定位 */
+}
+
+.factory-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: var(--sp-4);
+	/* 24px：比原来的 15px 宽，给工序箭头留出可见的间隙 */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.factory-step {
+	position: relative;
+	/* 行末向下箭头的定位基准 */
+	display: flex;
+	flex-direction: column;
+}
+
+/* 图片区。横向箭头挂在这一层，才能画到格子外面的间隙里 */
+.factory-frame {
+	position: relative;
+	transition: transform var(--dur) var(--ease-out);
+}
+
+.factory-img {
+	aspect-ratio: 4 / 3;
+	overflow: hidden;
+	border-radius: var(--r-md);
+	background-color: var(--c-surface-2);
+	/* 极细内描边，保证任何底图下都有一致的边界感 */
+	box-shadow: inset 0 0 0 1px var(--c-shadow-04);
+	transition: box-shadow var(--dur) var(--ease-out);
+}
+
+.factory-img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform var(--dur) var(--ease-out), opacity var(--dur) var(--ease-out);
+}
+
+.factory-step:hover .factory-img img {
+	transform: scale(1.04);
+	/* 克制的放大，与全站 hover 幅度一致 */
+}
+
+/* 工序编号 */
+.factory-num {
+	position: absolute;
+	top: var(--sp-2);
+	left: var(--sp-2);
+	z-index: var(--z-raised);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 27px;
+	height: 22px;
+	padding: 0 var(--sp-1);
+	border-radius: var(--r-pill);
+	background-color: var(--c-glass-90);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
+	color: var(--c-text-1);
+	font-size: var(--fs-xs);
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: 0.02em;
+	font-variant-numeric: tabular-nums;
+	transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+
+.factory-title {
+	margin: var(--sp-3) 0 0;
+	font-size: var(--fs-base);
+	font-weight: 600;
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+	color: var(--c-text-1);
+}
+
+.factory-copy {
+	margin: var(--sp-2) 0 0;
+	font-size: var(--fs-sm);
+	line-height: 1.5;
+	color: var(--c-text-2);
+}
+
+/* ---- 工序箭头 ------------------------------------------------------------
+   只画横向间隙里的箭头（每行 4 个）+ 每行末尾一个向下箭头（共 2 个）。
+   7px 的折角落在 24px 间隙的正中。
+   ⚠ 这里用的是 nth-child，它数的是「DOM 顺序」，不是视觉上的行内位置。
+   DOM 是蛇形排列的（见 index.html 的注释）：
+     槽位 1-5   = 工序 01..05（第 1 行，左→右）
+     槽位 6-10  = 工序 10..06（第 2 行，视觉上左→右是 10,9,8,7,6）
+     槽位 11-15 = 工序 11..15（第 3 行，左→右）
+   所以第 2 行的折返点是槽位 6（它落在视觉上的最左格），不是槽位 10。 */
+.factory-frame::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 7px;
+	height: 7px;
+	border-top: 1.5px solid var(--c-text-3);
+	border-right: 1.5px solid var(--c-text-3);
+}
+
+/* 第 1 行、第 3 行：向右 */
+.factory-step:nth-child(-n+5) .factory-frame::after,
+.factory-step:nth-child(n+11) .factory-frame::after {
+	right: calc(-1 * var(--sp-4) / 2 - 3px);
+	transform: translateY(-50%) rotate(45deg);
+}
+
+/* 第 2 行：蛇形折返，向左。
+   槽位 6 是这一行视觉上的最左格（工序 10），它是本行最后一格，
+   所以向左箭头从槽位 7 才开始画。 */
+.factory-step:nth-child(n+7):nth-child(-n+10) .factory-frame::after {
+	left: calc(-1 * var(--sp-4) / 2 - 3px);
+	transform: translateY(-50%) rotate(-135deg);
+}
+
+/* 行末不画横向箭头：
+   槽位 5  = 第 1 行最右格（工序 05），改画向下
+   槽位 6  = 第 2 行最左格（工序 10），改画向下
+   槽位 15 = 第 3 行最右格（工序 15），流程终点，什么也不画 */
+.factory-step:nth-child(5) .factory-frame::after,
+.factory-step:nth-child(6) .factory-frame::after,
+.factory-step:nth-child(15) .factory-frame::after {
+	content: none;
+}
+
+/* 行末向下折返：
+   槽位 5 的正下方就是第 2 行最右格（工序 06）
+   槽位 6 的正下方就是第 3 行最左格（工序 11） */
+.factory-step:nth-child(5)::before,
+.factory-step:nth-child(6)::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: calc(-1 * var(--sp-4) / 2 - 3px);
+	width: 7px;
+	height: 7px;
+	border-top: 1.5px solid var(--c-text-3);
+	border-right: 1.5px solid var(--c-text-3);
+	transform: translateX(-50%) rotate(135deg);
+}
+
+/* ---- 当前工序高亮（自动轮播）---------------------------------------------
+   两件事：① 当前格整格浮起 + 照片内容再放大一档；② 其余 14 张压暗，形成聚光灯。
+
+   ⚠ 为什么放大拆成 1.05(frame) x 1.15(img)，而不是直接把 frame 放大 1.2：
+   实测 frame 220.80 x 165.59，格子间隙 24px，标题在图片下方 16px 处。
+   注意横向箭头是 .factory-frame 的 ::after 子元素，**会跟着 frame 一起缩放并外移**
+   （它不是固定在间隙里的）。各元素距格子中心的距离：
+     格子右边缘 110.4px   箭头远侧 125.4px   右邻格左边缘 134.4px
+   于是 scale = s 时的约束是：
+     格子右边缘 110.4s 不能撞到右邻格 -> s < 1.10
+     箭头远侧   125.4s 不能压到右邻格 -> s < 1.072   ← 真正的瓶颈
+   纵向约束：165.59*(s-1)/2 不能吃掉 16px 的标题间距 -> s < 1.19
+   所以 frame 的横向上限约 1.07。取 1.05 时箭头距右邻格还有 2.73px 留白
+   （1.06 只剩 1.48px，偏紧）。已在 3x 裁图下确认箭头四周留白正常、没有被压住。
+   剩下要凑到 1.2 的量全部放进「不占布局空间」的内部图片缩放：
+     frame 1.05 x img 1.15 = 1.2075，即照片实际放大 1.21 倍。
+   另外放大 .factory-frame 而不是 .factory-img：编号胶囊 .factory-num 挂在 frame 上，
+   放大 frame 才能让图与胶囊一起缩放，胶囊相对图片边缘的内缩保持不变。 */
+.factory-step.is-current .factory-frame {
+	transform: scale(1.05);
+}
+
+.factory-step.is-current .factory-img img {
+	transform: scale(1.15);
+}
+
+.factory-step.is-current .factory-img {
+	box-shadow: inset 0 0 0 1px var(--c-shadow-04), var(--sh-lg);
+}
+
+/* 非当前工序压暗 —— 只在轮播真正跑起来之后才生效（.is-cycling 由 JS 在第一次
+   高亮时加上）。否则「区块还没滚进视窗」或「用户开了减少动态效果」这两种情况下，
+   15 张图会全部停在 0.98 的暗淡状态，看起来像页面没加载完。
+   只压 img，不压 .factory-img：这样每格那圈 1px 发丝内描边保持同等清晰度，
+   网格骨架不会跟着糊掉，编号胶囊也保持满亮度，顺序依然读得出来。 */
+.factory-tour-section.is-cycling .factory-step:not(.is-current) .factory-img img {
+	opacity: 0.98;
+}
+
+/* ---- 模块级 CTA（与 H2 同一行，右对齐）------------------------------------
+   Factory Tour 与 Buyer Concerns 共用这一套（.factory-cta / .concern-cta），
+   改这里两边同时生效。
+   位置用绝对定位，不去动 H2 的 DOM 与 margin：
+     top = 模块 padding-top(--sp-7 64px) + H2 行框高度的一半
+   H2 的 font-size 是 --fs-xl(40px)，而它**实际生效**的 line-height 是 1.1
+   （components.css 下方那条 #main section h2 覆盖了上面的 1.2），
+   行框 = 40 * 1.1 = 44px，一半 = 22px = --fs-xl * 0.55。
+   配合 translateY(-50%)，无论链接多高都自动与 H2 文字行垂直居中。
+   ⚠ 这条公式成立的前提：所属区块的 padding-top 必须是 --sp-7(64px)，
+     即区块要带 .global-section（其最终生效的定义在 components.css:2213）。
+   ⚠ 如果哪天 H2 的行高被改回 1.2，这里的系数要跟着改成 0.6。
+   做成「蓝色文字 + 细箭头」而不是实心按钮：H2 的视觉重量已经很强，实心蓝按钮
+   会跟它抢焦点；而且全站目前只有一个实心蓝按钮（.cta-btn），再加一个会削弱它。
+   箭头沿用本区块的 1.5px 发丝线语言，和工序箭头同一套。 */
+.factory-cta,
+.concern-cta {
+	position: absolute;
+	top: calc(var(--sp-7) + var(--fs-xl) * 0.55);
+	right: 0;
+	transform: translateY(-50%);
+	display: inline-flex;
+	align-items: center;
+	gap: var(--sp-2);
+	padding: var(--sp-2) 0;
+	color: var(--c-primary);
+	font-size: var(--fs-base);
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: color var(--dur-fast) var(--ease-out);
+}
+
+.factory-cta::after,
+.concern-cta::after {
+	content: "";
+	width: 7px;
+	height: 7px;
+	border-top: 1.5px solid currentColor;
+	border-right: 1.5px solid currentColor;
+	transform: rotate(45deg);
+	transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.factory-cta:hover,
+.concern-cta:hover {
+	color: var(--c-primary-hover);
+}
+
+.factory-cta:hover::after,
+.concern-cta:hover::after {
+	transform: translateX(3px) rotate(45deg);
+}
+
+.factory-cta:focus-visible,
+.concern-cta:focus-visible {
+	outline: 2px solid var(--c-primary);
+	outline-offset: 4px;
+	border-radius: var(--r-xs);
+}
+
+
+
+/* ========================================= */
+/* 大数字驱动的纯文本核心优势网格 (2x3 Layout)   */
+/* ========================================= */
+
+/* 采用 Grid 网格，电脑端 3 列 */
+.text-grid-2x3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	/* 卡片之间的间距 */
+}
+
+/* 极简文字卡片的基础样式 */
+.text-card {
+	background-color: var(--c-white);
+	border: 1px solid var(--c-border-2);
+	/* 极淡的苹果风边框 */
+	border-radius: var(--r-md);
+	padding: var(--sp-5) var(--sp-4);
+	text-align: center;
+	/* 内容居中 */
+	transition: all var(--dur) var(--ease-out);
+	/* 丝滑过渡动画 */
+}
+
+/* 卡片悬浮交互：轻微上浮 + 柔和阴影 */
+.text-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--sh-md);
+	border-color: var(--c-border-1);
+}
+
+/* 核心灵魂：极其醒目的大数字 */
+.big-number {
+	font-size: var(--fs-2xl);
+	/* 超大字号 */
+	font-weight: 700;
+	/* 粗体 */
+	color: var(--c-primary);
+	/* 苹果经典商务蓝，吸引眼球 */
+	line-height: 1;
+	margin-bottom: 10px;
+	letter-spacing: -1.5px;
+	/* 让大数字的字符更紧凑，显得更有力量感 */
+}
+
+/* 卡片内的小标题 */
+.text-card h4 {
+	font-size: var(--fs-md);
+	color: var(--c-text-1);
+	/* 近乎黑色的深灰 */
+	margin-bottom: 12px;
+	font-weight: 600;
+}
+
+/* 卡片内的补充说明段落 */
+.text-card p {
+	font-size: var(--fs-base);
+	color: var(--c-text-2);
+	/* 柔和的灰色，区分层级 */
+	line-height: 1.6;
+	margin: 0;
+}
+
+
+
+
+/* ========================================= */
+/* Products Category 苹果风格展示区            */
+/* ========================================= */
+/* ========================================= */
+/* 🎒 Featured Collections (終極主從佈局)     */
+/* ========================================= */
+
+/* ========================================= */
+/* 🗄️ Featured Collections：7 × 5 陳列櫃        */
+/* ========================================= */
+
+/* 櫃體外框 + 底座。層板與分隔線都在同一櫃體結構內，不用卡片之間的留白代替。 */
+.collection-cabinet {
+	position: relative;
+	/* Round 20：底部 20px 間距移除——詢盤條改為櫃體的「底座」，兩者貼齊連成一體。
+	   圓角同步改為只圓上緣：櫃體底部與底座帶接成一條連續輪廓。 */
+	margin-bottom: 0;
+	border: 1px solid var(--c-border-2);
+	border-radius: 16px 16px 0 0;
+	background: linear-gradient(180deg, #f4f4f8, #e6e6ec);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 12px 32px -14px rgba(0, 0, 0, 0.18);
+}
+
+.cabinet-frame {
+	padding: 14px;
+}
+
+/* 內腔 = 連續背板。高度 = 立牌軌 46px + 5 行 × 124px = 666px */
+.cabinet-interior {
+	position: relative;
+	height: 666px;
+	/* ── F1 板片結構 ──────────────────────────────────────────────
+	   左右各內縮 22px 讓櫃體外殼的留白變成「實體側板」。
+	   .cabinet-grid / .cabinet-dividers / .cabinet-shelves 的 left/right:0
+	   全都改為相對內腔 → 層板端點自動貼齊側板內緣，不再橫貫整櫃。
+	   側板吃的是原有的 22px 留白，櫃體總高不變。 */
+	margin: 0 22px;
+	border-radius: 2px;
+	/* 背板材質見下方 M2 區塊（9px 拼板縫 + 三段漸層） */
+}
+
+/* ── F1 板片結構：左右側板（各 22px）────────────────────────────
+   住在內腔左右外側那 22px，position:absolute 不會撐高櫃體。
+   外緣 1px 深色線 ＝ 側板與櫃體外殼的分面；
+   1px→30% 的淺色帶 ＝ 側板迎光面；
+   內緣側的 inset 陰影 ＝ 側板往內腔投的影。
+   材質見下方 M2 區塊（樺木夾板的 42px 層線 + 三段分面）。 */
+.cabinet-side-l,
+.cabinet-side-r {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 22px;
+	z-index: 1;
+}
+
+.cabinet-side-l { left: -22px; }
+.cabinet-side-r { right: -22px; }
+
+/* ==========================================================================
+   M2 霧面樺木夾板（Round 18）
+   承接 F1 的板片結構，把櫃體所有表面從冷灰換成啞面樺木。
+   M2 的辨識特徵 = 保留樺木夾板的 **42px 層線**，且全櫃無亮面高光。
+   色票全部啞面、明暗差 < 8%，取自 .research/F_board.css 的 .cb.m2。
+   板塊高度仍是 1037px — 本輪只換表面材質，不動任何幾何。
+   ========================================================================== */
+
+/* 櫃體外殼。1px 深色描邊取代原本的 --c-border-2，讓木櫃有個明確輪廓。 */
+.collection-cabinet {
+	border: 1px solid #a8946d;
+	background: linear-gradient(180deg, #e0d2b3, #d3c2a0 55%, #c8b691);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 16px 38px -16px rgba(70, 50, 24, 0.34);
+}
+
+/* 櫃體上下左右的木框。維持 14px 不動 —— .research/F_board.css 的 M2 用 16px，
+   差異可忽略；若為了「讓側板同寬」而加大到 22px，內腔會平白窄 16px、
+   1200 版心的銘牌也從 150.8px 縮到 148.6px，划不來。 */
+.cabinet-frame {
+	padding: 14px;
+}
+
+/* 左右側板：樺木夾板 = 42px 層線 + F1 的三段分面。
+   層線走 180deg（上下延續）才像夾板的貼合層，不是橫紋。 */
+.cabinet-side-l {
+	background-image:
+		repeating-linear-gradient(180deg, rgba(140, 112, 66, 0.22) 0 0.5px, rgba(140, 112, 66, 0) 0.5px 42px),
+		linear-gradient(90deg, #b9a67e 0 1px, #dfd0af 1px 30%, #d3c2a0 30% 100%);
+	box-shadow: inset -3px 0 6px -3px rgba(70, 50, 24, 0.42);
+}
+
+.cabinet-side-r {
+	background-image:
+		repeating-linear-gradient(180deg, rgba(140, 112, 66, 0.22) 0 0.5px, rgba(140, 112, 66, 0) 0.5px 42px),
+		linear-gradient(270deg, #b9a67e 0 1px, #dfd0af 1px 30%, #d3c2a0 30% 100%);
+	box-shadow: inset 3px 0 6px -3px rgba(70, 50, 24, 0.42);
+}
+
+/* 內腔背板：9px 直向細木縫（夾板的拼板痕），比側板亮一階 → 內腔是「受光面」。
+   側板的邊緣靠 1px 硬暗線 + 迎光帶界定，不靠亮度差。 */
+.cabinet-interior {
+	background-image:
+		repeating-linear-gradient(90deg, rgba(140, 112, 66, 0.05) 0 1px, rgba(140, 112, 66, 0) 1px 9px),
+		linear-gradient(180deg, #e6dabf 0%, #dbcdab 52%, #cebc95 100%);
+	box-shadow: inset 0 3px 10px rgba(90, 66, 34, 0.22), inset 0 -2px 6px rgba(90, 66, 34, 0.14);
+}
+
+/* ================= 1. 頂部立牌軌：每列一塊銘牌 ================= */
+.cabinet-placards {
+	position: relative;
+	z-index: 2;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	height: 46px;
+	/* M2：立牌軌 = 櫃體的頂板，比內腔暗一階，把「頂板 / 內腔」的關係讀出來 */
+	background: linear-gradient(180deg, #d5c5a3, #bda87f 55%, #a8946d);
+	border-bottom: 1px solid rgba(90, 66, 34, 0.22);
+	box-shadow: 0 2px 5px -2px rgba(70, 50, 24, 0.30), inset 0 1px 0 rgba(255, 250, 238, 0.6);
+}
+
+.cabinet-placard {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 5px;
+}
+
+.cabinet-placard span {
+	display: block;
+	width: 100%;
+	/* 銘牌「大小不變」：寬度仍是 152px、軌高 46px 不動。
+	   ⚠️ 1.5px 邊框在 DPR 1 會被 Chrome 無條件捨入成 1px（getComputedStyle 回報 1px），
+      所以垂直內距維持 7/6，卡片實測高度仍是 32.9px；換到 HiDPI（DPR≥1.5）才會真的吃到
+      1.5px，那時高度多 1px，不影響版型。 */
+	max-width: 152px;
+	padding: 7px 7px 6px;
+	text-align: center;
+	/* M2 燈箱銘牌：純白放射漸層 + 木色細邊 + 外擴暖光。
+	   移除藍裝飾條後，銘牌焦點由燈箱本身的光承擔。 */
+	border: 1.5px solid #5f4c2c;
+	border-radius: 6px;
+	background: radial-gradient(120% 132% at 50% 40%, #ffffff 0%, #fffefa 42%, #fbf5e8 74%, #f1e7d2 100%);
+	box-shadow: 0 0 22px 7px rgba(255, 252, 242, 0.95), 0 0 52px 22px rgba(255, 247, 224, 0.55),
+	            0 3px 7px -1px rgba(50, 34, 10, 0.52),
+	            inset 0 0 0 1px rgba(255, 255, 255, 1), inset 0 0 14px rgba(255, 255, 255, 1);
+	font-size: 15.6px;
+	font-weight: 600;
+	letter-spacing: -0.1px;
+	line-height: 1.15;
+	color: var(--c-text-1);
+}
+
+/* ================= 2. 展示格 ================= */
+.cabinet-grid {
+	position: absolute;
+	top: 46px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(5, 124px);
+	/* ⚠️ 這裡絕對不能加 z-index。加了會建立層疊上下文，把 .cabinet-pop 關在裡面，
+	   小窗就會被分隔線 (z-index:3) 和層板 (z-index:4) 切穿。保持 auto 才能浮在櫃體前面。 */
+}
+
+.cabinet-bay {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 12px 4px 3px;
+}
+
+.cabinet-bay img {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	/* contain 讓每款包在自己格子裡放到最大；刻意不做尺寸歸一化 */
+	object-fit: contain;
+	object-position: bottom center;
+	/* M2：接觸陰影。兩層 drop-shadow 疊出「東西放在層板上」的落地感，
+	   取代原本只有 transform 的懸空感。 */
+	filter: drop-shadow(0 4px 3px rgba(60, 42, 18, 0.40)) drop-shadow(0 1px 1px rgba(60, 42, 18, 0.28));
+	transition: transform 0.28s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 射燈光暈（常亮）。M2：改成單一盞頂光池，取代原本冷暖兩層的冷色暈 */
+.cabinet-bay::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+	background: radial-gradient(92% 62% at 50% 19%, rgba(255, 255, 252, 0.88) 0%,
+	                                                      rgba(255, 252, 240, 0.36) 44%,
+	                                                      rgba(255, 250, 236, 0) 80%);
+}
+
+/* 燈槽（常亮）。top:7px 是為了避開層板向行內探入的 5px */
+.cabinet-bay::after {
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: 50%;
+	z-index: 3;
+	width: 38px;
+	height: 5px;
+	transform: translateX(-50%);
+	border-radius: 3px;
+	background-color: #fffdf3;
+	box-shadow: 0 0 9px 3px rgba(255, 238, 180, 0.85), inset 0 1px 0 #fff;
+}
+
+/* ================= 3. 懸停：燈珠提亮 + 側邊資訊小窗 ================= */
+.cabinet-bay:hover::after {
+	background-color: #fffef8;
+	box-shadow: 0 0 14px 5px rgba(255, 240, 180, 0.98), inset 0 1px 0 #fff;
+}
+
+.cabinet-bay:hover img {
+	transform: translateY(-2px) scale(1.015);
+}
+
+.cabinet-pop {
+	position: absolute;
+	top: 50%;
+	left: calc(100% - 8px);
+	z-index: 30;
+	width: 184px;
+	padding: 8px 10px;
+	transform: translateY(-50%) translateX(5px);
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.97);
+	box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.30), 0 2px 6px rgba(0, 0, 0, 0.06);
+	text-align: left;
+	opacity: 0;
+	pointer-events: none;
+	/* 移開後延遲 0.30s 才淡出；懸停時把延遲覆蓋為 0，讓它即時出現 */
+	transition: opacity 0.18s ease, transform 0.18s ease;
+	transition-delay: 0.30s, 0.30s;
+}
+
+.cabinet-pop::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -4px;
+	margin-top: -4px;
+	width: 8px;
+	height: 8px;
+	transform: rotate(45deg);
+	background-color: rgba(255, 255, 255, 0.97);
+	border-left: 1px solid rgba(0, 0, 0, 0.08);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cabinet-pop b {
+	display: block;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.1px;
+	color: var(--c-text-1);
+}
+
+.cabinet-pop span {
+	display: block;
+	margin-top: 3px;
+	font-size: 10.5px;
+	line-height: 1.45;
+	/* --c-text-3 (#86868b) 壓白底只有 3.62:1，不達 AA → 用 --c-text-2 (#515154) 7.91:1 */
+	color: var(--c-text-2);
+}
+
+.cabinet-bay:hover .cabinet-pop {
+	opacity: 1;
+	transform: translateY(-50%) translateX(0);
+	transition-delay: 0s, 0s;
+}
+
+/* 右側三欄（第 5、6、7 列）改為向左彈出，避免衝出櫃體。
+   DOM 是橫向排列的，所以 7n+5 / 7n+6 / 7n+7 正好是每一列的第 5、6、7 格。 */
+.cabinet-bay:nth-child(7n+5) .cabinet-pop,
+.cabinet-bay:nth-child(7n+6) .cabinet-pop,
+.cabinet-bay:nth-child(7n+7) .cabinet-pop {
+	left: auto;
+	right: calc(100% - 8px);
+	transform: translateY(-50%) translateX(-5px);
+}
+
+.cabinet-bay:nth-child(7n+5) .cabinet-pop::after,
+.cabinet-bay:nth-child(7n+6) .cabinet-pop::after,
+.cabinet-bay:nth-child(7n+7) .cabinet-pop::after {
+	left: auto;
+	right: -4px;
+	border-left: 0;
+	border-bottom: 0;
+	border-right: 1px solid rgba(0, 0, 0, 0.08);
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cabinet-bay:nth-child(7n+5):hover .cabinet-pop,
+.cabinet-bay:nth-child(7n+6):hover .cabinet-pop,
+.cabinet-bay:nth-child(7n+7):hover .cabinet-pop {
+	transform: translateY(-50%) translateX(0);
+}
+
+/* ================= 4. 分隔線、層板、底座 ================= */
+.cabinet-dividers span {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 3;
+	width: 7px;
+	margin-left: -3.5px;
+	/* M2：立柱與側板同材質，中段一道亮帶讀成圓角立柱 */
+	background: linear-gradient(90deg, #b9a67e, #dfd0af 42%, #d3c2a0 58%, #b9a67e);
+	box-shadow: 1px 0 2px rgba(70, 50, 24, 0.28);
+}
+
+/* repeat(7, 1fr) 是精確的，所以用百分比定位即可，不必量測 */
+.cabinet-dividers span:nth-child(1) { left: 14.2857%; }
+.cabinet-dividers span:nth-child(2) { left: 28.5714%; }
+.cabinet-dividers span:nth-child(3) { left: 42.8571%; }
+.cabinet-dividers span:nth-child(4) { left: 57.1429%; }
+.cabinet-dividers span:nth-child(5) { left: 71.4286%; }
+.cabinet-dividers span:nth-child(6) { left: 85.7143%; }
+
+.cabinet-shelves span {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 4;
+	height: 10px;
+	margin-top: -5px;
+	/* M2：五段漸層分面（頂面亮 / 轉折 / 前緣暗），用 background-image 組合
+	   才不會把 42px 層線那一層洗掉。18px 原spec等比縮到 10px：
+	   0→0、2→1.1、7→3.9、13→7.2、16→8.9、18→10。 */
+	background-image:
+		repeating-linear-gradient(180deg, rgba(140, 112, 66, 0.20) 0 0.5px, rgba(140, 112, 66, 0) 0.5px 42px),
+		linear-gradient(180deg, #efe3c8 0 1.1px, #e2d4b4 1.1px 3.9px,
+		                          #d3c2a0 3.9px 7.2px, #c3b089 7.2px 8.9px, #b29c74 8.9px 10px);
+	box-shadow: 0 4px 8px -3px rgba(70, 50, 24, 0.38);
+	/* ── F1：層板端面 ────────────────────────────────────────────
+	   .cabinet-interior 有 margin:0 22px，所以這裡的 left/right:0 已經落在
+	   側板「內緣」→ 層板不再橫貫整櫃。左右各 3px 端面把「板是插進側板」
+	   這個關係讀出來；border-box 下不會改變層板寬度，櫃體總高不變。
+	   M2：端面換成樺木的深色切邊 #9c8659。 */
+	border-left: 3px solid #9c8659;
+	border-right: 3px solid #9c8659;
+	border-radius: 1px;
+}
+
+.cabinet-shelves span:nth-child(1) { top: 46px; }
+.cabinet-shelves span:nth-child(2) { top: 170px; }
+.cabinet-shelves span:nth-child(3) { top: 294px; }
+.cabinet-shelves span:nth-child(4) { top: 418px; }
+.cabinet-shelves span:nth-child(5) { top: 542px; }
+
+.cabinet-base {
+	height: 22px;
+	border-top: 1px solid rgba(255, 250, 238, 0.45);
+	/* Round 20：圓角移除——櫃體底部已與詢盤底座帶接上，由底座帶統一收口 10px。 */
+	border-radius: 0;
+	/* M2：底座 = 櫃體木料的加深段，與外殼底部同色收尾 */
+	background: linear-gradient(180deg, #c8b691, #a8946d);
+}
+
+/* ================= 4. 底部硬朗化 CTA 橫幅 ================= */
+.cta-capsule-banner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--c-surface-2);
+	border: 1px solid var(--c-border-2);
+	border-radius: var(--r-lg);
+	/* 🌟 修正：從 50px 膠囊改為更專業的 16px 大廠圓角 */
+	padding: 14px var(--sp-4);
+}
+
+.cta-text strong {
+	color: var(--c-text-1);
+	font-size: var(--fs-base);
+	margin-right: 10px;
+}
+
+.cta-text span {
+	color: var(--c-text-2);
+	font-size: var(--fs-base);
+}
+
+.cta-btn {
+	background-color: var(--c-primary);
+	color: var(--c-white);
+	padding: var(--sp-3) var(--sp-4);
+	border-radius: var(--r-sm);
+	font-weight: 600;
+	text-decoration: none;
+	transition: all var(--dur-fast) var(--ease-out);
+}
+
+.cta-btn:hover {
+	background-color: var(--c-primary-hover);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px var(--c-primary-25);
+}
+
+
+
+/* ========================================= */
+/* 修复：将导航栏左右边缘与下方内容严格对齐      */
+/* ========================================= */
+
+#header {
+	padding: 0;
+	/* 移除原本左右 40px 的内边距 */
+}
+
+#header h1 {
+	left: 0;
+	/* 让左侧的 Logo 紧贴容器的最左侧边缘 */
+}
+
+#header nav {
+	right: 0;
+	/* 让右侧的 Contact 按钮及菜单紧贴容器的最右侧边缘 */
+}
+
+
+/* ========================================= */
+/* 🍎 苹果风格 Services 服务卡片排版区           */
+/* ========================================= */
+
+/* ========================================= */
+/* 🧩 Core Services (極限 2 行壓縮網格)       */
+/* ========================================= */
+
+/* 🌟 修復對齊：強制副標題靠左並限制寬度，消除居中錯位 */
+.services-section .section-subtitle {
+	text-align: left;
+	max-width: 700px;
+	color: var(--c-text-2);
+	font-size: var(--fs-base);
+	margin-bottom: var(--sp-5);
+	max-width: 100%;
+	/* 🌟 解除宽度限制，允许文字在一行内完全舒展 */
+}
+
+/* Customization section subtitle. This section sits on a dark photo backdrop,
+   so the subtitle stays light-on-dark (tokenised, not darkened). */
+.customization-section .section-subtitle {
+	text-align: center;
+	color: var(--c-text-on-dark);
+	font-size: var(--fs-base);
+	margin-bottom: var(--sp-6);
+}
+
+/* 🌟 核心引擎：5列 x 2行 的極限網格 */
+.bento-grid-2rows {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	/* 5 列均分 */
+	grid-auto-rows: 240px;
+	/* 🌟 核心壓縮：強制每一行高度僅為 240px，兩行總高不到 500px！ */
+	gap: 18px;
+}
+
+/* 統一的卡片底座 */
+.bento-card {
+	background-color: var(--c-white);
+	border: 1px solid var(--c-border-2);
+	border-radius: var(--r-md);
+	overflow: hidden;
+	display: flex;
+	position: relative;
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.bento-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--sh-md);
+	border-color: var(--c-border-1);
+}
+
+/* 1. 寬卡片 (佔據 2 列，內部左右排列) */
+.bento-wide {
+	grid-column: span 2;
+	flex-direction: row;
+	align-items: center;
+}
+
+.bento-wide .bento-text {
+	flex: 1;
+	padding: var(--sp-4);
+}
+
+.bento-wide .bento-text h3 {
+	font-size: var(--fs-md);
+	margin-bottom: 8px;
+	font-weight: 700;
+	color: var(--c-text-1);
+}
+
+.bento-wide .bento-text p {
+	font-size: var(--fs-sm);
+	line-height: 1.5;
+	margin: 0;
+	color: var(--c-text-2);
+}
+
+.bento-img-right,
+.bento-img-left {
+	width: 45%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* 2. 小卡片 (佔據 1 列，內部上下排列) */
+.bento-small {
+	grid-column: span 1;
+	flex-direction: column;
+}
+
+.bento-small .bento-img-top {
+	width: 100%;
+	height: 110px;
+	/* 圖片高度壓縮 */
+	object-fit: cover;
+	background-color: var(--c-surface-1);
+}
+
+.bento-small .bento-text {
+	padding: var(--sp-3);
+	flex: 1;
+}
+
+.bento-small .bento-text h3 {
+	font-size: var(--fs-base);
+	margin-bottom: 5px;
+	font-weight: 700;
+	color: var(--c-text-1);
+}
+
+.bento-small .bento-text p {
+	font-size: var(--fs-sm);
+	line-height: 1.3;
+	margin: 0;
+	/* Round 38：原 --c-text-3（3.62:1）不達 AA 4.5；--c-text-2 = 7.91:1 */
+	color: var(--c-text-2);
+}
+
+/* 3. 全圖遮罩小卡片 (佔據 1 列) */
+.bento-overlay {
+	grid-column: span 1;
+	border: none;
+	background-color: var(--c-text-1);
+}
+
+.bento-overlay .bg-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.6;
+	transition: transform var(--dur) var(--ease-out);
+}
+
+.bento-card:hover.bento-overlay .bg-img {
+	transform: scale(1.1);
+	opacity: 0.4;
+}
+
+.overlay-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: var(--sp-3);
+	z-index: var(--z-raised);
+}
+
+.overlay-content h3 {
+	color: var(--c-white);
+	margin-bottom: 5px;
+	font-size: var(--fs-base);
+	font-weight: 700;
+}
+
+.overlay-content p {
+	color: var(--c-glass-85);
+	margin: 0;
+	font-size: var(--fs-sm);
+	line-height: 1.3;
+}
+
+/* 🌟 卡片內圖片懸浮放大特效 (針對非遮罩卡片) */
+.bento-img-right,
+.bento-img-left,
+.bento-img-top {
+	transition: transform var(--dur) var(--ease-out);
+}
+
+.bento-card:hover .bento-img-right,
+.bento-card:hover .bento-img-left,
+.bento-card:hover .bento-img-top {
+	transform: scale(1.05);
+}
+
+
+
+
+
+
+/* ========================================= */
+/* About SANDA - editorial split + photo story (2026-10-12 rebuild) */
+/* ========================================= */
+/* Replaces the 3x3 box grid. Left column carries the copy, with the key figures
+in brand blue. Right column tells the factory story: one wide production-floor
+shot over a four-angle strip. Below, full width: a seven-figure hairline ribbon,
+then the brand marquee.
+Geometry is pinned to the 736px one-screen budget - right column
+268 + 10 + 132 = 410px, whole section 731px. Change a height and re-measure. */
+
+.about-split-layout {
+	display: flex;
+	/* flex-start, NOT center. With `center` the taller column lifts the shorter
+	column's heading above it and breaks the reading order. */
+	align-items: flex-start;
+	gap: var(--sp-6);
+}
+
+/* ================= Left: intro copy ================= */
+.about-left-intro {
+	flex: 0 0 38%;
+}
+
+.about-left-intro .about-subtitle {
+	/* Round 38：20px/500 不屬 WCAG large text → 需 4.5。
+	   原 --c-text-3 只有 3.62，改 --c-text-2 = 7.91:1 */
+	color: var(--c-text-2);
+	font-weight: 500;
+	font-size: var(--fs-md);
+	margin-bottom: 20px;
+	line-height: 1.4;
+}
+
+.about-left-intro p {
+	font-size: var(--fs-base);
+	color: var(--c-text-2);
+	line-height: 1.6;
+	margin: 0 0 14px;
+}
+
+/* Key figures inside the prose. Replaces six hardcoded inline
+style="color:#0071e3" attributes - one class, one place to change. */
+.about-hl {
+	color: var(--c-primary);
+	font-weight: 600;
+}
+
+/* CTA row: the primary button plus a direct-contact fallback. The fallback is a
+quiet text block, NOT a second solid button — the site keeps one solid blue
+button per view (see the CTA convention).
+⚠ Scoped to .about-left-intro on purpose: this block's own `p` rule is (0,1,1),
+so a bare `.about-action-alt` (0,1,0) would lose and the fallback would inherit
+16px/1.6 metrics AND a 14px bottom margin, inflating the row from 48px to 65px. */
+.about-left-intro .about-action {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-4);
+	margin-top: var(--sp-5);
+}
+
+.about-left-intro .about-action-alt {
+	margin: 0;
+	font-size: var(--fs-sm);
+	line-height: 1.5;
+	/* Round 38：原 --c-text-3（3.62:1）不達 AA 4.5；--c-text-2 = 7.91:1 */
+	color: var(--c-text-2);
+}
+
+.about-left-intro .about-action-alt a {
+	display: block;
+	color: var(--c-primary);
+	font-weight: 600;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.about-left-intro .about-action-alt a:hover {
+	text-decoration: underline;
+}
+
+/* ================= Right: photo story ================= */
+.about-right-media {
+	flex: 1;
+	min-width: 0;
+}
+
+.about-hero,
+.about-photo-strip figure {
+	margin: 0;
+	overflow: hidden;
+	border-radius: var(--r-md);
+	border: 1px solid var(--c-border-2);
+	background-color: var(--c-surface-2);
+}
+
+.about-hero {
+	height: 268px;
+	margin-bottom: 10px;
+}
+
+.about-hero img,
+.about-photo-strip img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.about-photo-strip {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+}
+
+.about-photo-strip figure {
+	height: 132px;
+}
+
+/* ================= Full-width figure ribbon (7 figures) ================= */
+.about-stats-ribbon {
+	display: flex;
+	margin-top: var(--sp-5);
+}
+
+.about-stats-ribbon > div {
+	flex: 1;
+	padding: 0 var(--sp-3);
+	border-left: 1px solid var(--c-border-2);
+}
+
+/* No rule before the first cell - the row reads as one continuous band. */
+.about-stats-ribbon > div:first-child {
+	border-left: 0;
+	padding-left: 0;
+}
+
+.about-stat-num {
+	display: block;
+	font-size: var(--fs-xl);
+	font-weight: 700;
+	color: var(--c-primary);
+	line-height: 1;
+	letter-spacing: -1px;
+}
+
+.about-stat-num span {
+	font-size: 0.45em;
+	font-weight: 600;
+	margin-left: 2px;
+}
+
+.about-stat-lab {
+	display: block;
+	margin-top: 8px;
+	font-size: var(--fs-sm);
+	color: var(--c-text-2);
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+/* ================= Brand marquee, now full width ================= */
+/* Was nested inside the old right-hand card grid; it now spans the section.
+The hairline above it is dropped - the stat ribbon already closes that band. */
+.about-split-section .trust-signals-wrapper {
+	margin-top: var(--sp-5);
+	border-top: 0;
+	padding-top: 0;
+}
+
+/* .button was the site's only 20px button (52px tall, radius/height ratio 0.154,
+so it read squarer than every other button) and its hover only swapped the
+background. Bring it onto the shared system: 16px like .cta-btn, plus the same
+hover lift. */
+.about-split-section .button {
+	font-size: var(--fs-base);
+}
+
+.about-split-section .button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px var(--c-primary-25);
+}
+/* ========================================= */
+/* 🌐 全局大一统格式 (Global Section Styles)     */
+/* ========================================= */
+
+/* 1. 统一所有大板块的上下呼吸间距与淡淡的分割线 */
+.global-section {
+	padding: var(--sp-5) 0;
+	/* 统一模块内部的上下留白 (呼吸感核心) */
+	margin: 0;
+	border-top: 1px solid var(--c-border-2);
+	/* 全站统一的极淡苹果风分割线 */
+}
+
+/* About 板块作为首屏第一个模块，不需要顶部横线 */
+.about-split-section {
+	border-top: none;
+	padding-top: 0;
+}
+
+/* 2. 统一全站主标题 (H2) - 强制居左对齐 */
+#main section h2 {
+	text-align: left !important;
+	font-size: var(--fs-xl);
+	/* 统一大字号 */
+	font-weight: 700;
+	/* 统一加粗，提升大厂质感 */
+	color: var(--c-text-1);
+	letter-spacing: -1px;
+	margin-bottom: 35px !important;
+	/* 统一标题和下方内容之间的距离 */
+	line-height: 1.2;
+}
+
+/* 标题下方增加一抹品牌蓝色的几何短线 */
+#main section h2::after {
+	content: '';
+	display: block;
+	width: 60px;
+	height: 4px;
+	background-color: var(--c-primary);
+	/* SANDA 品牌蓝 */
+	margin-top: 13px;
+	border-radius: var(--r-xs);
+}
+
+/* 3. 统一层级：修正 Why Partner 卡片里的标题大小 (由 h4 修正为 h3) */
+.text-card h3 {
+	font-size: var(--fs-md);
+	color: var(--c-text-1);
+	margin-bottom: 12px;
+	font-weight: 600;
+}
+
+
+/* ========================================= */
+/* 🎨 各大模块背景自定义控制台 (Background Customization) */
+/* ========================================= */
+
+/* 1. 默认底色与准备工作 */
+.global-section {
+	/* 如果不使用图片背景，全站模块默认显示这个极淡的浅灰底色。/
+	background-color: var(--c-surface-3);
+
+	/* 以下两行必须保留：为下方的图片伪元素提供定位锚点，并保证文字内容永远在图片的最上层 */
+	position: relative;
+	z-index: var(--z-base);
+}
+
+/* =======================================================
+2. 【预留模块】各大板块背景图自定义 (默认已注释)
+👉 启用方法：删除你想修改的模块前后的 /* 和 * / 符号即可启用。
+👉 高级玩法：我已为你预设了 opacity(透明度)、brightness(亮度)、blur(模糊) 等参数，你可以随意改数值！
+=======================================================
+*/
+
+
+
+/* ========================================= */
+/* 🤝 信任背书区域 (Logo 滚动墙 / LCD 跑马灯)   */
+/* ========================================= */
+
+/* 外层容器：利用 margin-top 将其推下，正好与左侧的按钮保持水平视觉平衡 */
+.trust-signals-wrapper {
+	margin-top: 25px;
+	border-top: 1px solid var(--c-border-2);
+	/* 添加一条很淡的分割线 */
+	padding-top: var(--sp-3);
+	overflow: hidden;
+	/* 防止内容撑爆容器 */
+}
+
+/* 信任背书小标题 */
+.trust-title {
+	display: block;
+	font-size: var(--fs-xs);
+	font-weight: 600;
+	/* Round 38：12px/600 需 4.5；原 --c-text-3 = 3.62 → --c-text-2 = 7.91:1 */
+	color: var(--c-text-2);
+	letter-spacing: 1px;
+	margin-bottom: 12px;
+}
+
+/* 🍎 方案一：Logo 滚动墙核心样式 */
+.scrolling-logo-wall {
+	width: 100%;
+	overflow: hidden;
+	/* 苹果级特效：左右两端边缘渐变透明，让 Logo 看起来像从雾中浮现 */
+	-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+	mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-track {
+	display: flex;
+	align-items: center;
+	/* 必须 ≥ 2× 容器宽度(1200px)，否则无缝循环会露白 —— 见 @keyframes scroll-left */
+	width: max-content;
+	/* ⚙️ 滚动速度：一圈 7s。越小越快，越大越慢。
+	   一次循环只位移「一套」logo 的宽度（≈612px），所以增减套数不改变速度。 */
+	animation: scroll-left 7s linear infinite;
+}
+
+/* 悬浮交互：鼠标移上去时，滚动暂停，方便客户仔细看 Logo */
+.scrolling-logo-wall:hover .logo-track {
+	animation-play-state: paused;
+}
+
+.logo-track img {
+	/* ⚙️ Logo 高度：通过修改这里控制 Logo 的整体大小 */
+	height: 30px;
+	object-fit: contain;
+	/* ⚙️ Logo 间距：修改这里的数值控制 Logo 之间的距离 */
+	margin: 0 25px;
+	/* 苹果级特效：强制黑白并降低透明度，展现高级的次级视觉层级 */
+	filter: grayscale(1) opacity(50%);
+	transition: filter var(--dur) var(--ease-out);
+}
+
+/* 鼠标悬浮在某个特定 Logo 上时，恢复原本的彩色 */
+.logo-track img:hover {
+	filter: grayscale(0%) opacity(100%);
+}
+
+/* 🚇 方案二：LCD 文字滚动跑马灯核心样式 */
+
+
+
+
+
+
+/* ♾️ 核心动画引擎：无缝向左滑动 */
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0);
+	}
+
+	/* 内部有 FOUR 套完全相同的元素，所以移动到 -25% 时视觉上刚好完成一次完美轮回。
+	   ⚠ 无缝的前提是 track 宽度 ≥ 2× 容器宽度(1200px)：一套 5 个 logo ≈ 612px，
+	   4 套 = 2448px 才够。以前只有 2 套（1224px），滚到 -50% 时右侧会露出
+	   588px 空白，然后突然闪回 —— 这就是「右边没接上、突然闪现」的原因。 */
+	100% {
+		transform: translateX(-25%);
+	}
+}
+
+
+
+
+
+/* ========================================= */
+/* 📝 FAQ & Quote 左右分栏布局与样式            */
+/* ========================================= */
+
+/* 1. 左右分栏 Flex 布局 */
+.faq-split-layout {
+	display: flex;
+	align-items: flex-start;
+	gap: 50px;
+	/* 左右两边之间的留白距离 */
+}
+
+/* ================= 左侧：FAQ 手风琴 ================= */
+.faq-left-accordion {
+	flex: 1;
+	/* 占据剩余的 65% 宽度 */
+	min-width: 0;
+	/* 防止内容撑破 Flex 容器 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ================= 右侧：Get a Quote 表单卡片 ================= */
+.faq-right-form {
+	flex: 0 0 35%;
+	/* 表单占据 35% 宽度 */
+	position: sticky;
+	/* 开启粘性定位，左侧滚动时表单固定在屏幕上 */
+	top: 80px;
+}
+
+.quote-form-card {
+	background-color: var(--c-primary);
+	/* SANDA 品牌蓝 */
+	border-radius: var(--r-lg);
+	padding: var(--sp-5) var(--sp-4);
+	box-shadow: 0 10px 30px var(--c-primary-15);
+}
+
+.quote-form-card h3 {
+	color: var(--c-white);
+	text-align: center;
+	font-size: var(--fs-lg);
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+/* 表单输入框样式重置 */
+.quote-form input[type="text"],
+.quote-form input[type="email"],
+.quote-form textarea {
+	width: 100%;
+	padding: var(--sp-3) var(--sp-3);
+	margin-bottom: 15px;
+	border: none;
+	border-radius: var(--r-sm);
+	font-family: inherit;
+	font-size: var(--fs-base);
+	background-color: var(--c-white);
+	color: var(--c-text-5);
+}
+
+.quote-form input::placeholder,
+.quote-form textarea::placeholder {
+	color: var(--c-text-3);
+}
+
+.quote-form input:focus,
+.quote-form textarea:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px var(--c-glass-30);
+}
+
+/* ⚙️ 禁止拖拽并固定尺寸 */
+.quote-form textarea {
+	resize: none;
+	/* 禁止用户在右下角拖拽缩放 */
+	height: 150px;
+	/* ⚙️ 如果你想让留言框更扁，改小数值（如 90px）；如果想更高，改大数值（如 150px） */
+}
+
+/* 纯白色的提交按钮 */
+.quote-submit-btn {
+	width: 100%;
+	padding: var(--sp-3) 0;
+	background-color: var(--c-white);
+	color: var(--c-primary);
+	border: none;
+	border-radius: var(--r-sm);
+	font-size: var(--fs-base);
+	font-weight: 600;
+	cursor: pointer;
+	transition: all var(--dur-fast) var(--ease-out);
+	text-transform: uppercase;
+}
+
+.quote-submit-btn:hover {
+	background-color: var(--c-surface-2);
+	transform: translateY(-2px);
+	box-shadow: var(--sh-md);
+}
+
+/* 1. 将原本的蓝色背景替换为高通透度的浅色毛玻璃 */
+#main .faq-quote-section .quote-form-card {
+	background-color: var(--c-glass-45);
+	/* 浅色半透明白底 */
+	backdrop-filter: saturate(180%) blur(20px);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	border: 1px solid var(--c-glass-60);
+	box-shadow: var(--sh-lg);
+}
+
+/* 2. 调整标题颜色为深色 (因为底色变亮了) */
+.quote-form-card h3 {
+	color: var(--c-text-1);
+	text-shadow: none;
+	/* 去除原本的白色发光 */
+}
+
+/* 3. 输入框质感优化：微透明白底，融入玻璃环境 */
+.quote-form input,
+.quote-form textarea {
+	background-color: var(--c-glass-70) !important;
+	border: 1px solid var(--c-glass-50) !important;
+	color: var(--c-text-1) !important;
+	transition: all var(--dur) var(--ease-out);
+}
+
+/* 聚焦输入框时，亮起苹果蓝光环并变纯白 */
+.quote-form input:focus,
+.quote-form textarea:focus {
+	background-color: var(--c-glass-95);
+	box-shadow: 0 0 0 3px var(--c-primary-30);
+	border-color: var(--c-primary);
+}
+
+/* 4. 提交按钮改为经典的苹果蓝实心按钮，提升转化引导 */
+.quote-submit-btn {
+	background-color: var(--c-primary);
+	color: var(--c-white);
+	border: none;
+	box-shadow: 0 4px 10px var(--c-primary-25);
+}
+
+.quote-submit-btn:hover {
+	background-color: var(--c-primary-hover);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 15px var(--c-primary-40);
+}
+
+/* ========================================= */
+/* 🛡️ 方案二：表单下方信任徽章 (毛玻璃材质) */
+/* ========================================= */
+.quote-trust-badge {
+	margin-top: 15px;
+	padding: var(--sp-3);
+	background-color: var(--c-glass-45);
+	/* 继承浅色毛玻璃材质 */
+	backdrop-filter: saturate(180%) blur(20px);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	border: 1px solid var(--c-glass-60);
+	border-radius: var(--r-md);
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	box-shadow: var(--sh-md);
+}
+
+.quote-trust-badge .trust-icon {
+	font-size: var(--fs-lg);
+	line-height: 1;
+}
+
+.quote-trust-badge .trust-text strong {
+	display: block;
+	color: var(--c-text-1);
+	font-size: var(--fs-base);
+	font-weight: 700;
+	margin-bottom: 4px;
+}
+
+.quote-trust-badge .trust-text p {
+	color: var(--c-text-2);
+	font-size: var(--fs-sm);
+	line-height: 1.4;
+	margin: 0;
+}
+
+/* ========================================= */
+/* 🍏 FAQ 静态平铺网格替代方案 (Zero Layout Shift) */
+/* ========================================= */
+
+#main .faq-static-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/* 2 列排版 */
+	gap: 20px;
+	margin-top: 25px;
+}
+
+.faq-static-card {
+	background-color: var(--c-glass-60);
+	/* 极其通透的浅色玻璃底座 */
+	border: 1px solid var(--c-glass-50);
+	border-radius: var(--r-md);
+	padding: var(--sp-5) var(--sp-4);
+	transition: all var(--dur) var(--ease-out);
+}
+
+.faq-static-card:hover {
+	background-color: var(--c-glass-95);
+	transform: translateY(-3px);
+	box-shadow: var(--sh-md);
+}
+
+.faq-static-card h4 {
+	color: var(--c-text-1);
+	font-size: var(--fs-base);
+	font-weight: 700;
+	margin-bottom: 10px;
+	line-height: 1.3;
+}
+
+.faq-static-card p {
+	color: var(--c-text-2);
+	font-size: var(--fs-sm);
+	line-height: 1.5;
+	margin: 0;
+}
+
+
+
+
+/* ========================================= */
+/* 📰 Exhibitions (24/76 展會風采佈局) */
+/* ========================================= */
+
+/* 頂部標題列：H2 在左欄，一行副標在右欄（底線對齊） */
+.exhibition-toprow {
+	display: flex;
+	gap: 40px;
+	/* 與下方 .exhibition-split-layout 的欄距一致，讓 H2 左緣與票根對齊 */
+	align-items: baseline;
+	/* ⚙️ 用 baseline 而不是 flex-end：H2 下方有一條 4px 藍色短線，
+	   flex-end 會把藍線底部和副標底部對齊，導致 H2 文字被頂高、和副標對不上。
+	   baseline 讓兩者第一行文字坐在同一條基線上。 */
+	margin-bottom: 24px;
+}
+
+#main .exhibition-toprow > h2 {
+	flex: 0 0 24%;
+	/* 與票根同寬，形成一條垂直對齊線 */
+	margin-bottom: 0 !important;
+	/* ⚠️ 必須 !important：覆蓋 #main section h2 的 margin-bottom: 35px */
+}
+
+.exhibition-subtitle {
+	flex: 1;
+	min-width: 0;
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--c-text-1);
+	line-height: 1.45;
+}
+
+.exhibition-subtitle span {
+	font-size: 1rem;
+	font-weight: 400;
+	color: var(--c-text-2);
+}
+
+.exhibition-split-layout {
+	display: flex;
+	gap: 40px;
+	/* 左右兩邊的間距 */
+	align-items: stretch;
+	/* 讓左右兩邊高度自動等高 */
+}
+
+/* ================= 左側 (24%)：即將到來的展會（票根） ================= */
+.exhibition-upcoming {
+	flex: 0 0 24%;
+	/* ⚙️ 左側寬度鎖定為容器 24%（1600px 版心 → 384px）。
+	   原為 35%（560px）。縮窄後右欄變寬，票根高度又自動等於右欄高度。
+	   ⚠️ 不要再加 min-height，否則會把票根高度頂回去、破壞兩欄等高。 */
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--r-lg);
+	overflow: hidden;
+	box-shadow: var(--sh-lg);
+	/* ⚙️ 原本用一張「2024 邀請函海報」當背景 —— 海報自帶文字，會和覆蓋文案互撞，
+	   而且寫的是 2024 年、舊展位 17.2L32。改成「真實展位照 + 深藍漸層壓暗」：
+	   照片只做氛圍、不承載任何文字，日期一律由 HTML 提供。
+	   用背景而非 <img>，是為了不佔任何高度 —— 版心縮到 1200 時票根只有 288px 寬，
+	   任何固定高度的圖片帶都會把 CTA 擠出卡片。 */
+	background-image:
+		linear-gradient(158deg, rgba(13, 42, 77, 0.95) 0%, rgba(18, 60, 109, 0.87) 46%, rgba(10, 35, 64, 0.96) 100%),
+		url('../../images/Exhibition/thumbs/Exh6.webp');
+	background-size: cover, cover;
+	background-position: center center, center 42%;
+	background-repeat: no-repeat, no-repeat;
+}
+
+.upcoming-overlay {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 20px 20px 18px;
+	/* ⚙️ 左右各 20px（不是 --sp-5 的 32px）：版心 1200 時票根只有 288px，
+	   32px 內距會讓「Oct 31 – Nov 4」放不下一行 */
+}
+
+.upcoming-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	color: var(--c-white);
+}
+
+.upcoming-content .badge {
+	align-self: flex-start;
+	background-color: var(--c-primary);
+	color: white;
+	font-size: var(--fs-xs);
+	font-weight: 700;
+	padding: var(--sp-2) var(--sp-3);
+	border-radius: var(--r-xs);
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+
+/* 大日期：票根的視覺錨點 */
+.upcoming-content .event-date {
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+	flex-wrap: wrap;
+	margin: 0;
+	line-height: 1.05;
+}
+
+.upcoming-content .event-date .d {
+	font-size: clamp(1.75rem, 0.9rem + 1.05vw, 2.05rem);
+	/* ⚙️ 斜率刻意調低，讓視窗 1200–1280px 都落在 min(28px)：
+	   這段區間版心已被 clamp 固定在 1200px（票根 288px），若字再變大就會把年份擠到第二行。
+	   版心 1600px 時為 32.8px，兩邊都放得下一行。 */
+	font-weight: 800;
+	letter-spacing: -1.2px;
+	color: var(--c-white);
+}
+
+.upcoming-content .event-date .y {
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	color: #a9d3ff;
+}
+
+.upcoming-content .event-name {
+	color: var(--c-white);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.35;
+	margin: 8px 0 0;
+}
+
+.event-details {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 6px 14px;
+	margin: 12px 0 auto;
+	/* ⚙️ margin-bottom:auto → 把 CTA 推到卡片底部；卡片被右欄撐高時不會中間留空洞 */
+	padding-top: 9px;
+	border-top: 1px solid rgba(255, 255, 255, 0.16);
+	font-size: 0.82rem;
+	line-height: 1.35;
+}
+
+.event-details dt {
+	color: rgba(255, 255, 255, 0.72);
+	/* ⚙️ 不要降到 0.55：照片底最亮處 + 漸層最透明處（alpha .87）算出來的
+	   背景約 rgb(49,85,128)，0.55 只有 3.55:1（低於 AA 的 4.5:1），0.72 是 4.86:1 */
+}
+
+.event-details dd {
+	margin: 0;
+	color: var(--c-white);
+	font-weight: 600;
+}
+
+.event-details dd.hi {
+	color: #a9d3ff;
+	letter-spacing: 0.02em;
+}
+
+.book-meeting-btn {
+	margin-top: 13px;
+	align-self: flex-start;
+	display: inline-block;
+	background-color: var(--c-white);
+	color: var(--c-primary);
+	font-weight: 600;
+	font-size: 0.9rem;
+	padding: 11px 16px;
+	border-radius: var(--r-sm);
+	text-decoration: none;
+	transition: all var(--dur-fast) var(--ease-out);
+}
+
+.book-meeting-btn:hover {
+	background-color: var(--c-surface-2);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px var(--c-glass-20);
+}
+
+/* ================= 右側 (76%)：2行6列 照片牆 ================= */
+.exhibition-past {
+	flex: 1;
+	/* 自動佔滿剩下的 76% 空間 */
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	/* 防止子元素撐爆容器 */
+}
+
+/* 註：原本的 .past-header（h3「Past Highlights & Global Clients」+ 副標）
+   已整併到上方的 .exhibition-toprow —— 標題列改由 H2 + .exhibition-subtitle 承擔，
+   讓照片牆直接從頂端開始，省掉一行高度。相關規則已一併移除。 */
+
+/* 核心：2行6列 緊湊型網格（12 張全部平鋪，不跳轉） */
+.past-gallery-grid-12 {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	/* ⚙️ 橫向強制 6 列 → 12 張正好 2 行，照片牆高度比原本的 4 列 3 行明顯降低 */
+	gap: 12px;
+	/* ⚙️ 圖片之間的縫隙。為了容納 12 張圖，縫隙稍微調小一點顯得更精緻 */
+}
+
+.gallery-item {
+	border-radius: var(--r-sm);
+	/* 圓角比左邊小一點，更像相簿 */
+	overflow: hidden;
+	background-color: var(--c-surface-2);
+	position: relative;
+	aspect-ratio: 1 / 1;
+	/* ⚙️ 正方形裁切：縮圖已按 1:1 預裁好（見 .research/make_thumbs.py），
+	   這裡保證容器同比例，兩邊對齊不留白 */
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* 確保圖片鋪滿且不變形 */
+	display: block;
+	transition: transform var(--dur) var(--ease-out);
+}
+
+.gallery-item:hover img {
+	transform: scale(1.1);
+	/* 懸浮時的絲滑放大 */
+}
+
+
+/* ========================================= */
+/* 🛠️ Customization Solutions —— 重構版         */
+/* 定制流程(6步) → 定制數字條(6項) → 分類膠囊+保證文案 → 4 行滾動帶 */
+/* ========================================= */
+
+/* 1. 強制大標題靠左對齊 */
+#main .customization-section h2 {
+	text-align: left !important;
+}
+
+/* 2. 強制小藍條靠左對齊 (取消原本的居中屬性) */
+#main .customization-section h2::after {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+/* 3. 段落預設靠左；.cust-note 在下面用更高的 specificity 單獨覆寫成靠右 */
+#main .customization-section p {
+	text-align: left !important;
+	max-width: 100%;
+}
+
+/* ================= 1. 定制流程（6 步） =================
+   原本這裡是一個 152px 高的 .process-timeline-box（自帶卡片底、邊框、圓角），
+   現在壓成「圓圈 + 名稱」一行，用一條 1px 髮絲線串起來，不再佔一整塊。
+   圓本身是不透明的品牌藍，所以連接線不需要在文字底下斷開。 */
+.cust-flow {
+	display: flex;
+	position: relative;
+	list-style: none;
+	margin: 0 0 26px;
+	padding: 0;
+}
+
+/* 連接線只畫在「第一顆圓心」到「第六顆圓心」之間。
+   6 等分後第一欄的中心在 1/12 = 8.3333% 處，所以左右各內縮 8.3333%。 */
+.cust-flow::before {
+	content: '';
+	position: absolute;
+	top: 22px;
+	left: 8.3333%;
+	right: 8.3333%;
+	height: 1px;
+	background-color: var(--c-border-1);
+	z-index: var(--z-base);
+}
+
+.cust-flow li {
+	position: relative;
+	z-index: var(--z-raised);
+	/* 讓圓圈蓋在連接線上方 */
+	flex: 1;
+	min-width: 0;
+	text-align: center;
+	padding: 0 var(--sp-2);
+}
+
+.cf-dot {
+	display: block;
+	width: 44px;
+	height: 44px;
+	margin: 0 auto 14px auto;
+	border-radius: var(--r-pill);
+	background-color: var(--c-primary);
+	color: var(--c-white);
+	font-size: var(--fs-md);
+	font-weight: 700;
+	line-height: 44px;
+	/* 垂直居中數字 */
+	box-shadow: 0 4px 10px var(--c-primary-30);
+}
+
+.cf-lbl {
+	display: block;
+	font-size: var(--fs-base);
+	font-weight: 600;
+	line-height: 1.3;
+	color: var(--c-text-1);
+}
+
+/* ================= 2. 定制數字條（6 項） =================
+   全部是「定制能力」數字（能做多少種 / 分幾大類 / 備多少材料 / 起訂量 /
+   多快出樣 / 是不是一家包到底），刻意不含廠房規模類數字
+   （月產能、廠房面積、人數、機台數、國家數）。 */
+.cust-stats {
+	display: flex;
+	margin: 0 0 18px;
+	padding: 10px 0;
+	border-top: 1px solid var(--c-border-2);
+	border-bottom: 1px solid var(--c-border-2);
+}
+
+.cust-stats .cs {
+	display: flex;
+	/* 垂直居中：數字對齊整個「兩行標籤」區塊的中心。
+	   用 baseline 會讓數字只跟第一行對齊、看起來浮在上半邊。 */
+	align-items: center;
+	gap: 7px;
+	flex: 1;
+	/* min-width:0 是關鍵：否則 flex 子項的下限是內容寬度，6 欄在 1200 版心會撐爆 */
+	min-width: 0;
+	padding: 0 12px;
+	border-right: 1px solid var(--c-border-2);
+}
+
+.cust-stats .cs:last-child {
+	border-right: none;
+}
+
+/* 版心 1200 時每一格只有 200px（扣掉 padding 後 176px），字級必須跟著縮。
+   斜率只壓在「版心會成長」的區間（視窗 1320 → 1720），
+   所以版心被 clamp 釘死在 1200 的區間（視窗 1200–1320）字級幾乎不變。
+   實測最緊的是 `500+` 和 `100%` 兩格（標籤較長），
+   在 1200 版心仍有 ~15px 餘裕、1600 版心 ~54px 餘裕。 */
+.cust-stats .cs b {
+	font-size: clamp(23px, 1.75vw + 0.9px, 30px);
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	line-height: 1;
+	color: var(--c-primary);
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.cust-stats .cs span {
+	font-size: clamp(11px, 0.375vw + 6.05px, 12.5px);
+	line-height: 1.25;
+	color: var(--c-text-2);
+}
+
+/* ================= 3. 分類膠囊 + 保證文案（同一行） =================
+   5 個膠囊共 728px，右側剩下的寬度留給保證文案。
+   文案已改短到 405px，所以連最窄的 1200 版心（只剩 444px 可用）都能單行放下，
+   全站所有版心都不再換行；膠囊 white-space:nowrap 不縮，
+   所以膠囊在 1200 版心下也不會擠成一團。 */
+.cust-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 28px;
+	margin: 0 0 16px;
+}
+
+.cust-pills {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex: 0 0 auto;
+}
+
+.cust-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	padding: 6px 13px;
+	border: 1px solid var(--c-border-2);
+	border-radius: var(--r-pill);
+	background-color: var(--c-white);
+	font-size: 11.5px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: var(--c-text-2);
+	white-space: nowrap;
+}
+
+.cust-pill i {
+	font-style: normal;
+	font-family: var(--font-mono);
+	font-size: 10.5px;
+	font-weight: 700;
+	color: var(--c-primary);
+}
+
+/* 覆寫上面第 3 條的 text-align:left。
+   同為 !important 時比 specificity：#main + .customization-section + .cust-bar
+   + .cust-note (130) > #main + .customization-section + p (111)。 */
+#main .customization-section .cust-bar .cust-note {
+	flex: 1 1 auto;
+	min-width: 0;
+	margin: 0;
+	text-align: right !important;
+	font-size: 13.5px;
+	line-height: 1.35;
+	color: var(--c-text-2);
+}
+
+.cust-note b {
+	font-weight: 700;
+	color: var(--c-text-1);
+}
+
+/* 兩段文案切換：預設短版（實測 397px），
+   版心 >=1480（視窗 >=1600，此時文案格有 724px）時換成完整版（673px）。
+   1200 版心只剩 444px 可用，完整版 673px 必然換行，所以短版是必要的。
+   兩段 <span> 在 HTML 裡緊貼（中間不留空白），避免藏起來的那段留下一個空格。 */
+.cust-note .cn-l {
+	display: none;
+}
+
+@media (min-width: 1600px) {
+	.cust-note .cn-s {
+		display: none;
+	}
+
+	.cust-note .cn-l {
+		display: inline;
+	}
+}
+
+/* ================= 4. 4 行滾動展示帶（50 項全展開） =================
+   每一行 = 50 個色片 ×2 份，靠 translateX(-50%) 無縫循環。
+   四行用四組速度／方向（95s / 120s 反向 / 80s / 105s 反向），
+   懸停暫停；prefers-reduced-motion 時完全靜止。
+   兩端 5% 漸隱遮罩，讓色片「走進走出」而不是被硬切。 */
+.cust-marquee {
+	margin: 0;
+}
+
+.cm-row {
+	position: relative;
+	overflow: hidden;
+	padding: 0 0 8px;
+	-webkit-mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+	mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+}
+
+.cm-track {
+	display: flex;
+	width: max-content;
+	/* Round 28：色片改為 4 行 × 15 項（原本每行 50 項）。動畫位移是 translateX(-50%)，
+	   即「跑完半份」的時間。半份寬度從 5800px 縮到 1740px（0.3×），
+	   所以時長按 0.3 等比縮短，視覺速度（px/s）才與改動前一致。
+	   原本 95/120/80/105s → 28/36/24/32s。 */
+	animation: custMarquee 28s linear infinite;
+}
+
+.cm-track.r2 {
+	animation-direction: reverse;
+	animation-duration: 36s;
+}
+
+.cm-track.r3 {
+	animation-duration: 24s;
+}
+
+.cm-track.r4 {
+	animation-direction: reverse;
+	animation-duration: 32s;
+}
+
+/* 懸停暫停：整條帶一起停，避免四行各自停下看起來像壞掉 */
+.cust-marquee:hover .cm-track {
+	animation-play-state: paused;
+}
+
+@keyframes custMarquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.cm-chip {
+	position: relative;
+	width: 106px;
+	height: 106px;
+	flex: 0 0 106px;
+	margin-right: 10px;
+	border-radius: 6px;
+	overflow: hidden;
+	background-color: var(--c-surface-2);
+	box-shadow: inset 0 0 0 1px var(--c-shadow-04);
+}
+
+.cm-chip img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* 色片左下角的「色號」小標籤 */
+.cm-chip i {
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+	padding: 3px 5px;
+	border-radius: 3px;
+	background-color: var(--c-white);
+	color: var(--c-text-1);
+	font-style: normal;
+	font-family: var(--font-mono);
+	font-size: 9px;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.03em;
+	box-shadow: 0 0 0 1px var(--c-shadow-04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cm-track {
+		animation: none;
+	}
+}
+
+/* ========================================= */
+/* 🎨 终极版：全模块全屏背景控制台 (Zero Bleed)  */
+/* ========================================= */
+
+/* 1. 双重保险：防止 100vw 导致网页出现横向滚动条 */
+html,
+body {
+	overflow-x: hidden;
+}
+
+/* 2. 彻底清除外层容器的干扰留白，消除蓝色/红色框的缝隙 */
+#main {
+	padding: 0;
+}
+
+/* 3. 规范所有全局模块的基础属性 */
+.global-section {
+	position: relative;
+	z-index: var(--z-base);
+	padding: var(--sp-7) 0;
+	/* 统一模块内部的上下呼吸间距 */
+	margin: 0;
+	/* 绝对不能有 margin，否则模块之间会漏出白缝 */
+	border-top: none;
+	/* 使用背景图时，建议去掉原本的横线 */
+}
+
+/* 4. 🌟 核心大招：让所有模块的背景统一具备「左右铺满 + 上下绝对不越界」的能力 */
+.global-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	z-index: -1;
+	background-color: var(--c-white);
+
+	/* 🌟 终极防重复与尺寸锁定机制 */
+	background-repeat: no-repeat;
+	/* 绝对禁止图片重复贴瓷砖 */
+	background-size: cover;
+	/* 强制等比例缩放并完全覆盖容器 */
+	background-position: center center;
+	/* 始终保持图片中心点在正中央 */
+}
+
+
+/* =======================================================
+   👇 各大模块的专属背景设置区 
+   你可以为任何一个模块加上图片，或者换成浅灰底色
+======================================================= */
+
+
+/* ========================================= */
+/* 🖼️ Banner 外層區域全屏背景自定義 (Zero Bleed) */
+/* ========================================= */
+
+/* 1. 重置 Banner 外層容器，確保乾淨無干擾 */
+#banner-wrapper {
+	position: relative;
+	z-index: var(--z-base);
+	/* #ececec was only ever a backdrop for the old 97vw card; a full-bleed
+	   banner needs plain white behind it. */
+	background: var(--c-white);
+	padding-top: var(--sp-7);  /* 把 Banner 往下推，讓出導航欄的空間 */
+	padding-bottom: 0;
+}
+
+/* Banner 通欄：中和 banner 內部的 .container，讓輪播鋪滿視口。
+   寬度用 100% 而不是 100vw —— 100vw 含滾動條寬度，會讓整塊偏左 7–8px。 */
+#banner-wrapper .container {
+	width: 100%;
+	min-width: 0;
+}
+/* 2. 獨立的高級背景層 */
+#banner-wrapper::before {
+	content: '';
+	position: absolute;
+	/* 嚴格鎖定上下左右邊界，絕對不會干擾到上方導航欄或下方模塊 */
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+	/* 👇 在這裡放你的 Banner 背景圖路徑 */
+	/*background-image: url('../../images/Background/bg1.webp'); */
+	background-size: cover;
+	background-position: center;
+
+	/* 🍎 蘋果風高級特效調節 */
+	opacity: 0.55;
+	/* 透明度：建議 0.1 到 0.2 之間，隱約的紋理質感最高級 */
+	filter: grayscale(100%);
+	/* 如果圖片顏色太亂，解開這個註釋可將其變為高級黑白灰 */
+}
+
+
+/* 1. About SANDA (雪山背景) */
+.about-split-section::before {
+	/* 替换为你的雪山图片路径 */
+	/* background-image: url('../../images/Background/bg1.webp'); */
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	/* 视差滚动特效 */
+	opacity: 0.75;
+	/* 降低透明度保证文字清晰 */
+}
+
+/* 2. Products Category (默认浅灰底色，与上下模块区分) */
+.products-category-section::before {
+	background-color: var(--c-surface-1);
+	/* 如果想加图片，取消下面两行的注释 */
+	background-image: url('../../images/Background/bg2.webp');
+	background-size: cover;
+	opacity: 0.45;
+}
+
+/* 3. Services 服务模块 (图片背景演示) */
+.services-section::before {
+	/* background-image: url('../../images/Background/bg3.webp'); */
+	background-size: cover;
+	background-attachment: fixed;
+	opacity: 0.55;
+}
+
+/* 4. Why Partner 优势模块 (可以设置为纯白) */
+.why-choose-section::before {
+	/* background-image: url('../../images/Background/bg4.webp'); */
+	background-size: cover;
+	background-attachment: fixed;
+	opacity: 0.55;
+	background-color: var(--c-white);
+}
+
+/* 5. Factory Tour 工厂展示 (浅灰底色) */
+.factory-tour-section::before {
+	background-color: var(--c-surface-1);
+}
+
+/* 6. FAQ & Quote 询盘模块 */
+.faq-quote-section::before {
+	background-image: url('../../images/Background/bg5.webp');
+	opacity: 0.85;
+	background-color: var(--c-white);
+}
+
+/* 7. News & Exhibitions 展会模块 —— 純色底
+   （原本的 bg12.webp 是「木柵欄前的背包女孩」生活照，與展會主題無關，已移除） */
+.news-exhibition-section::before {
+	background-color: var(--c-surface-1);
+}
+
+/* 8. Customization 定制模块 —— 純色底
+   （原本的 4865.webp 是「暗桌旁打版」的低調深棕實景照，以 opacity .85 鋪滿整段；
+     和上方 40–55% 半透明的毛玻璃疊加後，文字對比度最差只有 1.21:1，是全站最糟的一段。
+     改版後色片直接鋪在底色上，更需要一個乾淨的底。已移除照片。） */
+.customization-section::before {
+	background-color: var(--c-surface-1);
+}
+
+
+/* ========================================= */
+/* 🌍 終極企業級 Footer (三列網格佈局)          */
+/* ========================================= */
+/* ========================================= */
+/* 🔧 全局修復 1：導航欄高級懸浮與防遮擋       */
+/* ========================================= */
+#header-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: var(--z-header);
+	background-color: var(--c-glass-95);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid var(--c-shadow-05);
+}
+
+
+/* ========================================= */
+/* 🔧 全局修復 2：圖片防拽出與底層灰色縫隙切除   */
+/* ========================================= */
+img {
+	-webkit-user-drag: none;
+	user-drag: none;
+}
+
+body,
+#page-wrapper {
+	background-color: var(--c-white);
+}
+
+#footer-wrapper {
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+}
+
+/* ========================================= */
+/* 🔒 終極極簡版權條 (Copyright Bar)           */
+/* ========================================= */
+#copyright-bar-advanced {
+	position: relative;
+	z-index: var(--z-base);
+	background-color: transparent;
+	padding: var(--sp-4) 0;
+	/* 移除左右内边距，让内部的 container 去对齐全站网格 */
+	border-top: none;
+}
+
+#copyright-bar-advanced::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	z-index: -1;
+	background-color: var(--c-white);
+	border-top: 1px solid var(--c-border-2);
+}
+
+/* 🌟 将 Flex 对齐作用于内部的真实内容容器 */
+.copyright-content {
+	display: flex;
+	justify-content: space-between;
+	/* 左右两端对齐 */
+	align-items: center;
+	/* 垂直居中 */
+	width: 100%;
+}
+
+.copy-left {
+	/* Round 38：底為 --c-white，原 --c-text-3 = 3.62（需 4.5）→ --c-text-2 = 7.91:1 */
+	color: var(--c-text-2);
+	font-size: var(--fs-sm);
+}
+
+.copy-right a {
+	color: var(--c-text-3);
+	text-decoration: none;
+	font-size: var(--fs-sm);
+	margin-left: 20px;
+	transition: color var(--dur-fast) var(--ease-out);
+}
+
+.copy-right a:hover {
+	color: var(--c-text-1);
+}
+
+/* Round 38：Privacy / Terms / Sitemap 目前無對應頁面，
+   由 <a href="#"> 改為不可點的 <span>，避免誤導成壞連結。
+   外觀沿用原本的 a 樣式（同色、同尺寸、同間距），只是沒有 hover 變化。 */
+.copy-right .copy-link-off {
+	/* Round 38：底為 --c-white，原 <a> 的 --c-text-3 = 3.62（需 4.5）
+	   → --c-text-2 = 7.91:1 */
+	color: var(--c-text-2);
+	font-size: var(--fs-sm);
+	margin-left: 20px;
+	cursor: default;
+}
+
+
+
+/* ========================================= */
+/* 🚀 終極重構版：2x2 矩陣 Footer (完美對齊)    */
+/* ========================================= */
+#footer-advanced {
+	position: relative;
+	z-index: var(--z-base);
+	background-color: transparent;
+	padding: var(--sp-7) 0 var(--sp-6) 0;
+	border-top: none;
+}
+
+/* 100vw 滿屏延伸的淺灰底色 */
+#footer-advanced::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	z-index: -1;
+	background-color: var(--c-surface-1);
+	border-top: 1px solid var(--c-border-2);
+}
+
+/* 核心網格引擎：2x2 矩陣 */
+.footer-grid-master {
+	display: grid;
+	grid-template-columns: 46% 50%;
+	/* 收緊中間空白 */
+	justify-content: space-between;
+	row-gap: 30px;
+}
+
+.footer-cell-headline {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.footer-cell-contact {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.footer-cell-locations {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+/* 標題強制不換行與小藍條 */
+.footer-main-title {
+	text-align: left;
+	font-size: var(--fs-lg);
+	font-weight: 700;
+	color: var(--c-text-1);
+	white-space: nowrap;
+	margin: 0;
+	letter-spacing: -0.5px;
+}
+
+.footer-main-title::after {
+	content: '';
+	display: block;
+	width: 60px;
+	height: 4px;
+	background-color: var(--c-primary);
+	margin-top: 15px;
+	border-radius: var(--r-xs);
+}
+
+/* Logo 與雙行口號佈局 */
+.footer-brand-flex {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 25px;
+}
+
+.footer-logo-img {
+	max-height: 42px;
+	width: auto;
+	display: block;
+}
+
+.footer-slogan-wrap p {
+	font-size: var(--fs-base);
+	color: var(--c-text-2);
+	line-height: 1.4;
+	margin: 0;
+	text-align: left;
+	max-width: none;
+	white-space: nowrap;
+	/* 僅靠 HTML <br> 換行 */
+}
+
+/* 聯繫方式文字間距 */
+.direct-contact-info p {
+	margin-bottom: 10px;
+	color: var(--c-text-1);
+}
+
+.direct-contact-info a {
+	color: var(--c-primary);
+	text-decoration: none;
+}
+
+/* 二維碼佈局 */
+.qr-direct-group {
+	display: flex;
+	gap: 15px;
+}
+
+.qr-direct-item {
+	flex: 0 0 100px;
+	text-align: center;
+}
+
+.qr-direct-item img {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: var(--r-sm);
+	border: 1px solid var(--c-border-2);
+	background-color: var(--c-white);
+	padding: var(--sp-1);
+	margin-bottom: 8px;
+}
+
+.qr-direct-item span {
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	color: var(--c-text-2);
+}
+
+/* 右側標題、地圖與地址佈局 */
+.footer-cell-locations .footer-title {
+	margin-top: 0;
+	font-size: var(--fs-md);
+	color: var(--c-text-1);
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.locations-flex {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 25px;
+}
+
+.location-item {
+	flex: 1;
+}
+
+.location-item strong {
+	display: block;
+	color: var(--c-text-1);
+	font-size: var(--fs-base);
+	margin-bottom: 8px;
+}
+
+.location-item p {
+	margin: 0;
+	font-size: var(--fs-base);
+	color: var(--c-text-2);
+	line-height: 1.5;
+}
+
+.footer-map-wide {
+	width: 100%;
+	height: 200px;
+	border-radius: var(--r-md);
+	overflow: hidden;
+	border: 1px solid var(--c-border-2);
+}
+
+.footer-map-wide iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+
+/* ========================================= */
+/* 🚫 全局防复制：禁止网页文字被鼠标选中        */
+/* ========================================= */
+body {
+	-webkit-user-select: none;
+	/* Safari */
+	user-select: none;
+	/* 标准语法 */
+}
+
+/* ⚠️ 核心保护：允许客户在表单输入框里正常选中和修改自己打的字 */
+input,
+textarea {
+	-webkit-user-select: auto;
+	user-select: auto;
+}
+
+
+/* ========================================= */
+/* 🌟 苹果风浅色毛玻璃 Banner 引擎 (Glassmorphism) */
+/* ========================================= */
+/* ========================================= */
+/* 🌟 终极苹果风：侧栏导航毛玻璃 Banner 引擎 */
+/* ========================================= */
+
+
+
+/* 1. 🖼️ 背景图无缝轮播 */
+
+
+
+
+
+
+
+
+/* 2. 🖥️ 左侧毛玻璃主面板 */
+
+
+
+
+/* 3. A区：侧边导航条 */
+
+
+
+
+
+
+
+
+/* 导航激活状态 */
+
+
+
+
+
+
+/* 4. B区：动态文字轮播 */
+
+
+
+
+
+
+
+
+
+
+/* 清除小蓝条 */
+
+
+/* 5. C区：全局强引导按钮 */
+
+
+
+
+
+
+/* 6. 📱 手机端逻辑：隐藏导航，启用圆点指示器 */
+
+
+/* 电脑端隐藏圆点 */
+
+
+
+/* --- 标题极致优化 --- */
+#main section h2 {
+	line-height: 1.1;
+	/* 压缩行高，产生压迫感和高级感 */
+	letter-spacing: -0.02em;
+	/* 苹果精细字距 */
+	font-weight: 700;
+	text-align: left !important;
+}
+
+/* 优化保留的“小蓝条” */
+#main section h2::after {
+	content: '';
+	display: block;
+
+	height: 4px;
+	background-color: var(--c-primary);
+	margin-top: 10px;
+	/* 随着行高压缩，间距也同步微调 */
+	border-radius: var(--r-xs);
+}
+
+/* --- 物理光影取代边框 --- */
+.text-card {
+	border: none;
+	/* 彻底去除边框 */
+	background-color: var(--c-white);
+	/* 确保卡片是纯白 */
+	/* 引用 DESIGN.md 的柔和弥散阴影 */
+	box-shadow: var(--sh-md);
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 悬浮时阴影加深，产生上浮感 */
+.text-card:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--sh-lg);
+}
+
+/* 部分模块利用色差区分 (如背景是浅灰时) */
+.products-category-section::before {
+	background-color: var(--c-surface-2);
+	/* 苹果标准浅灰背景 */
+}
+
+/* ========================================= */
+/* 🍏 Core Services 恢復淺色模式與陰影優化      */
+/* ========================================= */
+
+/* 1. 強制恢復背景為淺色 (與 About 模塊呼應) */
+#main .services-section {
+	background-color: var(--c-white);
+}
+
+/* 2. 重置全屏背景偽元素為淺灰色 (產生層級感) */
+#main .services-section::before {
+	background-color: var(--c-surface-2);
+	/* 蘋果標準淺灰，與白色卡片形成對比 */
+	background-image: none;
+}
+
+/* 3. 標題與副標題恢復深色 */
+#main .services-section h2 {
+	color: var(--c-text-1);
+}
+
+#main .services-section .section-subtitle {
+	color: var(--c-text-2);
+}
+
+/* 4. 🌟 核心：移除卡片邊框，改用物理陰影並防止切斷 */
+#main .services-section .bento-grid-2rows {
+	overflow: visible;
+	/* 確保整個網格區域不切斷陰影 */
+	padding: var(--sp-4) 0;
+	/* 留出陰影擴散的空間 */
+}
+
+.services-section .bento-card {
+	background-color: var(--c-white);
+	border: none;
+	/* 徹底取消邊框 */
+	overflow: visible;
+	/* 釋放卡片陰影 */
+
+	/* 引用規範中的柔和彌散陰影 */
+	box-shadow: var(--sh-md);
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 懸浮交互：上浮感 */
+.services-section .bento-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--sh-lg);
+}
+
+/* 5. 修正卡片內文字顏色 */
+.services-section .bento-text h3 {
+	color: var(--c-text-1);
+}
+
+.services-section .bento-text p {
+	color: var(--c-text-2);
+}
+
+/* 6. 遮罩卡片 (Bento Overlay) 的淺色適配 */
+.services-section .bento-overlay {
+	background-color: var(--c-black);
+	/* 遮罩卡片保持黑底以凸顯圖片文字 */
+}
+
+.services-section .bento-overlay .overlay-content h3 {
+	color: var(--c-white);
+}
+
+/* ========================================= */
+/* Round 23 · V5 最小修正（使用者裁示採用）
+   沿用 5×2 Bento 不動結構，只改三件事：
+   ① 卡高 240→196、gap 18→14（區塊 828→736px，省 92px）
+   ② 小卡圖片絕對定位鋪滿頂部 122px，文字貼底成一塊白牌
+   ③ 寬卡文字底部對齊；遮罩卡底部加深色漸層（把白字拉回 AA）
+   ========================================= */
+#main .services-section#core-services .bento-grid-2rows {
+	grid-auto-rows: 196px;
+	gap: 14px;
+}
+
+/* ② 小卡：照片在頂（絕對定位、鋪滿寬度），文字貼底 */
+#main .services-section#core-services .bento-small {
+	justify-content: flex-end;
+}
+
+#main .services-section#core-services .bento-small .bento-img-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 122px;
+}
+
+#main .services-section#core-services .bento-small .bento-text {
+	position: relative;
+	z-index: var(--z-raised);
+	flex: 0 0 auto;
+	margin: 0 10px 10px;
+	padding: 12px 14px;
+	background: var(--c-white);
+	border-radius: 0 0 var(--r-sm) var(--r-sm);
+	box-shadow: 0 -6px 14px -6px var(--c-shadow-10);
+}
+
+#main .services-section#core-services .bento-small .bento-text p {
+	font-size: var(--fs-xs);
+	line-height: 1.3;
+}
+
+/* ③ 寬卡：文字底部對齊（圖片維持左右側滿高） */
+#main .services-section#core-services .bento-wide .bento-text {
+	align-self: flex-end;
+}
+
+/* ③ 遮罩卡：底部深色漸層，讓白字在任何照片上都過 AA */
+#main .services-section#core-services .bento-overlay::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 62%;
+	background: linear-gradient(to top,
+		var(--c-shadow-70) 0%,
+		var(--c-shadow-50) 42%,
+		var(--c-shadow-30) 76%,
+		transparent 100%);
+	pointer-events: none;
+	z-index: var(--z-base);
+}
+
+#main .services-section#core-services .bento-overlay .overlay-content {
+	padding: 14px 16px;
+}
+
+#main .services-section#core-services .bento-overlay .overlay-content p {
+	font-size: var(--fs-xs);
+}
+
+/* ========================================= */
+/* 🔧 修复 Core Services 图片悬浮放大溢出圆角问题 */
+/* ========================================= */
+
+#main .services-section .bento-card {
+	/* 核心修复：重新开启隐藏，像剪刀一样沿着圆角切掉放大的图片边缘 */
+	overflow: hidden;
+
+	/* 强制锁定圆角，确保切出来的边缘是平滑的苹果风弧度 */
+	border-radius: var(--r-md);
+}
+
+/* 1. 先把外層的背景圖透明度調高一點，這樣毛玻璃透出來的紋理才好看 */
+.products-category-section::before {
+	opacity: 0.8;
+}
+
+/* 2. 底部 Get Catalog 橫幅 (CTA Banner) 升級為淺色毛玻璃 */
+#main .products-category-section .cta-capsule-banner {
+	/* 取消原本的實心淺灰，改為半透明白底 */
+	background-color: var(--c-glass-55);
+
+	/* 蘋果標準毛玻璃濾鏡 */
+	backdrop-filter: saturate(180%) blur(20px);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+
+	/* 邊框改為半透明白色高光 */
+	border: 1px solid var(--c-glass-70);
+
+	/* 增加柔和的彌散陰影，讓橫幅浮起來 */
+	box-shadow: var(--sh-lg);
+
+	/* 確保過渡動畫絲滑 */
+	transition: all var(--dur) var(--ease-out);
+}
+
+/* 鼠標懸浮在底部橫幅時，微微提亮並上浮 */
+#main .products-category-section .cta-capsule-banner:hover {
+	background-color: var(--c-glass-70);
+	transform: translateY(-3px);
+	box-shadow: var(--sh-lg);
+}
+
+/* 定义内部元素专属的丝滑载入动画 */
+@keyframes innerSoftLoad {
+	from {
+		opacity: 0;
+		transform: translateY(10px) scale(0.98);
+		/* 微微偏下且缩小 */
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+		/* 归位 */
+	}
+}
+
+/* ========================================= */
+/* 🍏 Customization 定制模块：毛玻璃升级 —— 已移除
+   ========================================= */
+/* 舊版這裡有 6 組規則，把流程卡、Tab 底座、工藝卡片、圖片台座全部改成
+   backdrop-filter 毛玻璃，另有一組「防閃爍」補丁（backface-visibility、
+   translate3d、innerSoftLoad 動畫）專門伺候它。
+
+   重構後定制板塊不再有任何卡片 —— 50 個色片直接鋪在板塊底色上；
+   且板塊背景已由 4865.webp 實景照改為純色 --c-surface-1，
+   毛玻璃沒有東西可以模糊。整塊刪除。 */
+
+
+/* ========================================= */
+/* 原生輪播圖 Apple 視覺風格升級補丁         */
+/* ========================================= */
+
+/* 1. 輪播圖主容器：去除死板相框，改為電影級大圓角與柔和陰影 */
+#banner-slider {
+	height: 500px;
+	/* 增加高度，營造電影感 (Cinematic feel) */
+	border-radius: var(--r-lg);
+	/* 蘋果風大圓角 */
+	box-shadow: var(--sh-lg);
+	/* 柔和的彌散外陰影 */
+	border: none;
+	/* 徹底清除原本的白色內邊框 */
+}
+
+/* 2. 圖片底層漸變：確保文字在任何亮度的圖片上都絕對清晰 */
+#banner-slider .slide::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 30%;
+	/* 漸變覆蓋下半部分 */
+	background: linear-gradient(to top, var(--c-shadow-70) 0%, transparent 100%);
+	pointer-events: none;
+	/* 不阻擋點擊 */
+	z-index: var(--z-base);
+}
+
+/* 3. 懸浮文字：去除藍色方塊，採用極致排版 (Typography) */
+#banner-slider .slide-text {
+	background: transparent;
+	/* 去除老派的藍色半透明框 */
+	font-size: var(--fs-xl);
+	/* 字號放大，增加衝擊力 */
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	/* 蘋果經典負字距，讓標題更緊湊 */
+	text-shadow: 0 4px 15px var(--c-shadow-40);
+	/* 增強立體感 */
+	bottom: 70px;
+	width: 90%;
+	white-space: normal;
+	/* 允許文字自動換行 */
+	line-height: 1.1;
+	z-index: var(--z-raised);
+}
+
+/* 4. 左右控制按鈕：升級為圓形毛玻璃 (Media Controls) */
+#banner-slider .slide-btn {
+	width: 54px;
+	height: 54px;
+	padding: 0;
+	border-radius: var(--r-pill);
+	/* 完美圓形 */
+	background: var(--c-scrim-15);
+	/* 極淡的白色 */
+	backdrop-filter: saturate(180%) blur(15px);
+	/* 蘋果標準毛玻璃 */
+	-webkit-backdrop-filter: saturate(180%) blur(15px);
+	border: 1px solid var(--c-glass-30);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--fs-md);
+	box-shadow: var(--sh-md);
+	transition: all var(--dur) var(--ease-out);
+}
+
+/* 按鈕懸浮交互 */
+#banner-slider .slide-btn:hover {
+	background: var(--c-glass-30);
+	transform: translateY(-50%) scale(1.08);
+	/* 輕微放大 */
+}
+
+/* 5. 底部指示圓點：升級為蘋果動態膠囊 (Pill-shaped dots) */
+#banner-slider .slider-dots {
+	bottom: 25px;
+	z-index: var(--z-sticky);
+}
+
+#banner-slider .dot {
+	width: 10px;
+	height: 10px;
+	background-color: var(--c-glass-30);
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	/* 絲滑過渡 */
+	margin: 0 6px;
+}
+
+/* 當前激活的圓點會自動拉長變成膠囊狀 */
+#banner-slider .dot.active {
+	width: 32px;
+	border-radius: var(--r-xs);
+	background-color: var(--c-white);
+	box-shadow: var(--sh-on-photo);
+}
+
+
+
+/* =======================================================
+   轮播图全屏宽度开关 (Full-Width Banner Switch)
+   效果：铺满整个视口；高度由原图比例 2040×779 自动得出，永不裁切。
+   宽度用 100%（不是 100vw）—— 上面已中和 banner 内的 .container，
+   100vw 会把滚动条宽度算进去，导致整块偏左 7–8px。
+======================================================= */
+
+#banner-slider {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 2040 / 779;
+	position: relative;
+	left: auto;
+	transform: none;
+
+	border-radius: 0;
+	box-shadow: none;
+}
+
+/* =======================================================
+   版心贯通：首屏標題與圓點改為對齊版心左緣，
+   與下方所有區塊共用同一條豎線（.container 的左緣）。
+   banner 已通欄，故這裡的 100% == 視口寬 == .container 的參照寬，
+   兩邊算出的 --shell-w 完全相同，不需要再減一次 gutter。
+======================================================= */
+
+#banner-slider .slide-text {
+	left: 0;
+	right: 0;
+	transform: none;
+	width: auto;
+	max-width: var(--shell-w);
+	margin: 0 auto;
+	text-align: left;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#banner-slider .slider-dots {
+	left: 0;
+	right: 0;
+	width: auto;
+	max-width: var(--shell-w);
+	margin: 0 auto;
+	text-align: left;
+}
+
+/* ========================================= */
+/* 🧩 Footer 左下角：扩展组件通用样式          */
+/* ========================================= */
+.footer-widget-box {
+	margin-top: 15px;
+	border-top: 1px solid var(--c-border-2);
+	padding-top: var(--sp-4);
+	max-width: 380px;
+}
+
+
+
+/* 方案 1：下载按钮样式 */
+
+
+
+
+
+
+/* 方案 2：社交媒体样式 */
+
+
+
+
+
+
+/* 方案 3：寄语样式 */
+.founder-note p {
+	font-family: "Georgia", serif;
+	font-size: var(--fs-md);
+	font-style: italic;
+	color: var(--c-text-2);
+	line-height: 1.5;
+	margin-bottom: 5px;
+}
+
+.founder-note .signature {
+	font-family: "Georgia", serif;
+	font-size: var(--fs-base);
+	color: var(--c-text-1);
+	font-weight: 700;
+}
+
+
+/* 方案 4 & 5：文字说明样式 */
+
+/* ==========================================================================
+   Buyer Concerns & SANDA Solutions  ·  order-lifecycle tabbed carousel
+   Tabs on top (one segmented pill row), one row of four concern cards below.
+   Colour rule for this block:
+     · --c-text-1 (near-black) = the SELECTED tab. The site already uses this
+       token as its "active control" colour (.tab-btn.active text), and blue is
+       already carrying two jobs here (the h2 rule + the in-card SANDA Solution
+       marker), so the tab row stays monochrome.
+     · --c-primary (brand blue) = the SANDA Solution marker only. One colour,
+       one job. (No decorative bar inside the tab buttons.)
+
+   GOTCHA — do not remove the `margin: 0` on .concern-card below.
+   base.css:276 sets `section, article { margin: 0 0 60px 0 }` for the page
+   flow. These cards are <article>, so that 60px margin becomes part of the
+   grid row's auto size: the row resolves to content + 60px, `height: 100%`
+   stretches each card to the inflated row, and the leftover 60px shows up as
+   a pocket of dead white under the last line of every card.
+   ========================================================================== */
+#buyer-concerns {
+	position: relative;
+}
+
+/* Left-aligned to match every other subtitle on the site. Two ids so this
+   beats `#main section h2`'s sibling rules in the cascade. */
+#main #buyer-concerns .section-subtitle {
+	text-align: left;
+	max-width: 100%;
+	margin-bottom: var(--sp-4);
+	color: var(--c-text-2);
+	font-size: var(--fs-base);
+	line-height: 1.5;
+}
+
+/* ---- Tab row ------------------------------------------------------------ */
+.concern-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sp-2);
+	margin-bottom: var(--sp-4);
+}
+
+.concern-tab {
+	appearance: none;
+	border: 1px solid var(--c-border-2);
+	background-color: var(--c-white);
+	color: var(--c-text-2);
+	font: inherit;
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	line-height: 1;
+	padding: 10px 16px;
+	border-radius: var(--r-pill);
+	cursor: pointer;
+	transition: background-color var(--dur-fast) var(--ease-out),
+	            color var(--dur-fast) var(--ease-out),
+	            border-color var(--dur-fast) var(--ease-out);
+}
+
+.concern-tab:hover {
+	border-color: var(--c-border-1);
+	color: var(--c-text-1);
+}
+
+.concern-tab[aria-selected="true"] {
+	background-color: var(--c-text-1);
+	border-color: var(--c-text-1);
+	color: var(--c-white);
+}
+
+.concern-tab:focus-visible {
+	outline: 2px solid var(--c-primary);
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.concern-card {
+		transition: none;
+	}
+}
+
+/* ---- Panels ------------------------------------------------------------- */
+.concern-panels {
+	position: relative;
+}
+
+.concern-panel {
+	display: none;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--sp-3);
+	align-items: stretch;
+}
+
+.concern-panel.is-active {
+	display: grid;
+}
+
+/* The row is content-sized (see `margin: 0` on .concern-card), and this then
+   makes all four cards share the height of the tallest one. Do NOT add
+   `grid-auto-rows: 1fr` here — combined with height:100% it produces circular
+   sizing and inflates the row. */
+.concern-panel.is-active > .concern-card {
+	height: 100%;
+}
+
+/* ---- Card --------------------------------------------------------------- */
+.concern-card {
+	display: flex;
+	flex-direction: column;
+	/* Required: base.css gives every <article> a 60px bottom margin, which would
+	   otherwise inflate the grid row and leave a 60px white pocket in the card. */
+	margin: 0;
+	padding: var(--sp-3) var(--sp-3) 14px;
+	background-color: var(--c-white);
+	border: 1px solid var(--c-border-2);
+	border-radius: var(--r-md);
+	box-shadow: var(--sh-sm);
+	transition: transform var(--dur) var(--ease-out),
+	            box-shadow var(--dur) var(--ease-out),
+	            border-color var(--dur) var(--ease-out);
+}
+
+/* Same hover language as .text-card in "Why Partner With SANDA?". */
+.concern-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--sh-md);
+	border-color: var(--c-border-1);
+}
+
+.concern-tag {
+	display: inline-block;
+	align-self: flex-start;
+	margin-bottom: 10px;
+	padding: 3px 10px;
+	border-radius: var(--r-pill);
+	background-color: var(--c-surface-2);
+	font-size: var(--fs-xs);
+	font-weight: 600;
+	letter-spacing: 0.3px;
+	text-transform: uppercase;
+	/* Round 38：底為 --c-surface-2 #f5f5f7，原 --c-text-3 = 3.33（需 4.5）
+	   → --c-text-2 = 7.62:1 */
+	color: var(--c-text-2);
+}
+
+/* ---- Uniform text bands -------------------------------------------------
+   Every card must occupy exactly the same vertical space so the rows line up
+   and no card ends with a pocket of dead white. The copy is trimmed to fit
+   (quote <=95 chars, signature <=36, answer <=100); these min-heights then
+   pin the three bands to 3 / 1 / 3 lines. min-height rather than a hard
+   height: if the copy is ever edited longer, the band grows gracefully
+   instead of clipping the customer's words. */
+.concern-quote {
+	display: block;
+	min-height: calc(3 * 1.45em);
+	margin: 0 0 7px;
+	padding-left: 11px;
+	border-left: 2px solid var(--c-border-1);
+	font-size: var(--fs-sm);
+	font-style: italic;
+	line-height: 1.45;
+	color: var(--c-text-1);
+}
+
+.concern-quote::before { content: '\201C'; }
+.concern-quote::after  { content: '\201D'; }
+
+/* Attribution is metadata, so it is pinned to a single line and ellipsised
+   rather than allowed to wrap to two and push the row taller. */
+.concern-from {
+	min-height: calc(1.35em);
+	margin: 0 0 12px;
+	padding-left: 13px;
+	font-size: var(--fs-xs);
+	line-height: 1.35;
+	/* Round 38：原 --c-text-3（3.62:1）不達 AA 4.5；--c-text-2 = 7.91:1 */
+	color: var(--c-text-2);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.concern-solution {
+	padding-top: 10px;
+	border-top: 1px solid var(--c-border-2);
+}
+
+.concern-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 6px;
+	font-size: var(--fs-xs);
+	font-weight: 700;
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
+	color: var(--c-primary);
+}
+
+.concern-label::before {
+	content: '';
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background-color: var(--c-primary);
+}
+
+.concern-solution p {
+	min-height: calc(3 * 1.45em);
+	margin: 0;
+	font-size: var(--fs-sm);
+	line-height: 1.45;
+	color: var(--c-text-2);
+}
+
+.concern-solution b {
+	color: var(--c-text-1);
+	font-weight: 600;
+}
+
+
+/* =========================================================================
+   Canton Fair invitation — fixed overlay, bottom-right (2026-10-12)
+   -------------------------------------------------------------------------
+   Deliberately the ONE skeuomorphic thing on an otherwise flat site. That is
+   the point: v1 was a flat white card on a flat white page, so it vanished.
+   A physical kraft envelope cannot be ignored.
+
+   · The envelope is an inline SVG (four folded panels, a flap on a hinge, and
+     an elliptical cast shadow inside the art). SVG rather than stacked
+     clip-paths because the fold seams and the hinge need exact geometry, and
+     because a box-shadow would fall under the rotated bounding box instead of
+     under the envelope.
+   · The letter is a paper card: a crosshatch weave, a vertical gradient, a top
+     inner highlight plus a bottom inner shade (the bevel), and a deep cast
+     shadow. The CTA keeps the iOS-era gloss — two-stop gradient with the
+     highlight at 48%/52%, inset top highlight, inset bottom shade, text-shadow.
+   · Colours are literals, not tokens, and on purpose: the token set is
+     deliberately cool grey and paper only reads as paper when it is warm.
+     Scoped to this component.
+   ========================================================================= */
+
+.fair-invite {
+	position: fixed;
+	right: 22px;
+	bottom: 22px;
+	z-index: var(--z-overlay);
+	transition: opacity var(--dur) var(--ease-out), transform var(--dur) var(--ease-out),
+		visibility var(--dur) var(--ease-out);
+	--paper-face: #fefdfa;
+	--paper-edge: #d2c1a0;
+}
+
+/* ---- Stand-down at the footer -------------------------------------------
+   The footer is the page's real contact block, so the invitation gets out of
+   its way once the footer scrolls into view (the inline script adds .is-away).
+   Measured 2026-10-12 without it: the OPEN letter buried the Manufacturing
+   address column and 81,549 px² of the map, and the COLLAPSED envelope sat
+   squarely on the "Terms of Service" link in the copyright bar — a link that
+   could then not be clicked, because the envelope is a button.
+   visibility (not just opacity) keeps the whole widget out of the tab order;
+   the letter needs its own override because .is-open sets visibility: visible. */
+.fair-invite.is-away {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(16px);
+}
+
+.fair-invite.is-away.is-open .fair-letter {
+	visibility: hidden;
+}
+
+/* ---- The envelope (always visible, doubles as the toggle) --------------- */
+.fair-envelope {
+	position: relative;
+	display: block;
+	width: 190px;
+	height: 122px;
+	padding: 0;
+	border: 0;
+	background: none;
+	cursor: pointer;
+	overflow: visible;
+	/* tucked into the corner: ~27px right and ~56px bottom sit off-screen */
+	transform: rotate(-14deg) translate(54px, 46px);
+	transform-origin: 100% 100%;
+	transition: transform 0.42s var(--ease-out);
+}
+
+.fair-envelope:hover {
+	transform: rotate(-14deg) translate(54px, 43px);
+}
+
+.fair-envelope-art {
+	display: block;
+	width: 190px;
+	height: 122px;
+	overflow: visible;
+}
+
+.fair-invite.is-open .fair-envelope,
+.fair-invite.is-open .fair-envelope:hover {
+	transform: rotate(0deg) translate(0, 0);
+}
+
+/* The flap folds BACKWARD on its hinge. It has to be rotateX about the top
+   edge, not a flat 2D rotate: a 2D spin reads as a triangle rotating in place,
+   whereas folding back sends the tip up and away from the viewer (-Z) and
+   perspective foreshortens it on the way — that is what makes it read as paper
+   bending over. It still ends up hidden behind the letter (the letter is wider),
+   so the fade at the end is only there because SVG paints in DOM order and not
+   by depth: without it the folded flap would draw over the back panel. */
+.fair-env-flap {
+	transform-box: view-box;
+	transform-origin: 95px 2px;
+	transition: transform 0.46s var(--ease-out), opacity 0.16s var(--ease-out) 0.30s;
+}
+
+.fair-invite.is-open .fair-env-flap {
+	transform: perspective(300px) rotateX(-168deg);
+	opacity: 0;
+}
+
+/* Revealed on open: the dark inner lip and the edge of the letter inside. */
+.fair-env-mouth {
+	opacity: 0;
+	transition: opacity 0.26s var(--ease-out) 0.32s;
+}
+
+.fair-invite.is-open .fair-env-mouth {
+	opacity: 1;
+}
+
+/* Printed on the UPPER FLAP, not below the envelope. Measured 2026-10-13: at
+   bottom:16px the ink sat at y801..834 in an 805px viewport, so the collapsed
+   envelope carried no text at all — nothing said "Canton Fair" until you clicked.
+   At top:13px the ink lands at y720, inside the viewport. The label is a sibling
+   of the SVG, not a child of the flap group, so it stays put when the flap folds
+   away on open (the letter occupies y280..655 and never reaches it). */
+.fair-envelope-label {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 13px;
+	bottom: auto;
+	text-align: center;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 1.8px;
+	text-transform: uppercase;
+	color: #5f4c2c;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	pointer-events: none;
+}
+
+/* ---- The sway (closed only) --------------------------------------------
+   While the invitation is still closed the envelope breathes +/-2deg about the
+   same bottom-right corner it is tucked behind, so the corner of the screen
+   reads as alive instead of as a static sticker.
+   It has to live on its own element. An animation on .fair-envelope itself
+   would outrank BOTH the hover lift and the .is-open transform, because
+   animations beat normal declarations in the cascade — the envelope would
+   stop responding to the pointer and could no longer be opened.
+   The wrapper also carries the label, so the printed mark sways with the paper
+   rather than sliding across it.
+   Known trade-off: stopping the animation on open is an instant switch, and no
+   transition is created for it (verified: getAnimations() drops to 0 with no
+   CSSTransition), so the envelope sheds up to 2deg in one frame. That is ~14%
+   of the 14deg it is rotating through at the same moment, so it does not read
+   as a glitch — and paying for a smooth settle would mean a registered custom
+   property driving the keyframes, which is not worth the browser support risk
+   for a 2deg detail. */
+.fair-envelope-sway {
+	display: block;
+	position: relative;
+	width: 190px;
+	height: 122px;
+	transform-origin: 100% 100%;
+	animation: fair-sway 8s ease-in-out infinite;
+}
+
+/* ease-in-out on each half makes the envelope ease into and out of each
+   extreme, which reads as breathing rather than as a metronome. */
+@keyframes fair-sway {
+	0%,
+	100% {
+		transform: rotate(-2deg);
+	}
+
+	50% {
+		transform: rotate(2deg);
+	}
+}
+
+/* Reaching for it should steady it — and a target that drifts is unkind to
+   anyone with a tremor. */
+.fair-envelope:hover .fair-envelope-sway,
+.fair-envelope:focus-visible .fair-envelope-sway {
+	animation-play-state: paused;
+}
+
+/* Once it is open the paper is flat on the screen and must stop moving; when
+   it has stood down for the footer it is invisible and need not burn a frame. */
+.fair-invite.is-open .fair-envelope-sway,
+.fair-invite.is-away .fair-envelope-sway {
+	animation: none;
+	transform: none;
+}
+
+/* ---- The letter (revealed on click) ------------------------------------- */
+.fair-letter {
+	position: absolute;
+	right: 0;
+	bottom: calc(100% + 6px);
+	width: 302px;
+	padding: 0 0 18px;
+	background-color: var(--paper-face);
+	background-image:
+		repeating-linear-gradient(0deg, rgba(122, 96, 54, 0.045) 0 1px, rgba(255, 255, 255, 0) 1px 3px),
+		repeating-linear-gradient(90deg, rgba(122, 96, 54, 0.045) 0 1px, rgba(255, 255, 255, 0) 1px 3px),
+		linear-gradient(180deg, #fffefa 0%, #fcf9f3 55%, #f6f1e6 100%);
+	border: 1px solid var(--paper-edge);
+	border-radius: 9px;
+	box-shadow:
+		inset 0 1px 0 #ffffff,
+		inset 0 -2px 4px rgba(122, 96, 54, 0.10),
+		0 20px 38px rgba(44, 30, 8, 0.30),
+		0 4px 10px rgba(44, 30, 8, 0.18);
+	/* visibility (not just opacity) so its contents leave the tab order */
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(18px) scale(0.96);
+	transform-origin: 100% 100%;
+	transition: opacity var(--dur) var(--ease-out), transform var(--dur) var(--ease-out),
+		visibility var(--dur) var(--ease-out);
+}
+
+.fair-invite.is-open .fair-letter {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0) scale(1);
+	/* held back so the flap's fold-back is actually seen before the letter
+	   rises over it. Closing is not delayed — the base rule has no delay. */
+	transition-delay: 0.24s;
+}
+
+.fair-letter-head {
+	padding: 15px 44px 13px 18px;
+	border-bottom: 1px solid rgba(122, 96, 54, 0.22);
+	border-radius: 9px 9px 0 0;
+	background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.fair-letter-body-wrap {
+	padding: 14px 18px 0;
+}
+
+.fair-letter-close {
+	position: absolute;
+	top: 9px;
+	right: 9px;
+	width: 25px;
+	height: 25px;
+	padding: 0;
+	border: 1px solid #bfae8c;
+	border-radius: 50%;
+	background-image: linear-gradient(180deg, #fffefb 0%, #f1e9d6 100%);
+	box-shadow: inset 0 1px 0 #ffffff, 0 1px 2px rgba(60, 42, 12, 0.25);
+	color: #6f5c3d;
+	font-size: 15px;
+	line-height: 1;
+	text-shadow: 0 1px 0 #ffffff;
+	cursor: pointer;
+	transition: background-image var(--dur-fast) var(--ease-out),
+		color var(--dur-fast) var(--ease-out);
+}
+
+.fair-letter-close:hover {
+	background-image: linear-gradient(180deg, #ffffff 0%, #e7dbc0 100%);
+	color: #3f3220;
+}
+
+.fair-kicker {
+	margin: 0 0 3px;
+	font-size: var(--fs-xs);
+	font-weight: 700;
+	letter-spacing: 1.4px;
+	text-transform: uppercase;
+	color: #0a6cd6;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.fair-letter-title {
+	margin: 0;
+	font-size: var(--fs-md);
+	font-weight: 700;
+	line-height: 1.2;
+	color: #3a2f1c;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.fair-letter-body {
+	margin: 0 0 13px;
+	font-size: var(--fs-sm);
+	line-height: 1.5;
+	color: #6b5c42;
+}
+
+.fair-facts {
+	margin: 0 0 15px;
+	border-top: 1px solid rgba(122, 96, 54, 0.26);
+}
+
+/* Dark rule + white rule directly beneath = an engraved groove. */
+.fair-facts > div {
+	display: flex;
+	gap: 10px;
+	padding: 7px 0;
+	border-bottom: 1px solid rgba(122, 96, 54, 0.16);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.fair-facts dt {
+	flex: 0 0 52px;
+	font-size: var(--fs-xs);
+	font-weight: 700;
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
+	line-height: 1.5;
+	color: #9a8863;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.fair-facts dd {
+	margin: 0;
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	line-height: 1.5;
+	color: #3a2f1c;
+}
+
+/* Glossed CTA — the highlight lands at 48%/52%, which is the iOS-era tell. */
+.fair-letter-cta {
+	display: block;
+	padding: 12px 20px;
+	border: 1px solid #0a5aa8;
+	border-radius: 8px;
+	background-color: #1177e0;
+	background-image: linear-gradient(180deg, #59b0ff 0%, #1a83ea 48%, #0b64c4 52%, #0a5cb4 100%);
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.55),
+		inset 0 -1px 0 rgba(0, 0, 0, 0.20),
+		0 2px 4px rgba(10, 60, 120, 0.35);
+	color: #ffffff;
+	font-size: var(--fs-base);
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+	transition: background-image var(--dur-fast) var(--ease-out);
+}
+
+.fair-letter-cta:hover {
+	background-image: linear-gradient(180deg, #6cbcff 0%, #218bec 48%, #0d6ed2 52%, #0b66c0 100%);
+}
+
+.fair-letter-cta:active {
+	box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.38);
+}
+
+.fair-envelope:focus-visible,
+.fair-letter-close:focus-visible,
+.fair-letter-cta:focus-visible {
+	outline: 2px solid var(--c-primary);
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.fair-invite,
+	.fair-envelope,
+	.fair-env-flap,
+	.fair-env-mouth,
+	.fair-letter,
+	.fair-letter-cta,
+	.fair-letter-close {
+		transition: none;
+	}
+
+	.fair-envelope-sway {
+		animation: none;
+	}
+}
+
+
+/* ========================================= */
+/* Round 19–20 — Featured Collections 協調性   */
+/* Round 19：副標題 + 背景 + 樺木詢盤條 +      */
+/*            按鈕效果 + hover 多標籤修正      */
+/* Round 20：副標題文案 / 按鈕改 B1 /          */
+/*            詢盤條改為櫃體底座（去 20px 空隙） */
+/* ========================================= */
+
+/* ① 副標題：沿用 #buyer-concerns 的排版（左對齊 / --c-text-2 / --fs-base / 1.5）。
+   h2 原本的 35px 統一間距讓位給副標題——空格是被「填掉」而不是「新增」。 */
+#main #featured-products .section-subtitle {
+	text-align: left;
+	max-width: 100%;
+	color: var(--c-text-2);
+	font-size: var(--fs-base);
+	line-height: 1.5;
+	margin: 0 0 var(--sp-5);
+}
+
+/* 選擇器里的兩個 id 是為了壓過 :1572 的 #main section h2（id 多者勝）。 */
+#main #featured-products h2 {
+	margin-bottom: 10px !important;
+}
+
+/* ② 背景：純色 + 底部極淡暖漸層，取代深褐縫紉機照 bg2.webp。
+   漸層終點 #f7f3ea（亮度 0.899）vs 起點 #fbfbfd（0.966）——差 0.067，
+   是「看得出一點、說不出來」的程度，不與樺木櫃體搶戲。 */
+#main .products-category-section::before {
+	background-color: var(--c-surface-1);
+	background-image: linear-gradient(180deg, #fbfbfd 0%, #fbfbfd 62%, #f7f3ea 100%);
+	opacity: 1;
+}
+
+/* ③ 底部詢盤條 = 櫃體的「底座帶」（Round 20–21 改）。
+   Round 19 把毛玻璃改成樺木；Round 20 移除 20px 空隙、讓 CTA 貼上櫃體底部；
+   **Round 21（使用者裁定）：整條帶維持「櫃體底座」的深色，不再往上抬回淺樺木** ——
+   否則只有頂端一小段是深的、下面又變淺，讀起來不像同一個底座。
+   做法：色票從櫃體底座收尾的 #a8946d 起跳（頂端與櫃體底座**完全同色、無斷點**），
+   再讓它在 54px 內緩緩沉到 #a0865c —— 越靠地板越暗（環境遮蔽），而不是變亮。
+   接縫本身只靠頂部 1px 深色框線 + inset 頂影定義，不再靠一大段暗漸層。
+   ⚠ 副作用：底色變深後 --c-text-2(#515154) 只有 2.7:1，硬不過 AA
+     → 副文案（含 → 箭頭）改深胡桃 #2b2113（4.8:1），主文案維持 --c-text-1（5.1:1）。
+   ⚠ 層紋必須寫在 background-image：background 簡寫會把圖層整個重置。 */
+#main .products-category-section .cta-capsule-banner {
+	padding: 10px var(--sp-4);
+	background-color: #a0865c;
+	background-image:
+		repeating-linear-gradient(180deg,
+			rgba(140, 112, 66, 0.18) 0 0.5px,
+			rgba(140, 112, 66, 0) 0.5px 42px),
+		linear-gradient(180deg, #a8946d 0px, #a0865c 100%);
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	border: 1px solid #8a7350;
+	border-radius: 0 0 10px 10px;
+	box-shadow: inset 0 3px 6px -3px rgba(50, 34, 12, 0.45),
+		0 1px 2px rgba(0, 0, 0, 0.06),
+		0 14px 32px -18px rgba(70, 50, 24, 0.42);
+}
+
+/* 深色底上的文字：主文案維持 --c-text-1；副文案（含 → 箭頭）換深胡桃。 */
+#main .products-category-section .cta-text strong { color: var(--c-text-1); }
+#main .products-category-section .cta-text span { color: #2b2113; }
+
+/* hover **完全不做任何視覺變化**（使用者 Round 22：滑鼠指到底座時「會亮」這個不需要）。
+   ⚠ 這條規則不能刪：:3183 有一條更早的
+   `#main .products-category-section .cta-capsule-banner:hover{ background-color:var(--c-glass-70);
+     transform:translateY(-3px); box-shadow:var(--sh-lg) }`（Round 19 之前的舊毛玻璃 hover）。
+   沒有這條覆寫，滑鼠指上去會跳 3px 並透出玻璃底色。
+   做法 = 把 resting 狀態的四個屬性原封不動再寫一次，讓 hover 與靜止**逐像素相同**。
+   （按鈕 `.cta-btn:hover` 仍保留自己的 hover —— 那顆是連結，需要可點擊的回饋。） */
+#main .products-category-section .cta-capsule-banner:hover {
+	background-color: #a0865c;
+	background-image:
+		repeating-linear-gradient(180deg,
+			rgba(140, 112, 66, 0.18) 0 0.5px,
+			rgba(140, 112, 66, 0) 0.5px 42px),
+		linear-gradient(180deg, #a8946d 0px, #a0865c 100%);
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	box-shadow: inset 0 3px 6px -3px rgba(50, 34, 12, 0.45),
+		0 1px 2px rgba(0, 0, 0, 0.06),
+		0 14px 32px -18px rgba(70, 50, 24, 0.42);
+	transform: none;
+}
+
+/* ④ 藍色按鈕：**B1**（漸層 + 亮邊 + 中光暈，使用者 Round 20 選定）。
+   漸層三段都在 AA 安全範圍內：#0a6fd0 5.00:1 / #0071e3 4.70:1 / #0060bf 6.13:1，
+   白字皆達 AA（實測無文字幀最亮處 4.88）。
+   ⚠ 漸層頂端不能再亮：#1279d8 只有 4.42:1，會把白字壓到不達標。
+   B2 = 四段漸層 + 強斜角；B3 = B1 + 超大外光暈。要換只改這兩段。 */
+#main .products-category-section .cta-btn {
+	padding: 8px var(--sp-4);
+	background-color: #0071e3;
+	background-image: linear-gradient(180deg, #0a6fd0 0%, #0071e3 50%, #0060bf 100%);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34),
+		inset 0 -1px 0 rgba(0, 40, 90, 0.22),
+		0 1px 2px rgba(0, 72, 150, 0.32),
+		0 8px 20px -8px rgba(0, 113, 227, 0.62);
+}
+
+/* hover 不變亮（#0077ed 白字只有 4.32:1，原本就不達 AA）——改為加深 + 光暈微放 */
+#main .products-category-section .cta-btn:hover {
+	background-color: #0071e3;
+	background-image: linear-gradient(180deg, #0071e3 0%, #0060bf 60%, #0055ab 100%);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34),
+		inset 0 -1px 0 rgba(0, 40, 90, 0.22),
+		0 2px 4px rgba(0, 72, 150, 0.34),
+		0 10px 24px -8px rgba(0, 113, 227, 0.70);
+}
+
+/* ⑤ hover 多標籤：out-transition 去掉 0.30s 延遲並縮短淡出。
+   原本 0.30s 寬限期配合 pointer-events:none 永遠用不到，
+   反而讓離開一格後的標籤以「完全不透明」再掛 0.3s，快速掃過時會疊好幾個。 */
+.cabinet-pop {
+	transition: opacity 0.09s ease, transform 0.09s ease;
+	transition-delay: 0s, 0s;
+}
+
+.cabinet-bay:hover .cabinet-pop {
+	opacity: 1;
+	transform: translateY(-50%) translateX(0);
+	transition: opacity 0.16s ease, transform 0.16s ease;
+	transition-delay: 0s, 0s;
+}
+
+/* =========================================================================
+   Why Partner With SANDA? — Round 25 / 方案 1「左對齊 / 收緊」
+   -------------------------------------------------------------------------
+   問題（實測 @1600）：
+     · 卡片 230.8px 高，文字堆疊只 141.2~166.8px → 內容僅佔卡高 61~72%
+     · 同列卡片行數不一（2 行 vs 3 行）→「7 Days」「24/7」底部 25.6px 死空格
+     · 置中 + p 16px/1.6，正文 pMaxW 401~466px 對可用 478.7px → 只用 78% 寬
+   做法：
+     · 全區改左對齊（收益最大：每行填到 95%+）
+     · 大數字 48px → 28px（--fs-lg）；「24/7」「0 Hassle」這類非數值型標籤
+       也不再與「7 Days」同等搶眼，層級回歸標題
+     · h3 20px → 16px（--fs-base）；p 16px → 14px（--fs-sm）、行高 1.6 → 1.5
+     · 內距 32/24 → 20px/24px/18px（上/左右/下）
+     · 縮小 --sh-md → --sh-sm + 1px --c-border-4，卡片不再靠重陰影撐體量
+   範圍：只作用於 .why-choose-section（全站唯一使用 .text-grid-2x3 的板塊）。
+   底色刻意保持純白（使用者指定不改），故卡片靠極淡邊框 + 輕陰影分離。
+   ========================================================================= */
+.why-choose-section .text-grid-2x3 {
+	gap: 14px;
+}
+
+.why-choose-section .text-card {
+	display: flex;
+	flex-direction: column;
+	/* 同一列的卡片由 grid 拉成等高。文案長度不一時，某些卡會是 2 行、
+	   某些是 3 行（實測 @1600：436px 欄寬下 3 張 2 行、3 張 3 行），
+	   2 行的卡就多出 22px。改為垂直置中，讓內容在卡內居中呼吸，
+	   而不是全部貼上緣、底部掛一條 22px 的空帶。 */
+	justify-content: center;
+	padding: 20px var(--sp-4) 18px;
+	text-align: left;
+	background-color: var(--c-white);
+	border: 1px solid var(--c-border-4);
+	box-shadow: var(--sh-sm);
+}
+
+/* hover 沿用原本語言（上浮 + 陰影加深），只是基準陰影變輕 */
+.why-choose-section .text-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--sh-md);
+	border-color: var(--c-border-2);
+}
+
+.why-choose-section .big-number {
+	font-size: var(--fs-lg);
+	font-weight: 700;
+	color: var(--mblue, #0b5aa8);
+	line-height: 1.05;
+	letter-spacing: -0.6px;
+	margin-bottom: 2px;
+}
+
+.why-choose-section .text-card h3 {
+	font-size: var(--fs-base);
+	margin-bottom: 8px;
+	letter-spacing: -0.1px;
+}
+
+.why-choose-section .text-card p {
+	font-size: var(--fs-sm);
+	line-height: 1.5;
+}
+
+/* =========================================================================
+   Round 27 / 方案 V3 — 導航欄：4 主項 + Company ▾ 巨集選單 + Contact
+   -------------------------------------------------------------------------
+   為什麼要改：改動前 #nav 只有 3 個入口（About / Products / Services），
+   但頁面有 10 個 .global-section。實測後果：
+     • 7 個區塊完全沒有入口
+     • scrollY 3006→7445（全頁可捲高度的 59.6%）導航完全無高亮
+     • #index.html:1648 的 homeHref 是 '#'，而 About 的 href 是 '#about'
+       → About 這顆按鈕永遠不可能被點亮
+   方案 V3 讓 10 個區塊全部可達，而主列只佔 4 格：
+     實測 nav 675.8px，1600 版心餘 467px、1200 版心餘 187px。
+   對照：平鋪 8 個極簡標籤在 1200 會溢出 7px、9 個溢出 37px。
+
+   ⚠️ 兩條必須遵守的約束（實測所得）：
+     1. Contact 按鈕右緣目前正好貼齊 shell 右緣（slackRight = 0）。
+        新增任何元素都不得把 nav 推寬到超出 shell。
+     2. 新的巨集面板 z-index 必須高於 --z-header(2000)，且不能被
+        #header 的 border-radius / overflow 裁掉。
+   ========================================================================= */
+
+/* ---- 缺陷 A 修復：跳轉後 H2 不再被固定導航糊住 -------------------------
+   改動前全站沒有任何 scroll-margin-top / scroll-padding-top，而
+   .global-section 的 H2 距區塊頂部只有 64px < header 高 71px，
+   所以每次點導航跳轉，標題頂端都會被 rgba(255,255,255,.95) 的
+   導航列蓋掉約 7px（半透明 → 是「糊掉」而非單純看不見）。
+   88px = header 72.2 + 約 16px 呼吸。 */
+.global-section {
+	scroll-margin-top: 88px;
+}
+
+/* ---- V3 主列：4 主項，字級與內距都比原本收一級，換取巨集項目的空間 ----
+   原本：17.6px / padding 0 25px / letter-spacing -1px
+   現在：16.5px / padding 0 20px / letter-spacing -0.6px */
+#header nav a {
+	font-size: 16.5px;
+	padding: 0 20px;
+	letter-spacing: -0.6px;
+}
+
+/* ---- Company ▾ 巨集：外框沿用 .lang-dropdown 的相對定位語言 ---- */
+.nav-mega {
+	display: inline-block;
+	position: relative;
+}
+
+#header nav .nav-mega-btn {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--c-text-5);
+	font-size: 16.5px;
+	font-weight: 500;
+	letter-spacing: -0.6px;
+	line-height: 52px;
+	padding: 0 20px;
+	border-radius: 6px;
+	transition: background var(--dur-fast) var(--ease-out),
+		color var(--dur-fast) var(--ease-out);
+}
+
+#header nav .nav-mega-btn:hover,
+.nav-mega.is-open > .nav-mega-btn {
+	background: var(--c-shadow-05);
+	color: var(--c-black);
+}
+
+/* 面板：兩欄、白底、柔和陰影。
+   ⚠️ z-index 取 3000，高於 --z-header(2000)，確保不被導航列本身蓋住。
+   ⚠️ top 必須是 calc 而非 100%。實測：.nav-mega 是 inline-block，其盒底在
+      文件 y=60；而 #header-wrapper 的底緣在 y=72.2。所以 top:100% 會讓面板
+      頂端落在 60，被導航列的下緣壓掉 12px。用 +12px 讓它精準貼齊列底，
+      既不重疊也不留縫。 */
+.nav-mega-panel {
+	display: none;
+	position: absolute;
+	top: calc(100% + 12px);
+	right: -8px;
+	min-width: 430px;
+	background-color: var(--c-white);
+	border: 1px solid var(--c-border-2);
+	border-radius: var(--r-md);
+	box-shadow: var(--sh-lg);
+	padding: 10px;
+	z-index: 3000;
+}
+
+.nav-mega:hover .nav-mega-panel,
+.nav-mega.is-open .nav-mega-panel {
+	display: block;
+	animation: megaFadeIn 0.2s ease;
+}
+
+/* hover 橋接：面板與按鈕之間有 12px 空隙，若不放一個透明區塊，
+   滑鼠下移時會離開 .nav-mega 的 hover 範圍，面板立刻消失。
+   用 ::before 造一條透明帶把兩者連起來（高度與 top 的 +12px 對齊）。 */
+.nav-mega-panel::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -12px;
+	height: 12px;
+}
+
+.nav-mega-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2px;
+}
+
+.nav-mega-title {
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	line-height: 1.3;
+	/* ⚠️ 不可用 --c-text-3（#86868b）：壓白底只有 3.62:1，AA 需 4.5:1。
+	   用 --mblue（#0b5aa8）＝白底 6.90:1，同時讓分組標題有品牌色。
+	   Round 27b-3 補：原本 10.5px 在子連結 14px / 副標 11.5px 的環境下太弱，
+	   拉到 12px + line-height 1.3（不再繼承 line-height 52），層級才出得來。 */
+	color: var(--mblue, #0b5aa8);
+	padding: 6px 12px 4px;
+}
+
+/* 面板內的連結：覆寫主列的 16.5px/20px 內距，改成 14px 的密集清單。
+   ⚠️ 顏色用 --c-text-1（#1d1d1f）壓白底 = 16.9:1，安全。
+      副標必須用 --c-text-2（#515154，7.91:1）；
+      不可用 --c-text-3（#86868b，白底只有 3.62:1 → FAIL）。 */
+#header nav .nav-mega-panel a {
+	display: block;
+	padding: 9px 12px;
+	border-radius: var(--r-sm);
+	text-decoration: none;
+	color: var(--c-text-1);
+	font-size: var(--fs-sm);
+	font-weight: 500;
+	line-height: 1.3;
+	letter-spacing: -0.2px;
+	white-space: nowrap;
+	background: transparent;
+	transition: background var(--dur-fast) var(--ease-out);
+}
+
+#header nav .nav-mega-panel a:hover {
+	background-color: var(--c-surface-2);
+	color: var(--c-text-1);
+}
+
+.nav-mega-panel a small {
+	display: block;
+	margin-top: 2px;
+	color: var(--c-text-2);
+	font-size: 11.5px;
+	font-weight: 400;
+	letter-spacing: 0;
+}
+
+/* ---- 語言：Round 27 → 地球圖示；Round 27b-2 → 再加回「目前語言」文字 ----
+   Round 27 為了騰出巨集選單的空間，把「Language ▾」(143px) 換成 38px 的地球
+   圖示。但這樣做讓它變成導航列上唯一沒有文字的項目：實測絕對墨量只有
+   22,216，是相鄰文字標籤的 0.24–0.35×（全列最輕，落差 4 倍）→ 使用者反映
+   「不顯眼」。
+   Round 27b-2 加回文字，且改顯示「目前語言」(English) 而非泛稱 (Language)：
+     • 絕對墨量 22,216 → 76,662（3.45×），回到最重文字項目的 0.84×
+     • 寬度 39px → 124px；1200vp 餘裕 200.5 → 115.3，四個寬度都不碰撞
+     • 「English ▾」比「Language」省 3px，且告訴使用者現在是哪一種語言
+       （下拉裡是 Español / Français / العربية / Bahasa）
+   Round 27b-3：把按鈕從 inline-flex 改回純文字流（line-height 撐開 + 圖示
+   vertical-align:middle 對齊 x-height），這樣整個 lang 按鈕的盒模型與其他
+   純文字導航項目完全一致 → 修正 3.5px 對齊偏移。 */
+#header nav .lang-dropdown .lang-dropbtn {
+	display: inline-block;
+	white-space: nowrap;
+	width: auto;
+	padding: 0 14px;
+	text-align: center;
+	line-height: 52px;
+}
+
+#header nav .lang-dropdown .lang-globe {
+	/* 用 baseline 對齊而非 middle：middle 會把 19px SVG 撐高行盒，
+	   導致 .lang-dropbtn 的盒模型比相鄰純文字項目高 1.6px。
+	   改 -3.5px 近似把 SVG 中心對到 x-height 中線。 */
+	vertical-align: -3.5px;
+	margin-right: 6px;
+}
+
+#header nav .lang-dropdown .lang-txt {
+	vertical-align: baseline;
+}
+
+/* ---- Contact 按鈕 hover：修正一個既有的 AA 缺陷 ----
+   `components.css:422` 原本用 --c-primary-hover(#0077ed)，那是全站共用 token
+   （另外 3 顆按鈕也用），所以不動 token，只在導航這顆覆寫。
+   實測白字對比：rest #0071e3 = 4.70:1 PASS
+                hover #0077ed = 4.32:1 FAIL（AA 需 4.5）
+   改為 #0062c4 = 5.93:1 PASS。
+   方向刻意選「變深」而非原本的「變亮」——hover 時同時有 scale(1.15) 放大，
+   加深底色讓按下感更明確，也順手解掉對比問題。 */
+#header nav a.nav-contact-btn:hover {
+	background-color: #0062c4;
+}
+
+.lang-globe {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* 下拉面板原本靠文字寬度置中，改成圖示後若要維持在 icon 正下方，
+   transform 置中已足夠；但因為 icon 變窄，改對齊面板右緣避免跑出畫面。 */
+#header nav .lang-dropdown .lang-dropdown-content {
+	left: auto;
+	right: 0;
+	transform: none;
+}
+
+@keyframes megaFadeIn {
+	from { opacity: 0; transform: translateY(-5px); }
+	to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav-mega:hover .nav-mega-panel,
+.nav-mega.is-open .nav-mega-panel {
+	animation: megaFadeIn 0.2s ease;
+}
+
+/* ---- 1200px 以下的保險：再收 0.5px 字距與 2px 內距 ----
+   實測 675.8px 對 863px 預算本來就還有 187px，這條只是防止
+   使用者在瀏覽器縮放 / 字型替換（Inter 從 Google Fonts 載入失敗時
+   會退回系統字型，文字度量會變）時溢出。 */
+@media (max-width: 1320px) {
+	#header nav a,
+	#header nav .nav-mega-btn {
+		font-size: 16px;
+		padding: 0 17px;
+	}
+
+	/* 語言鈕是「圖示 + 文字」，內距基準與純文字項目不同（14 vs 20），
+	   所以這裡等比收 2px，讓它與其他項目同步縮。 */
+	#header nav .lang-dropdown .lang-dropbtn {
+		padding: 0 12px;
+	}
+}
+
+/* ==========================================================================
+   [Round 30] Apple-style tracking (letter-spacing) pass
+   --------------------------------------------------------------------------
+   Why this exists
+   ---------------
+   Two separate problems were fixed in this round.
+
+   1. FAUX BOLD. index.html requested Inter at 300/400/500/600 only, while this
+      stylesheet sets font-weight:700 in 28 places and 800 in 2. With no 700 or
+      800 face available the browser faked them by smearing the 600 glyphs
+      sideways. Measured on identical text at 100px:
+        400 -> 500 : 1092.3 -> 1109.1  (+16.8px)
+        500 -> 600 : 1109.1 -> 1125.6  (+16.5px)
+        600 -> 700 : 1125.6 -> 1125.6  ( +0.0px)   <- no second face existed
+        700 -> 800 : 1125.6 -> 1125.6  ( +0.0px)
+      The 700/800 weights are now requested. Inter is a variable font on Google
+      Fonts, so the latin subset is the SAME 47.1 KB woff2 as before -- zero
+      extra bytes, zero extra requests.
+
+   2. TRACKING. Apple's display type is set with a small, size-dependent
+      negative tracking. But this stylesheet ALREADY has its own tracking
+      curve -- it is just applied unevenly, with outliers and one real gap.
+      So rather than importing an unrelated external number, this pass
+      CALIBRATES to the curve the designer already chose and closes the gaps.
+      Measured computed values before this pass (font-size -> px -> em):
+         40px  h2               -0.8px   = -0.020em
+         40px  .about-stat-num  -1.0px   = -0.025em
+         28px  .big-number      -0.6px   = -0.021em
+         28px  .footer-title    -0.5px   = -0.018em
+         20px  .bento-card h3   normal   =  0        <- the gap
+         16px  .text-card h3    -0.1px   = -0.006em
+         16.5px #header nav a   -0.6px   = -0.036em
+      i.e. the designer's intent is roughly -0.02em across the display range,
+      a hair tighter for nav (small caps-like UI text), near zero at body size.
+      This block restores that curve: display sizes land on -0.02em, the 20px
+      bento titles get the -0.012em they were missing, and the 16px small-card
+      headings stay at their existing -0.006em.
+
+      NOTE ON THE EARLIER DRAFT: a first attempt used -0.038em/-0.04em, which
+      is ~2x the designer's curve. It measured as a real change (and stayed
+      within every container) but it changed the site's character, so it was
+      rejected in favour of matching the existing scale.
+
+   Why a block at the end instead of editing rules in place
+   --------------------------------------------------------
+   Several of these selectors are declared more than once (#main section h2 at
+   :1575 and :3055, #header nav a at :75/:302/:4322, .slide-text at :196/:3343
+   /:3440). Editing one copy silently loses to another, and the original
+   letter-spacing values on disk do not match what the browser actually
+   computes. Appending a clearly-scoped block keeps the whole change reviewable
+   in one place and makes the before/after obvious. Selectors that also appear
+   under a more specific prefix (.why-choose-section .big-number etc.) are
+   written with matching specificity here, otherwise they would be no-ops.
+
+   Safety
+   ------
+   Every value below makes text NARROWER than or equal to what shipped, so
+   nothing can overflow or re-wrap. Verified per element, new single-line width
+   vs container width, at 1600px:
+      #main section h2      254.0 / 562.4     .footer-main-title  478.5 / 680.8
+      .slide-text           767.7 / 1480      .bento-card h3      114.0 / 273
+      .about-stat-num       155.1 / 180.8     #header nav a        43.4 /  84.4
+   .cust-stats .cs b is deliberately NOT touched: it is white-space:nowrap at
+   -0.04em already, with only 0.9px of headroom (34.5px text in a 35.1px box).
+   ========================================================================== */
+
+/* Block headings, 40px. Both #main section h2 rules resolve to -0.02em here,
+   which is where the designer already had this size. */
+#main section h2 {
+	letter-spacing: -0.02em;
+}
+
+/* Hero slogan, 40px. Matches the h2 display size. */
+#banner-slider .slide-text {
+	letter-spacing: -0.02em;
+}
+
+/* The big stat figures, 40px, tabular so they align in a row. Was -0.025em,
+   brought onto the -0.02em display curve. */
+.about-stat-num {
+	letter-spacing: -0.02em;
+}
+
+/* "7 Days / 100% NDA / 24-7" cards, 28px. This pair needs the
+   .why-choose-section prefix to outrank :4269/:4278; a bare .big-number /
+   .text-card h3 here would be silently ignored. */
+.why-choose-section .big-number,
+.big-number {
+	letter-spacing: -0.02em;
+}
+
+/* Footer heading, 28px. Was -0.018em; aligned to -0.02em. */
+.footer-main-title {
+	letter-spacing: -0.02em;
+}
+
+/* Service bento card titles, 20px. These had NO letter-spacing at all
+   (computed: normal) -- the one clear gap in the original type scale. */
+.bento-card h3,
+.bento-text h3,
+.bento-wide .bento-text h3,
+.services-section .bento-text h3,
+.about-subtitle {
+	letter-spacing: -0.012em;
+}
+
+/* Small card headings, 16px. Left at the designer's -0.006em rather than
+   tightened further; at this size Apple also sits close to neutral. */
+.why-choose-section .text-card h3,
+.text-card h3,
+.factory-title {
+	letter-spacing: -0.006em;
+}
+
+/* Nav, 16.5px. Already -0.036em (-0.6px); a touch tighter for crispness. */
+#header nav a,
+#header nav .nav-mega-btn {
+	letter-spacing: -0.8px;
+}
+
+/* Body copy, 16px. A hair of negative tracking; at this size it reads as
+   "not loose" rather than as "tightened". */
+#main p {
+	letter-spacing: -0.004em;
+}
+
+
+/* =========================================================================
+   Round 35 — Featured Collections 展示櫃：方案 R2「髮絲紋金屬」
+   -------------------------------------------------------------------------
+   使用者選定（Round 34 研究 → 2026-10-16）：在方案 A 的冷白基調上，
+   把全櫃材質換成陽極處理鋁（Brushed Aluminium）。
+
+   材質做法：
+     · 1px（或 3px）週期 180deg repeating-linear-gradient = 橫向拉絲，
+       拉絲密度隨表面寬度自然變化，不用假的紋理圖。
+     · 疊一層大範圍上亮下暗，讀出「整塊金屬」的體積感。
+     · 幾何完全不動（區塊 1024 / 櫃體 1480×718 / 內腔 1406×666 / 格 200.8×124）。
+
+   為什麼全部加 `body` 前綴：
+     `:4127` 的 `#main .products-category-section::before`（1-1-1）與
+     `:4155`/`:4186` 的 CTA 帶（1-1-1）原本靠「原始碼順序」贏過裸 class。
+     加 body → 1-2-1 以上，穩贏，且不再依賴順序。
+
+   ⚠ 動工鐵律（勿刪、勿改）：
+     1. `:3183` 的 no-hover 規則（rest 原封重寫）必須原樣保留在檔內 ——
+        它與本節 ⑫ 是兩道保險，缺一會讓舊毛玻璃 hover 復活。
+     2. CTA 鈕 B1 漸層頂色不得更亮（`#1279d8` = 4.42:1 FAIL）。本輪未動按鈕。
+     3. `.cabinet-grid` 不得加 `z-index`（會建立層疊上下文、關住 .cabinet-pop）。
+     4. 區塊背景 `:4127` 本身的暖尾 `#f7f3ea` 一起改（見 ⑬），否則底部仍透暖。
+
+   實測（.research/R34_report.md）：
+     覆蓋 81.2% → 15.0%；色相 59.4° → 155.2°；暖冷比 14.51 → 1.28；
+     側板 [215,203,179] 81.7% 暖 → [228,228,232] 3.1%；分隔柱 100% 暖 → 0%；
+     CTA 主鈕 5.25:1、副文 6.07:1、標籤文字 16.14:1 全 PASS AA；
+     hover 小窗、35 圖、JS 錯誤 0 全部無迴歸。
+   ========================================================================= */
+
+/* ① 機殼：樺木 → 陽極鋁（上亮下暗的整塊金屬感） */
+body .collection-cabinet {
+	border: 1px solid #c3c3c9;
+	background-image: linear-gradient(180deg, #f2f2f4, #e6e6ea 55%, #d9d9df);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 14px 34px -16px rgba(0, 0, 0, 0.20);
+}
+
+/* ② 內腔背板：細拉絲（3px 週期）+ 上亮下暗。這是全櫃面積最大的一片。 */
+body .cabinet-interior {
+	background-image:
+		repeating-linear-gradient(180deg, rgba(120, 120, 132, 0.055) 0 1px, rgba(120, 120, 132, 0) 1px 3px),
+		linear-gradient(180deg, #fafafc 0%, #f2f2f6 58%, #e9e9ef 100%);
+	box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.06), inset 0 -2px 5px rgba(0, 0, 0, 0.04);
+}
+
+/* ③ 左右側板：拉絲更明顯（模擬折邊高光），密度 3px。 */
+body .cabinet-side-l {
+	background-image:
+		repeating-linear-gradient(180deg, rgba(110, 110, 124, 0.14) 0 1px, rgba(110, 110, 124, 0) 1px 3px),
+		linear-gradient(90deg, #c9c9d0 0 1px, #ececf0 1px 30%, #dedee5 30% 100%);
+	box-shadow: inset -2px 0 5px -3px rgba(0, 0, 0, 0.13);
+}
+
+body .cabinet-side-r {
+	background-image:
+		repeating-linear-gradient(180deg, rgba(110, 110, 124, 0.14) 0 1px, rgba(110, 110, 124, 0) 1px 3px),
+		linear-gradient(270deg, #c9c9d0 0 1px, #ececf0 1px 30%, #dedee5 30% 100%);
+	box-shadow: inset 2px 0 5px -3px rgba(0, 0, 0, 0.13);
+}
+
+/* ④ 立柱：金屬圓柱（中段亮帶 = 圓柱受光面） */
+body .cabinet-dividers span {
+	background-image: linear-gradient(90deg, #b6b6be, #e8e8ee 42%, #d4d4dc 58%, #b6b6be);
+	box-shadow: 1px 0 2px rgba(0, 0, 0, 0.10);
+}
+
+/* ⑤ 層板：鋁擱板（5 段折面 + 拉絲 + 兩端收邊） */
+body .cabinet-shelves span {
+	background-image:
+		repeating-linear-gradient(180deg, rgba(110, 110, 124, 0.14) 0 1px, rgba(110, 110, 124, 0) 1px 3px),
+		linear-gradient(180deg, #e9e9ee 0 1.1px, #dcdce3 1.1px 3.9px, #cdcdd6 3.9px 7.2px,
+			#bfbfc9 7.2px 8.9px, #b0b0bb 8.9px 10px);
+	box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.16);
+	border-left: 3px solid #a8a8b3;
+	border-right: 3px solid #a8a8b3;
+}
+
+/* ⑥ 底座：金屬踢腳 */
+body .cabinet-base {
+	background-image: linear-gradient(180deg, #e2e2e8, #c9c9d1);
+	border-top: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* ⑦ 銘牌軌：木頂板 → 金屬壓條 */
+body .cabinet-placards {
+	background-image: linear-gradient(180deg, #e9e9ee, #dcdce3 55%, #d0d0d8);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+	box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+/* ⑧ 銘牌：白色陽極標牌 + 藍色識別條（沿用 R1 的印刷標籤風，不再有燈箱外暈） */
+body .cabinet-placard span {
+	border: 1px solid #cfcfd6;
+	background-image: linear-gradient(180deg, #ffffff 0%, #f7f7fa 100%);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), inset 0 -2px 0 var(--c-primary);
+}
+
+/* ⑨ 燈槽：印刷標籤不該配燈槽 → 收掉 */
+body .cabinet-bay::after {
+	display: none;
+}
+
+/* ⑩ 商品落地陰影：金屬底上要更收斂（暖褐 → 中性黑，更小） */
+body .cabinet-bay img {
+	filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.15)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.10));
+}
+
+/* ⑪ 區塊背景：底部暖漸層 #f7f3ea → 冷白。
+   ⚠ 與 :4127 同為 1-1-1，靠 body 前綴（1-2-1）穩定勝出。 */
+body #main .products-category-section::before {
+	background-color: #fbfbfd;
+	background-image: linear-gradient(180deg, #ffffff 0%, #fbfbfd 58%, #f5f5f7 100%);
+	opacity: 1;
+}
+
+/* ⑫ CTA 底座帶：深樺木 → 冷灰金屬帶。
+   rest 與 hover 一起寫（`:3183` 的舊毛玻璃 hover 規則還活著）。
+   `border-radius` 沿用舊值讓帶子仍「收在櫃體底下」。 */
+body #main .products-category-section .cta-capsule-banner,
+body #main .products-category-section .cta-capsule-banner:hover {
+	background-color: #e2e2e8;
+	background-image: linear-gradient(180deg, #e8e8ed 0px, #dedee4 100%);
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	border: 1px solid #d2d2d7;
+	border-radius: 0 0 10px 10px;
+	box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.10),
+		0 1px 2px rgba(0, 0, 0, 0.05),
+		0 12px 28px -18px rgba(0, 0, 0, 0.20);
+	transform: none;
+}
+
+/* ⑬ 帶上文字：底改冷灰後亮度差拉開，副文可以回到 --c-text-2
+   （實測 #515154 壓 #e1e1e6 = 6.07:1，比原本深胡桃更好）。 */
+body #main .products-category-section .cta-text strong {
+	color: var(--c-text-1);
+}
+
+body #main .products-category-section .cta-text span {
+	color: var(--c-text-2);
+}
+
+
+/* =========================================================================
+   Round 38/40 — 導覽列 scrollspy：Company ▾ 的「目前子區塊」標籤
+   -------------------------------------------------------------------------
+   捲到 why-sanda ~ quote 這 5 個區塊時，主列只能亮 Company ▾（因為這 5 個
+   區塊只存在於巨集面板裡，沒有頂層項）。原本使用者看不出自己在哪一段，
+   這裡在按鈕上加一顆小標籤顯示目前的子區塊名。
+
+   [Round 40] 改為「一體式尾巴」（方案 V4）+ 文案縮短為「Why SANDA」：
+   - R38 的版本是飄在按鈕下方的獨立小 pill，看起來與按鈕無關、且文案過長
+     （「Why Partner With SANDA?」190px > 按鈕 127px）。
+   - 現在：與按鈕同寬、同底色、無縫接合成一體的下緣，視覺上屬於同一顆按鈕。
+   - 文案在 JS 端已縮短（面板連結的 <small> 前文字同步改為 Why SANDA）。
+
+   幾何（實測 1600/1200）：
+   - 按鈕 127×52，header 高 71 → 按鈕底 60，下方僅剩 11px。
+   - 標籤 bottom:-1px、高約 15px → 標籤底 = 60+15 = 61 < 71，完全落在 header 內。
+   - width:100% + box-sizing:border-box，天生不超出按鈕寬 → 主列寬度零變化。
+
+   其他：
+   - 預設 opacity:0；只有 .is-on 時顯示。
+   - 文字 --c-text-2（白/淺灰底 7.91:1，AA 通過）。
+   - 標籤本體 aria-hidden（純視覺），可及名稱由按鈕的 aria-label 提供。
+   - hover／展開面板時收起標籤，避免與面板重疊。
+   ========================================================================= */
+#header nav .nav-mega-btn {
+	position: relative;   /* 作為 .nav-mega-now 的定位基準 */
+	/* 上緣留圓角、下緣切平，讓尾巴接得順 */
+	border-radius: 6px 6px 0 0;
+}
+
+#header nav .nav-mega-now {
+	position: absolute;
+	left: 50%;
+	bottom: -1px;                 /* 標籤底 61 < header 底 71 */
+	transform: translateX(-50%);
+	width: 100%;                  /* 與按鈕同寬 → 不會超出 */
+	max-width: 100%;
+	box-sizing: border-box;
+	padding: 1px 8px 3px;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+	line-height: 1.2;
+	color: var(--c-text-2);
+	pointer-events: none;
+	opacity: 0;
+	/* 與按鈕同底色 → 視覺上連成一體 */
+	background: var(--c-shadow-05);
+	border-radius: 0 0 6px 6px;
+	transition: opacity 0.16s var(--ease-out, ease);
+}
+
+#header nav .nav-mega-now.is-on {
+	opacity: 1;
+}
+
+/* 巨集面板展開時，標籤會被面板蓋住也沒關係（面板在上層）；
+   但 hover 按鈕本身時，避免標籤與面板重疊造成視覺干擾 → 面板開啟時收起標籤。 */
+#header nav .nav-mega:hover .nav-mega-now,
+#header nav .nav-mega.is-open .nav-mega-now {
+	opacity: 0;
+}
+
+/* hover 按鈕時按鈕底色與 (R38) 一致；此時尾巴也收起，圓角回到四角 */
+#header nav .nav-mega:hover .nav-mega-btn,
+#header nav .nav-mega.is-open > .nav-mega-btn {
+	border-radius: 6px;
+}
+
+
+/* ===== R43 T3：四塊板塊背景 20px 方格 rgba(0,0,0,0.030) ===== */
+body #main #core-services::before,
+body #main #customization::before,
+body #main #why-sanda::before,
+body #main #buyer-concerns::before {
+	background-image:
+		linear-gradient(to right, rgba(0, 0, 0, 0.030) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(0, 0, 0, 0.030) 1px, transparent 1px);
+	background-size: 20px 20px, 20px 20px;
+	background-position: 0 0, 0 0;
+	background-repeat: repeat, repeat;
+}

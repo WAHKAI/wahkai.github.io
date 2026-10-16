@@ -1,0 +1,478 @@
+/* ==========================================================================
+   LAYER 2 / 4 - BASE
+   Reset + typography + layout primitives
+   --------------------------------------------------------------------------
+   Verbatim copy of the original main.css lines 1-617. Rule order is unchanged,
+   so the cascade behaves exactly as before the split.
+
+   Contents: Reset | Basic | Container | Row | Reusable
+
+   [Round 29] The Google Fonts @import that used to sit on line 11 has been
+   moved to a <link rel="preconnect"> + <link rel="stylesheet"> pair in the
+   document head. An @import inside a stylesheet cannot start until base.css
+   itself has downloaded AND been parsed, which serialised the chain:
+   html -> base.css -> googleapis CSS -> gstatic woff2. A head <link> with
+   preconnect starts the same request in parallel with the other CSS layers
+   and removes one full round trip. The font requested is unchanged
+   (Inter 300/400/500/600, swap), so every text metric is untouched.
+   ========================================================================== */
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	-webkit-text-size-adjust: none;
+}
+
+mark {
+	background-color: transparent;
+	color: inherit;
+}
+
+input,
+select,
+textarea {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+/* Form controls do not inherit type by default, which left every button and
+   input rendering in Arial while the rest of the page used Inter. */
+input,
+select,
+textarea,
+button {
+	font: inherit;
+}
+
+/* Basic */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: var(--fs-base);
+	background-color: var(--c-border-4);
+
+	/* 核心修改：首选 Inter 字体，其次调用苹果系统原生字体，最后是常规无衬线 */
+	font-family: var(--font-sans);
+
+	/* 建议：将原本带点绿色的浅灰 (var(--c-hex-878e83)) 改为深灰 (var(--c-text-5))，苹果官网正文通常是高对比度的深灰色，阅读体验更好 */
+	color: var(--c-text-5);
+
+	/* 注意：这里我删除了 letter-spacing: -1px; 让正文呼吸感更强，更像苹果官网 */
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--c-text-1);
+	font-weight: normal;
+}
+
+
+h2 {
+	font-size: var(--fs-lg);
+	/* 苹果的大标题通常比较有视觉张力，推荐放大到 2em */
+	font-weight: 600;
+	/* 半粗体 (Semi-bold)，增加标题的分量感 */
+	color: var(--c-text-1);
+	/* 苹果官方最爱用的经典深灰色，比纯黑更有呼吸感 */
+	letter-spacing: -0.02em;
+	/* 极微弱的负字距，让英文字母看起来更紧凑高级，去除原本粗暴的 -1px */
+	margin-bottom: 0.8em;
+	/* 增加标题和下方正文的留白距离（呼吸感） */
+	line-height: 1.2;
+	/* 确保标题换行时行距紧凑 */
+}
+
+/* ========================================= */
+/* 缩小主内容区标题与下方内容之间的间距           */
+/* ========================================= */
+
+#main section h2 {
+	/* 强行缩小底部的外边距。你可以将 10px 改为 5px 甚至 0 来看看哪个效果最紧凑 */
+	margin-bottom: 10px !important;
+}
+
+h3,
+h4 {
+	color: var(--c-text-1);
+	margin-bottom: 0.5em;
+}
+
+h3 {
+	font-size: var(--fs-md);
+	margin-bottom: 0.8em;
+}
+
+h4 {
+	font-size: var(--fs-base);
+}
+
+p,
+ul {
+	margin-bottom: 1.25em;
+}
+
+p {
+	line-height: 1.8em;
+}
+
+strong {
+	color: var(--c-text-2);
+}
+
+
+
+
+
+ul {
+	padding: 0.25em 0 0 0;
+}
+
+a {
+	color: var(--c-primary);
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+*>p:last-child {
+	margin-bottom: 0;
+}
+
+section,
+article {
+	margin: 0 0 60px 0;
+}
+
+section:last-child,
+article:last-child {
+	margin-bottom: 0;
+}
+
+/* Container */
+
+.container {
+    margin: 0 auto;
+    width: var(--shell-w);       /* 版心：隨視口 1200 → 1600，兩側各留 60px */
+    min-width: var(--shell-w);   /* 下限仍是 1200px（clamp 的底） */
+    max-width: none;     /* 上限由 clamp 控制（1600px） */
+}
+
+/* 給 body 也加上最小寬度，防止背景圖變形 */
+body {
+    min-width: 1200px;
+    overflow-x: auto; /* 允許橫向滑動 */
+}
+
+/* Row */
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	align-items: stretch;
+}
+
+.row>* {
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.row>.col-12 {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.row {
+	margin-top: -50px;
+	margin-left: -50px;
+}
+
+.row>* {
+	padding: 50px 0 0 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reusable */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Primary button. Part of the shared button system: one radius, one weight,
+   one motion across every button on the page (see components.css). */
+.button {
+	display: inline-block;
+	padding: var(--sp-3) var(--sp-4);
+	background-color: var(--c-primary);
+	border-radius: var(--r-sm);
+	text-decoration: none;
+	color: var(--c-white);
+	font-size: var(--fs-md);
+	font-weight: 600;
+	letter-spacing: normal;
+	transition: all var(--dur-fast) var(--ease-out);
+}
+
+.button:hover {
+	background-color: var(--c-primary-hover);
+}

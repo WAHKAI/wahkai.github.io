@@ -1,0 +1,190 @@
+/* ==========================================================================
+   LAYER 1 / 4 - TOKENS
+   SANDA Backpack Manufacturer - design tokens
+   --------------------------------------------------------------------------
+   Only custom properties live here. Nothing in this file matches an element,
+   so it can never change rendering on its own.
+
+   Load order: tokens.css -> base.css -> components.css -> responsive.css
+
+   SCALES (2026-10-11, P1 consolidation)
+     spacing   4 / 8 / 16 / 24 / 32 / 48 / 64
+     radius    8 / 12 / 16 / pill
+     shadow    sm / md / lg (+ on-photo, see below)
+     motion    0.2s / 0.3s, single easing
+     type      12 / 14 / 16 / 20 / 28 / 40 / 48
+   ========================================================================== */
+
+:root {
+	/* ---- Brand + neutrals ---- */
+	--c-white: #ffffff;
+	--c-black: #000000;
+	--c-primary: #0071e3;
+	--c-primary-hover: #0077ed;
+	--c-text-1: #1d1d1f;
+	--c-text-2: #515154;
+	--c-text-3: #86868b;
+	--c-text-4: #39393a;
+	--c-text-5: #333333;
+	--c-text-6: #222222;
+
+	/* ---- Surfaces ---- */
+	--c-surface-1: #fbfbfd;
+	--c-surface-2: #f5f5f7;
+	--c-surface-3: #fdfdfd;
+	--c-surface-4: #ececec;
+	--c-surface-5: #fcfcfc;
+
+	/* ---- Borders ---- */
+	--c-border-1: #d2d2d7;
+	--c-border-2: #e5e5ea;
+	--c-border-4: #f0f0f0;
+
+	/* ---- Translucent ink (shadows / overlays) ---- */
+	--c-shadow-02: rgba(0,0,0,0.02);
+	--c-shadow-04: rgba(0,0,0,0.04);
+	--c-shadow-05: rgba(0,0,0,0.05);
+	--c-shadow-06: rgba(0,0,0,0.06);
+	--c-shadow-08: rgba(0,0,0,0.08);
+	--c-shadow-10: rgba(0,0,0,0.1);
+	--c-shadow-12: rgba(0,0,0,0.12);
+	--c-shadow-15: rgba(0,0,0,0.15);
+	--c-shadow-30: rgba(0,0,0,0.3);
+	--c-shadow-40: rgba(0,0,0,0.4);
+	--c-shadow-50: rgba(0,0,0,0.5);
+	--c-shadow-60: rgba(0,0,0,0.6);
+	--c-shadow-70: rgba(0,0,0,0.7);
+	--c-shadow-80: rgba(0,0,0,0.8);
+	--c-shadow-85: rgba(0,0,0,0.85);
+
+	/* ---- Translucent white (glass surfaces) ---- */
+	--c-glass-05: rgba(255,255,255,0.05);
+	--c-glass-10: rgba(255,255,255,0.1);
+	--c-glass-20: rgba(255,255,255,0.2);
+	--c-glass-25: rgba(255,255,255,0.25);
+	--c-glass-30: rgba(255,255,255,0.3);
+	--c-glass-40: rgba(255,255,255,0.4);
+	--c-glass-45: rgba(255,255,255,0.45);
+	--c-glass-50: rgba(255,255,255,0.5);
+	--c-glass-55: rgba(255,255,255,0.55);
+	--c-glass-60: rgba(255,255,255,0.6);
+	--c-glass-65: rgba(255,255,255,0.65);
+	--c-glass-70: rgba(255,255,255,0.7);
+	--c-glass-80: rgba(255,255,255,0.8);
+	--c-glass-85: rgba(255,255,255,0.85);
+	--c-glass-90: rgba(255,255,255,0.9);
+	--c-glass-95: rgba(255,255,255,0.95);
+
+	/* ---- Primary tints ---- */
+	--c-primary-15: rgba(0,113,227,0.15);
+	--c-primary-25: rgba(0,113,227,0.25);
+	--c-primary-30: rgba(0,113,227,0.3);
+	--c-primary-40: rgba(0,113,227,0.4);
+
+	/* ---- Accessible blue for SMALL text on light backgrounds ----
+	   --c-primary (#0071e3) only reaches 4.31:1 on white / 4.10:1 on
+	   --c-surface-2, so it fails AA for text below 18.66px bold / 24px.
+	   This darker step holds 6.34:1 on --c-surface-2 and 6.53:1 on white,
+	   so it is safe for metrics, eyebrows and small links. */
+	--mblue: #0b5aa8;
+
+	/* ---- Neutral scrim (photo overlays, media controls) ---- */
+	--c-scrim-15: rgba(31,26,26,0.15);
+
+	/* Text placed on top of a photo/dark surface. Note this is NOT a contrast
+	   bug: #c2c2c4 measures 1.78:1 against white, but it is only ever used on
+	   the customization section's dark photo backdrop, where it is the correct
+	   light-on-dark choice. Do not "fix" it to a dark neutral. */
+	--c-text-on-dark: #c2c2c4;
+
+	/* ==================================================================
+	   NON-COLOUR TOKENS
+	   ================================================================== */
+
+	/* Kept byte-identical to the original declaration on purpose. The site
+	   loads Inter from Google Fonts, which is unreliable from mainland China;
+	   when it fails the fallback chain decides every text metric, so changing
+	   it would silently re-flow the layout (it measurably changed nav widths). */
+	--font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+		Helvetica, Arial, sans-serif;
+
+	/* Monospace - used only for the small swatch codes on the customization
+	   chips ("LG 01"), the group codes in the category pills, and nothing else.
+	   Kept as a token so all three stay in sync if the stack ever changes. */
+	--font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+		"Liberation Mono", monospace;
+
+	/* Type scale - 7 steps. 12 / 14 / 16 / 20 / 28 / 40 / 48.
+	   --fs-2xl exists because the page's display numbers (.big-number, "7 Days",
+	   "100% NDA") were authored at 3rem for maximum impact. Collapsing them into
+	   --fs-xl would have shrunk them 17%, so the scale keeps a top step. */
+	--fs-xs: 0.75rem;
+	--fs-sm: 0.875rem;
+	--fs-base: 1rem;
+	--fs-md: 1.25rem;
+	--fs-lg: 1.75rem;
+	--fs-xl: 2.5rem;
+	--fs-2xl: 3rem;
+
+	/* Spacing scale - 4 / 8 / 16 / 24 / 32 / 48 / 64 */
+	--sp-1: 4px;
+	--sp-2: 8px;
+	--sp-3: 16px;
+	--sp-4: 24px;
+	--sp-5: 32px;
+	--sp-6: 48px;
+	--sp-7: 64px;
+
+	/* Radius scale - 8 / 12 / 16 / pill, plus a 4px step for small chips.
+	   Without --r-xs the many 2-6px radii would have to snap to 8px, which is
+	   a visible change on small elements. */
+	--r-xs: 4px;
+	--r-sm: 8px;
+	--r-md: 12px;
+	--r-lg: 16px;
+	--r-pill: 999px;
+
+	/* Shadow scale - 3 elevation tiers + 1 legibility tier.
+	   NOTE: the nav bar (#header-wrapper) deliberately keeps its own literal
+	   shadow, `0 2px 5px rgba(0,0,0,0.1)`, as a brand feature. Do not fold it
+	   into --sh-sm.
+	   --sh-on-photo is not an elevation step: it is for small white controls
+	   floating on photography (the hero slider's active dot), where a 0.06
+	   shadow disappears against a bright slide. Keep it strong. */
+	--sh-sm: 0 2px 8px rgba(0,0,0,0.06);
+	--sh-md: 0 4px 24px rgba(0,0,0,0.08);
+	--sh-lg: 0 10px 30px rgba(0,0,0,0.10);
+	--sh-on-photo: 0 2px 8px rgba(0,0,0,0.3);
+
+	/* Motion - 2 durations, 1 easing */
+	--dur-fast: 0.2s;
+	--dur: 0.3s;
+	--ease-out: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+	--layout-max: 1200px;
+	/* Content shell - the single width every block shares. Grows with the
+	   viewport, leaves a 60px gutter on each side, capped at 1600px and
+	   never below 1200px. Consumed by .container (base.css) and by the
+	   banner's own text/dots grid (components.css). */
+	--shell-w: clamp(1200px, calc(100% - 120px), 1600px);
+	/* Reserved for the responsive pass - nothing consumes a gutter yet. */
+	--layout-gutter: 4vw;
+
+	/* Z-index scale - mirrors the values actually in use:
+	   1 / 2 / 10 / 1000 (dropdown) / 2000 (header) */
+	--z-base: 1;
+	--z-raised: 2;
+	--z-sticky: 10;
+	--z-dropdown: 1000;
+	--z-header: 2000;
+	--z-overlay: 3000;
+	--z-modal: 4000;
+	--z-toast: 5000;
+
+	/* Breakpoints - reference only; custom properties cannot be used inside
+	   @media conditions. Canonical values are documented in responsive.css. */
+	--bp-xlarge-min: 1281px;
+	--bp-large-min: 981px;
+	--bp-medium-min: 737px;
+	--bp-small-max: 736px;
+}

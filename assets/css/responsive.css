@@ -1,0 +1,76 @@
+/* ==========================================================================
+   LAYER 4 / 4 - RESPONSIVE
+   SANDA Backpack Manufacturer — media queries
+   --------------------------------------------------------------------------
+   Load order:  tokens.css -> base.css -> components.css -> responsive.css
+
+   STATUS: scaffold only. This file currently contains no active rules, so the
+   rendered output is identical to the pre-split build. The four breakpoint
+   ranges below are the canonical source of truth for this project.
+
+   The original main.css contained ZERO @media rules; the layout was held at a
+   fixed 1200px by `body { min-width: 1200px }` plus
+   `<meta name="viewport" content="width=1200">`. Those are unlocked in the
+   responsive implementation pass, not here.
+
+   --------------------------------------------------------------------------
+   BREAKPOINT MAP
+   --------------------------------------------------------------------------
+   xlarge   1281px - 1680px   desktop, wide
+   large     981px - 1280px   desktop, narrow  (current fixed-width target)
+   medium    737px -  980px   tablet
+   small     <= 736px         phone
+
+   --------------------------------------------------------------------------
+   MIGRATION TARGETS — components needing a rule in each section
+   --------------------------------------------------------------------------
+   .container            fixed 1200px -> min(1200px, 92vw)
+   body                  remove min-width / overflow-x
+   #nav                  desktop horizontal -> hamburger panel (small)
+   .stats-grid-3x3       3 cols -> 2 (medium) -> 1 (small)
+   .product-grid-2x3     6 cols -> 3 (medium) -> 2 (small)
+   .bento-grid-2rows     2-row bento -> single column (small)
+   .process-timeline-box horizontal -> vertical (small)
+   .craft-grid-5         5 cols -> 3 (medium) -> 2 (small)
+   .factory-grid         5 cols -> 2 (medium/small)
+   .text-grid-2x3        3 cols -> 2 -> 1
+   .exhibition-split-layout, .faq-split-layout, .about-split-layout
+                         side-by-side -> stacked
+   .footer-grid-master   3 cols -> 1
+   #banner-slider        550px fixed height -> fluid aspect ratio
+   ==========================================================================
+
+   NOTE — Exhibitions section (updated 2026-10-13)
+   --------------------------------------------------------------------------
+   .exhibition-split-layout was reworked from a 35% ticket + 4-col 4:3 wall to
+   a 24% ticket + 6-col 1:1 wall. It is now equal-height by construction at
+   every shell width from 1200px to 1600px (the ticket and the photo wall
+   always end at the same y), so it needs NO rule in the sections below yet.
+
+   When this file is implemented, the pieces that will need attention are:
+     .exhibition-toprow        flex row (H2 + one-line subtitle) -> stack (small)
+     .exhibition-split-layout  -> stacked (small); ticket becomes full width
+     .past-gallery-grid-12     6 cols -> 3 (medium) -> 2 (small)
+   The ticket's internal spacing was deliberately tuned to fit a 288px-wide
+   card; if the ticket ever goes full-width on mobile those values can grow.
+   --------------------------------------------------------------------------
+
+
+/* --------------------------------------------------------------------------
+   XLARGE  1281px - 1680px
+   -------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------
+   LARGE   981px - 1280px
+   -------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------
+   MEDIUM  737px - 980px
+   -------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------
+   SMALL   <= 736px
+   -------------------------------------------------------------------------- */
