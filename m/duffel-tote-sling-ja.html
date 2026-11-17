@@ -1,0 +1,2484 @@
+<!doctype html>
+<html lang="ja" dir="ltr" data-draft="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>広州のダッフル・トート・スリング・ウエストバッグ工場 | SANDA</title>
+<meta name="description" content="Duffel, Tote & Sling — SANDA Backpack Manufacturing">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="assets/mobile.css">
+<style>
+
+        /* [R141/R142] 品類頁專用。全部掛 .lb- 前綴，不動共用樣式。
+           .lb-logo 是降級後的 logo：把 components.css 裡 #header h1 的
+           四條定位規則（:49 / :131 / :314 / :1213）搬到這裡，
+           否則 logo 會掉出 header。 */
+        #header .lb-logo {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            margin: 0;
+            height: auto;
+            line-height: 1;
+            font-size: 2.4em;
+            letter-spacing: -2px;
+        }
+        #header .lb-logo a {
+            display: block;
+            line-height: 1;
+            color: var(--c-text-6);
+            text-decoration: none;
+        }
+        #header .lb-logo img {
+            max-height: 38px;
+            width: auto;
+            display: block;
+        }
+
+        .lb-hero { padding: 76px 0 60px; border-bottom: 1px solid var(--c-border-2); }
+        .lb-kicker {
+            font-size: 12px; font-weight: 600; letter-spacing: 0.14em;
+            text-transform: uppercase; color: var(--c-primary); margin-bottom: 16px;
+        }
+        .lb-h1 {
+            font-size: 52px; line-height: 1.06; letter-spacing: -0.028em;
+            font-weight: 700; margin: 0 0 20px; max-width: 940px;
+        }
+        .lb-lead {
+            font-size: 19px; line-height: 1.6; color: var(--c-text-2);
+            max-width: 800px; margin: 0;
+        }
+        .lb-actions {
+            display: flex; gap: 14px; align-items: center;
+            margin-top: 30px; flex-wrap: wrap;
+        }
+        .lb-actions .lb-alt { font-size: 15px; color: var(--c-text-2); }
+        .lb-actions .lb-alt a { color: var(--mblue); font-weight: 600; }
+
+        .lb-sec { padding: 64px 0; border-bottom: 1px solid var(--c-border-2); }
+        .lb-sec:last-of-type { border-bottom: none; }
+        .lb-h2 {
+            font-size: 34px; line-height: 1.15; letter-spacing: -0.02em;
+            font-weight: 700; margin: 0 0 14px;
+        }
+        .lb-sub {
+            font-size: 17px; line-height: 1.6; color: var(--c-text-2);
+            max-width: 820px; margin: 0 0 34px;
+        }
+        .lb-grid { display: grid; gap: 20px; }
+        .lb-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .lb-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .lb-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .lb-card {
+            background: #fff; border: 1px solid var(--c-border-2);
+            border-radius: 18px; padding: 26px 26px 24px;
+        }
+        .lb-card h3 {
+            font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em;
+        }
+        .lb-card p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--c-text-2); }
+        .lb-card .lb-tag {
+            display: inline-block; font-size: 12px; font-weight: 600;
+            letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-primary);
+            background: rgba(0, 113, 227, 0.08); border-radius: 6px;
+            padding: 4px 8px; margin-bottom: 14px;
+        }
+        .lb-card .lb-num {
+            font-size: 30px; font-weight: 700; letter-spacing: -0.02em;
+            color: var(--c-primary); line-height: 1; margin-bottom: 10px;
+        }
+
+        /* ---- 產品照格：底線對齊，讓不同比例的產品看起來站在同一條架上。
+           圖片一律 max-width/max-height + width/height:auto，
+           靠 <img width height> 的固有比例撐開，避免載入前塌成 0 或變形。 */
+        .lb-shots { display: grid; gap: 14px; }
+        .lb-shots--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+        .lb-shot {
+            background: #fff; border: 1px solid var(--c-border-2);
+            border-radius: 14px; overflow: hidden;
+        }
+        .lb-shot .lb-ph {
+            height: 186px; background: #fafafa; display: flex;
+            align-items: flex-end; justify-content: center; padding: 16px 16px 0;
+        }
+        .lb-shot img {
+            max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;
+        }
+        .lb-shot .lb-meta { padding: 11px 13px 13px; border-top: 1px solid var(--c-border-2); }
+        .lb-shot .lb-sku {
+            font-size: 13px; font-weight: 600; letter-spacing: 0.02em; color: var(--c-text-6);
+        }
+        .lb-shot .lb-desc { font-size: 12px; line-height: 1.45; color: var(--c-text-2); margin-top: 3px; }
+
+        .lb-fam { margin-bottom: 46px; }
+        .lb-fam:last-child { margin-bottom: 0; }
+        .lb-fam-head {
+            display: flex; align-items: baseline; gap: 14px; margin-bottom: 16px;
+        }
+        .lb-fam-head h3 { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; margin: 0; }
+        .lb-fam-head .lb-count { font-size: 13px; color: var(--c-text-2); }
+        .lb-fam-head .lb-codes {
+            margin-left: auto; font-size: 12px; font-weight: 600;
+            letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-primary);
+        }
+
+        .lb-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+        .lb-table th, .lb-table td {
+            text-align: left; padding: 15px 18px;
+            border-bottom: 1px solid var(--c-border-2); vertical-align: top;
+        }
+        .lb-table thead th {
+            font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+            text-transform: uppercase; color: var(--c-text-2);
+            background: #fafafa; border-bottom: 1px solid var(--c-border-2);
+        }
+        .lb-table tbody th { font-weight: 500; width: 24%; }
+        .lb-table td { color: var(--c-text-2); }
+        .lb-table td b { color: var(--c-text-6); font-weight: 600; }
+        /* 款號區間（LT-8012–8016）在窄欄會被斷成「LT-8012–」+「8016」，
+           因為 en dash 是可斷行點。整格 nowrap，欄寬讓表格自己算。 */
+        .lb-table td.lb-nowrap, .lb-table th.lb-nowrap { white-space: nowrap; }
+        .lb-table tr:last-child th, .lb-table tr:last-child td { border-bottom: none; }
+        .lb-wrap {
+            background: #fff; border: 1px solid var(--c-border-2);
+            border-radius: 18px; overflow: hidden;
+        }
+
+        .lb-steps { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+        .lb-step {
+            background: #fff; border: 1px solid var(--c-border-2);
+            border-radius: 14px; padding: 18px 16px;
+        }
+        .lb-step .lb-day {
+            font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+            text-transform: uppercase; color: var(--c-primary);
+        }
+        .lb-step .lb-what { font-size: 15px; font-weight: 600; margin: 8px 0 6px; }
+        .lb-step .lb-how { font-size: 13px; line-height: 1.5; color: var(--c-text-2); }
+
+        .lb-faq { border-bottom: 1px solid var(--c-border-2); padding: 0; }
+        .lb-faq summary {
+            list-style: none; cursor: pointer; padding: 20px 40px 20px 0;
+            position: relative; font-size: 17px; font-weight: 600; letter-spacing: -0.01em;
+        }
+        .lb-faq summary::-webkit-details-marker { display: none; }
+        .lb-faq summary::after {
+            content: '+'; position: absolute; right: 6px; top: 18px;
+            font-size: 22px; font-weight: 400; color: var(--c-text-2);
+        }
+        .lb-faq[open] summary::after { content: '\\2212'; }
+        .lb-faq p {
+            margin: 0 0 22px; font-size: 15px; line-height: 1.7;
+            color: var(--c-text-2); max-width: 880px;
+        }
+
+        .lb-next {
+            display: flex; gap: 16px; align-items: center;
+            background: #fafafa; border: 1px solid var(--c-border-2);
+            border-radius: 18px; padding: 26px 28px;
+        }
+        .lb-next .lb-next-txt { flex: 1; }
+        .lb-next h3 { font-size: 19px; font-weight: 600; margin: 0 0 6px; }
+        .lb-next p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--c-text-2); }
+
+        .lb-note {
+            position: fixed; left: 16px; bottom: 16px; z-index: 99999;
+            max-width: 400px; padding: 13px 16px; border-radius: 12px;
+            background: #1d1d1f; color: #f5f5f7;
+            font: 400 12px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+        }
+        .lb-note b { color: #ffe680; font-weight: 600; }
+        .lb-note p { margin: 0 0 6px; }
+        .lb-note p:last-child { margin-bottom: 0; }
+        .lb-note .lb-dim { color: #a1a1a6; }
+        body.lb-clean .lb-note { display: none; }
+
+        /* ================= R145 新增 ================= */
+
+        /* ---- 0. 區塊標題列：h2 左、副標右 ----
+           副標 820px 在 1600 殼裡只佔 51%，右半空著像排壞；
+           鋪滿 1600 又會變一行 190 字。並排後副標量到的字數不變（91 字／行），
+           空出來的那一半交給 h2。44% 是量出來的：1600 → 704 + 48 + 848，
+           1200 → 528 + 48 + 624（副標 68 字／行，比原本更好讀）。 */
+        .lb-head2 {
+            display: grid; grid-template-columns: 44% minmax(0, 1fr);
+            gap: 0 48px; align-items: start;
+        }
+        .lb-head2 .lb-h2 { margin-bottom: 0; }
+        /* R167（使用者選 R1）：副標靠右。
+           副標砍短之後，44% 固定軌道讓它浮在頁面中間 —— h2→副標 121–570px、右邊又空 291–433px，
+           兩邊都空就讀成沒對齊。靠右之後副標右緣與下方表格／卡片的右緣是同一條線。
+           🔴 用 `end` 不是 `right`：RTL 時 `right` 會變成行首（見鐵律 18b）。 */
+        .lb-head2 .lb-sub { max-width: none; margin: 2px 0 34px; text-align: end; }
+        /* R165：沒有副標的區塊（Four ways to order／Questions buyers ask us）
+           h2 獨佔整寬，下方留 34px 與有副標的區塊同一個節奏。 */
+        .lb-head2--solo { grid-template-columns: minmax(0, 1fr); }
+        .lb-head2--solo .lb-h2 { margin-bottom: 34px; }
+
+        /* ---- 1. 頁首：標題與切換按鈕同一行 ---- */
+        /* #header-wrapper 是 position:fixed（實測 1920 下高 72px），
+           頁首 padding-top 必須大於它，否則 kicker 會藏在 header 底下。 */
+        .lb-pagehead {
+            padding: 104px 0 46px; border-bottom: 1px solid var(--c-border-2);
+        }
+        .lb-head-row {
+            display: flex; align-items: flex-end; justify-content: space-between;
+            gap: 44px;
+        }
+        .lb-head-row .lb-h1 { max-width: 900px; margin-bottom: 0; }
+        .lb-switch { display: flex; gap: 10px; flex: 0 0 auto; padding-bottom: 9px; }
+        .lb-switch a {
+            display: inline-flex; align-items: center; gap: 8px;
+            height: 42px; padding: 0 17px; border-radius: 999px;
+            border: 1px solid var(--c-border-2); background: #fff;
+            font-size: 14px; font-weight: 500; color: var(--c-text-6);
+            text-decoration: none; white-space: nowrap;
+            transition: border-color .18s ease, background .18s ease;
+        }
+        .lb-switch a:hover { border-color: #c7c7cc; background: #fafafa; }
+        .lb-switch .lb-arw { color: var(--c-text-2); font-size: 15px; line-height: 1; }
+        .lb-pagehead .lb-lead { margin-top: 24px; }
+        .lb-pagehead .lb-actions { margin-top: 26px; }
+        /* 窄版（1200 shell）時按鈕換到標題下面，避免把標題擠成三行 */
+        @media (max-width: 1400px) {
+            .lb-head-row { flex-direction: column; align-items: flex-start; gap: 26px; }
+            .lb-switch { padding-bottom: 0; }
+        }
+
+        /* ---- 2. 三檔對照表：三欄等寬 ---- */
+        .lb-table--3 { table-layout: fixed; }
+        .lb-table--3 thead th:first-child,
+        .lb-table--3 tbody th { width: 16%; }
+        .lb-table--3 thead th { white-space: nowrap; }
+
+        /* ---- 4. 產品卡：一行 3 款（R154 改成 V2 密度） ----
+           規格改成「標籤與值同一行、單欄往下」。
+           上一版是「標籤在上、值在下」的 2×3 網格，眼睛要在兩個左邊緣之間來回跳，
+           每一項也佔掉兩行。改成單欄 dl 後是一次線性掃描，同高度塞進更多資訊。
+           R154：2 欄 792px 卡片裡規格文字只用到 59%，右半邊是空的 →
+           3 欄 522px、圖 236→180、字級 15.5→13.5，填充率 85.9%。
+           @1400 以下 shell 只有 1200，3 欄會窄到 360px，退回 2 欄。 */
+        .lb-cards {
+            display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;
+        }
+        .lb-pcard {
+            background: #fff; border: 1px solid var(--c-border-2); border-radius: 14px;
+            padding: 15px 17px 17px;
+        }
+        /* base.css 對 article 有 margin-bottom:60px，讓列距變成 76px（grid gap 只有 16）。
+           卡片自己在 grid 裡，外距一律歸零。 */
+        .lb-cards > .lb-pcard { margin: 0; }
+        .lb-pcard-top { display: flex; align-items: baseline; gap: 10px; margin-bottom: 11px; }
+        .lb-pcard-top .lb-psku {
+            font-size: 15.5px; font-weight: 700; letter-spacing: .01em; color: var(--c-text-6);
+        }
+        .lb-pcard-top .lb-pfam { font-size: 12.5px; color: var(--c-text-2); }
+        .lb-pcard-top .lb-pmoq {
+            margin-left: auto; font-size: 11.5px; font-weight: 600; letter-spacing: .05em;
+            text-transform: uppercase; color: var(--mblue);
+        }
+        /* 規格目前只有 5 行（面料／里布／尺寸待補），比圖矮約 90px。
+           靠上對齊會在右下角留一個洞 → 垂直居中，兩側留白平均，補齊資料後也自動成立。 */
+        .lb-pcard-body {
+            display: grid; grid-template-columns: 180px minmax(0, 1fr);
+            gap: 14px; align-items: center;
+        }
+        .lb-pimg { height: 180px; display: flex; align-items: center; justify-content: center; }
+        /* R172c：閃一下變寬再變窄的根因 —— 圖沒有固有尺寸時，object-fit:contain 沒有比例
+           可算，會退化成填滿 180×180，解碼完成才跳回真實比例（35 張比例 0.598–1.607）。
+           修法是在 <img> 上補 width/height（生成器用 webp_size() 從檔頭讀，不靠 Pillow），
+           比例在解析階段就已知，contain 第一幀就是對的。
+           ⚠️ 這裡**不能**改成 width/height:auto + max-*：實測載入前會塌成 0×0
+              （屬性只提供比例提示，不提供尺寸），變成「空 → 突然出現」的另一種跳動。 */
+        /* R172f：使用者回報「刷新時圖還是會閃一下變寬再縮窄」。
+           A 版（width/height:100% + object-fit:contain）量到的盒在解碼前後完全相同，
+           但盒子固定代表「圖一定被塞進 180×180 再由 contain 縮進去」——只要瀏覽器在
+           解碼那一幀用了 stretch 畫法，就會出現一次變寬。
+           C 版讓 <img> 的盒子本身＝圖片：高度撐滿、寬度由 width/height 屬性給的比例算，
+           object-fit 幾乎不參與（只有比例大於盒子的那 1 張會被 max-width 夾住）。
+           實測 15 張 × 2 寬度，解碼前後盒尺寸 0 張不同（1600：151.1/175.6/147.2…×180）。 */
+        .lb-pimg img {
+            width: auto; height: 100%; max-width: 100%;
+            object-fit: contain; display: block;
+        }
+
+        .lb-specs {
+            display: grid; grid-template-columns: 76px minmax(0, 1fr);
+            column-gap: 10px; row-gap: 5px; margin: 0;
+            font-size: 13.5px; line-height: 1.45;
+        }
+        .lb-specs dt {
+            font-size: 11.5px; font-weight: 600; color: var(--c-text-2);
+            padding-top: 2px; letter-spacing: 0;
+        }
+        .lb-specs dd { margin: 0; color: var(--c-text-6); }
+        /* 1200 shell 下 3 欄會窄到 360px → 退回 2 欄，圖與字級同時放大 */
+        @media (max-width: 1400px) {
+            .lb-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .lb-pcard { padding: 17px 20px 19px; }
+            .lb-pcard-body { grid-template-columns: 196px minmax(0, 1fr); gap: 18px; }
+            .lb-pimg { height: 206px; }
+            .lb-specs { grid-template-columns: 82px minmax(0, 1fr); column-gap: 12px;
+                        row-gap: 6px; font-size: 14.5px; }
+            .lb-specs dt { font-size: 12.5px; }
+            .lb-pcard-top .lb-psku { font-size: 17px; }
+        }
+        .lb-tbd { color: #6e6e73; font-size: 12px; font-weight: 600; letter-spacing: .05em; }
+        /* R165：TBD 圖例。原本寫在「What is in the range」的副標裡，副標砍短後搬到這裡。
+           上面 14px、下面 28px —— 讀起來是卡片組的註腳，不是浮在卡片和 CTA 中間的一行。 */
+        .lb-tbd-note {
+            margin: 0 0 28px; font-size: 12.5px; line-height: 1.5; color: var(--c-text-2);
+        }
+        /* 圖例插在最後一組家族卡後面，那組就不再是 :last-child，會吃到 38px 的 margin
+           → 這裡壓回 14px，其餘家族卡不受影響。 */
+        .lb-fam2:has(+ .lb-tbd-note) { margin-bottom: 14px; }
+        /* 小字藍 #0071e3 壓在 8% 藍底上只有 3.9:1，12px 不合格 → --mblue(6.2) */
+        .lb-card .lb-tag { color: var(--mblue); }
+
+        /* ---- 4a. 草稿說明框改成可收合（覆寫 _r141_build.py 的共用樣式） ----
+           原本是 fixed 的 400px 黑色方塊、z-index 99999，直接蓋住左下角內容。
+           收合時只剩一顆小膠囊；展開時限制高度並可捲動，不會頂出視窗。
+           🔴 這整塊是中文內部備註，正式上線前要整段刪掉，不是收起來就好。 */
+        .lb-note {
+            max-height: calc(100vh - 32px); overflow: auto;
+            padding: 9px 14px; border-radius: 12px;
+        }
+        .lb-note[open] { padding: 12px 16px; }
+        .lb-note-sum {
+            display: flex; align-items: center; gap: 7px;
+            cursor: pointer; list-style: none; white-space: nowrap;
+        }
+        .lb-note-sum::-webkit-details-marker { display: none; }
+        .lb-note-sum::after {
+            content: 'B4'; font-size: 10px; color: #a1a1a6; line-height: 1;
+        }
+        .lb-note:not([open]) .lb-note-sum::after { content: 'BE'; }
+        .lb-note p { margin: 8px 0 6px; }
+
+        /* ---- 4b. 第 6 格：預留位 ----
+           原本是「虛線卡 + 兩段說明」，但每族一張 → 同一段話在一頁出現 3～4 次。
+           改成一個符號化的空格，整張卡就是連結，文字只剩一行。 */
+        .lb-pcard--open {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 9px; text-align: center; text-decoration: none;
+            border-style: dashed; border-color: #d2d2d7; background: #fcfcfd;
+            transition: border-color .18s ease, background .18s ease;
+        }
+        .lb-pcard--open:hover { border-color: #b4b4bb; background: #f7f7f9; }
+        .lb-open-plus {
+            font-size: 30px; font-weight: 300; line-height: 1; color: var(--c-text-3);
+        }
+        .lb-open-k { font-size: 15.5px; font-weight: 600; color: var(--c-text-6); }
+        .lb-open-c { font-size: 13.5px; line-height: 1.5; color: var(--c-text-2); }
+        .lb-open-link { font-size: 13.5px; font-weight: 600; color: var(--mblue); }
+
+        /* R170：首頁陳列櫃的 7 個銘牌連到這裡。`#header-wrapper` 在執行時是
+           position:fixed（實測 70.97px @1600、72.19 @1920、68.19 @1320），
+           沒有 scroll-margin-top 時 location.hash 會把家族標題推到 header 底下
+           —— 實測落點 0.19px，整個 h3 被蓋住。88px 留 17px 呼吸。 */
+        .lb-fam2 { margin-bottom: 38px; scroll-margin-top: 88px; }
+        .lb-fam2:last-child { margin-bottom: 0; }
+        .lb-fam2-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 13px; }
+        .lb-fam2-head h3 { font-size: 21px; font-weight: 600; margin: 0; letter-spacing: -.01em; }
+        .lb-fam2-head .lb-count { font-size: 13px; color: var(--c-text-2); }
+
+        /* ---- 5. （R164：Logo 工藝 ＋ 包裝 整段已移除，其 .lb-lp/.lb-chip/.lb-pack 等
+               CSS 一併刪除。保留 .lb-sec--tight，其餘 section 仍在用。） ---- */
+        .lb-sec--tight { padding: 52px 0; }
+
+        /* ---- 6. 四步流程 ----
+           🔴 類名原本叫 .lb-step，撞上 _r141_build.py 裡舊版「六格白卡」的
+           .lb-step { background:#fff; border:1px; border-radius:14px; padding:18px 16px }
+           → 本版只宣告 padding，background/border 由舊規則勝出，卡片底部 padding 被吃掉，
+           第四格文字壓在邊框上（實際壞過）。改名 .lb-flow 徹底脫離舊作用域。 */
+        .lb-flow {
+            display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
+            border-top: 1px solid var(--c-border-2); margin-top: 6px;
+        }
+        .lb-flow-step { padding: 20px 26px 4px 0; }
+        .lb-flow-step + .lb-flow-step { padding-left: 26px; border-left: 1px solid #f0f0f3; }
+        .lb-flow-d {
+            display: inline-block; font-size: 12px; font-weight: 700; color: var(--mblue);
+            font-variant-numeric: tabular-nums; margin-bottom: 7px;
+        }
+        .lb-flow-step h3 {
+            font-size: 16.5px; font-weight: 600; margin: 0 0 7px; letter-spacing: -.01em;
+        }
+        .lb-flow-step p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--c-text-2); }
+
+        /* ---- 7. 詢價需要五樣東西 ---- */
+        .lb-ask {
+            display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px;
+            margin-top: 4px;
+        }
+        .lb-ask div { border-top: 2px solid var(--c-text-6); padding-top: 11px; }
+        .lb-ask b {
+            display: block; font-size: 12px; font-weight: 700; color: var(--mblue);
+            font-variant-numeric: tabular-nums; margin-bottom: 5px;
+        }
+        .lb-ask span { font-size: 14.5px; line-height: 1.5; color: var(--c-text-6); }
+
+        /* ---- 目錄 CTA ---- */
+        .lb-cat-cta {
+            display: flex; gap: 30px; align-items: center;
+            background: #fafafa; border: 1px solid var(--c-border-2);
+            border-radius: 18px; padding: 28px 30px; margin-top: 34px;
+        }
+        .lb-cat-cta-txt { flex: 1; min-width: 0; }
+        .lb-cat-cta h3 {
+            font-size: 21px; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01em;
+        }
+        /* R172（使用者選 B）：660 → 820。
+           660 是 R165 在 1200 shell 下調的；換到 1600/1920 shell 之後，卡片 1480 寬、
+           文字欄 1124 寬，段落卻鎖在 660 → 段落右緣到按鈕之間空 494px（1920 是 614px）。
+           而且 189 字 ÷ 90 字一行 = 2.1 行，第 3 行只剩 `last season.`（84/619 = 14%），是孤行。
+           820 讓它變成 2 行、尾行 67%，卡片高 159 → 135。
+           實測洞仍有 334px —— 那是「填滿 vs 對齊」的取捨，使用者這輪只選了最小改動。 */
+        .lb-cat-cta p {
+            margin: 0; font-size: 15px; line-height: 1.6;
+            color: var(--c-text-2); max-width: 820px;
+        }
+        .lb-cat-cta-act { display: flex; flex-direction: column; gap: 10px; flex: 0 0 auto; }
+        .lb-cat-cta-act .lb-alt { font-size: 14px; color: var(--c-text-2); }
+        .lb-cat-cta-act .lb-alt a { color: var(--mblue); font-weight: 600; }
+
+        /* ---- 3. FAQ 雙欄全開 ---- */
+        .lb-qa { columns: 2; column-gap: 46px; }
+        .lb-qa-item { break-inside: avoid; margin-bottom: 30px; }
+        .lb-qa-item h3 {
+            font-size: 16px; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01em;
+        }
+        .lb-qa-item p { margin: 0; font-size: 14.5px; line-height: 1.7; color: var(--c-text-2); }
+
+        /* ---- 8. 交易條件：兩欄 dl，標籤與值同一行（不做成卡片） ---- */
+        .lb-terms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 56px; }
+        .lb-terms dl {
+            display: grid; grid-template-columns: 118px minmax(0, 1fr);
+            column-gap: 18px; margin: 0;
+        }
+        .lb-terms dt, .lb-terms dd {
+            border-bottom: 1px solid #f0f0f3; padding: 12px 0;
+        }
+        .lb-terms dt {
+            font-size: 13px; font-weight: 600; color: var(--c-text-2);
+            line-height: 1.5; padding-top: 15px;
+        }
+        .lb-terms dd { margin: 0; font-size: 15px; line-height: 1.55; color: var(--c-text-6); }
+        /* 第一列不要上邊線，最後一列不要下邊線 */
+        .lb-terms dt:first-of-type, .lb-terms dd:first-of-type { padding-top: 0; }
+        .lb-terms dt:last-of-type, .lb-terms dd:last-of-type { border-bottom: 0; padding-bottom: 0; }
+
+        /* ---- 9. 合規矩陣：3 欄表格，第一欄是市場 ---- */
+        .lb-mkt { width: 100%; border-collapse: collapse; table-layout: fixed; }
+        .lb-mkt col.lb-c1 { width: 18%; }
+        .lb-mkt col.lb-c2 { width: 44%; }
+        .lb-mkt col.lb-c3 { width: 38%; }
+        .lb-mkt thead th {
+            text-align: left; font-size: 12px; font-weight: 700; letter-spacing: .08em;
+            text-transform: uppercase; color: var(--c-text-2);
+            padding: 0 20px 10px 0; border-bottom: 1px solid var(--c-border-2);
+        }
+        .lb-mkt tbody td {
+            padding: 14px 20px 14px 0; border-bottom: 1px solid #f0f0f3;
+            vertical-align: top; font-size: 14px; line-height: 1.55; color: var(--c-text-2);
+        }
+        .lb-mkt tbody td:first-child {
+            font-size: 15px; font-weight: 600; color: var(--c-text-6); line-height: 1.4;
+        }
+        .lb-mkt tbody td:last-child { padding-right: 0; color: var(--c-text-6); }
+        .lb-mkt tbody tr:last-child td { border-bottom: 0; padding-bottom: 0; }
+        .lb-mkt b { font-weight: 600; }
+
+        /* ---- 10. 下單窗口：四欄時間軸 ---- */
+        .lb-win {
+            display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+            border-top: 1px solid var(--c-border-2);
+        }
+        .lb-win > div { padding: 18px 26px 2px 0; }
+        .lb-win > div + div { padding-left: 26px; border-left: 1px solid #f0f0f3; }
+        .lb-win-w {
+            display: inline-block; font-size: 12px; font-weight: 700; color: var(--mblue);
+            letter-spacing: .04em; margin-bottom: 7px;
+        }
+        .lb-win h3 { font-size: 16.5px; font-weight: 600; margin: 0 0 7px; letter-spacing: -.01em; }
+        .lb-win p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--c-text-2); }
+
+        /* ---- 11. 付款階梯：四格，只有真正收錢的兩格有大數字 ---- */
+        .lb-pay { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+        .lb-pay > div {
+            background: #fafafa; border: 1px solid var(--c-border-2);
+            border-radius: 12px; padding: 15px 17px 17px;
+        }
+        .lb-pay-pct {
+            display: block; font-size: 21px; font-weight: 700; letter-spacing: -.02em;
+            color: var(--c-text-6); font-variant-numeric: tabular-nums; line-height: 1.1;
+        }
+        .lb-pay-when {
+            display: block; font-size: 12.5px; font-weight: 700; color: var(--mblue);
+            margin: 3px 0 9px;
+        }
+        .lb-pay p { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--c-text-2); }
+
+        /* 1200 shell：四欄變兩欄，避免每格只剩 270px 把句子擠成六行 */
+        @media (max-width: 1400px) {
+            .lb-terms { column-gap: 36px; }
+            .lb-terms dl { grid-template-columns: 104px minmax(0, 1fr); column-gap: 14px; }
+            .lb-mkt thead th, .lb-mkt tbody td { padding-right: 14px; }
+            .lb-mkt tbody td { font-size: 13.5px; }
+            .lb-win > div { padding-right: 18px; }
+            .lb-win > div + div { padding-left: 18px; }
+            .lb-win p { font-size: 13.5px; }
+            .lb-pay { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        /* ---- 2. 四檔卡片：小標籤是「單位」，大數字是數量，不用 Step 編號 ---- */
+        .lb-grid--4 > .lb-card { padding: 22px 20px 20px; }
+        .lb-grid--4 > .lb-card h3 { font-size: 17px; }
+        .lb-card .lb-t4-kick {
+            margin: 0 0 8px; font-size: 14px; font-weight: 600;
+            color: var(--c-text-6); line-height: 1.45;
+        }
+        .lb-grid--4 > .lb-card .lb-num { font-size: 27px; }
+
+        /* ---- 2a. 四檔表：表頭名稱在上、起訂量在下 ---- */
+        .lb-t4-wrap { margin-top: 26px; }
+        .lb-table.lb-t4 { table-layout: fixed; }
+        .lb-table.lb-t4 th, .lb-table.lb-t4 td {
+            padding: 11px 14px; font-size: 14px; line-height: 1.5;
+        }
+        .lb-table.lb-t4 thead th { vertical-align: bottom; }
+        .lb-table.lb-t4 thead th b {
+            display: block; font-size: 13px; font-weight: 700; letter-spacing: 0;
+            text-transform: none; color: var(--c-text-6);
+        }
+        .lb-table.lb-t4 tbody th {
+            width: 196px; font-weight: 600; color: var(--c-text-6);
+        }
+        .lb-t4-q {
+            display: block; margin-top: 3px; font-size: 11.5px; font-weight: 600;
+            letter-spacing: .02em; color: var(--mblue); white-space: nowrap;
+        }
+
+        /* ---- 2b. 成本階梯：門檻在左（右對齊、等寬數字），品項在右三欄 ---- */
+        .lb-lad { border-top: 1px solid #d2d2d7; margin-top: 10px; }
+        .lb-lad-row {
+            display: grid; grid-template-columns: 190px minmax(0, 1fr);
+            gap: 30px; padding: 15px 0 16px; border-bottom: 1px solid #f0f0f3;
+        }
+        .lb-lad-f { text-align: right; padding-right: 2px; line-height: 1.1; }
+        .lb-lad-k {
+            margin-right: 5px; vertical-align: 3px; font-size: 10.5px;
+            font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+            color: var(--c-text-2);
+        }
+        .lb-lad-n {
+            font-size: 27px; font-weight: 700; letter-spacing: -.02em;
+            color: var(--mblue); font-variant-numeric: tabular-nums;
+        }
+        .lb-lad-note {
+            display: block; margin-top: 3px; font-size: 12px; line-height: 1.4;
+            color: var(--c-text-2);
+        }
+        /* R172g：原本固定 3 欄，但六帶的品項數是 3/1/1/2/2/2 ——
+           1 項那兩帶右邊空 860px（整列 68%）、2 項那三帶空 430px（34%），
+           合計 3,010px 的空格，看起來像表格缺格。
+           改成「每帶的欄數用完它的品項數」，沒有一格是空的：
+             n=3 → 3 欄並排（一列）；n=2 → 2 欄（一列）；
+             n=1 → 2 欄，且把品項本身 display:contents，名稱進左欄、說明進右欄，
+                   一列就把整行用完 —— 這是唯一能真的把右邊填掉的辦法
+                   （只讓它跨滿整列的話，文字還是停在 460px，右邊照樣空 800px）。
+           ⚠️ display:contents 會讓 .lb-lad-it 不產生盒子，所以它不能有自己的
+              邊框／背景；目前沒有，維持現狀即可。 */
+        .lb-lad-i {
+            display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px 30px; align-items: baseline;
+        }
+        .lb-lad-i--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .lb-lad-i--1 .lb-lad-it { display: contents; }
+        .lb-lad-it b {
+            display: block; font-size: 14.5px; font-weight: 600;
+            color: var(--c-text-6); line-height: 1.45;
+        }
+        .lb-lad-it span {
+            display: block; margin-top: 1px; font-size: 12.5px; line-height: 1.5;
+            color: var(--c-text-2);
+        }
+        /* 備註改成階梯的第 7 列：同一組 190px + 1fr 欄寬、同一條細線，
+           沒有盒子、沒有底色 —— 讀起來是表格的一列，不是表格下面的補充說明。
+           🔴 三欄盒子版本（R158）在 1320 高 926，這版 784。 */
+        .lb-lad-foot {
+            display: grid; grid-template-columns: 190px minmax(0, 1fr);
+            gap: 30px; padding: 16px 0 0; border-top: 1px solid #d2d2d7;
+        }
+        .lb-lad:has(+ .lb-lad-foot) .lb-lad-row:last-child { border-bottom: none; }
+        .lb-lad-foot-l { text-align: right; padding-right: 2px; }
+        .lb-lad-foot-k {
+            display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .09em;
+            text-transform: uppercase; color: var(--c-text-2);
+        }
+        .lb-lad-foot-n {
+            display: block; margin-top: 3px; font-size: 15px; font-weight: 600;
+            color: var(--c-text-6);
+        }
+        .lb-lad-foot-t {
+            font-size: 14.5px; line-height: 1.65; color: var(--c-text-2); padding-top: 2px;
+        }
+        .lb-lad-foot-t b { color: var(--c-text-6); }
+
+        /* ---- 2c. 定制順序：四道關卡、23 項 ---- */
+        .lb-seq { margin-top: 8px; }
+        .lb-seq-g { border-top: 1px solid #d2d2d7; padding: 18px 0 20px; }
+        .lb-seq-g:last-child { border-bottom: 1px solid #d2d2d7; }
+        .lb-seq-h { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+        .lb-seq-k {
+            font-size: 10.5px; font-weight: 700; letter-spacing: .09em;
+            text-transform: uppercase; color: var(--mblue);
+        }
+        .lb-seq-h b { font-size: 17px; font-weight: 700; color: var(--c-text-6); }
+        .lb-seq-w { font-size: 13px; color: var(--c-text-2); }
+        .lb-seq-i {
+            display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px 30px;
+        }
+        .lb-seq-it {
+            display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px;
+        }
+        .lb-seq-n {
+            padding-top: 2px; font-size: 12px; font-weight: 700;
+            color: var(--c-text-2); font-variant-numeric: tabular-nums;
+        }
+        .lb-seq-t b {
+            display: block; font-size: 14.5px; font-weight: 600;
+            color: var(--c-text-6); line-height: 1.45;
+        }
+        .lb-seq-t span {
+            display: block; margin-top: 1px; font-size: 12.5px; line-height: 1.5;
+            color: var(--c-text-2);
+        }
+
+        /* ---- 3. 聯絡區：三欄（表單 / 找人 / 目錄）----
+           🔴 表單單行輸入框 806px（1920）／605px（1320），詢價表單一般 300–420px。
+           問題是「欄位長」不是「欄多」：只把外框收窄到 1240 居中，輸入框仍有 608px。
+           拆三欄後 487／364，表單沒有少任何一欄。 */
+        .lb-ct {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, .84fr);
+            gap: 0 32px; align-items: stretch;
+        }
+        .lb-ct-form {
+            border: 1px solid var(--c-border-2); border-radius: 14px;
+            background: #fbfbfd; padding: 26px 26px 22px;
+        }
+        .lb-ct-form h3 {
+            font-size: 19px; margin: 0 0 7px; letter-spacing: -.01em; color: var(--c-text-6);
+        }
+        .lb-ct-lead {
+            font-size: 14px; line-height: 1.6; color: var(--c-text-2); margin: 0 0 16px;
+        }
+        .lb-ct-form input[type="text"], .lb-ct-form input[type="email"],
+        .lb-ct-form textarea {
+            display: block; width: 100%; box-sizing: border-box; padding: 11px 13px;
+            margin-bottom: 9px; border: 1px solid #d2d2d7; border-radius: 8px;
+            font-family: inherit; font-size: 14.5px; line-height: 1.4;
+            background: #fff; color: var(--c-text-1);
+        }
+        .lb-ct-form textarea { height: 104px; resize: none; }
+        /* 這裡的 placeholder 就是標籤（沒有可見的 label）→ 不能用 --c-text-3（3.62） */
+        .lb-ct-form input::placeholder, .lb-ct-form textarea::placeholder {
+            color: var(--c-text-2);
+        }
+        .lb-ct-form input:focus, .lb-ct-form textarea:focus {
+            outline: none; border-color: var(--mblue);
+            box-shadow: 0 0 0 3px rgba(11, 90, 168, .18);
+        }
+        /* R173：使用者發現「表單的藍色按鈕和首頁不一致」。實測首頁 .quote-submit-btn：
+           #0071e3 / 16px / uppercase / 48px 高 / 帶 rgba(0,113,227,.25) 陰影 / hover 上浮 2px。
+           分類頁這顆原本是 #0b5aa8 / 14.5px / 小寫 / 39px 高 / 無陰影 / hover 只是變深。
+           全部對齊首頁（#0b5aa8 是給「小字藍連結」用的，白字壓 #0071e3 是 4.70:1 合格）。 */
+        .lb-ct-submit {
+            display: block; width: 100%; padding: var(--sp-3) 0; border: none;
+            border-radius: var(--r-sm);
+            background: var(--c-primary); color: var(--c-white);
+            box-shadow: 0 4px 10px var(--c-primary-25);
+            font-family: inherit; font-size: var(--fs-base); font-weight: 600;
+            letter-spacing: normal; text-transform: uppercase; cursor: pointer;
+            transition: all var(--dur-fast) var(--ease-out);
+        }
+        .lb-ct-submit:hover {
+            background: var(--c-primary-hover); transform: translateY(-2px);
+            box-shadow: 0 6px 15px var(--c-primary-40);
+        }
+
+        .lb-ct-h {
+            font-size: 11.5px; font-weight: 700; letter-spacing: .1em;
+            text-transform: uppercase; color: var(--c-text-2); margin: 4px 0 14px;
+        }
+        .lb-ct-h2 {
+            font-size: 11.5px; font-weight: 700; letter-spacing: .1em;
+            text-transform: uppercase; color: var(--c-text-2); margin: 0 0 8px;
+        }
+        .lb-ct-h4 {
+            font-size: 17px; font-weight: 600; letter-spacing: -.01em; line-height: 1.35;
+            color: var(--c-text-6); margin: 0 0 16px;
+        }
+        .lb-ct-ch { display: grid; gap: 10px; }
+        .lb-ct-ch-i {
+            display: grid; grid-template-columns: 26px minmax(0, 1fr);
+            align-items: center; column-gap: 11px; row-gap: 2px;
+            border: 1px solid var(--c-border-2); border-radius: 10px;
+            background: #fff; padding: 13px 14px; text-decoration: none;
+            transition: border-color .16s ease, background .16s ease;
+        }
+        .lb-ct-ch-i:hover { border-color: #b4b4bb; background: #f7f7f9; }
+        .lb-ct-ch-i svg {
+            width: 22px; height: 22px; grid-row: span 2; color: var(--mblue);
+        }
+        .lb-ct-ch-i b {
+            font-size: 14px; font-weight: 600; color: var(--c-text-6); line-height: 1.3;
+        }
+        .lb-ct-ch-i span {
+            font-size: 12.5px; color: var(--c-text-2); line-height: 1.35;
+            overflow-wrap: anywhere;
+        }
+
+        .lb-ct-note { margin-top: 20px; padding-top: 16px; border-top: 1px solid #ededf0; }
+        .lb-ct-bl { list-style: none; margin: 0; padding: 0; }
+        .lb-ct-bl li {
+            position: relative; padding-left: 13px; font-size: 12.5px;
+            line-height: 1.62; color: var(--c-text-2);
+        }
+        .lb-ct-bl li::before {
+            content: ""; position: absolute; left: 0; top: 9px;
+            width: 4px; height: 4px; border-radius: 50%; background: var(--mblue);
+        }
+
+        .lb-ct-third {
+            display: flex; flex-direction: column; background: #fbfbfd;
+            border-radius: 14px; padding: 22px 22px 20px;
+        }
+        .lb-ct-row {
+            display: grid; grid-template-columns: 24px minmax(0, 1fr);
+            gap: 0 10px; padding: 11px 0; border-top: 1px solid #f0f0f3;
+        }
+        .lb-ct-row:first-of-type { border-top: none; padding-top: 0; }
+        .lb-ct-n {
+            font-size: 10.5px; font-weight: 700; letter-spacing: .08em;
+            color: var(--mblue); font-variant-numeric: tabular-nums; padding-top: 3px;
+        }
+        .lb-ct-rowt b {
+            display: block; font-size: 14px; font-weight: 600; color: var(--c-text-6);
+            line-height: 1.4; margin-bottom: 2px;
+        }
+        .lb-ct-rowt span {
+            display: block; font-size: 12.5px; line-height: 1.5; color: var(--c-text-2);
+        }
+        .lb-ct-cat { margin-top: 15px; padding-top: 15px; border-top: 1px solid #ededf0; }
+        .lb-ct-cat p {
+            font-size: 12.5px; line-height: 1.62; color: var(--c-text-2); margin: 0;
+        }
+        /* R172f：這個區塊改成純說明、不再有連結（使用者：左邊已經有聯絡方式），
+           所以 R169 的 `p a` 兩條規則已無對應元素，一併刪掉，不留死碼。 */
+
+        /* 1200 shell：三欄都還在，只收窄間距與內距 */
+        @media (max-width: 1400px) {
+            .lb-ct { gap: 0 24px; }
+            .lb-ct-form { padding: 22px 20px 18px; }
+            .lb-ct-third { padding: 20px 20px 18px; }
+        }
+
+        /* 1200 shell：左欄收窄、順序退兩欄。階梯維持三欄 ——
+           兩欄時 Free 那列的第 3 項會落到第 1 項下面，看起來像同一組。 */
+        @media (max-width: 1400px) {
+            .lb-lad-row { grid-template-columns: 152px minmax(0, 1fr); gap: 22px; }
+            .lb-lad-foot { grid-template-columns: 152px minmax(0, 1fr); gap: 22px; }
+            .lb-lad-n { font-size: 24px; }
+            .lb-seq-i { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        /* ================= R172b：孤行（widow）=================
+           症狀：一段話的最後一行只剩一兩個詞。1600 下這頁有 9 處，最刺眼的是
+           「How an order runs」四欄同時短尾，第 4 欄的 `48 hours.` 單獨佔一行。
+
+           🔴 逐句改文案行不通 —— 已實測：同一句在 1600 改好、到 1320 反而更糟
+              （1320 的殼窄 19%，每個換行點都位移；成本階梯那條 36% → 27%，
+              條款 Revisions 34% → 21%）。一句文案只能討好一個寬度。
+
+           🔴 `text-wrap: pretty` 完全無效：9 個目標 0 個改善（Chrome 只在有餘裕時才挪詞，
+              窄欄永遠沒有餘裕）。這條已經被試過兩次，不要再試。
+
+           ✅ `text-wrap: balance` 讓各行等長，2–3 行的短區塊一次全清：
+              backpack 9→0（1600）／2→0（1920）／8→1（1320）；
+              duffel 10→1（1600）／3→1（1920）／7→2（1320）。
+              三寬 docH **完全不變**、沒有任何區塊行數變多、沒有任何區塊尾行變差。
+
+           ⚠️ 只對「2–6 行」的區塊生效（Chrome 上限），長段落不受影響 —— 所以範圍可以放寬。
+           ⚠️ 對 **inline** 的 span 無效（行盒屬於父區塊）：`.lb-lad-it span` 是 display:block
+              所以吃得到；`.lb-ask span` 是 inline，1320 下那條仍會孤行，是唯一殘留。
+           ⚠️ 舊瀏覽器（Chrome <114 / Safari <17.5 / Firefox <121）直接忽略，退回現在的樣子。 */
+        .lb-sec p,
+        .lb-sec li,
+        .lb-sec dd,
+        .lb-sec span,
+        .lb-sec h2,
+        .lb-sec h3,
+        .lb-lead {
+            text-wrap: balance;
+        }
+
+        /* R172e：使用者要求「How an order runs」四欄不要每行等長，要像其他欄一樣鋪滿欄寬。
+           balance 會把 4 欄都拉成等長，看起來像四塊方磚 —— 那 4 欄例外。
+           實測（balance 關掉之後）：1600 下四欄尾行 94% / 100% / 98% / 96%，
+           1320 下 38% / 35% / 52% / 51%，兩寬都沒有孤行，所以直接關掉是安全的。 */
+        .lb-flow-step p { text-wrap: wrap; }
+
+        /* 最後一個殘留：`.lb-ask span` 是 inline，行盒屬於父 div，balance 對它無效
+           （1320 下 3 行、尾行 11%）。改成 block 就吃得到 —— 它本來就是該 div 的唯一內容，
+           實測區塊高 245/245/281/281 **完全不變**，孤行 1 → 0。 */
+        .lb-ask span { display: block; }
+    
+/* ---- P0: sticky anchor chips ---- */
+/* one sticky container holds the header + chip row -> a single sticky layer, no vertical jump */
+.p0-sticky{position:sticky;top:0;z-index:40;background:var(--m-bg)}
+.m-head{position:static!important;top:auto!important;background:var(--m-bg)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.p0-anchors{position:static!important;top:auto!important;z-index:auto!important;background:var(--m-bg);border-bottom:1px solid var(--m-line)}
+.p0-anchors-in{display:flex;gap:7px;overflow-x:auto;padding:9px 16px;max-width:680px;margin:0 auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-behavior:auto}
+.p0-anchors-in::-webkit-scrollbar{display:none}
+.p0-chip{flex:0 0 auto;display:inline-flex;align-items:center;min-height:32px;padding:0 13px;border-radius:99px;border:1px solid var(--m-line);background:var(--m-surface);font-size:12px;font-weight:600;color:var(--m-ink-2);text-decoration:none;white-space:nowrap;transition:background .15s,color .15s,border-color .15s}
+.p0-chip.is-active{background:var(--m-accent);color:#fff;border-color:var(--m-accent)}
+/* ---- P0: collapsible long sections ---- */
+.p0-clamp{position:relative}
+.p0-clamp.is-clamped{max-height:360px;overflow:hidden}
+.p0-clamp.is-clamped::after{content:'';position:absolute;left:0;right:0;bottom:0;height:96px;background:linear-gradient(rgba(234,240,248,0),var(--m-bg));pointer-events:none}
+.p0-more{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:44px;margin:6px 0 0;padding:10px;border:1px solid var(--m-line);border-radius:10px;background:var(--m-surface);color:var(--m-accent);font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.p0-more span::after{content:' \2193'}
+.p0-clamp:not(.is-clamped)+.p0-more span::after{content:' \2191'}
+/* ---- P0: FAQ accordion ---- */
+.p0-faq-q{position:relative;padding-right:26px;cursor:pointer}
+.p0-faq-q::after{content:'';position:absolute;right:2px;top:50%;width:8px;height:8px;border-right:2px solid var(--m-ink-3);border-bottom:2px solid var(--m-ink-3);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.p0-faq.is-open .p0-faq-q::after{transform:translateY(-30%) rotate(-135deg)}
+.p0-faq>*:not(.p0-faq-q){display:none}
+.p0-faq.is-open>*:not(.p0-faq-q){display:block}
+/* ---- P0: pagehead CTA ---- */
+.lb-pagehead .lb-actions{display:flex;flex-direction:column;align-items:stretch;gap:10px}
+.lb-pagehead .p0-cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;padding:0 22px;border-radius:10px;background:var(--m-accent)!important;color:#fff!important;font-size:15px;font-weight:700;text-decoration:none;box-shadow:var(--m-shadow-sm);border:0}
+.lb-pagehead .p0-cta::after{content:' \2192';margin-left:6px}
+.lb-pagehead .lb-alt{text-align:center}
+/* ---- P0: bottom bar  [Get quote] + 3 evenly-spaced channels + cup ---- */
+.m-bar{gap:8px}
+.m-socs{flex:1!important;justify-content:center!important;gap:9px!important;margin-right:101px!important}
+.m-bar .soc{width:42px!important;height:42px!important}
+.m-bar .soc[aria-label="TikTok"]{display:none!important}
+.p0-bar-quote{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 20px;min-width:96px;border-radius:99px;background:var(--m-accent);color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;white-space:nowrap;box-shadow:var(--m-shadow-sm)}
+/* narrow phones (Galaxy S8+ 360, iPhone SE 375): tighten quote + icons so the cup never covers them */
+@media (max-width:389px){
+  .p0-bar-quote{padding:0 10px!important;min-width:72px!important;font-size:12.5px!important}
+  .m-bar .soc{width:40px!important;height:40px!important}
+  .m-socs{gap:6px!important}
+}
+</style>
+<script>
+(function(){
+  if(location.hash==='#products'){
+    window.__p0ToProducts=true;
+    try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){}
+  }
+})();
+</script>
+<style>
+  /* ---------- base ---------- */
+  body{min-width:0!important;overflow-x:clip!important;padding-bottom:calc(72px + env(safe-area-inset-bottom))!important;background:var(--m-bg)!important}
+  html{overflow-x:clip!important}
+  .container{width:auto!important;min-width:0!important;max-width:none!important;padding:0 16px!important}
+  .m-lb{max-width:680px;margin:0 auto;padding:0 16px 0}
+
+  /* ---------- page head ---------- */
+  .m-lb .lb-pagehead{padding:18px 0 10px!important}
+  .m-lb .lb-h1{font-size:28px!important;line-height:1.18!important;letter-spacing:-.02em!important;color:var(--m-ink)!important}
+  .m-lb .lb-kicker{font-size:10.5px!important;letter-spacing:.16em!important;text-transform:uppercase!important;color:var(--m-accent)!important}
+  .m-lb .lb-lead{font-size:14px!important;line-height:1.6!important;color:var(--m-ink-2)!important}
+  .m-lb .lb-head-row{display:block!important}
+  .m-lb .lb-switch{display:flex!important;gap:16px!important;margin:12px 0 0!important;font-size:12.5px!important}
+  .m-lb .lb-switch a{color:var(--m-accent)!important}
+  .m-lb .lb-actions{display:flex!important;flex-wrap:wrap!important;gap:12px!important;align-items:center!important;margin-top:16px!important}
+  .m-lb .lb-alt{font-size:12px!important;color:var(--m-ink-3)!important}
+
+  /* ---------- section rhythm + header (clear transition between blocks) ---------- */
+  .m-lb .lb-sec{padding:28px 0!important;border-bottom:1px solid var(--m-line)!important}
+  .m-lb .lb-sec:last-of-type{border-bottom:0!important;padding-bottom:38px!important}
+  .m-lb .lb-head2{display:block!important;grid-template-columns:none!important;margin:0 0 18px!important}
+  .m-lb .lb-head2--solo .lb-h2{margin-bottom:0!important}
+  .m-lb .lb-head2 .lb-sub{margin:8px 0 0!important;font-size:13px!important;line-height:1.5!important;color:var(--m-ink-2)!important;text-align:left!important;float:none!important;width:auto!important;max-width:100%!important}
+
+  /* ---------- grids -> single column ---------- */
+  .m-lb .lb-cards,.m-lb .lb-grid--4,.m-lb .lb-grid--3,.m-lb .lb-grid--2,.m-lb .lb-grid,.m-lb .lb-terms,.m-lb .lb-flow,.m-lb .lb-seq-i,.m-lb .lb-win,.m-lb .lb-ct{grid-template-columns:1fr!important}
+  .m-lb .lb-ct{gap:18px!important;align-items:start!important}
+  .m-lb .lb-pay{grid-template-columns:1fr 1fr!important}
+  .m-lb .lb-terms{column-gap:0!important}
+
+  /* ---------- generic type ---------- */
+  .m-lb h2,.m-lb .lb-h2{position:relative;padding-bottom:9px!important;font-size:22px!important;line-height:1.22!important;font-weight:700!important;color:var(--m-ink)!important;letter-spacing:-.02em!important;text-wrap:balance!important}
+  .m-lb h2::before,.m-lb .lb-h2::before{content:'';position:absolute;left:0;bottom:0;width:30px;height:3px;border-radius:2px;background:var(--m-accent)}
+  .m-lb h3{font-size:15px!important;line-height:1.32!important;font-weight:700!important;color:var(--m-ink)!important}
+  .m-lb p{font-size:13px!important;line-height:1.6!important;color:var(--m-ink-2)!important}
+  .m-lb .lb-sub{font-size:13px!important;color:var(--m-ink-2)!important}
+  /* mobile: undo the desktop text-wrap:balance (lines 822-830). On a narrow screen it balances
+     short blocks into two equally-short lines, leaving a large empty gap on the right. */
+  .m-lb .lb-sec p,.m-lb .lb-sec li,.m-lb .lb-sec dd,.m-lb .lb-sec span,.m-lb .lb-sec h3,.m-lb .lb-lead,.m-lb .lb-sub,.m-lb .lb-qa-item h3{text-wrap:wrap!important}
+  /* key content: every inline <b>/<strong> in the body becomes bold + accent */
+  .m-lb b,.m-lb strong{color:var(--m-accent)!important;font-weight:700!important}
+  .m-lb .lb-num{font-size:26px!important;color:var(--m-accent)!important;margin-bottom:6px!important}
+  .m-lb .lb-tag{font-size:10.5px!important;color:var(--m-accent)!important}
+  .m-lb img{max-width:100%}
+  .m-lb table{max-width:100%}
+
+  /* ---------- cards ---------- */
+  .m-lb .lb-card,.m-lb .lb-pcard{background:var(--m-surface)!important;border:1px solid var(--m-line)!important;border-radius:12px!important;box-shadow:var(--m-shadow-sm)!important}
+  .m-lb .lb-card{padding:14px!important}
+
+  /* ---------- product cards + images (contain, never crop) ---------- */
+  .m-lb .lb-cards{gap:10px!important}
+  .m-lb .lb-pcard{padding:12px!important;break-inside:avoid}
+  .m-lb .lb-pcard-top{display:flex!important;align-items:baseline!important;gap:8px!important;margin-bottom:9px!important}
+  .m-lb .lb-pcard-body{grid-template-columns:112px minmax(0,1fr)!important;gap:12px!important;align-items:start!important}
+  .m-lb .lb-pimg{height:112px!important;width:112px!important;box-sizing:border-box!important;overflow:hidden!important;border-radius:10px!important;background:var(--m-surface-2)!important;padding:4px!important}
+  .m-lb .lb-pimg img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;display:block!important}
+  .m-lb .lb-psku{font-size:13px!important;color:var(--m-ink)!important;font-weight:700!important}
+  .m-lb .lb-pfam{font-size:11px!important;color:var(--m-ink-3)!important}
+  .m-lb .lb-pmoq{font-size:10.5px!important;color:var(--m-accent)!important}
+  .m-lb .lb-tbd{font-size:11px!important;color:var(--m-ink-3)!important}
+  .m-lb .lb-specs{grid-template-columns:58px minmax(0,1fr)!important;font-size:11.5px!important;row-gap:3px!important;column-gap:8px!important}
+  .m-lb .lb-specs dt{font-size:10.5px!important;color:var(--m-ink-3)!important}
+  .m-lb .lb-specs dd{font-size:11.5px!important;color:var(--m-ink-2)!important}
+  .m-lb .lb-fam2{margin-bottom:20px!important}
+  .m-lb .lb-fam2-head{display:flex!important;justify-content:space-between!important;align-items:baseline!important;gap:10px!important;margin-bottom:10px!important}
+  .m-lb .lb-fam2-head h3{font-size:16px!important;margin:0!important}
+  .m-lb .lb-count{font-size:11px!important;color:var(--m-ink-3)!important}
+
+  /* ---------- five things: big number left, text right ---------- */
+  .m-lb .lb-ask{grid-template-columns:1fr!important;gap:0!important;margin-top:0!important}
+  .m-lb .lb-ask>div{display:grid!important;grid-template-columns:40px minmax(0,1fr)!important;gap:12px!important;align-items:start!important;border-top:1px solid var(--m-line)!important;padding:13px 0!important}
+  .m-lb .lb-ask b{display:block!important;margin:0!important;font-size:22px!important;line-height:1!important;font-weight:700!important;color:var(--m-accent)!important;font-variant-numeric:tabular-nums!important}
+  .m-lb .lb-ask span{display:block!important;font-size:13px!important;line-height:1.5!important;color:var(--m-ink-2)!important;padding-top:2px!important}
+
+  /* ---------- gates / numbered decisions: bold + accent key content ---------- */
+  .m-lb .lb-seq{margin-top:0!important}
+  .m-lb .lb-seq-g{padding:16px 0!important;border-top:1px solid var(--m-line)!important}
+  .m-lb .lb-seq-g:last-child{border-bottom:1px solid var(--m-line)!important}
+  .m-lb .lb-seq-h{display:block!important;margin-bottom:12px!important}
+  .m-lb .lb-seq-k{display:inline-block!important;margin-bottom:4px!important;font-size:10px!important;letter-spacing:.14em!important;color:var(--m-accent)!important}
+  .m-lb .lb-seq-h b{display:block!important;margin:0!important;font-size:16px!important;font-weight:700!important;color:var(--m-ink)!important}
+  .m-lb .lb-seq-w{display:block!important;margin-top:2px!important;font-size:12px!important;color:var(--m-ink-3)!important}
+  .m-lb .lb-seq-i{gap:0!important}
+  .m-lb .lb-seq-it{grid-template-columns:26px minmax(0,1fr)!important;gap:8px!important;padding:8px 0!important;border-top:1px solid var(--m-line)!important}
+  .m-lb .lb-seq-it:first-child{border-top:0!important}
+  .m-lb .lb-seq-n{font-size:12px!important;font-weight:700!important;color:var(--m-accent)!important;padding-top:2px!important}
+  .m-lb .lb-seq-t b{display:block!important;font-size:14px!important;font-weight:700!important;color:var(--m-accent)!important;line-height:1.35!important}
+  .m-lb .lb-seq-t span{display:block!important;margin-top:2px!important;font-size:12px!important;line-height:1.5!important;color:var(--m-ink-2)!important}
+
+  /* ---------- terms ---------- */
+  .m-lb .lb-terms{grid-template-columns:1fr!important;column-gap:0!important}
+  .m-lb .lb-terms dl{grid-template-columns:1fr!important;column-gap:0!important;gap:0!important;margin:0!important}
+  .m-lb .lb-terms dt{font-size:10.5px!important;font-weight:700!important;letter-spacing:.06em!important;text-transform:uppercase!important;color:var(--m-accent)!important;padding:13px 0 0!important;border-bottom:0!important;line-height:1.4!important}
+  .m-lb .lb-terms dd{font-size:13px!important;line-height:1.55!important;color:var(--m-ink-2)!important;padding:3px 0 13px!important;border-bottom:1px solid var(--m-line)!important;margin:0!important}
+  .m-lb .lb-terms dt:first-of-type{padding-top:0!important}
+  .m-lb .lb-terms dd:last-of-type{border-bottom:0!important;padding-bottom:0!important}
+
+  /* ---------- FAQ ---------- */
+  .m-lb .lb-qa{columns:1!important}
+  .m-lb .lb-qa-item{margin-bottom:22px!important}
+  .m-lb .lb-qa-item h3{margin:0 0 6px!important;font-size:15px!important;font-weight:700!important;color:var(--m-accent)!important}
+  .m-lb .lb-qa-item p{font-size:13px!important;line-height:1.65!important;color:var(--m-ink-2)!important}
+
+  /* ---------- shipping windows ---------- */
+  .m-lb .lb-win{border-top:0!important}
+  .m-lb .lb-win>div{border-left:0!important;border-top:1px solid var(--m-line)!important;padding:14px 0!important}
+  .m-lb .lb-win-w{font-size:10.5px!important;color:var(--m-accent)!important}
+  .m-lb .lb-win h3{font-size:15px!important;font-weight:700!important;color:var(--m-ink)!important}
+  .m-lb .lb-flow>div{border-left:0!important;padding-left:0!important}
+
+  /* ---------- tables ---------- */
+  .m-lb .lb-mkt,.m-lb .lb-t4{display:block!important;overflow-x:auto!important}
+  .m-tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 14px}
+  .m-tablewrap table{min-width:560px}
+  .m-t4cards{display:flex;flex-direction:column;gap:10px;margin:8px 0 0}
+  .m-t4cap{margin:20px 0 4px!important;font-size:13px!important;font-weight:600!important;line-height:1.5!important;color:var(--m-ink)!important}
+  .m-t4card{background:var(--m-surface);border:1px solid var(--m-line);border-radius:12px;padding:12px 14px;box-shadow:var(--m-shadow-sm)}
+  .m-t4card h4{margin:0 0 8px;font-size:15px;font-weight:700;color:var(--m-ink)}
+  .m-t4card h4 span{font-size:11px;font-weight:600;color:var(--m-accent);margin-left:6px}
+  .m-t4card dl{margin:0}
+  .m-t4card .m-t4row{display:flex;gap:10px;padding:6px 0;border-top:1px solid var(--m-line)}
+  .m-t4card dt{flex:0 0 40%;font-size:11px;color:var(--m-ink-3);font-weight:600}
+  .m-t4card dd{margin:0;font-size:12px;color:var(--m-ink-2);line-height:1.45}
+
+  /* ---------- cost timeline ---------- */
+  .m-tl{position:relative;margin-top:8px}
+  .m-tl::before{content:'';position:absolute;left:5px;top:12px;bottom:12px;width:2px;background:rgba(30,86,232,.22)}
+  .m-tl-row{position:relative;display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0 12px 20px;border-top:1px solid var(--m-line)}
+  .m-tl-row:first-child{border-top:0}
+  .m-tl-dot{position:absolute;left:0;top:16px;width:12px;height:12px;border-radius:50%;background:var(--m-accent);box-shadow:0 0 0 3px var(--m-bg)}
+  .m-tl-price{text-align:right}
+  .m-tl-price .from{display:block;font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--m-accent)}
+  .m-tl-price b{display:block;font-size:20px;font-weight:700;color:var(--m-accent);letter-spacing:-.02em;line-height:1.1}
+  .m-tl-price small{display:block;margin-top:2px;font-size:10px;color:var(--m-ink-3);line-height:1.3}
+  .m-tl-items ul{list-style:none;margin:0;padding:0}
+  .m-tl-items li{padding:0 0 6px}
+  .m-tl-items li:last-child{padding-bottom:0}
+  .m-tl-items b{display:block;font-size:12.5px;font-weight:700;color:var(--m-ink)}
+  .m-tl-items span{display:block;font-size:11px;color:var(--m-ink-3);margin-top:1px;line-height:1.4}
+  .m-tl-foot{margin-top:14px;padding:11px 13px;background:rgba(30,86,232,.07);border-left:3px solid var(--m-accent);border-radius:8px;font-size:11.5px;line-height:1.5;color:var(--m-ink-2)}
+
+  /* ---------- contact / quote form: retheme from desktop tokens to mobile palette ---------- */
+  .m-lb .lb-ct-form{background:var(--m-surface)!important;border:1px solid var(--m-line)!important;border-radius:12px!important;padding:18px 16px 16px!important;box-shadow:var(--m-shadow-sm)!important}
+  .m-lb .lb-ct-form h3{font-size:18px!important;margin:0 0 6px!important;letter-spacing:-.01em!important;color:var(--m-ink)!important}
+  .m-lb .lb-ct-lead{font-size:13px!important;line-height:1.55!important;color:var(--m-ink-2)!important;margin:0 0 14px!important}
+  .m-lb .lb-ct-form input[type="text"],.m-lb .lb-ct-form input[type="email"],.m-lb .lb-ct-form textarea{display:block!important;width:100%!important;box-sizing:border-box!important;padding:11px 13px!important;margin-bottom:9px!important;border:1px solid var(--m-line)!important;border-radius:9px!important;background:#fff!important;color:var(--m-ink)!important;font-size:14.5px!important;line-height:1.4!important}
+  .m-lb .lb-ct-form textarea{height:104px!important;resize:none!important}
+  .m-lb .lb-ct-form input::placeholder,.m-lb .lb-ct-form textarea::placeholder{color:var(--m-ink-3)!important}
+  .m-lb .lb-ct-form input:focus,.m-lb .lb-ct-form textarea:focus{outline:none!important;border-color:var(--m-accent)!important;box-shadow:0 0 0 3px rgba(30,86,232,.18)!important}
+  .m-lb .lb-ct-submit{display:block!important;width:100%!important;padding:0!important;min-height:50px!important;border:0!important;border-radius:var(--m-radius-sm)!important;background:var(--m-accent)!important;color:#fff!important;font-size:15px!important;font-weight:600!important;letter-spacing:normal!important;text-transform:none!important;box-shadow:var(--m-shadow-sm)!important;transition:background .18s ease!important}
+  .m-lb .lb-ct-submit:hover{background:var(--m-accent)!important;transform:none!important;box-shadow:var(--m-shadow-sm)!important}
+  .m-lb .lb-ct-h{font-size:11px!important;font-weight:700!important;letter-spacing:.1em!important;text-transform:uppercase!important;color:var(--m-ink-3)!important;margin:4px 0 12px!important}
+  .m-lb .lb-ct-ch-i{display:flex!important;align-items:center!important;gap:10px!important;padding:11px 12px!important;margin-bottom:8px!important;background:var(--m-surface)!important;border:1px solid var(--m-line)!important;border-radius:10px!important;box-shadow:var(--m-shadow-sm)!important;text-decoration:none!important}
+  .m-lb .lb-ct-ch-i svg{width:20px!important;height:20px!important;flex:0 0 auto!important;color:var(--m-accent)!important}
+  .m-lb .lb-ct-ch-i b{display:block!important;font-size:13px!important;font-weight:700!important;color:var(--m-ink)!important}
+  .m-lb .lb-ct-ch-i span{display:block!important;font-size:11.5px!important;color:var(--m-ink-3)!important}
+  .m-lb .lb-ct-row{display:flex!important;gap:12px!important;padding:10px 0!important;border-top:1px solid var(--m-line)!important}
+  .m-lb .lb-ct-row:first-of-type{border-top:0!important}
+  .m-lb .lb-ct-n{font-size:13px!important;font-weight:700!important;color:var(--m-accent)!important;flex:0 0 auto!important;line-height:1.4!important}
+  .m-lb .lb-ct-rowt b{display:block!important;font-size:13px!important;font-weight:600!important;color:var(--m-ink)!important}
+  .m-lb .lb-ct-rowt span{display:block!important;font-size:11.5px!important;color:var(--m-ink-2)!important;margin-top:1px!important;line-height:1.45!important}
+  .m-lb .lb-ct-h2{font-size:14px!important;font-weight:700!important;color:var(--m-ink)!important;margin:0 0 8px!important}
+  .m-lb .lb-ct-bl{margin:0!important;padding-left:18px!important}
+  .m-lb .lb-ct-bl li{font-size:12.5px!important;color:var(--m-ink-2)!important;line-height:1.55!important;margin-bottom:4px!important}
+  .m-lb .lb-ct-h4{font-size:12.5px!important;color:var(--m-ink-2)!important;margin:0 0 6px!important;line-height:1.5!important}
+  .m-lb .lb-ct p{font-size:12.5px!important;line-height:1.55!important;color:var(--m-ink-2)!important}
+
+  /* ---------- market cards: full width, no empty right column ---------- */
+  .m-mktcards{display:flex;flex-direction:column;gap:10px;margin:14px 0 0}
+  .m-mktcard{background:var(--m-surface);border:1px solid var(--m-line);border-radius:12px;padding:14px;box-shadow:var(--m-shadow-sm)}
+  .m-mktcard h4{margin:0 0 8px;font-size:15px;font-weight:700;color:var(--m-ink)}
+  .m-mktrow{display:block!important;width:100%!important;padding:8px 0!important;border-top:1px solid var(--m-line)!important}
+  .m-mktrow dt{display:block!important;width:100%!important;margin:0 0 3px!important;font-size:10px!important;font-weight:700!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:var(--m-accent)!important}
+  .m-mktrow dd{display:block!important;width:100%!important;margin:0!important;font-size:12.5px!important;line-height:1.55!important;color:var(--m-ink-2)!important}
+
+  /* ---------- misc ---------- */
+  .m-lb .lb-cat-cta{display:block!important}
+  .m-lb .lb-next{display:block!important}
+  .m-lb .lb-open-c{display:block!important}
+  .m-sub-foot{padding:22px 16px 26px;background:var(--m-surface-2);font-size:12px;line-height:1.65;color:var(--m-ink-2);text-align:center}
+  .m-sub-foot a{color:var(--m-accent)}
+</style>
+    <link rel="canonical" href="https://sanda2019.com/m/duffel-tote-sling-ja.html" />
+    <link rel="alternate" hreflang="en" href="https://sanda2019.com/m/duffel-tote-sling.html" />
+    <link rel="alternate" hreflang="es" href="https://sanda2019.com/m/duffel-tote-sling-es.html" />
+    <link rel="alternate" hreflang="fr" href="https://sanda2019.com/m/duffel-tote-sling-fr.html" />
+    <link rel="alternate" hreflang="ru" href="https://sanda2019.com/m/duffel-tote-sling-ru.html" />
+    <link rel="alternate" hreflang="ja" href="https://sanda2019.com/m/duffel-tote-sling-ja.html" />
+    <link rel="alternate" hreflang="ms" href="https://sanda2019.com/m/duffel-tote-sling-ms.html" />
+    <link rel="alternate" hreflang="ar" href="https://sanda2019.com/m/duffel-tote-sling-ar.html" />
+    <link rel="alternate" hreflang="x-default" href="https://sanda2019.com/m/duffel-tote-sling.html" />
+    <meta property="og:url" content="https://sanda2019.com/m/duffel-tote-sling-ja.html" />
+    <script src="../assets/js/device-router.js"></script>
+    <script async src="https://cloud.umami.is/script.js" data-website-id="0fd84cbf-4741-4d22-8139-6f02e9ed0211"></script>
+<style>
+
+/* R190 — mobile-only patches for the current desktop category content. */
+.m-lb .container,.m-lb .row,.m-lb .col-12{width:100%!important;max-width:100%!important;margin:0!important;padding:0!important}
+.m-lb .lb-pimg img{width:auto!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important}
+.m-lb .lb-pimg img.lb-w{width:100%!important;height:auto!important;max-height:100%!important}
+.m-lb .lb-pcard--range{display:flex!important;flex-direction:column!important;justify-content:space-between!important;text-decoration:none!important;gap:10px!important}
+.m-lb .lb-pcard--range .lb-range-img{height:112px!important;width:100%!important;box-sizing:border-box!important;overflow:hidden!important;border-radius:10px!important;background:var(--m-surface-2)!important;padding:4px!important}
+.m-lb .lb-pcard--range .lb-range-img img{width:100%!important;height:auto!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;display:block!important}
+.m-lb .lb-range-foot{display:flex!important;flex-direction:column!important;gap:3px!important}
+.m-lb .lb-range-k{font-size:13px!important;font-weight:700!important;color:var(--m-ink)!important}
+.m-lb .lb-range-l{font-size:11.5px!important;color:var(--m-accent)!important}
+.m-lb .lb-tbd{display:none!important}
+.m-lb [dir="rtl"],.m-lb[dir="rtl"]{text-align:right}
+.m-lb[dir="rtl"] .lb-specs dt{text-align:right}
+.m-lb[dir="rtl"] .lb-specs dd{text-align:right}
+.m-lb[dir="rtl"] bdi[dir="ltr"]{unicode-bidi:isolate}
+/* R190b — cost ladder: one compact price line, then full-width item cards. */
+.m-lb .lb-lad-row{display:block!important;padding:12px 0!important;box-sizing:border-box!important}
+.m-lb .lb-lad-f{display:flex!important;align-items:baseline!important;gap:8px!important;text-align:left!important;padding:0 0 8px!important;line-height:1.2!important}
+.m-lb .lb-lad-k{font-size:10.5px!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:var(--m-accent)!important}
+.m-lb .lb-lad-n{font-size:20px!important;line-height:1!important;letter-spacing:-.02em!important;color:var(--m-accent)!important}
+.m-lb .lb-lad-note{margin-left:auto!important;text-align:right!important;font-size:11px!important;line-height:1.3!important;color:var(--m-ink-3)!important}
+.m-lb .lb-lad-i,.m-lb .lb-lad-i--3{display:grid!important;grid-template-columns:1fr!important;gap:8px!important}
+.m-lb .lb-lad-i--1 .lb-lad-it{display:block!important}
+.m-lb .lb-lad-it{display:block!important;padding:9px 11px!important;background:var(--m-surface)!important;border:1px solid var(--m-line)!important;border-radius:9px!important;box-sizing:border-box!important}
+.m-lb .lb-lad-it b{display:block!important;font-size:12.5px!important;line-height:1.4!important;color:var(--m-ink)!important}
+.m-lb .lb-lad-it span{display:block!important;margin-top:2px!important;font-size:11.5px!important;line-height:1.5!important;color:var(--m-ink-2)!important}
+.m-lb .lb-lad-foot{display:block!important;padding:12px 0 0!important}
+.m-lb .lb-lad-foot-l{display:flex!important;align-items:baseline!important;gap:8px!important;text-align:left!important;padding:0 0 8px!important}
+.m-lb .lb-lad-foot-k{font-size:12px!important;font-weight:700!important;color:var(--m-accent)!important}
+.m-lb .lb-lad-foot-n{font-size:11px!important;color:var(--m-ink-3)!important}
+.m-lb .lb-lad-foot-t{font-size:11.5px!important;line-height:1.55!important;color:var(--m-ink-2)!important}
+.m-lb[dir="rtl"] .lb-lad-f,.m-lb[dir="rtl"] .lb-lad-foot-l{flex-direction:row-reverse;text-align:right}
+.m-lb[dir="rtl"] .lb-lad-note{margin-left:0!important;margin-right:auto!important;text-align:left!important}
+</style>
+</head><body id="top">
+
+<header class="m-head">
+  <a class="m-logo" href="ja.html" aria-label="SANDA home" data-umami-event="m-logo"><img src="../images/SANDA.webp" alt="SANDA — Backpack &amp; Bag Manufacturer"></a>
+  <div class="m-head-right">
+    <button class="m-lang" id="langBtn" type="button" aria-label="Choose language" aria-expanded="false" aria-controls="langSheet" data-umami-event="m-lang-open">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg>
+    </button>
+    <button class="m-menu" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer" data-umami-event="m-menu-open"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<div class="m-scrim" id="scrim"></div>
+<nav class="m-drawer" id="drawer" aria-label="Main menu">
+  <div class="m-drawer-top"><b>SANDA</b><button class="m-x" id="closeBtn" type="button" aria-label="Close menu">&times;</button></div>
+    <div class="m-dgroup"><h4>対応力</h4>
+      <a href="#products"><span>製品</span><i aria-hidden="true">&rsaquo;</i></a>
+      <a href="#capabilities"><span>主要サービス</span><i aria-hidden="true">&rsaquo;</i></a>
+      <a href="#customization"><span>カスタマイズ</span><i aria-hidden="true">&rsaquo;</i></a>
+    </div>
+    <div class="m-dgroup"><h4>会社</h4>
+      <a href="#why"><span>SANDAの強み</span><i aria-hidden="true">&rsaquo;</i></a>
+      <a href="#factory"><span>工場見学</span><i aria-hidden="true">&rsaquo;</i></a>
+    </div>
+    <div class="m-dgroup"><h4>サポート</h4>
+      <a href="#faq"><span>FAQ・見積</span><i aria-hidden="true">&rsaquo;</i></a>
+      <a href="#contact"><span>お問い合わせ</span><i aria-hidden="true">&rsaquo;</i></a>
+    </div>
+  <a class="m-drawer-cta" href="#quote" data-umami-event="m-quote-cta">見積もりを依頼</a>
+</nav>
+
+<div class="m-lang-scrim" id="langScrim"></div>
+<div class="m-lang-sheet" id="langSheet" role="dialog" aria-modal="true" aria-labelledby="langTitle">
+  <div class="handle"></div>
+  <p class="sk" id="langTitle">言語</p>
+  <ul>
+    <li><a data-umami-event="m-lang-switch" href="duffel-tote-sling.html">English</a></li>
+    <li><a data-umami-event="m-lang-switch" href="duffel-tote-sling-ja.html" aria-current="true" hreflang="ja" lang="ja">日本語</a></li>
+    <li><a data-umami-event="m-lang-switch" href="duffel-tote-sling-es.html" hreflang="es" lang="es">Español</a></li>
+    <li><a data-umami-event="m-lang-switch" href="duffel-tote-sling-fr.html" hreflang="fr" lang="fr">Français</a></li>
+    <li><a data-umami-event="m-lang-switch" href="duffel-tote-sling-ru.html" hreflang="ru" lang="ru">Русский</a></li>
+    <li><a data-umami-event="m-lang-switch" href="duffel-tote-sling-ms.html" hreflang="ms" lang="ms">Bahasa Melayu</a></li>
+    <li><a data-umami-event="m-lang-switch" href="duffel-tote-sling-ar.html" hreflang="ar" lang="ar">العربية</a></li>
+  </ul>
+</div>
+
+<!-- 1. Value proposition + primary conversion -->
+
+<main class="m-lb"><!-- Page head: title + two switch buttons on one row -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-pagehead">
+                        <p class="lb-kicker">バッグ &middot; ダッフル・トート・スリング・ウエスト</p>
+                        <div class="lb-head-row">
+                            <h1 class="lb-h1">広州のダッフル・トート・スリング・ウエストバッグ工場</h1>
+                            <nav class="lb-switch" aria-label="Category pages">
+                                <a data-umami-event="m-category-switch" href="ja.html#featured-products"><span class="lb-arw" aria-hidden="true">&larr;</span> すべての製品</a>
+                                <a data-umami-event="m-category-switch" href="backpack-oem-ja.html">バックパックのラインナップ<span class="lb-arw" aria-hidden="true">&rarr;</span></a>
+                            </nav>
+                        </div>
+                        <p class="lb-lead">ダッフル・トート・スリング・ウエスト。同じ広州市花都区の工場から。在庫モデルは50枚から、貴社の下げ札・カートン、またはフルOEM/ODMは300枚から。</p>
+                        <div class="lb-actions">
+                            <a class="button" href="ja.html#quote" data-umami-event="m-quote-cta">見積を依頼</a>
+                            <span class="lb-alt">またはメール <a
+                                    href="mailto:peter@sanda2019.com.cn" data-umami-event="m-email">peter@sanda2019.com.cn</a></span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec" id="capabilities" data-msec="0" data-mlabel="注文">
+                        <div class="lb-head2 lb-head2--solo"><h2 class="lb-h2">4つの発注方法</h2></div>
+                        <div class="lb-grid lb-grid--4">
+                            <div class="lb-card">
+                                <span class="lb-tag">型ごと</span>
+                                <div class="lb-num">50</div>
+                                <h3>そのまま</h3>
+                                <p class="lb-t4-kick">在庫色の組み合わせは自由</p>
+                                <p>在庫色で出荷。貴社のリスティングまたは貴社書類で。</p>
+                            </div>
+                            <div class="lb-card">
+                                <span class="lb-tag">型ごと</span>
+                                <div class="lb-num">50</div>
+                                <h3>お客様の書類</h3>
+                                <p class="lb-t4-kick">タグ、シール、カートンマーク</p>
+                                <p>治具は不要。下げ札・バーコード・ポリ袋ラベル・シッピングマーク &mdash; すべて手作業で貼ります。</p>
+                            </div>
+                            <div class="lb-card">
+                                <span class="lb-tag">色ごと</span>
+                                <div class="lb-num">200</div>
+                                <h3>バッグへの貴社マーク</h3>
+                                <p class="lb-t4-kick">色ごとに版・データ・金型のいずれか1つ</p>
+                                <p>印刷、刺繍、織りネーム、ゴムパッチ、金属プレート &mdash; 当社が既に作っているバッグに。</p>
+                            </div>
+                            <div class="lb-card">
+                                <span class="lb-tag">型ごと</span>
+                                <div class="lb-num">300</div>
+                                <h3>お客様のバッグ</h3>
+                                <p class="lb-t4-kick">型紙、生地、裏地、金具</p>
+                                <p>テックパックから製作、7&ndash;10日で試作、他社には転売しません。</p>
+                            </div>
+                        </div>
+                        <div class="lb-wrap lb-t4-wrap">
+                            <table class="lb-table lb-t4">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="lb-t4-k">項目</th>
+                                        <th scope="col"><b>そのまま</b><span class="lb-t4-q">50枚から</span></th>
+                                        <th scope="col"><b>お客様の書類</b><span class="lb-t4-q">50枚から</span></th>
+                                        <th scope="col"><b>バッグへの貴社マーク</b><span class="lb-t4-q">200枚から</span></th>
+                                        <th scope="col"><b>お客様のバッグ</b><span class="lb-t4-q">300枚から</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">最小ロット</th><td colspan="2">型ごとに50、色は混在可</td><td>色・位置ごとに200</td><td>型ごとに300</td></tr>
+                                    <tr><th scope="row">なぜこの工場なのか</th><td>1カートン</td><td>治具なし &mdash; 印刷と手作業のみ</td><td>色ごとに版・刺繍データ・金型のいずれか1つ</td><td>1型につき1反</td></tr>
+                                    <tr><th scope="row">貴社が変えるもの</th><td>なし</td><td>下げ札、バーコードシール、ポリ袋ラベル、シッピングマーク</td><td>印刷、刺繍、織りネーム、ゴム・金属タグ</td><td>型紙、サイズ、生地、裏地、金具、構造</td></tr>
+                                    <tr><th scope="row">データは誰が作るか</th><td>&mdash;</td><td>入稿データをお送りください。SKU入り白カードは50枚から</td><td>貴社データから治具を製作</td><td>テックパックをご承認</td></tr>
+                                    <tr><th scope="row">治具</th><td>なし</td><td>なし &mdash; 手貼り</td><td>版、刺繍データ、織機、パッチまたはプレートの金型</td><td>型紙、抜き型、生地発注</td></tr>
+                                    <tr><th scope="row">追加リードタイム</th><td>48時間</td><td>2&ndash;3日</td><td>10&ndash;14日</td><td>サンプル7&ndash;10日、量産25&ndash;35日</td></tr>
+                                    <tr><th scope="row">独占</th><td>共用モデル</td><td>共用モデル</td><td>共用モデル</td><td>型紙は他社に転売しません</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec" id="cost" data-msec="1" data-mlabel="費用">
+                        <div class="lb-head2"><h2 class="lb-h2">コストはどこにあるのか</h2><p class="lb-sub">各行は最低数量であり、料金ではありません &mdash; 貴社の数量まで下へ。</p></div>
+                        <div class="lb-lad">
+                            <div class="lb-lad-row">
+                                <div class="lb-lad-f"><span class="lb-lad-n">無料</span><span class="lb-lad-note">数量自由</span></div>
+                                <div class="lb-lad-i lb-lad-i--3">
+                                    <div class="lb-lad-it"><b>お客様の下げ札を当社で取付</b><span>手作業 &mdash; 治具不要</span></div>
+                                    <div class="lb-lad-it"><b>バーコード・ポリ袋ラベル</b><span>シール手貼り</span></div>
+                                    <div class="lb-lad-it"><b>カートンへのシッピングマーク</b><span>ラベル手貼り</span></div>
+                                </div>
+                            </div>
+                            <div class="lb-lad-row">
+                                <div class="lb-lad-f"><span class="lb-lad-k">〜から</span><span class="lb-lad-n">20</span><span class="lb-lad-note">カートンのロット</span></div>
+                                <div class="lb-lad-i lb-lad-i--1">
+                                    <div class="lb-lad-it"><b>印刷済み外カートン</b><span>クラフトに1色。フルカラーは応相談</span></div>
+                                </div>
+                            </div>
+                            <div class="lb-lad-row">
+                                <div class="lb-lad-f"><span class="lb-lad-k">〜から</span><span class="lb-lad-n">50</span><span class="lb-lad-note">紙のロット</span></div>
+                                <div class="lb-lad-i lb-lad-i--1">
+                                    <div class="lb-lad-it"><b>SKU入り白カード</b><span>デジタル、版不要</span></div>
+                                </div>
+                            </div>
+                            <div class="lb-lad-row">
+                                <div class="lb-lad-f"><span class="lb-lad-k">〜から</span><span class="lb-lad-n">200</span><span class="lb-lad-note">色・位置ごと</span></div>
+                                <div class="lb-lad-i">
+                                    <div class="lb-lad-it"><b>シルク印刷</b><span>色・位置ごとに1版</span></div>
+                                    <div class="lb-lad-it"><b>刺繍</b><span>型ごとに1刺繍データ</span></div>
+                                </div>
+                            </div>
+                            <div class="lb-lad-row">
+                                <div class="lb-lad-f"><span class="lb-lad-k">〜から</span><span class="lb-lad-n">300</span><span class="lb-lad-note">型ごと</span></div>
+                                <div class="lb-lad-i">
+                                    <div class="lb-lad-it"><b>織りネーム</b><span>織機自体の最小ロット</span></div>
+                                    <div class="lb-lad-it"><b>お客様の型紙・素材</b><span>型紙＋生地の最小ロット。色の指定がなければ在庫生地</span></div>
+                                </div>
+                            </div>
+                            <div class="lb-lad-row">
+                                <div class="lb-lad-f"><span class="lb-lad-k">〜から</span><span class="lb-lad-n">1,000</span><span class="lb-lad-note">金型</span></div>
+                                <div class="lb-lad-i">
+                                    <div class="lb-lad-it"><b>ゴム・シリコンパッチ</b><span>型ごとに1金型</span></div>
+                                    <div class="lb-lad-it"><b>金属プレート・エンボス</b><span>型ごとに1版</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lb-lad-foot">
+                            <div class="lb-lad-foot-l"><span class="lb-lad-foot-k">都度</span><span class="lb-lad-foot-n">受注ごとではない</span></div>
+                            <div class="lb-lad-foot-t"><b>版・金型・プレートは当社で保管します。</b> 次回ご注文に追加費用なしで充当します。200枚の初回が5,000枚分を負担することはありません。</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec" id="products" data-msec="2" data-mlabel="製品">
+                        <div class="lb-head2"><h2 class="lb-h2">ラインナップ内容</h2><p class="lb-sub">各カテゴリー6型 &mdash; 5型を表示、6つ目が全ラインナップへの入口です。</p></div>
+                        <div class="lb-fam2" id="tote">
+                            <div class="lb-fam2-head">
+                                <h3>トートバッグ</h3>
+                                <span class="lb-count">在庫460型のうち5型を表示</span>
+                            </div>
+                            <div class="lb-cards">
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">TB-2051</span>
+                                    <span class="lb-pfam">トート</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img
+                                            src="../images/Cabinet/tote1.webp"
+                                            width="229" height="368"
+                                            alt="Tote bag TB-2051, jute body, canvas handles" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>29 × 25 × 15 cm</dd>
+                                        <dt>生地</dt><dd>ジュート</dd>
+                                        <dt>カラー</dt><dd>ナチュラルジュート</dd>
+                                        <dt>仕様</dt><dd>ジュート本体、キャンバスハンドル</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">TB-2052</span>
+                                    <span class="lb-pfam">トート</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img
+                                            src="../images/Cabinet/tote2.webp"
+                                            width="335" height="368"
+                                            alt="Tote bag TB-2052, canvas, full-colour print" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>36 × 35 × 15 cm</dd>
+                                        <dt>生地</dt><dd>キャンバス</dd>
+                                        <dt>カラー</dt><dd>ナチュラルキャンバス</dd>
+                                        <dt>仕様</dt><dd>キャンバス、フルカラー印刷</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">TB-2053</span>
+                                    <span class="lb-pfam">トート</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img
+                                            src="../images/Cabinet/tote3.webp"
+                                            width="233" height="368"
+                                            alt="Tote bag TB-2053, gusseted, rope handle" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>23 × 16 × 16 cm</dd>
+                                        <dt>生地</dt><dd>ポリエステル</dd>
+                                        <dt>カラー</dt><dd>複数</dd>
+                                        <dt>仕様</dt><dd>マチ付き、ロープハンドル</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">TB-2054</span>
+                                    <span class="lb-pfam">トート</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img class="lb-w"
+                                            src="../images/Cabinet/tote4.webp"
+                                            width="368" height="341"
+                                            alt="Tote bag TB-2054, wide gusset, printed body" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>44 × 31 × 5 cm</dd>
+                                        <dt>生地</dt><dd>キャンバス</dd>
+                                        <dt>カラー</dt><dd>複数</dd>
+                                        <dt>仕様</dt><dd>ワイドマチ、プリント本体</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">TB-2055</span>
+                                    <span class="lb-pfam">トート</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img
+                                            src="../images/Cabinet/tote5.webp"
+                                            width="300" height="368"
+                                            alt="Tote bag TB-2055, floral print, flat handle" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>40 × 30 × 15 cm</dd>
+                                        <dt>生地</dt><dd>キャンバス</dd>
+                                        <dt>カラー</dt><dd>ナチュラルキャンバス</dd>
+                                        <dt>仕様</dt><dd>花柄プリント、平紐ハンドル</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <a class="lb-pcard lb-pcard--range" href="ja.html#quote" data-umami-event="m-range-card">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">全ラインナップ</span>
+                                    <span class="lb-pfam">トート</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-range-img"><img
+                                        src="../images/Cabinet/Tote_all.webp"
+                                        width="1200" height="352"
+                                        alt="Tote range, 460 styles in stock" loading="lazy"></div>
+                                <div class="lb-range-foot">
+                                    <span class="lb-range-k">ほか455型</span>
+                                    <span class="lb-range-l">カタログと見積はこちら &rarr;</span>
+                                </div>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="lb-fam2" id="duffle">
+                            <div class="lb-fam2-head">
+                                <h3>ダッフル・ウィークエンダーバッグ</h3>
+                                <span class="lb-count">在庫170型のうち5型を表示</span>
+                            </div>
+                            <div class="lb-cards">
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">DF-9081</span>
+                                    <span class="lb-pfam">ダッフル</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img class="lb-w"
+                                            src="../images/Cabinet/duffle1.webp"
+                                            width="368" height="339"
+                                            alt="Duffle bag DF-9081, barrel, top zip, shoulder strap" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>43 × 22 × 22 cm</dd>
+                                        <dt>生地</dt><dd>ポリエステル</dd>
+                                        <dt>裏地</dt><dd>210D</dd>
+                                        <dt>カラー</dt><dd>ブラック、ホワイト、ピンク、ブルー、レッド、グレー</dd>
+                                        <dt>仕様</dt><dd>バレル型、天ファスナー、ショルダーストラップ</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">DF-9082</span>
+                                    <span class="lb-pfam">ダッフル</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img class="lb-w"
+                                            src="../images/Cabinet/duffle2.webp"
+                                            width="368" height="257"
+                                            alt="Duffle bag DF-9082, metallic pu, wrap handles" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>45 × 25 × 26 cm</dd>
+                                        <dt>生地</dt><dd>PU</dd>
+                                        <dt>裏地</dt><dd>210D</dd>
+                                        <dt>カラー</dt><dd>ブラック、シルバー、ネイビー</dd>
+                                        <dt>仕様</dt><dd>メタリックPU、巻きハンドル</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">DF-9083</span>
+                                    <span class="lb-pfam">ダッフル</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img
+                                            src="../images/Cabinet/duffle3.webp"
+                                            width="365" height="368"
+                                            alt="Duffle bag DF-9083, weekender, webbing handles" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>42 × 36 × 12 cm</dd>
+                                        <dt>生地</dt><dd>Oxford</dd>
+                                        <dt>裏地</dt><dd>210D</dd>
+                                        <dt>カラー</dt><dd>レッド、グリーン、ネイビー、ブラック、ピンク、グレー、ブルー</dd>
+                                        <dt>仕様</dt><dd>ウィークエンダー、ウェビングハンドル</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">DF-9084</span>
+                                    <span class="lb-pfam">ダッフル</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img class="lb-w"
+                                            src="../images/Cabinet/duffle4.webp"
+                                            width="368" height="299"
+                                            alt="Duffle bag DF-9084, padded strap" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>48 × 25 × 25 cm</dd>
+                                        <dt>生地</dt><dd>Oxford</dd>
+                                        <dt>裏地</dt><dd>210D</dd>
+                                        <dt>カラー</dt><dd>マルーン、ネイビー、ブラック、ピンク、グレー、シャンパン</dd>
+                                        <dt>仕様</dt><dd>パッド入りストラップ</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">DF-9085</span>
+                                    <span class="lb-pfam">ダッフル</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img class="lb-w"
+                                            src="../images/Cabinet/duffle5.webp"
+                                            width="368" height="300"
+                                            alt="Duffle bag DF-9085, end pocket, detachable strap" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>46 × 26 × 22 cm</dd>
+                                        <dt>生地</dt><dd>Oxford</dd>
+                                        <dt>裏地</dt><dd>210D</dd>
+                                        <dt>カラー</dt><dd>ブラック、グレー、マルーン、ピンク、ブルー</dd>
+                                        <dt>仕様</dt><dd>エンドポケット、着脱式ストラップ</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <a class="lb-pcard lb-pcard--range" href="ja.html#quote" data-umami-event="m-range-card">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">全ラインナップ</span>
+                                    <span class="lb-pfam">ダッフル</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-range-img"><img
+                                        src="../images/Cabinet/Duffle_all.webp"
+                                        width="1200" height="352"
+                                        alt="Duffle range, 170 styles in stock" loading="lazy"></div>
+                                <div class="lb-range-foot">
+                                    <span class="lb-range-k">ほか165型</span>
+                                    <span class="lb-range-l">カタログと見積はこちら &rarr;</span>
+                                </div>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="lb-fam2" id="sling">
+                            <div class="lb-fam2-head">
+                                <h3>スリング・ショルダーバッグ</h3>
+                                <span class="lb-count">在庫110型のうち5型を表示</span>
+                            </div>
+                            <div class="lb-cards">
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">SL-7044</span>
+                                    <span class="lb-pfam">スリング</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img
+                                            src="../images/Cabinet/sling4.webp"
+                                            width="301" height="368"
+                                            alt="Sling bag SL-7044, usb port, mesh back panel, double layer" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>30 × 16 × 6 cm</dd>
+                                        <dt>生地</dt><dd>Oxford</dd>
+                                        <dt>裏地</dt><dd>190D</dd>
+                                        <dt>カラー</dt><dd>ブラック、グレー、ネイビー</dd>
+                                        <dt>仕様</dt><dd>USBポート、メッシュ背面パネル、二重構造</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">SL-7045</span>
+                                    <span class="lb-pfam">スリング</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img
+                                            src="../images/Cabinet/sling5.webp"
+                                            width="291" height="368"
+                                            alt="Sling bag SL-7045, usb port, mesh back panel, double layer" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>32 × 17 × 7 cm</dd>
+                                        <dt>生地</dt><dd>PU</dd>
+                                        <dt>裏地</dt><dd>190D</dd>
+                                        <dt>カラー</dt><dd>ブラック、グレー、ネイビー</dd>
+                                        <dt>仕様</dt><dd>USBポート、メッシュ背面パネル、二重構造</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">SL-7046</span>
+                                    <span class="lb-pfam">スリング</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img
+                                            src="../images/Cabinet/sling6.webp"
+                                            width="230" height="368"
+                                            alt="Sling bag SL-7046, usb port, mesh back panel, double layer, headphone port" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>32 × 17 × 7 cm</dd>
+                                        <dt>生地</dt><dd>Oxford</dd>
+                                        <dt>裏地</dt><dd>190D</dd>
+                                        <dt>カラー</dt><dd>ブラック、グレー、ネイビー</dd>
+                                        <dt>仕様</dt><dd>USBポート、メッシュ背面パネル、二重構造、イヤホン穴</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">SL-7047</span>
+                                    <span class="lb-pfam">スリング</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img
+                                            src="../images/Cabinet/sling7.webp"
+                                            width="352" height="368"
+                                            alt="Sling bag SL-7047, printed body, webbing strap" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>30 × 17 × 10 cm</dd>
+                                        <dt>生地</dt><dd>ポリエステル</dd>
+                                        <dt>裏地</dt><dd>190D</dd>
+                                        <dt>カラー</dt><dd>レッド、グリーン、イエロー、ブルー</dd>
+                                        <dt>仕様</dt><dd>プリント本体、ウェビングストラップ</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">SL-7048</span>
+                                    <span class="lb-pfam">スリング</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img
+                                            src="../images/Cabinet/sling8.webp"
+                                            width="220" height="368"
+                                            alt="Sling bag SL-7048, contrast trim, mesh pocket, headphone port, side pockets" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>33 × 20 × 7 cm</dd>
+                                        <dt>生地</dt><dd>キャンバス</dd>
+                                        <dt>裏地</dt><dd>190D</dd>
+                                        <dt>カラー</dt><dd>ホワイト、グリーン、イエロー、レッド、ブラック、ピンク、ブルー</dd>
+                                        <dt>仕様</dt><dd>コントラストトリム、メッシュポケット、イヤホン穴、サイドポケット</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <a class="lb-pcard lb-pcard--range" href="ja.html#quote" data-umami-event="m-range-card">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">全ラインナップ</span>
+                                    <span class="lb-pfam">スリング</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-range-img"><img
+                                        src="../images/Cabinet/Sling_all.webp"
+                                        width="1200" height="352"
+                                        alt="Sling range, 110 styles in stock" loading="lazy"></div>
+                                <div class="lb-range-foot">
+                                    <span class="lb-range-k">ほか105型</span>
+                                    <span class="lb-range-l">カタログと見積はこちら &rarr;</span>
+                                </div>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="lb-fam2" id="waist">
+                            <div class="lb-fam2-head">
+                                <h3>ウエストバッグ・ベルトポーチ</h3>
+                                <span class="lb-count">在庫110型のうち5型を表示</span>
+                            </div>
+                            <div class="lb-cards">
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">WB-6011</span>
+                                    <span class="lb-pfam">ウエスト</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img class="lb-w"
+                                            src="../images/Cabinet/belt2.webp"
+                                            width="368" height="229"
+                                            alt="Waist bag WB-6011, slim running belt, zip pocket, headphone port" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>生地</dt><dd>Lycra</dd>
+                                        <dt>裏地</dt><dd>190D</dd>
+                                        <dt>カラー</dt><dd>ピンク、イエロー、グリーン、ブルー、ブラック、グレー、ホワイト</dd>
+                                        <dt>仕様</dt><dd>スリムランニングベルト、ファスナーポケット、イヤホン穴</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">SL-7041</span>
+                                    <span class="lb-pfam">ウエスト</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img class="lb-w"
+                                            src="../images/Cabinet/sling1.webp"
+                                            width="368" height="279"
+                                            alt="Waist bag SL-7041, two-zip running belt, headphone port" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>32 × 11 cm</dd>
+                                        <dt>生地</dt><dd>キャンバス</dd>
+                                        <dt>裏地</dt><dd>190D</dd>
+                                        <dt>カラー</dt><dd>ブラック、ブルー、レッド、グリーン、ネイビー、コーヒー、カーキ、グレー</dd>
+                                        <dt>仕様</dt><dd>2ファスナーランニングベルト、イヤホン穴</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">SL-7043</span>
+                                    <span class="lb-pfam">ウエスト</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img class="lb-w"
+                                            src="../images/Cabinet/sling3.webp"
+                                            width="368" height="247"
+                                            alt="Waist bag SL-7043, multi-pocket waist pack, webbing belt" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>25 × 15 × 18 cm</dd>
+                                        <dt>生地</dt><dd>キャンバス</dd>
+                                        <dt>裏地</dt><dd>190D</dd>
+                                        <dt>カラー</dt><dd>グリーン、ブラック、カーキ、グレー</dd>
+                                        <dt>仕様</dt><dd>マルチポケットウエストバッグ、ウェビングベルト</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">WB-6021</span>
+                                    <span class="lb-pfam">ウエスト</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img class="lb-w"
+                                            src="../images/Cabinet/belt5.webp"
+                                            width="368" height="248"
+                                            alt="Waist bag WB-6021, belt-mounted bottle pouch, molle webbing" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>Ø28 × 5 cm</dd>
+                                        <dt>生地</dt><dd>ポリエステル</dd>
+                                        <dt>裏地</dt><dd>190D</dd>
+                                        <dt>カラー</dt><dd>グリーン、ブラック、カーキ、グレー</dd>
+                                        <dt>仕様</dt><dd>ベルト用ボトルポーチ、MOLLE ウェビング</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <article class="lb-pcard">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">WB-6022</span>
+                                    <span class="lb-pfam">ウエスト</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-pcard-body">
+                                    <div class="lb-pimg"><img class="lb-w"
+                                            src="../images/Cabinet/belt6.webp"
+                                            width="368" height="248"
+                                            alt="Waist bag WB-6022, belt-mounted utility holster" loading="lazy"></div>
+                                    <dl class="lb-specs">
+                                        <dt>サイズ</dt><dd>16 × 21 cm</dd>
+                                        <dt>生地</dt><dd>ポリエステル</dd>
+                                        <dt>裏地</dt><dd>190D</dd>
+                                        <dt>カラー</dt><dd>ブルー、ピンク、パープル、ネイビー、ブラック、グレー、レッド</dd>
+                                        <dt>仕様</dt><dd>ベルト用ユーティリティホルスター</dd>
+                                    </dl>
+                                </div>
+                            </article>
+                            <a class="lb-pcard lb-pcard--range" href="ja.html#quote" data-umami-event="m-range-card">
+                                <div class="lb-pcard-top">
+                                    <span class="lb-psku">全ラインナップ</span>
+                                    <span class="lb-pfam">ウエスト</span>
+                                    <span class="lb-pmoq">MOQ 100</span>
+                                </div>
+                                <div class="lb-range-img"><img
+                                        src="../images/Cabinet/Waist_all.webp"
+                                        width="1200" height="352"
+                                        alt="Waist range, 110 styles in stock" loading="lazy"></div>
+                                <div class="lb-range-foot">
+                                    <span class="lb-range-k">ほか105型</span>
+                                    <span class="lb-range-l">カタログと見積はこちら &rarr;</span>
+                                </div>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="lb-cat-cta">
+                            <div class="lb-cat-cta-txt">
+                                <h3>製品カタログを請求</h3>
+                                <p>保有する全型のサイズ・生地・裏地・在庫色・カートン寸法。生産ロットが終わるたびに更新し、前シーズンのPDFではなく最新版をお送りします。</p>
+                            </div>
+                            <div class="lb-cat-cta-act">
+                                <a class="button" href="ja.html#quote" data-umami-event="m-quote-cta">カタログを請求</a>
+                                <span class="lb-alt">またはメール <a
+                                        href="mailto:peter@sanda2019.com.cn" data-umami-event="m-email">peter@sanda2019.com.cn</a></span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec" id="customization" data-msec="3" data-mlabel="オプション">
+                        <div class="lb-head2"><h2 class="lb-h2">何を、いつまで変えられるか</h2><p class="lb-sub">23の判断、それぞれに「無償で変えられなくなる日」があります。</p></div>
+                        <div class="lb-seq">
+                            <div class="lb-seq-g">
+                                <div class="lb-seq-h"><span class="lb-seq-k">第1段階</span><b>見積前</b><span class="lb-seq-w">どんなバッグで、いくらになるか</span></div>
+                                <div class="lb-seq-i">
+                                    <div class="lb-seq-it"><span class="lb-seq-n">01</span><span class="lb-seq-t"><b>型紙・シルエット</b><span>お客様の形、または当社の形を出発点に</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">02</span><span class="lb-seq-t"><b>サイズ・容量</b><span>12Lから80Lまで。寸法は拡大ではなく、すべて引き直します</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">03</span><span class="lb-seq-t"><b>生地</b><span>ジュート、キャンバス、600D / 900Dポリエステル、PU、ターポリン、EVA</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">04</span><span class="lb-seq-t"><b>裏地</b><span>内側の素材・重量・色</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">05</span><span class="lb-seq-t"><b>金具</b><span>ファスナーブランド、スライダー、バックル、Dリング</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">06</span><span class="lb-seq-t"><b>気室</b><span>ポケット、仕切り、PCスリーブの深さ</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">07</span><span class="lb-seq-t"><b>カラー</b><span>Pantone合わせ、または在庫色</span></span></div>
+                                </div>
+                            </div>
+                            <div class="lb-seq-g">
+                                <div class="lb-seq-h"><span class="lb-seq-k">第2段階</span><b>サンプル前</b><span class="lb-seq-w">テックパックで確定、初回試作で検証</span></div>
+                                <div class="lb-seq-i">
+                                    <div class="lb-seq-it"><span class="lb-seq-n">08</span><span class="lb-seq-t"><b>背负システム</b><span>ショルダー、背面パネル、フレームシート、通気チャネル</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">09</span><span class="lb-seq-t"><b>PCスリーブ</b><span>フェルト、フォーム、エアメッシュ。13&Prime;〜17&Prime;</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">10</span><span class="lb-seq-t"><b>ファスナー・スライダー</b><span>ナイロンコイルまたは金属。#5・#8・#10</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">11</span><span class="lb-seq-t"><b>バックル・ウェビング</b><span>幅、素材、ブランド</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">12</span><span class="lb-seq-t"><b>フォーム・パッド</b><span>密度と厚みを、パネルごとに</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">13</span><span class="lb-seq-t"><b>縫製</b><span>縫い目ピッチ、糸色、カンヌキ</span></span></div>
+                                </div>
+                            </div>
+                            <div class="lb-seq-g">
+                                <div class="lb-seq-h"><span class="lb-seq-k">第3段階</span><b>データ前</b><span class="lb-seq-w">ライン稼働後は追加できません</span></div>
+                                <div class="lb-seq-i">
+                                    <div class="lb-seq-it"><span class="lb-seq-n">14</span><span class="lb-seq-t"><b>ロゴ加工</b><span>印刷200/色 &middot; 織り300 &middot; ゴム・金属1,000</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">15</span><span class="lb-seq-t"><b>ロゴ位置・サイズ</b><span>前面パネル、ストラップ、引き手、裏地</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">16</span><span class="lb-seq-t"><b>織りネーム・ケアラベル</b><span>組成、原産国、洗濯表示</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">17</span><span class="lb-seq-t"><b>下げ札</b><span>貴社タグを無料で取付 &mdash; または白カード印刷は50枚から</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">18</span><span class="lb-seq-t"><b>バーコード・シール</b><span>EAN / UPC、価格シール、ポリ袋ラベル</span></span></div>
+                                </div>
+                            </div>
+                            <div class="lb-seq-g">
+                                <div class="lb-seq-h"><span class="lb-seq-k">第4段階</span><b>梱包前</b><span class="lb-seq-w">工場にあるうちに確定</span></div>
+                                <div class="lb-seq-i">
+                                    <div class="lb-seq-it"><span class="lb-seq-n">19</span><span class="lb-seq-t"><b>ポリ袋</b><span>厚み、印刷、窒息警告</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">20</span><span class="lb-seq-t"><b>シッピングマーク</b><span>ラベル貼り無料。カートン単位またはパレット単位</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">21</span><span class="lb-seq-t"><b>外カートン</b><span>サイズ、層数。クラフト1色印刷は20枚から</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">22</span><span class="lb-seq-t"><b>試験・認証</b><span>AQL 2.5、REACH、CPSIA、Prop 65、ISPM-15</span></span></div>
+                                    <div class="lb-seq-it"><span class="lb-seq-n">23</span><span class="lb-seq-t"><b>書類</b><span>インボイス、パッキングリスト、CO、GRS取引証明書</span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec lb-sec--tight" id="terms" data-msec="4" data-mlabel="条件">
+                        <div class="lb-head2"><h2 class="lb-h2">聞かれる前に、条件を</h2><p class="lb-sub">受注すべきかを決める8つのルール。</p></div>
+                        <div class="lb-terms">
+                            <dl>
+                                <dt>最小ロット</dt>
+                                <dd>別注は型ごとに300、在庫モデルは50。同一型の色違いは同じロットとして扱います。</dd>
+                                <dt>サンプル</dt>
+                                <dd>まずCLO 3Dで型紙、次に実物試作。ブリーフから7〜10日。</dd>
+                                <dt>修正</dt>
+                                <dd>試作は3〜5日で1巡。型紙は作り直しではなく修正します。</dd>
+                                <dt>量産リードタイム</dt>
+                                <dd>サンプル承認と手付金から25&ndash;35日、7ラインで生産します。</dd>
+                            </dl>
+                            <dl>
+                                <dt>在庫受注</dt>
+                                <dd>倉庫から48時間、ロゴ加工が入る場合は10&ndash;14日。</dd>
+                                <dt>出荷</dt>
+                                <dd>FOB広州、またはCIF・Door to Door DDPで50カ国以上へ。</dd>
+                                <dt>検品</dt>
+                                <dd>完成ロットはAQL&nbsp;2.5、ご希望により100&nbsp;%全数検査。</dd>
+                                <dt>お客様の型紙</dt>
+                                <dd>採寸し、3Dで再構築し、当社カタログには載せません。他社に転売しません。</dd>
+                            </dl>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec lb-sec--tight" id="factory" data-msec="5" data-mlabel="工程">
+                        <div class="lb-head2"><h2 class="lb-h2">受注から納品まで</h2><p class="lb-sub">4つの段階。最良ケースではなく、当社が提示する日数です。</p></div>
+                        <div class="lb-flow">
+                            <div class="lb-flow-step">
+                                <span class="lb-flow-d">2&ndash;3日</span>
+                                <h3>データと原価</h3>
+                                <p>参考バッグかテックパックを入力。原価入りBOM、3Dレンダー、生地リストが返ります。</p>
+                            </div>
+                            <div class="lb-flow-step">
+                                <span class="lb-flow-d">7&ndash;10日</span>
+                                <h3>サンプル</h3>
+                                <p>まずCLO 3Dで型紙、次に実物試作。修正は3&ndash;5日です。</p>
+                            </div>
+                            <div class="lb-flow-step">
+                                <span class="lb-flow-d">25&ndash;35日</span>
+                                <h3>生産</h3>
+                                <p>7ライン、重ね裁断、各工程でインライン検査、完成ロットはAQL&nbsp;2.5。</p>
+                            </div>
+                            <div class="lb-flow-step">
+                                <span class="lb-flow-d">3&ndash;5日</span>
+                                <h3>検品・出荷</h3>
+                                <p>最終検品とカートン写真、その後積み込み。在庫モデルは省略し48時間で出荷します。</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec lb-sec--tight" id="payment" data-msec="6" data-mlabel="支払い">
+                        <div class="lb-head2"><h2 class="lb-h2">生産中の資金のありか</h2><p class="lb-sub">4段階で2回払い &mdash; 残金は写真で進みます。</p></div>
+                        <div class="lb-pay">
+                            <div>
+                                <span class="lb-pay-pct">30%</span>
+                                <span class="lb-pay-when">受注時</span>
+                                <p>まずプロフォーマインボイス。BOM、カートン仕様、納期を記載します。</p>
+                            </div>
+                            <div>
+                                <span class="lb-pay-pct">0%</span>
+                                <span class="lb-pay-when">サンプル承認</span>
+                                <p>サンプルは単独請求で、PayPalまたはWestern Unionでお支払い。試作と色見本にご署名いただくまでラインには載りません。</p>
+                            </div>
+                            <div>
+                                <span class="lb-pay-pct">70%</span>
+                                <span class="lb-pay-when">出荷前</span>
+                                <p>AQL&nbsp;2.5の検品とカートン写真の後に支払い。誰も見ていないロットには支払いません。</p>
+                            </div>
+                            <div>
+                                <span class="lb-pay-pct">0%</span>
+                                <span class="lb-pay-when">書類上</span>
+                                <p>B/L、パッキングリスト、インボイス、原産地証明。提出前に貴社の通関業者とすり合わせます。</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec lb-sec--tight" id="markets" data-msec="7" data-mlabel="市場">
+                        <div class="lb-head2"><h2 class="lb-h2">貴社の市場が求めるもの</h2><p class="lb-sub">6つの仕向地、1つのモール &mdash; 後から足せない書類があります。</p></div>
+                        <table class="lb-mkt">
+                            <colgroup><col class="lb-c1"><col class="lb-c2"><col class="lb-c3"></colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">市場</th>
+                                    <th scope="col">相手が貴社に求めるもの</th>
+                                    <th scope="col">商品と一緒に出るもの</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>アメリカ</td>
+                                    <td>子ども向けに販売する場合はCPSIAの鉛・フタル酸制限。指定物質が含まれる場合はProp&nbsp;65の警告。FTC規則による繊維組成とケア表示、原産国をバッグに表示します。</td>
+                                    <td>鉛・フタル酸・アゾ染料・PFASの試験報告書。Prop&nbsp;65の短縮表示をラベルに入れます。</td>
+                                </tr>
+                                <tr>
+                                    <td>EU</td>
+                                    <td>REACH附属書&nbsp;XVII：アゾ染料、フタル酸、ゴム・プラスチック部品のPAH、金属金具のニッケル溶出。2024年12月13日以降、GPSRにより製品または包装にEU責任者の表示も必要です。</td>
+                                    <td>認定ラボのSVHC・附属書&nbsp;XVII報告書。EU責任者の氏名・住所をラベルに印刷します。</td>
+                                </tr>
+                                <tr>
+                                    <td>イギリス</td>
+                                    <td>GPSR&nbsp;2005の一般安全義務、繊維・ケア表示、責任者の英国住所。</td>
+                                    <td>EUと同じ試験報告書、ラベルに英国連絡先ブロックを追加。</td>
+                                </tr>
+                                <tr>
+                                    <td>日本</td>
+                                    <td>家庭用品品質表示法：繊維組成、取扱い絵表示、原産国を日本語で、縫い付けラベルに。</td>
+                                    <td>貴社テキストに合わせた日本語ラベルのデータ、JIS取扱い絵表示付き。</td>
+                                </tr>
+                                <tr>
+                                    <td>オーストラリア・ニュージーランド</td>
+                                    <td>バッグに製品規格はありませんが、豪州消費者法により安全義務は輸入者が負います。ISPM&nbsp;15は木製梱包すべてに適用されます。</td>
+                                    <td>ISPM-15熱処理パレット、および貴社保管用の試験報告書。</td>
+                                </tr>
+                                <tr>
+                                    <td>カナダ</td>
+                                    <td>子ども向けはCCPSA、繊維表示法に基づく英語・仏語の二言語表示。</td>
+                                    <td>二言語ラベルのデータ、および鉛・フタル酸エステルの報告書。</td>
+                                </tr>
+                                <tr>
+                                    <td>Amazon FBA</td>
+                                    <td>全個体にFNSKU、ポリ袋には窒息警告、カートンは50&nbsp;lb以下、落下テストを通過する必要があります。</td>
+                                    <td>社内で準備：窒息警告印刷、ASINバーコード、カートンマーク、5層ボール。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec lb-sec--tight" id="dates" data-msec="8" data-mlabel="日程">
+                        <div class="lb-head2"><h2 class="lb-h2">いつ発注すべきか</h2><p class="lb-sub">シーズンに間に合うかを決める4つの日付。</p></div>
+                        <div class="lb-win">
+                            <div>
+                                <span class="lb-win-w">3月</span>
+                                <h3>新学期</h3>
+                                <p>3月試作、4月生産、6月には海上、7月に店頭へ。</p>
+                            </div>
+                            <div>
+                                <span class="lb-win-w">6月</span>
+                                <h3>第4四半期・年末商戦</h3>
+                                <p>6月にデータ承認、7月に生産枠、9月初旬までに積み込み。</p>
+                            </div>
+                            <div>
+                                <span class="lb-win-w">秋</span>
+                                <h3>春節</h3>
+                                <p>春節で工場が止まり、その前後4週間が一年で最も厳しくなります。それまでに必要な分は秋に発注し、締切はプロフォーマで確定します。</p>
+                            </div>
+                            <div>
+                                <span class="lb-win-w">7月&ndash;10月</span>
+                                <h3>海上輸送の繁忙期</h3>
+                                <p>スペースは逼迫し運賃は毎週動くため、生産日確定の3週間前に船腹を押さえます。</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec lb-sec--tight" id="quoteinfo" data-msec="9" data-mlabel="見積情報">
+                        <div class="lb-head2"><h2 class="lb-h2">1回の返信で見積もるための5項目</h2><p class="lb-sub">これを送っていただければ、最初の返信が価格付きで返ります。</p></div>
+                        <div class="lb-ask">
+                            <div>
+                                <b>01</b>
+                                <span>このページの型番、または既に販売中のバッグの写真</span>
+                            </div>
+                            <div>
+                                <b>02</b>
+                                <span>色ごとの数量と初回発注の合計</span>
+                            </div>
+                            <div>
+                                <b>03</b>
+                                <span>ロゴデータ &mdash; AI・EPS・PDF などのベクター。スクリーンショット不可</span>
+                            </div>
+                            <div>
+                                <b>04</b>
+                                <span>生地・裏地のご希望、または500以上の素材から最も近いものをご提案します</span>
+                            </div>
+                            <div>
+                                <b>05</b>
+                                <span>仕向港、モール経由ならそのチャネル</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec" id="faq" data-msec="10" data-mlabel="FAQ">
+                        <div class="lb-head2 lb-head2--solo"><h2 class="lb-h2">バイヤーからのよくある質問</h2></div>
+                        <div class="lb-qa">
+                            <div class="lb-qa-item">
+                                <h3>ダッフルやトートの最小ロットは？</h3>
+                                <p>別注は型ごとに300枚、在庫モデルは100枚。トートとウエストベルトは、バイヤーが100枚で始めて500枚で追加する最も多い2カテゴリーです。</p>
+                            </div>
+                            <div class="lb-qa-item">
+                                <h3>キャンバストートにフルカラー印刷はできますか？</h3>
+                                <p>はい。1〜4色のスポットはシルク印刷、写真調は熱転写、洗濯に耐える必要がある部分は織り・刺繍パッチ。印刷範囲は型紙図にミリ単位で記載します。</p>
+                            </div>
+                            <div class="lb-qa-item">
+                                <h3>ダッフルとウィークエンダーの違いは何ですか？</h3>
+                                <p>ダッフルはバレル型。天ファスナー1本、両端は丸く、内部構造はありません。ウィークエンダーは底が平らでマチが広く、自立してシューズ収納も入ります。バレルは着地コストが安く、ウィークエンダーは棚で写真映えします。</p>
+                            </div>
+                            <div class="lb-qa-item">
+                                <h3>右肩用ではなく左肩用のスリングは作れますか？</h3>
+                                <p>はい。金型ではなく型紙の変更です。現行スリング形状は左右両方の向きを保有しているので、左右混在のご注文も1ロットで出荷できます。</p>
+                            </div>
+                            <div class="lb-qa-item">
+                                <h3>ランニングイベントや企業のスポーツ大会向けのウエストバッグは作れますか？</h3>
+                                <p>はい。ロープロファイルベルトは当社で最も安い製品であり、スポンサードロゴが最も入る製品でもあります。リードタイムを短く保つため、ゴム、反射パイピング、昇華ウェビングを在庫しています。</p>
+                            </div>
+                            <div class="lb-qa-item">
+                                <h3>トートは再生繊維やオーガニック生地で作れますか？</h3>
+                                <p>GRS認証の600D rPET、GOTSオーガニックコットン、ナチュラルジュートを工場に在庫しています。証明書は出荷に同梱します。監査段階で小売バイヤーが求めるのはこれです。</p>
+                            </div>
+                            <div class="lb-qa-item">
+                                <h3>Amazon FBA向けにダッフルはどう梱包しますか？</h3>
+                                <p>窒息警告ラベル、ASINバーコード、マスターカートンマークは封函前に貼付し、カートン寸法は当社の標準輸出カートンではなく貴社フルフィルメントセンターの上限に合わせます。</p>
+                            </div>
+                            <div class="lb-qa-item">
+                                <h3>複数カテゴリーのバッグを1本のコンテナで出せますか？</h3>
+                                <p>はい。リピートの大半はそうしています。カテゴリーは別ラインで裁断しますが、カートンマークと書類を1つにまとめるので、混在注文も1出荷として通関できます。</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec" id="next" data-msec="11" data-mlabel="">
+                        <div class="lb-next">
+                            <div class="lb-next-txt">
+                                <h3>バックパック</h3>
+                                <p>ラップトップ・登山・スクールバックパック &mdash; 同じ工場の在庫15型。</p>
+                            </div>
+                            <a class="button" href="backpack-oem-ja.html">バックパックを見る</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="lb-sec" id="quote" data-msec="12" data-mlabel="見積">
+                        <div class="lb-head2 lb-head2--solo"><h2 class="lb-h2">見積を依頼</h2></div>
+                        <div class="lb-ct">
+                            <div class="lb-ct-form">
+                                <h3>在庫または別注</h3>
+                                <p class="lb-ct-lead">型番と数量だけで十分です。最初の返信が価格付きで返ります。</p>
+                                <form action="https://formsubmit.co/peter@sanda2019.com.cn" method="POST">
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_subject" value="Category page — quote request">
+                                    <input type="text" name="name" placeholder="Your name*" required>
+                                    <input type="email" name="email" placeholder="Work email*" required>
+                                    <input type="text" name="phone" placeholder="WhatsApp or phone">
+                                    <textarea name="message" placeholder="Paste your brief here — anything you have." required></textarea>
+                                    <button type="submit" class="lb-ct-submit" data-umami-event="m-form-submit">ブリーフを送る</button>
+                                </form>
+                            </div>
+                            <div class="lb-ct-side">
+                                <h3 class="lb-ct-h">担当者に直接どうぞ</h3>
+                                <div class="lb-ct-ch">
+                                    <a class="lb-ct-ch-i" href="https://wa.me/8613562448949" target="_blank" rel="noopener noreferrer" data-umami-event="m-whatsapp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><b>WhatsApp / WeChat</b><span>+86 135 6244 8949</span></a>
+                                    <a class="lb-ct-ch-i" href="mailto:peter@sanda2019.com.cn" target="_blank" rel="noopener noreferrer" data-umami-event="m-email"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z"/><path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z"/></svg><b>メール</b><span>peter@sanda2019.com.cn</span></a>
+                                    <a class="lb-ct-ch-i" href="https://www.facebook.com/profile.php?id=61593783179330" target="_blank" rel="noopener noreferrer" data-umami-event="m-facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg><b>Facebook</b><span>SANDA backpack</span></a>
+                                    <a class="lb-ct-ch-i" href="https://www.tiktok.com/@sanda.backpack" target="_blank" rel="noopener noreferrer" data-umami-event="m-tiktok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg><b>TikTok</b><span>@sanda.backpack</span></a>
+                                </div>
+                                <div class="lb-ct-note">
+                                    <h3 class="lb-ct-h2">返ってくるもの</h3>
+                                    <ul class="lb-ct-bl">
+                                        <li>色・数量ごとの価格</li>
+                                        <li>貴社の運賃用に、カートン寸法と重量</li>
+                                        <li>ブリーフからのサンプル日</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lb-ct-third">
+                                <h3 class="lb-ct-h">何も用意がない場合</h3>
+                                <p class="lb-ct-h4">写真1枚で出発点になります。</p>
+                                <div class="lb-ct-row"><span class="lb-ct-n">01</span><div class="lb-ct-rowt"><b>写真かリンク</b><span>形が気に入ったバッグなら何でも。ショップのリンクで構いません。</span></div></div>
+                                <div class="lb-ct-row"><span class="lb-ct-n">02</span><div class="lb-ct-rowt"><b>数量と色</b><span>50枚でも答えになります。</span></div></div>
+                                <div class="lb-ct-row"><span class="lb-ct-n">03</span><div class="lb-ct-rowt"><b>どこへ、いつ</b><span>仕向港と、必着日。</span></div></div>
+                                <div class="lb-ct-row"><span class="lb-ct-n">04</span><div class="lb-ct-rowt"><b>目標価格</b><span>1枚あたり。使える素材がここで決まります。</span></div></div>
+                                <div class="lb-ct-cat">
+                                    <h3 class="lb-ct-h2">カタログだけご希望ですか？</h3>
+                                    <p>2〜3型を選んで数量をお知らせください。見積はその型のみが対象です。最新版は当日中にWhatsAppまたはメールでお送りします。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+</main>
+<div class="m-bar" role="group" aria-label="Contact us">
+  <div class="m-socs">
+  <a class="soc" href="mailto:peter@sanda2019.com.cn" aria-label="Email" data-umami-event="m-email"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z"/><path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z"/></svg></a>
+  <a class="soc" href="https://wa.me/8613562448949" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-umami-event="m-whatsapp"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+  <a class="soc" href="https://www.facebook.com/profile.php?id=61593783179330" target="_blank" rel="noopener noreferrer" aria-label="Facebook" data-umami-event="m-facebook"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+  <a class="soc" href="https://www.tiktok.com/@sanda.backpack" target="_blank" rel="noopener noreferrer" aria-label="TikTok" data-umami-event="m-tiktok"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+  </div>
+  <span id="contact" aria-hidden="true"></span>
+<button class="m-cup" id="cupBtn" type="button" aria-label="Visit our showroom" aria-expanded="false" aria-controls="cupSheet" data-umami-event="m-showroom-cup">
+    <span class="cupbubble">ショールームへ</span>
+    <span class="cupimg"><img src="../images/showroom-cup.webp" alt=""></span>
+  </button>
+</div>
+<div class="m-sheet-scrim" id="cupScrim"></div>
+<div class="m-sheet" id="cupSheet" role="dialog" aria-modal="true" aria-labelledby="cupTitle">
+  <div class="handle"></div>
+  <p class="sk">You&rsquo;re invited</p>
+  <h3 id="cupTitle">広州ショールーム</h3>
+  <p class="sl">実際に全ラインナップをご覧いただき、次のご注文をコーヒー片手にご相談ください。</p>
+  <dl>
+    <div><dt>住所</dt><dd>Room 2821, Jinying Plaza, 316 Huanshi Middle Road, Yuexiu District, Guangzhou</dd></div>
+    <div><dt>地下鉄</dt><dd>Xiaobei Station (Line 5), Exit B, 20 m</dd></div>
+    <div><dt>お車</dt><dd>Baiyun Airport, 35 min / Canton Fair, 20 min</dd></div>
+    <div><dt>営業時間</dt><dd>Mon–Fri 9:00–19:00, other times by appointment</dd></div>
+  </dl>
+  <a class="scta" href="https://wa.me/8613562448949" data-umami-event="m-showroom-book">訪問を予約</a>
+  <button class="sclose" id="cupClose" type="button">閉じる</button>
+</div>
+
+<script>
+(function(){
+  var SETS = {"All": {"html": "    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/laptop1.webp\" alt=\"Laptop Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ラップトップバッグ</b><span>LT-8012</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/hiking1.webp\" alt=\"Hiking Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>登山用バッグ</b><span>HK-5021</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/school1.webp\" alt=\"School Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>スクールバッグ</b><span>SC-3011</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/tote1.webp\" alt=\"Tote Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>トートバッグ</b><span>TB-2051</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/duffle1.webp\" alt=\"Duffle Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ダッフルバッグ</b><span>DF-9081</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/sling4.webp\" alt=\"Sling Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>スリングバッグ</b><span>SL-7044</span></div>\n    </a>", "href": "backpack-oem.html#products"}, "Laptop Bags": {"html": "    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/laptop1.webp\" alt=\"Laptop Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ラップトップバッグ</b><span>LT-8012</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/laptop2.webp\" alt=\"Laptop Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ラップトップバッグ</b><span>LT-8013</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/laptop3.webp\" alt=\"Laptop Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ラップトップバッグ</b><span>LT-8014</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/laptop4.webp\" alt=\"Laptop Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ラップトップバッグ</b><span>LT-8015</span></div>\n    </a>", "href": "backpack-oem.html#products"}, "Hiking Bags": {"html": "    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/hiking1.webp\" alt=\"Hiking Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>登山用バッグ</b><span>HK-5021</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/hiking2.webp\" alt=\"Hiking Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>登山用バッグ</b><span>HK-5022</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/hiking3.webp\" alt=\"Hiking Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>登山用バッグ</b><span>HK-5023</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/hiking4.webp\" alt=\"Hiking Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>登山用バッグ</b><span>HK-5024</span></div>\n    </a>", "href": "backpack-oem.html#products"}, "School Bags": {"html": "    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/school1.webp\" alt=\"School Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>スクールバッグ</b><span>SC-3011</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/school2.webp\" alt=\"School Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>スクールバッグ</b><span>SC-3012</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/school3.webp\" alt=\"School Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>スクールバッグ</b><span>SC-3013</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"backpack-oem.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/school4.webp\" alt=\"School Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>スクールバッグ</b><span>SC-3014</span></div>\n    </a>", "href": "backpack-oem.html#products"}, "Tote Bags": {"html": "    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/tote1.webp\" alt=\"Tote Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>トートバッグ</b><span>TB-2051</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/tote2.webp\" alt=\"Tote Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>トートバッグ</b><span>TB-2052</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/tote3.webp\" alt=\"Tote Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>トートバッグ</b><span>TB-2053</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/tote4.webp\" alt=\"Tote Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>トートバッグ</b><span>TB-2054</span></div>\n    </a>", "href": "duffel-tote-sling.html#products"}, "Duffle Bags": {"html": "    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/duffle1.webp\" alt=\"Duffle Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ダッフルバッグ</b><span>DF-9081</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/duffle2.webp\" alt=\"Duffle Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ダッフルバッグ</b><span>DF-9082</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/duffle3.webp\" alt=\"Duffle Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ダッフルバッグ</b><span>DF-9083</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/duffle4.webp\" alt=\"Duffle Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ダッフルバッグ</b><span>DF-9084</span></div>\n    </a>", "href": "duffel-tote-sling.html#products"}, "Waist Bags": {"html": "    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/sling1.webp\" alt=\"Waist Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ウエストバッグ</b><span>SL-7041</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/belt2.webp\" alt=\"Waist Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ウエストバッグ</b><span>WB-6011</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/sling3.webp\" alt=\"Waist Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ウエストバッグ</b><span>SL-7043</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/belt5.webp\" alt=\"Waist Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>ウエストバッグ</b><span>WB-6021</span></div>\n    </a>", "href": "duffel-tote-sling.html#products"}, "Sling Bags": {"html": "    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/sling4.webp\" alt=\"Sling Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>スリングバッグ</b><span>SL-7044</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/sling5.webp\" alt=\"Sling Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>スリングバッグ</b><span>SL-7045</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/sling6.webp\" alt=\"Sling Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>スリングバッグ</b><span>SL-7046</span></div>\n    </a>\n    <a class=\"m-pcard\" href=\"duffel-tote-sling.html#products\">\n      <div class=\"ph\"><img src=\"../images/Cabinet/sling7.webp\" alt=\"Sling Bags\" loading=\"lazy\"></div>\n      <div class=\"pt\"><b>スリングバッグ</b><span>SL-7047</span></div>\n    </a>", "href": "duffel-tote-sling.html#products"}};
+  var STATIC = window.__mNoMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var menuBtn=document.getElementById('menuBtn'),
+      drawer=document.getElementById('drawer'),
+      scrim=document.getElementById('scrim'),
+      closeBtn=document.getElementById('closeBtn');
+  function setMenu(open){
+    drawer.classList.toggle('is-open',open);
+    scrim.classList.toggle('is-open',open);
+    menuBtn.setAttribute('aria-expanded',String(open));
+    document.body.style.overflow=open?'hidden':'';
+  }
+  menuBtn.addEventListener('click',function(){setMenu(!drawer.classList.contains('is-open'));});
+  closeBtn.addEventListener('click',function(){setMenu(false);});
+  scrim.addEventListener('click',function(){setMenu(false);});
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+
+  /* 3 — category chips: real filtering + one smooth scroll hint */
+  var chipsWrap=document.getElementById('chipsWrap'),
+      grid=document.getElementById('productGrid'),
+      more=document.getElementById('moreLink'),
+      chips=document.querySelectorAll('.m-chip');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(x){x.classList.remove('is-on');});
+    c.classList.add('is-on');
+    var set=SETS[c.getAttribute('data-key')];
+    if(set&&grid){
+      grid.innerHTML=set.html;
+      if(more) more.setAttribute('href',set.href);
+    }
+  });});
+
+  /* 1 — stats: a continuous CSS marquee; hold to pause, release to resume */
+  var wrap=document.getElementById('statsWrap'),
+      track=document.getElementById('statsTrack');
+  if(wrap&&track&&!STATIC){
+    var hold=function(){track.style.animationPlayState='paused';},
+        free=function(){track.style.animationPlayState='running';};
+    wrap.addEventListener('pointerdown',hold);
+    wrap.addEventListener('pointerup',free);
+    wrap.addEventListener('pointercancel',free);
+    wrap.addEventListener('pointerleave',free);
+  }
+
+  /* 3b — a gentle, fully smooth hint that the chip row scrolls */
+  if(chipsWrap&&!STATIC&&'IntersectionObserver' in window){
+    var armed=true, busy=false;
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting){armed=true;return;}
+        if(!armed||busy) return;
+        armed=false; busy=true;
+        chipsWrap.classList.add('is-hinting');
+        chipsWrap.scrollTo({left:120,behavior:'smooth'});
+        setTimeout(function(){chipsWrap.scrollTo({left:0,behavior:'smooth'});},1600);
+        setTimeout(function(){chipsWrap.classList.remove('is-hinting');busy=false;},2500);
+      });
+    },{threshold:.55});
+    io.observe(chipsWrap);
+  }
+
+  var cupBtn=document.getElementById('cupBtn'),
+      sheet=document.getElementById('cupSheet'),
+      scrim2=document.getElementById('cupScrim'),
+      cupClose=document.getElementById('cupClose');
+  function setSheet(open){
+    sheet.classList.toggle('is-open',open);
+    scrim2.classList.toggle('is-open',open);
+    cupBtn.setAttribute('aria-expanded',String(open));
+    document.body.style.overflow=open?'hidden':'';
+  }
+  cupBtn.addEventListener('click',function(){setSheet(!sheet.classList.contains('is-open'));});
+  cupClose.addEventListener('click',function(){setSheet(false);});
+  scrim2.addEventListener('click',function(){setSheet(false);});
+
+  var langBtn=document.getElementById('langBtn'),
+      langSheet=document.getElementById('langSheet'),
+      langScrim=document.getElementById('langScrim');
+  function setLang(open){
+    langSheet.classList.toggle('is-open',open);
+    langScrim.classList.toggle('is-open',open);
+    langBtn.setAttribute('aria-expanded',String(open));
+  }
+  langBtn.addEventListener('click',function(){setLang(!langSheet.classList.contains('is-open'));});
+  langScrim.addEventListener('click',function(){setLang(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){setSheet(false);setMenu(false);setLang(false);}});
+})();
+</script>
+<script>
+(function(){
+  'use strict';
+  var secs=[].slice.call(document.querySelectorAll('.m-lb .lb-sec[data-msec]'));
+  var map=[];
+  secs.forEach(function(s){
+    var label=s.getAttribute('data-mlabel')||'';
+    if(label) map.push({sec:s, label:label});
+  });
+  var head=document.querySelector('.m-head');
+  var headH=head?head.offsetHeight:56;
+  var nav=null, inner=null, chips=[];
+  if(map.length){
+    var wrap=document.createElement('div'); wrap.className='p0-sticky';
+    if(head){ head.parentNode.insertBefore(wrap, head); wrap.appendChild(head); }
+    else { document.body.insertBefore(wrap, document.body.firstChild); }
+    nav=document.createElement('nav');
+    nav.className='p0-anchors'; nav.id='p0Anchors'; nav.setAttribute('aria-label','Jump to section');
+    inner=document.createElement('div'); inner.className='p0-anchors-in';
+    map.forEach(function(m){
+      var a=document.createElement('a'); a.className='p0-chip'; a.href='#'+m.sec.id; a.textContent=m.label; a.dataset.id=m.sec.id;
+      inner.appendChild(a);
+    });
+    nav.appendChild(inner);
+    wrap.appendChild(nav);
+    inner.addEventListener('click',function(e){
+      var a=e.target.closest('.p0-chip'); if(!a) return; e.preventDefault();
+      var el=document.getElementById(a.dataset.id); if(!el) return;
+      var off=headH+nav.offsetHeight+10;
+      var y=el.getBoundingClientRect().top+window.scrollY-off;
+      window.scrollTo({top:y,behavior:'smooth'});
+    });
+    chips=[].slice.call(inner.children);
+    var lastId=null, rafPending=false, idleTimer=null, arriving=false;
+    function centerChip(chip, smooth){
+      if(!chip) return;
+      var ar=chip.getBoundingClientRect(), ir=inner.getBoundingClientRect();
+      var target=inner.scrollLeft+(ar.left-ir.left)-(ir.width-ar.width)/2;
+      if(inner.scrollWidth>inner.clientWidth+2){ inner.scrollTo({left:target,behavior:smooth?'smooth':'auto'}); }
+    }
+    // active state updates immediately (cheap); the chip row only recenters after scrolling
+    // settles (170ms idle) and never while the arrival animation is running -> no jitter.
+    function applyActive(){
+      rafPending=false;
+      var probe=headH+nav.offsetHeight+30;
+      var cur=map[0], curTop=-1e9;
+      map.forEach(function(m){ var t=m.sec.getBoundingClientRect().top; if(t<=probe && t>curTop){ curTop=t; cur=m; } });
+      chips.forEach(function(c){ c.classList.toggle('is-active', c.dataset.id===cur.sec.id); });
+      if(cur.sec.id!==lastId){
+        lastId=cur.sec.id;
+        if(idleTimer) clearTimeout(idleTimer);
+        if(!arriving){ idleTimer=setTimeout(function(){ centerChip(chips.filter(function(c){return c.classList.contains('is-active');})[0], true); }, 170); }
+      }
+    }
+    function onScroll(){ if(!rafPending){ rafPending=true; requestAnimationFrame(applyActive); } }
+    window.addEventListener('scroll',onScroll,{passive:true}); applyActive();
+    // controlled ease scroll (does not rely on CSS scroll-behavior:smooth, so duration is fixed)
+    function animScrollTo(targetY, dur){
+      var de=document.documentElement, prev=de.style.scrollBehavior;
+      de.style.scrollBehavior='auto';
+      var startY=window.scrollY, dist=targetY-startY, t0=null;
+      function step(now){
+        if(t0===null) t0=now;
+        var p=Math.min(1,(now-t0)/dur);
+        var e=p<0.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;
+        window.scrollTo(0, startY+dist*e);
+        if(p<1){ requestAnimationFrame(step); } else { de.style.scrollBehavior=prev; }
+      }
+      requestAnimationFrame(step);
+    }
+    function playArrival(){
+      var sec=document.getElementById('products'); if(!sec||arriving) return; arriving=true;
+      var off=headH+nav.offsetHeight+10;
+      var y=Math.max(0, sec.getBoundingClientRect().top+window.scrollY-off);
+      animScrollTo(y, 700);
+      var pchip=chips.filter(function(c){return c.textContent==='Products';})[0];
+      setTimeout(function(){ inner.scrollTo({left:inner.scrollWidth,behavior:'smooth'}); }, 380);
+      setTimeout(function(){ inner.scrollTo({left:0,behavior:'smooth'}); }, 780);
+      setTimeout(function(){ centerChip(pchip,true); }, 1200);
+      setTimeout(function(){ if(pchip) pchip.classList.add('is-active'); arriving=false; }, 1550);
+    }
+    if(window.__p0ToProducts){ setTimeout(playArrival,120); }
+  }
+  document.querySelectorAll('.m-lb .lb-qa-item').forEach(function(item){
+    var q=item.querySelector('h3'); if(!q) return;
+    item.classList.add('p0-faq');
+    q.classList.add('p0-faq-q');
+    q.setAttribute('role','button'); q.setAttribute('tabindex','0'); q.setAttribute('aria-expanded','false');
+    function tog(){ var open=item.classList.toggle('is-open'); q.setAttribute('aria-expanded',open?'true':'false'); }
+    q.addEventListener('click',tog);
+    q.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  var clampKeys=['3','4','7'];
+  secs.forEach(function(sec){
+    var h=sec.querySelector('.lb-h2'); if(!h) return;
+    var t=h.textContent.trim();
+    if(clampKeys.indexOf(sec.getAttribute('data-msec')||'')===-1) return;
+    var hd=sec.querySelector('.lb-head2')||h;
+    var body=document.createElement('div'); body.className='p0-clamp';
+    var node=hd.nextElementSibling;
+    while(node){ var next=node.nextElementSibling; body.appendChild(node); node=next; }
+    sec.appendChild(body);
+    if(body.scrollHeight>430){
+      body.classList.add('is-clamped');
+      var btn=document.createElement('button'); btn.type='button'; btn.className='p0-more';
+      btn.innerHTML='<span>すべて表示</span>';
+      btn.addEventListener('click',function(){
+        var clamped=body.classList.toggle('is-clamped');
+        btn.querySelector('span').textContent=clamped?'すべて表示':'折りたたむ';
+      });
+      sec.appendChild(btn);
+    }
+  });
+  var b=document.querySelector('.lb-pagehead .lb-actions a.button');
+  if(b){ b.classList.add('p0-cta'); }
+  var bar=document.querySelector('.m-bar');
+  if(bar){
+    var quote=document.createElement('a');
+    quote.className='p0-bar-quote'; quote.setAttribute('data-umami-event','m-bar-quote');
+    var qsec=map.filter(function(m){return m.label==='Quote';})[0];
+    quote.href=qsec?('#'+qsec.sec.id):'#';
+    quote.textContent='見積依頼';
+    bar.insertBefore(quote, bar.firstChild);
+  }
+})();
+</script>
+
+<script>
+/* R191 — mobile Umami events. Static attributes are in the HTML; this marker
+   also covers cards injected later by the homepage category chips. */
+(function(){
+  var rules=[
+    ['.m-logo','m-logo'],['#langBtn','m-lang-open'],['#menuBtn','m-menu-open'],
+    ['#langSheet a','m-lang-switch'],['.m-drawer-cta','m-quote-cta'],
+    ['.m-btn-fill','m-quote-cta'],['.m-btn-ghost','m-new-arrivals'],
+    ['.m-pcard','m-product-card'],['.m-more','m-full-range'],
+    ['.m-cup','m-showroom-cup'],['.scta','m-showroom-book'],
+    ['a[href^="mailto:"]','m-email'],['a[href*="wa.me/"]','m-whatsapp'],
+    ['a[href*="facebook.com"]','m-facebook'],['a[href*="tiktok.com"]','m-tiktok'],
+    ['button[type="submit"]','m-form-submit'],['.p0-bar-quote','m-bar-quote'],
+    ['.lb-pcard--range','m-range-card'],['.lb-switch a','m-category-switch'],
+    ['.lb-actions a.button','m-quote-cta'],['a[href*="?desktop=1"]','m-desktop-link']
+  ];
+  function mark(){
+    rules.forEach(function(r){
+      document.querySelectorAll(r[0]).forEach(function(el){
+        if(!el.hasAttribute('data-umami-event')) el.setAttribute('data-umami-event',r[1]);
+      });
+    });
+  }
+  mark();
+  document.addEventListener('click',mark,true);
+  if(window.MutationObserver){
+    var mo=new MutationObserver(function(){ mark(); });
+    mo.observe(document.body,{childList:true,subtree:true});
+  }
+})();
+</script>
+</body>
+</html>

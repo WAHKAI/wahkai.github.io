@@ -1,0 +1,59 @@
+# SANDA — https://sanda2019.com
+# Only the eleven shipped pages belong in search results. Everything listed as
+# Disallow below was a local working copy or a design preview. All four were
+# moved out of the tree on 2026-11-04 (see Desktop/13N_cleanup_2026-11-04),
+# so these lines are now inert — they stay as a guard in case any of those
+# paths ever comes back. Note that Disallow is a crawling hint, not access
+# control: a file left in the tree is still downloadable by direct URL.
+#
+# Working files are also prefixed with "_", which Jekyll skips at build time,
+# so they never reach the published site in the first place.
+
+User-agent: *
+Allow: /
+Disallow: /backup/
+Disallow: /_r111_preview.html
+Disallow: /mobile-zoom-sim.html
+Disallow: /*.bak_r83
+
+# --- Generative engines (GEO) -------------------------------------------
+# Explicitly allowed so that AI search and answer engines can read and cite
+# the site. Each crawler is listed by its own UA token rather than relying on
+# the "*" block, because a named group replaces "*" for that crawler and this
+# keeps the intent readable. UA tokens follow each vendor's published names
+# as of 2026. All of them are content crawlers for retrieval or training;
+# SANDA has nothing to hide in its public pages, so every one is allowed.
+# The plain-text summary for LLMs lives at /llms.txt (proposed standard,
+# not yet recognised by Google — harmless to publish).
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://sanda2019.com/sitemap.xml

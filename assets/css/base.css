@@ -476,3 +476,76 @@ body {
 .button:hover {
 	background-color: var(--c-primary-hover);
 }
+
+/* ==========================================================================
+   【R114】Banner 首屏防跳（must stay in BASE, not components）
+   --------------------------------------------------------------------------
+   Why here: this file is linked before components.css, and the symptom is a
+   race — when components.css arrives late (cold cache, slow link), the banner
+   is briefly laid out by these base rules alone.
+
+   Without the block below, at 1440×1000 the banner was measured at 2978px and
+   then snapped to 550px the moment components.css landed. In that instant the
+   image's paint lags the new box and a thin strip of the background shows
+   along the bottom edge of banner 1 — which is the intermittent dark line.
+
+   What was wrong, in order of contribution:
+     1. `.slide img` had width:100% only. The height="779" presentational hint
+        therefore set a hard 779px, and object-fit did not exist yet — every
+        image was stretched to 1440×779.
+     2. `.slider-container` was display:block, so the three slides stacked
+        vertically instead of forming a row.
+     3. The prev/next buttons were still position:static, adding 22px each.
+   Net: 3 × 779 = 2337 + chrome ≈ 2978px.
+
+   The rules are deliberately inert once components.css loads — every value
+   here is then overridden by an equal or stronger rule, and the final heights
+   are identical. !important on the image height is what beats
+   `.slide img { height:100% }`, and both resolve to the same 550px.
+   ========================================================================== */
+#banner-slider {
+	aspect-ratio: 2040 / 779;
+}
+
+/* The template's .container carries padding and a max-width. Until components.css
+   neutralises it, the banner is inset ~46px wider than its own box, so the image
+   (width:100% of the padded box) never matches the banner height. */
+#banner-wrapper > .container {
+	width: 100%;
+	max-width: none;
+	padding: 0;
+}
+
+#banner-slider .slider-container {
+	display: flex;
+	height: auto;
+}
+
+#banner-slider .slide {
+	flex: 0 0 100%;
+	min-width: 100%;
+	height: auto;
+}
+
+#banner-slider .slide img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 2040 / 779;
+	height: auto !important;
+	object-fit: cover;
+}
+
+/* The caption layer is position:absolute only in components.css. Until then it
+   is a block and its four lines of copy add ~157px to each slide. */
+#banner-slider .slide-layer {
+	position: absolute;
+	inset: 0;
+}
+
+#banner-slider .slide-btn {
+	position: absolute;
+}
+
+#banner-slider .slider-dots {
+	position: absolute;
+}
